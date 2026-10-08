@@ -84,6 +84,9 @@
     "authors": [
       "Mark Lewko"
     ],
+    "responsible_maintainers": [
+      "Mark Lewko"
+    ],
     "license": "AGPL-3.0"
   },
   "sources": [
@@ -162,6 +165,9 @@
       }
     ],
     "notes": "Additional AI review used Claude. AI tools are not human authors or responsible maintainers; no human peer-review claim is made."
+  },
+  "review": {
+    "status": "No human peer-review claim is made."
   },
   "fidelity": {
     "divergences": "The formal proof uses full-line Mellin reflection, integer auxiliary scales, explicit detector/multiplicity bridges and the sufficient eventual T^(2+epsilon) twelfth-moment estimate. The exact log^17 refinement and effective numerical constants are not claimed."
