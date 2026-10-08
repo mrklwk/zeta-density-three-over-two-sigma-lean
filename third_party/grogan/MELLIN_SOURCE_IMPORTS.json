@@ -1,0 +1,42 @@
+{
+  "scope": "Selected public source provenance. Records identify inspected source files/ranges; they do not assert that entire upstream files were copied. See PROVENANCE.md and retained file-level notices.",
+  "upstream": {
+    "repository": "https://github.com/jconorgrogan/prime-minor-arcs-2-15",
+    "revision": "f369f267b4dcfebf010c8e7baa2c9602e2960eba",
+    "license": "Apache-2.0"
+  },
+  "source_records": [
+    {
+      "path": "Proof/MellinDetectorLeaf.lean",
+      "original_direct_imports": [
+        "DirichletZeros",
+        "Mathlib.Analysis.SpecialFunctions.Gamma.Deriv",
+        "Mathlib.Analysis.SpecialFunctions.Pow.Deriv",
+        "Mathlib.Analysis.Complex.CauchyIntegral",
+        "Mathlib.NumberTheory.LSeries.Nonvanishing"
+      ],
+      "selected_line_ranges": [
+        [
+          109,
+          125
+        ]
+      ],
+      "sha256": "7edbf5608a11a5f03d63b1c200257821dfb86d3b2ab3a9a0e289c8b1487b8f3e"
+    },
+    {
+      "path": "Proof/GammaMellinInversion.lean",
+      "original_direct_imports": [
+        "MellinDetectorLeaf",
+        "Mathlib.Analysis.MellinInversion",
+        "Mathlib.Analysis.SpecialFunctions.ImproperIntegrals"
+      ],
+      "selected_line_ranges": [
+        [
+          19,
+          210
+        ]
+      ],
+      "sha256": "de8d9282c0a7362c1c13b74f09eb590579f0e772ca98e5281664ca939b13a7f1"
+    }
+  ]
+}

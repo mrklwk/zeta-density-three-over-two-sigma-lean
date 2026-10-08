@@ -1,0 +1,14 @@
+A zero-density estimate with exponent 3(1−σ)/(2σ) for the Riemann zeta function
+Copyright (c) 2026 Mark Lewko, for original contributions.
+
+Original contributions are licensed under the GNU Affero General Public
+License, version 3 only (SPDX: AGPL-3.0-only). The standard license text is
+in LICENSE. The generic "or later" example in that text's application appendix
+does not change this project's version-3-only grant.
+
+Reused contributions remain subject to their existing MIT, MIT-0 and
+Apache-2.0 licenses and notices. This notice does not replace an existing
+file-level license or assign upstream authorship to Mark Lewko. Preserve the
+license texts, author headers, modification notices and source manifests in
+third_party/ and the Lean sources. LICENSE_STATUS.md and PROVENANCE.md identify
+the applicable source families. CREDITS.md records AI assistance separately.

@@ -1,0 +1,41 @@
+{
+  "status": "passed for the previously_verified_files snapshot recorded in PROOF_SOURCE_HASHES.json; current copy has comment-only Lean edits",
+  "lean": "4.35.0-rc2",
+  "lean_compiler_commit": "11acb17ec6b07a8f9e9173e6845197929540936b",
+  "mathlib_revision": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "fresh_local_modules": 460,
+  "production_modules": 456,
+  "production_declarations": 5732,
+  "safe_production_roots": 5731,
+  "full_production_closure_replayed": 73216,
+  "type_i_closure_replayed": 57437,
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "direct_checkers": [
+    "Lean",
+    "NanoDa",
+    "con-ron"
+  ],
+  "source_bound_official_comparator": {
+    "exit_code": 0,
+    "fresh_source_run_seconds": 437.248,
+    "subsequent_unchanged_proof_run_seconds": 173.903,
+    "sandbox_bypass": false,
+    "preexisting_exports_supplied": false,
+    "fresh_source_run_log_sha256": "0da6188a4e895fc87f0b9ca5ce5f071f7b5c215862bd3c1a1e9074ac466e626a",
+    "subsequent_run_log_sha256": "3c317941002a13b1834d8c6f60868eb732c45c64efc87d8479d8490ff9596f8a"
+  },
+  "dependency_source_cache_binding_independently_rebuilt": false,
+  "public_documentation_prepared_after_proof_checks": true,
+  "full_hosted_palomar_workflow_run": false,
+  "palomar_submission": false,
+  "comment_only_packaging": {
+    "changed_lean_files": 19,
+    "unchanged_lean_files": 447,
+    "noncomment_lean_source_identical": true
+  },
+  "current_package_verification": "Recorded in accompanying source-bound verification receipts identifying this package hash."
+}

@@ -1,0 +1,73 @@
+{
+  "scope": "Selected public source provenance. Records identify inspected source files/ranges; they do not assert that entire upstream files were copied. See PROVENANCE.md and retained file-level notices.",
+  "upstream": {
+    "repository": "https://github.com/smccolm/Lean",
+    "revision": "6e2d10c6c2252ee1575bb7ef12dea12e2f1a3af1",
+    "license": "MIT-0; selected PNT-derived material is Apache-2.0"
+  },
+  "source_records": [
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/GuthMaynard/DFIComplexLaplace.lean",
+      "sha256": "1f79e5847fb9cb9e3e3d1a61fa62f9043ecf9b362c643fc06f42730607473bf9",
+      "imports": [
+        "GuthMaynard.DFIBesselMellin",
+        "Mathlib.Analysis.Analytic.IsolatedZeros",
+        "Mathlib.Analysis.Complex.Convex",
+        "Mathlib.Analysis.Calculus.ParametricIntegral"
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/GuthMaynard/DFIY0Abel.lean",
+      "sha256": "96573717b9da29c9ccbb6635630302ea93c172c6a111f03e7effa8ecf10a3b31",
+      "imports": [
+        "GuthMaynard.DFIComplexLaplace"
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/GuthMaynard/DFIY0Mellin.lean",
+      "sha256": "23c6398998677dd9facf55480f495a69233a22896bdf20961c1fa026136b8138",
+      "imports": [
+        "GuthMaynard.DFIY0Abel",
+        "GuthMaynard.DFIBesselMellin",
+        "Mathlib.Analysis.SpecialFunctions.Trigonometric.Inverse",
+        "Mathlib.Analysis.SpecialFunctions.Arsinh"
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/GuthMaynard/DFIBesselKernel.lean",
+      "sha256": "f64faaf8ac5a810cda871cc6ef46011015636ee92182efe570a52b2c20ddb7a2",
+      "imports": [
+        "GuthMaynard.DFIVoronoiDual",
+        "GuthMaynardExternal.PNT.ZetaAppendix",
+        "Mathlib.Analysis.SpecialFunctions.Gaussian.GaussianIntegral",
+        "Mathlib.Analysis.SpecialFunctions.Trigonometric.Bounds",
+        "Mathlib.Analysis.SpecialFunctions.Trigonometric.Series"
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/GuthMaynard/DFIY0PhysicalMellin.lean",
+      "sha256": "3355157db297ce4ad0122f088ca52e55a48d6131905977fb667058438f978aef",
+      "imports": [
+        "GuthMaynard.DFIY0Mellin"
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/GuthMaynard/DFIMellinPairing.lean",
+      "sha256": "9df5c810db748807f4f065abf53ffe74d2598ad8fb8925cf473deb47920854b7",
+      "imports": [
+        "GuthMaynard.DFIProposition1",
+        "Mathlib.Analysis.MellinInversion",
+        "Mathlib.MeasureTheory.Integral.Prod"
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/GuthMaynard/DFIBesselTransformBridge.lean",
+      "sha256": "d1dc9be9fffa1e85e65f730bf7e548de0824960bb70ad1614e3457112b95c5d7",
+      "imports": [
+        "GuthMaynard.DFIBesselMellin",
+        "GuthMaynard.DFIY0PhysicalMellin",
+        "GuthMaynard.DFIMellinPairing"
+      ]
+    }
+  ]
+}

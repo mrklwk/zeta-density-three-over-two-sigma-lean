@@ -1,0 +1,215 @@
+{
+  "scope": "Selected public source provenance. Records identify inspected source files/ranges; they do not assert that entire upstream files were copied. See PROVENANCE.md and retained file-level notices.",
+  "upstream": {
+    "repository": "https://github.com/smccolm/Lean",
+    "revision": "6e2d10c6c2252ee1575bb7ef12dea12e2f1a3af1",
+    "license": "MIT-0; selected PNT-derived material is Apache-2.0"
+  },
+  "source_records": [
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/78 Dhiman-Kadiri-Quesada-Herrera, 2026/Extension/DhimanKadiriQuesadaHerrera2026/AFESecondLimits.lean",
+      "retained": true,
+      "source_sha256": "6b5f5acfdda60a66f78421b895529aef94552f7c9c81e44dfa8ade4f2b70262f"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/78 Dhiman-Kadiri-Quesada-Herrera, 2026/Extension/DhimanKadiriQuesadaHerrera2026/WeightedIntegralAssembly.lean",
+      "retained": true,
+      "source_sha256": "ce8c3339e0a445d77d790e05f2b91cbd78be0511ea52f62f6edd2260b289163b"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/78 Dhiman-Kadiri-Quesada-Herrera, 2026/Extension/DhimanKadiriQuesadaHerrera2026/LowerIntegralEstimate.lean",
+      "retained": true,
+      "source_sha256": "17e99d62e4adec780fe27ad35c353cf1467f1e16351e1bd88b173eca3b4ac678"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/78 Dhiman-Kadiri-Quesada-Herrera, 2026/Extension/DhimanKadiriQuesadaHerrera2026/WeightedIntegralPhase.lean",
+      "retained": true,
+      "source_sha256": "9ef7272c5894cac39aed1b861e47f0560371e70cc830f8264a9637351c21190c"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/78 Dhiman-Kadiri-Quesada-Herrera, 2026/Extension/DhimanKadiriQuesadaHerrera2026/WeightedIntegrals.lean",
+      "retained": true,
+      "source_sha256": "924ad73751806a499dfc264634df0799d23adbd10a907505c4d4dde34bf57164"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/78 Dhiman-Kadiri-Quesada-Herrera, 2026/Extension/DhimanKadiriQuesadaHerrera2026/WeightedIntegralSums.lean",
+      "retained": true,
+      "source_sha256": "f7227d97a76e2752c354c24785421aa209cddd9ef76d708c65f022e8bc52e5ea"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/78 Dhiman-Kadiri-Quesada-Herrera, 2026/Extension/DhimanKadiriQuesadaHerrera2026/AFEDigammaNumerics.lean",
+      "retained": false,
+      "source_sha256": "c168c26c6a26b8e26887435531c42cfd28dc9dfd357912657ad237f1edf3f284"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/78 Dhiman-Kadiri-Quesada-Herrera, 2026/Extension/DhimanKadiriQuesadaHerrera2026/AFEFirstRealCutoff.lean",
+      "retained": false,
+      "source_sha256": "cec44cb7f0a74d1ad0e98d3ce9b969578c0fb753c3a88c780b6e6f2e53a14423"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/78 Dhiman-Kadiri-Quesada-Herrera, 2026/Extension/DhimanKadiriQuesadaHerrera2026/AFEFirstMonotonicity.lean",
+      "retained": false,
+      "source_sha256": "593fa2b8f25ed388f4a3def1bda85156657dafac61dc62a91b688a07ae56bcbd"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/78 Dhiman-Kadiri-Quesada-Herrera, 2026/Extension/DhimanKadiriQuesadaHerrera2026/AFEFirstKind.lean",
+      "retained": false,
+      "source_sha256": "4ca375da4f39b8edd2b65bbfebc160ab10708524084f52525daef137ee142d97"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/78 Dhiman-Kadiri-Quesada-Herrera, 2026/Extension/DhimanKadiriQuesadaHerrera2026/ZetaTruncation.lean",
+      "retained": true,
+      "source_sha256": "6c6c788aa016a6f3447d6627dde5d0ab8042889144c07a3b5cddc40f0f21dcb3"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/78 Dhiman-Kadiri-Quesada-Herrera, 2026/Extension/DhimanKadiriQuesadaHerrera2026/Objects.lean",
+      "retained": true,
+      "source_sha256": "fb808b4cb0b01d20b67c6f4282b75537215dc58dda82f0d6d9fcb3ff9878b258"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/78 Dhiman-Kadiri-Quesada-Herrera, 2026/Extension/DhimanKadiriQuesadaHerrera2026/PoissonApplications.lean",
+      "retained": true,
+      "source_sha256": "628d5abf554024bb03f7ff32765d1a3378ae8bbde11bf246047ac2b149d9dfd0"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/78 Dhiman-Kadiri-Quesada-Herrera, 2026/Extension/DhimanKadiriQuesadaHerrera2026/PowerWeights.lean",
+      "retained": true,
+      "source_sha256": "7dbb91e1c3a19e99e9f6b80faddaadc4d9c722f620b5fa40eee742f11ea7e69b"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/78 Dhiman-Kadiri-Quesada-Herrera, 2026/Extension/DhimanKadiriQuesadaHerrera2026/PoissonShift.lean",
+      "retained": true,
+      "source_sha256": "ed44190547eeb88ff4916a88f69e0652fa993e757e5dac788ecc74a73a9060aa"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/78 Dhiman-Kadiri-Quesada-Herrera, 2026/Extension/DhimanKadiriQuesadaHerrera2026/PoissonPartI.lean",
+      "retained": true,
+      "source_sha256": "31f79a5159d3db9b894549e528cb76c3d994fd258f7362275bdbb977c37bc7d4"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/78 Dhiman-Kadiri-Quesada-Herrera, 2026/Extension/DhimanKadiriQuesadaHerrera2026/EulerMaclaurin.lean",
+      "retained": true,
+      "source_sha256": "14226e8c6a4e8e04b7174546e7338adf70cfffa6c94627d387cdde5ca2ca6f3a"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/78 Dhiman-Kadiri-Quesada-Herrera, 2026/Extension/DhimanKadiriQuesadaHerrera2026/PoissonFourier.lean",
+      "retained": true,
+      "source_sha256": "f392cf1a06bdeea395e2ffcd62b8e5964b99cbdfaede8b270c5fa96a3b347296"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/78 Dhiman-Kadiri-Quesada-Herrera, 2026/Extension/DhimanKadiriQuesadaHerrera2026/AbelSawtooth.lean",
+      "retained": true,
+      "source_sha256": "21faa5fe33f259bae105497f2fdf9ff99e3310b3313078e4391330a350025ef9"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/78 Dhiman-Kadiri-Quesada-Herrera, 2026/Extension/DhimanKadiriQuesadaHerrera2026/FiniteExponentialSums.lean",
+      "retained": true,
+      "source_sha256": "fe8c55d607993550a3e55ace34b19341b359dab171b494840fc27353aa07609d"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/78 Dhiman-Kadiri-Quesada-Herrera, 2026/Extension/DhimanKadiriQuesadaHerrera2026/AlternatingHarmonic.lean",
+      "retained": true,
+      "source_sha256": "a2154b71d79bdd1c70e3e2263f4ad9887fd8150905a9143d9fc7a3ae3d34d21f"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/78 Dhiman-Kadiri-Quesada-Herrera, 2026/Extension/DhimanKadiriQuesadaHerrera2026/HarmonicDigamma.lean",
+      "retained": true,
+      "source_sha256": "85fca8517291023f8ef76a4697aaae195add95e14878c247e9966ba1ff3e4def"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/78 Dhiman-Kadiri-Quesada-Herrera, 2026/Extension/DhimanKadiriQuesadaHerrera2026/NonstationaryPhase.lean",
+      "retained": true,
+      "source_sha256": "f481fdfd3d4342b55a4cd0c8bb2c44c52f86215bc9cce5883da6b9a169a8c725"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/78 Dhiman-Kadiri-Quesada-Herrera, 2026/Extension/DhimanKadiriQuesadaHerrera2026/ExponentialTails.lean",
+      "retained": true,
+      "source_sha256": "e7c45ae39a3a96e2dfbf82f78d4f18bd1daf1a65ce649177cf64039cd1807dcf"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/78 Dhiman-Kadiri-Quesada-Herrera, 2026/Extension/DhimanKadiriQuesadaHerrera2026/FirstDerivativeTest.lean",
+      "retained": true,
+      "source_sha256": "c4f725926dd2b5c931be7085bf3ac7b1850f27224d91c8e6cac7702d656c79ca"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/78 Dhiman-Kadiri-Quesada-Herrera, 2026/Extension/DhimanKadiriQuesadaHerrera2026/DampedWeightedKernel.lean",
+      "retained": true,
+      "source_sha256": "abddb8a8afe5ea98dab20b562edf11ae4a9138984c22df822e76c2859cd3aff0"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/78 Dhiman-Kadiri-Quesada-Herrera, 2026/Extension/DhimanKadiriQuesadaHerrera2026/ChiGammaFactor.lean",
+      "retained": true,
+      "source_sha256": "aea1a02b7048fdca13d1f4beece8afcf01b13ba728318d0ce8efd09e4567c7d5"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/78 Dhiman-Kadiri-Quesada-Herrera, 2026/Extension/DhimanKadiriQuesadaHerrera2026/ChiReflection.lean",
+      "retained": true,
+      "source_sha256": "96ddb3f3d6e18cd1e7c6a106bbe13855b9b1ac12f4deddd8464a76938f606677"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/78 Dhiman-Kadiri-Quesada-Herrera, 2026/Extension/DhimanKadiriQuesadaHerrera2026/UpperIntegralEstimate.lean",
+      "retained": true,
+      "source_sha256": "21b5c378b808137cc08e59992cc199d2e19f36f4222ab24b57ed8114bcb8d0c0"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/78 Dhiman-Kadiri-Quesada-Herrera, 2026/Extension/DhimanKadiriQuesadaHerrera2026/MonotoneAmplitude.lean",
+      "retained": true,
+      "source_sha256": "b2fcc3fd9f74f134d23d433c645c14d603a2ed71f3fb1f06470a474f2b589065"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/78 Dhiman-Kadiri-Quesada-Herrera, 2026/Extension/DhimanKadiriQuesadaHerrera2026/SecondTailSharp.lean",
+      "retained": true,
+      "source_sha256": "03579c7f91f9d94eae5c6646874d10abd122af4a574f2e4e9bd22a3c68b7ba54"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/78 Dhiman-Kadiri-Quesada-Herrera, 2026/Extension/DhimanKadiriQuesadaHerrera2026/SecondEndpoints.lean",
+      "retained": true,
+      "source_sha256": "d6d5a31c80a25aceda685eb4fee5ed684c4f11667f4852810bd87377d250a6be"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/78 Dhiman-Kadiri-Quesada-Herrera, 2026/Extension/DhimanKadiriQuesadaHerrera2026/SecondCoeffBounds.lean",
+      "retained": true,
+      "source_sha256": "83705341a0f1e5d4b753da6cafe96ee93c6cc9412883a03a4e92bbb94ec8a261"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/78 Dhiman-Kadiri-Quesada-Herrera, 2026/Extension/DhimanKadiriQuesadaHerrera2026/PartIISignReview.lean",
+      "retained": true,
+      "source_sha256": "4868735258817ba125469d3f59b7406503fffc4cbb1e2ce71409e880194526de"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/78 Dhiman-Kadiri-Quesada-Herrera, 2026/Extension/DhimanKadiriQuesadaHerrera2026/SecondCoefficients.lean",
+      "retained": true,
+      "source_sha256": "995496c545c4a2d51b1712a12f3ea6be05f8e4e480e3e48c0edf531c63d16409"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/78 Dhiman-Kadiri-Quesada-Herrera, 2026/Extension/DhimanKadiriQuesadaHerrera2026/AFESecondModes.lean",
+      "retained": true,
+      "source_sha256": "f1539fdb2007a56973a5be14d8a54ec1fd4bf13468c9c8a39bea003d2f18e9de"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/78 Dhiman-Kadiri-Quesada-Herrera, 2026/Extension/DhimanKadiriQuesadaHerrera2026/AFESecondWeights.lean",
+      "retained": true,
+      "source_sha256": "776fc2a0506e25bd015f267ca180d451504e4a7bd20d90c31441c4d274a6ba5d"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/78 Dhiman-Kadiri-Quesada-Herrera, 2026/Extension/DhimanKadiriQuesadaHerrera2026/UpperModeTails.lean",
+      "retained": true,
+      "source_sha256": "9501be77f5a5458af3de54efaa4d8402e3729ebb5168caa7e8885645d047e2a6"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/78 Dhiman-Kadiri-Quesada-Herrera, 2026/Extension/DhimanKadiriQuesadaHerrera2026/SecondModeTails.lean",
+      "retained": true,
+      "source_sha256": "556a808514b7e1c6426021157e06826440a99c90a788664311a8f5355d9bc277"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/78 Dhiman-Kadiri-Quesada-Herrera, 2026/Extension/DhimanKadiriQuesadaHerrera2026/OscillatoryParts.lean",
+      "retained": true,
+      "source_sha256": "8ca72ceb0a81fbe60acb66abaeccd74cb9d1a0770cb0f80bed90a06aba234225"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/SpecialFunctions/Gamma/DigammaSeries.lean",
+      "retained": true,
+      "source_sha256": "32923ce2c186655e972ea123a42a953f2fb97f83e61c32f143a554e2d307befc"
+    }
+  ]
+}

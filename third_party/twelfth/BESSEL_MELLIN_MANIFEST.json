@@ -1,0 +1,37 @@
+{
+  "scope": "Selected public source provenance. Records identify inspected source files/ranges; they do not assert that entire upstream files were copied. See PROVENANCE.md and retained file-level notices.",
+  "upstream": {
+    "repository": "https://github.com/smccolm/Lean",
+    "revision": "6e2d10c6c2252ee1575bb7ef12dea12e2f1a3af1",
+    "license": "MIT-0; selected PNT-derived material is Apache-2.0"
+  },
+  "source_records": [
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/GuthMaynard/DFIBesselKernel.lean",
+      "sha256": "f64faaf8ac5a810cda871cc6ef46011015636ee92182efe570a52b2c20ddb7a2",
+      "imports": [
+        "GuthMaynard.DFIVoronoiDual",
+        "GuthMaynardExternal.PNT.ZetaAppendix",
+        "Mathlib.Analysis.SpecialFunctions.Gaussian.GaussianIntegral",
+        "Mathlib.Analysis.SpecialFunctions.Trigonometric.Bounds",
+        "Mathlib.Analysis.SpecialFunctions.Trigonometric.Series"
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/GuthMaynard/DFIBesselMellin.lean",
+      "sha256": "cc093cb8e335d72058b47208bd481997ff241712e775ed19336f6cb2dc90641d",
+      "imports": [
+        "GuthMaynard.DFIBesselKernel",
+        "Mathlib.Analysis.SpecialFunctions.Gamma.Beta",
+        "Mathlib.Analysis.SpecialFunctions.Artanh"
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/GuthMaynard/DFIVoronoiDual.lean",
+      "sha256": "5e38f8388adbbc7345089d097dcd883cb7044871851c893ee0dc18bbfa710f2e",
+      "imports": [
+        "GuthMaynard.DFIPeriodicBounds"
+      ]
+    }
+  ]
+}

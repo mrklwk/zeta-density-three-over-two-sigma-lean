@@ -1,0 +1,18 @@
+{
+  "scope": "Selected public source provenance. Records identify inspected source files/ranges; they do not assert that entire upstream files were copied. See PROVENANCE.md and retained file-level notices.",
+  "upstream": {
+    "repository": "https://github.com/smccolm/Lean",
+    "revision": "6e2d10c6c2252ee1575bb7ef12dea12e2f1a3af1",
+    "license": "MIT-0; selected PNT-derived material is Apache-2.0"
+  },
+  "source_records": [
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/PointValueHighMoment.lean",
+      "sha256": "dbc4e41d8a7fd4c2b574f6fdb5386f24ebb4052addf64b3f50fe9b7580210a9d"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/PointValueLowMoment.lean",
+      "sha256": "179e029680d98680e00548385f9ae21a15456cc7805d8875f3c95171130d9cf2"
+    }
+  ]
+}

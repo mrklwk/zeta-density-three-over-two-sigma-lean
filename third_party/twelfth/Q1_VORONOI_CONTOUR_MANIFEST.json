@@ -1,0 +1,36 @@
+{
+  "scope": "Selected public source provenance. Records identify inspected source files/ranges; they do not assert that entire upstream files were copied. See PROVENANCE.md and retained file-level notices.",
+  "upstream": {
+    "repository": "https://github.com/smccolm/Lean",
+    "revision": "6e2d10c6c2252ee1575bb7ef12dea12e2f1a3af1",
+    "license": "MIT-0; selected PNT-derived material is Apache-2.0"
+  },
+  "source_records": [
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/GuthMaynard/DFIPeriodicBounds.lean",
+      "sha256": "577030a1f0e7bf00b3fba12df74939bfc65e664226536793ca6850f2ff21c8ad",
+      "imports": [
+        "GuthMaynard.DFIProposition1",
+        "GuthMaynard.GammaVerticalDecay",
+        "Mathlib.Analysis.Complex.PhragmenLindelof"
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/GuthMaynard/DFIProposition1.lean",
+      "sha256": "841c8ea474b358be0d5b88be0c629087bfd7f1efb946c5b761e804c1c68c1670",
+      "imports": [
+        "Mathlib.NumberTheory.Harmonic.GammaDeriv",
+        "Mathlib.NumberTheory.Harmonic.ZetaAsymp",
+        "Mathlib.Analysis.SpecialFunctions.Gamma.Beta",
+        "GuthMaynard.DivisorVoronoi"
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/PointMeanMellinShift.lean",
+      "sha256": "e3a6a0e76d51b375d9c503a552310d227c1fdd078ab0fbb0d6e79443d1736a36",
+      "imports": [
+        "TaoTrudgianYang2025.PointMeanMellinVertical"
+      ]
+    }
+  ]
+}

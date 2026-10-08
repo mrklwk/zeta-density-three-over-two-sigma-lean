@@ -1,0 +1,46 @@
+{
+  "scope": "Selected public source provenance. Records identify inspected source files/ranges; they do not assert that entire upstream files were copied. See PROVENANCE.md and retained file-level notices.",
+  "upstream": {
+    "repository": "https://github.com/smccolm/Lean",
+    "revision": "6e2d10c6c2252ee1575bb7ef12dea12e2f1a3af1",
+    "license": "MIT-0; selected PNT-derived material is Apache-2.0"
+  },
+  "source_records": [
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/AtkinsonFrequencyTail.lean",
+      "end_line": 100,
+      "start_line": 17,
+      "sha256": "dd4fc865c6a2b244b033aef84a691d75b59a35c0308a6af6c9efd1c49a51e8aa"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/AtkinsonCarrierBounds.lean",
+      "end_line": 37,
+      "start_line": 18,
+      "sha256": "6232f1b85068b2cccc79dcab4bbbd6cfcc8d2e76e792342912a144f08d5484e2"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/AtkinsonCarrierAlgebra.lean",
+      "end_line": 86,
+      "start_line": 24,
+      "sha256": "636771de7eacc89b35f492885f3e74bb811dcb4b34672db2ce081f49eac3018c"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/AtkinsonCarrierIntegrals.lean",
+      "end_line": 107,
+      "start_line": 18,
+      "sha256": "c1f4a97c4237f5f8c48aafe27532a1241a6d29950952593d3c12f7e758479fe8"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/AtkinsonCorrectionBounds.lean",
+      "end_line": 128,
+      "start_line": 19,
+      "sha256": "ef1a6cfa5d9c7dba358975999eb15c9f42275f1b65bf6b0cd7dbbd504b8797d1"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/AtkinsonLeadingSeries.lean",
+      "end_line": 69,
+      "start_line": 28,
+      "sha256": "62c460e55cdf3dc40f5933192a7d8cfc8beecefa5248b4f5904a9c1c87fc68c0"
+    }
+  ]
+}

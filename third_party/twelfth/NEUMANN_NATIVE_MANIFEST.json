@@ -1,0 +1,93 @@
+{
+  "scope": "Selected public source provenance. Records identify inspected source files/ranges; they do not assert that entire upstream files were copied. See PROVENANCE.md and retained file-level notices.",
+  "upstream": {
+    "repository": "https://github.com/smccolm/Lean",
+    "revision": "6e2d10c6c2252ee1575bb7ef12dea12e2f1a3af1",
+    "license": "MIT-0; selected PNT-derived material is Apache-2.0"
+  },
+  "source_records": [
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/GuthMaynard/DFIBesselKernel.lean",
+      "sha256": "f64faaf8ac5a810cda871cc6ef46011015636ee92182efe570a52b2c20ddb7a2",
+      "imports": [
+        "GuthMaynard.DFIVoronoiDual",
+        "GuthMaynardExternal.PNT.ZetaAppendix",
+        "Mathlib.Analysis.SpecialFunctions.Gaussian.GaussianIntegral",
+        "Mathlib.Analysis.SpecialFunctions.Trigonometric.Bounds",
+        "Mathlib.Analysis.SpecialFunctions.Trigonometric.Series"
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/NeumannContourKernel.lean",
+      "sha256": "9848bec1d0dda5cf2ad25d00964158347d376b68183e1704e213c65b6dfc2233",
+      "imports": [
+        "TaoTrudgianYang2025.ZetaAtkinsonMinusSource",
+        "Mathlib.Analysis.Complex.CauchyIntegral"
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/NeumannContourShift.lean",
+      "sha256": "55e04d69c5443eecd8ce0e2b8d49f005bef1f62e9589bdd63bcb825e0a842693",
+      "imports": [
+        "TaoTrudgianYang2025.NeumannContourKernel"
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/NeumannSchlafliEntry.lean",
+      "sha256": "87a340e9d74240370081745ab9bfd6c72d15a3db242119d647f1f675735c6c31",
+      "imports": [
+        "TaoTrudgianYang2025.NeumannContourShift"
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/NeumannLaplaceRepresentation.lean",
+      "sha256": "e7abc3129398e537c08cae9fa4e2a19f93b1902dd9fb5d4f25ccb4b7f0d4753c",
+      "imports": [
+        "TaoTrudgianYang2025.NeumannSchlafliEntry"
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/NeumannLaplaceAmplitude.lean",
+      "sha256": "e42e365c6e2f9b486413eca6e97e7b88ff3d34448e15d9f1e88152b71abbef1c",
+      "imports": [
+        "TaoTrudgianYang2025.NeumannLaplaceRepresentation",
+        "Mathlib.Analysis.RCLike.Sqrt"
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/NeumannRayFactorization.lean",
+      "sha256": "ab6b8d0cba070218651417a32226fd4ac801e721f3c5bfe234ecb0c2fbc7413e",
+      "imports": [
+        "TaoTrudgianYang2025.NeumannLaplaceAmplitude"
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/NeumannLaplaceMoments.lean",
+      "sha256": "056872ec0ea447102c4506f262f7597047cc5b433e11a9e63df194d47ba6d31f",
+      "imports": [
+        "TaoTrudgianYang2025.NeumannRayFactorization"
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/NeumannLaplaceRemainder.lean",
+      "sha256": "d0c66a7a301c7601cf6e22b8d22d85f2e4684c1e4fec7c328ee72ca426dcef73",
+      "imports": [
+        "TaoTrudgianYang2025.NeumannLaplaceMoments"
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/NeumannTwoTermExpansion.lean",
+      "sha256": "057540a999af72619fa4bd4ac6e84fc76fc4027574c0e5c239128c532fbd2ea4",
+      "imports": [
+        "TaoTrudgianYang2025.NeumannLaplaceRemainder"
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/NeumannSourceBounds.lean",
+      "sha256": "4eb1fef290754504060ca786da9cd6010527b0545c9a7516fd0d6ad658ae8387",
+      "imports": [
+        "TaoTrudgianYang2025.NeumannTwoTermExpansion"
+      ]
+    }
+  ]
+}

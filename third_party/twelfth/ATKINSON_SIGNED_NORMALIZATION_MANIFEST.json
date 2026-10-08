@@ -1,0 +1,40 @@
+{
+  "scope": "Selected public source provenance. Records identify inspected source files/ranges; they do not assert that entire upstream files were copied. See PROVENANCE.md and retained file-level notices.",
+  "upstream": {
+    "repository": "https://github.com/smccolm/Lean",
+    "revision": "6e2d10c6c2252ee1575bb7ef12dea12e2f1a3af1",
+    "license": "MIT-0; selected PNT-derived material is Apache-2.0"
+  },
+  "source_records": [
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/AtkinsonSaddleGaussian.lean",
+      "first_line": 16,
+      "last_line": 20,
+      "sha256": "a357b6f2506c6589d580f8d4693e2cf063a4ab00dcb2413fed66b728f8fefca2"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/AtkinsonSaddleGaussian.lean",
+      "first_line": 25,
+      "last_line": 50,
+      "sha256": "a357b6f2506c6589d580f8d4693e2cf063a4ab00dcb2413fed66b728f8fefca2"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/AtkinsonSignedStationaryMain.lean",
+      "first_line": 17,
+      "last_line": 44,
+      "sha256": "dec5fe0aa777190d41a720942b79cbb7e5862a5f76de319b6461c5a32647863f"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/AtkinsonEvaluatedPhases.lean",
+      "first_line": 16,
+      "last_line": 72,
+      "sha256": "973d0c638b821972884b89f446b6f462759e38c7c16d65560ec005e6f417f132"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/AtkinsonMainNormalization.lean",
+      "first_line": 43,
+      "last_line": 117,
+      "sha256": "d4d4da351dd4fcf04b12b58214daf6de33a3dfe1534c708061936479d4f19d51"
+    }
+  ]
+}

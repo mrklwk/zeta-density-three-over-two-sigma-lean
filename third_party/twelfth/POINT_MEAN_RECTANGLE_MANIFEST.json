@@ -1,0 +1,130 @@
+{
+  "scope": "Selected public source provenance. Records identify inspected source files/ranges; they do not assert that entire upstream files were copied. See PROVENANCE.md and retained file-level notices.",
+  "upstream": {
+    "repository": "https://github.com/smccolm/Lean",
+    "revision": "6e2d10c6c2252ee1575bb7ef12dea12e2f1a3af1",
+    "license": "MIT-0; selected PNT-derived material is Apache-2.0"
+  },
+  "source_records": [
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/PointMeanMovingPole.lean",
+      "sha256": "15277cba754036d26b03988b6fca54e7fc007942b57c95ec2ceed8282f267807",
+      "imports": [
+        "import TaoTrudgianYang2025.PointMeanDoublePole",
+        "import TaoTrudgianYang2025.PointMeanDivisorMellin",
+        "import GuthMaynard.HughesYoungDFIProfile",
+        "import GuthMaynard.HughesYoungShiftRegularization"
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/PointMeanGammaPole.lean",
+      "sha256": "94e03cafe92ef29dfbdb0d69c2809c34f57225aecaf7f1ee3d85db6a97f17ec5",
+      "imports": [
+        "import TaoTrudgianYang2025.PointMeanMovingPole"
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/PointMeanLemmaThreeContour.lean",
+      "sha256": "71125048769f4fade301f74d1e76541f560d687582d95a2e22ffce0ceef9b857",
+      "imports": [
+        "import TaoTrudgianYang2025.PointMeanReflection",
+        "import TaoTrudgianYang2025.PointMeanLemmaThreeStatement"
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/PointMeanGammaKernel.lean",
+      "sha256": "65058a5867db648f949dd82e0934a7e89049558f81b709a0b59272389362c143",
+      "imports": [
+        "import TaoTrudgianYang2025.PointMeanGammaDecay"
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/PointMeanGammaConvolution.lean",
+      "sha256": "2b9e5c2b76b9c412cb3f26b5911b432700db827b33c71fa598323db90e06591c",
+      "imports": [
+        "import TaoTrudgianYang2025.PointMeanGammaKernel",
+        "import Mathlib.Analysis.SpecialFunctions.ImproperIntegrals"
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/PointMeanLemmaThreeEdges.lean",
+      "sha256": "f6c0cceccf51a28062ab8156aecfbfb610c0375f1fae9a279951c151000e5e83",
+      "imports": [
+        "import TaoTrudgianYang2025.PointMeanLemmaThreeContour",
+        "import TaoTrudgianYang2025.PointMeanLemmaThreeDouble",
+        "import TaoTrudgianYang2025.PointMeanMellinHorizontal",
+        "import Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics"
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/PointMeanDoublePole.lean",
+      "sha256": "3cfeeeddfad45c87067935bc38d4f1a0972b4885e1bc83e6ac5f7203db02a141",
+      "imports": [
+        "import GuthMaynard.DivisorVoronoi"
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/PointMeanDivisorMellin.lean",
+      "sha256": "4ce1727611928e5e3a709bd5175601db5891cc75e3523a126a3d69fc04d3604f",
+      "imports": [
+        "import TaoTrudgianYang2025.PointMeanGammaKernel",
+        "import TaoTrudgianYang2025.PointMeanMellinExp",
+        "import GuthMaynard.SmoothZetaAFE"
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/PointMeanMellinVertical.lean",
+      "sha256": "6594f0116410ae1054b8196a127aa26d5db1c3f5ced17f1511b40dbbb7eb031c",
+      "imports": [
+        "import TaoTrudgianYang2025.PointMeanMellinHorizontal",
+        "import Mathlib.Analysis.SpecialFunctions.Gaussian.GaussianIntegral"
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/PointMeanMellinShift.lean",
+      "sha256": "e3a6a0e76d51b375d9c503a552310d227c1fdd078ab0fbb0d6e79443d1736a36",
+      "imports": [
+        "import TaoTrudgianYang2025.PointMeanMellinVertical"
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/PointMeanMellinBounds.lean",
+      "sha256": "a473efb415cc7b0f40feb12a201a55408a864b9686e5bf5d5b20364bf44d2e0b",
+      "imports": [
+        "import TaoTrudgianYang2025.PointMeanMellinShift"
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/PointMeanOffCriticalStrong.lean",
+      "sha256": "724254846a479ef19c9bc1ea8d275bff27930f94252b49819f3dfa68d85a77da",
+      "imports": [
+        "import TaoTrudgianYang2025.PointMeanReflection",
+        "import TaoTrudgianYang2025.PointMeanGammaConvolution"
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/PointMeanReflection.lean",
+      "sha256": "f6c572dd7b8025aab68e17c7e181fce41b5bcebfe27f1cf5bd5d909746143de8",
+      "imports": [
+        "import TaoTrudgianYang2025.PointMeanOffCritical",
+        "import TaoTrudgianYang2025.PointMeanGammaShift",
+        "import PrimeNumberTheoremAnd.ZetaConj",
+        "import GuthMaynard.HughesYoungShiftRegularization"
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/PointMeanLemmaThreeDouble.lean",
+      "sha256": "27c28faba581ebdac0c4859c54baee7eb64004c4dc6f956418affc61947a48a3",
+      "imports": [
+        "import TaoTrudgianYang2025.PointMeanOffCriticalStrong"
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/PointMeanLemmaThreeTail.lean",
+      "sha256": "5071e5aec148bc7092affeed3201baf30ed298b3d2595a881329b86bc150e061",
+      "imports": [
+        "import TaoTrudgianYang2025.PointMeanLemmaThreeEdges"
+      ]
+    }
+  ]
+}

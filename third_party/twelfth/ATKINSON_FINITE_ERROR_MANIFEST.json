@@ -1,0 +1,142 @@
+{
+  "scope": "Selected public source provenance. Records identify inspected source files/ranges; they do not assert that entire upstream files were copied. See PROVENANCE.md and retained file-level notices.",
+  "upstream": {
+    "repository": "https://github.com/smccolm/Lean",
+    "revision": "6e2d10c6c2252ee1575bb7ef12dea12e2f1a3af1",
+    "license": "MIT-0; selected PNT-derived material is Apache-2.0"
+  },
+  "source_records": [
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/AtkinsonLeadingSeries.lean",
+      "module": "TaoTrudgianYang2025.AtkinsonLeadingSeries",
+      "sha256": "62c460e55cdf3dc40f5933192a7d8cfc8beecefa5248b4f5904a9c1c87fc68c0",
+      "imports": [
+        "TaoTrudgianYang2025.AtkinsonCorrectionBounds"
+      ],
+      "selected_declarations": [
+        {
+          "name": "atkinsonLeadingIntegral",
+          "first_line": 18
+        },
+        {
+          "name": "atkinsonLeadingTerm",
+          "first_line": 23
+        },
+        {
+          "name": "atkinsonLeadingSum",
+          "first_line": 26
+        }
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/AtkinsonLeadingTruncation.lean",
+      "module": "TaoTrudgianYang2025.AtkinsonLeadingTruncation",
+      "sha256": "e73bf1bad9479958bc6ef6d8fd10a6aa2c2e57ca4d2097b466f7066a7651e918",
+      "imports": [
+        "TaoTrudgianYang2025.AtkinsonLeadingMajorant"
+      ],
+      "selected_declarations": [
+        {
+          "name": "atkinsonLeadingFiniteSum",
+          "first_line": 18
+        }
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/AtkinsonCarrierBounds.lean",
+      "module": "TaoTrudgianYang2025.AtkinsonCarrierBounds",
+      "sha256": "6232f1b85068b2cccc79dcab4bbbd6cfcc8d2e76e792342912a144f08d5484e2",
+      "imports": [
+        "TaoTrudgianYang2025.AtkinsonCarrierIntegrals"
+      ],
+      "selected_declarations": [
+        {
+          "name": "atkinsonBesselScale_nonneg",
+          "first_line": 37
+        }
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/DivisorQuarterPrefix.lean",
+      "module": "TaoTrudgianYang2025.DivisorQuarterPrefix",
+      "sha256": "1c747b1357fba3ac227797525ec415f5ee39a9088378e530f009543a95bae7e8",
+      "imports": [
+        "TaoTrudgianYang2025.ZetaNeumannSeries"
+      ],
+      "selected_declarations": [
+        {
+          "name": "norm_divisorDirichletTerm_quarter_le_prefix",
+          "first_line": 18
+        },
+        {
+          "name": "exists_sum_norm_divisorDirichletTerm_quarter_le",
+          "first_line": 41
+        }
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/AtkinsonStationarySeries.lean",
+      "module": "TaoTrudgianYang2025.AtkinsonStationarySeries",
+      "sha256": "e65bc0e39532ed2d76468506cbeaeaf67bea7864016410f664aad674bce3cb30",
+      "imports": [
+        "TaoTrudgianYang2025.AtkinsonFourthRootRadius",
+        "TaoTrudgianYang2025.AtkinsonSourceCutoff",
+        "TaoTrudgianYang2025.DivisorQuarterPrefix"
+      ],
+      "selected_declarations": [
+        {
+          "name": "exists_norm_atkinsonLeadingTerm_sub_stationary_le",
+          "first_line": 61
+        },
+        {
+          "name": "exists_norm_atkinsonLeadingFiniteSum_sub_stationary_mass_le",
+          "first_line": 116
+        },
+        {
+          "name": "exists_norm_atkinsonLeadingFiniteSum_sub_stationary_le",
+          "first_line": 136
+        }
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/AtkinsonStationarySumScale.lean",
+      "module": "TaoTrudgianYang2025.AtkinsonStationarySumScale",
+      "sha256": "ce23e08bff62c3134b98902431703e2f4e07f32f8e85d08d28365fc63db2cd12",
+      "imports": [
+        "TaoTrudgianYang2025.AtkinsonStationarySeries"
+      ],
+      "selected_declarations": [
+        {
+          "name": "atkinsonSourceCutoff_le_natural",
+          "first_line": 17
+        },
+        {
+          "name": "atkinsonStationary_scale_identity",
+          "first_line": 33
+        },
+        {
+          "name": "atkinsonStationary_cutoff_scale_le",
+          "first_line": 52
+        }
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/AtkinsonStationarySumError.lean",
+      "module": "TaoTrudgianYang2025.AtkinsonStationarySumError",
+      "sha256": "9d19abe38dafe2c8d63291a56bc425d777fce4da1665d6d2e17c171713c98c33",
+      "imports": [
+        "TaoTrudgianYang2025.AtkinsonStationarySumScale"
+      ],
+      "selected_declarations": [
+        {
+          "name": "exists_atkinsonStationary_finite_log_error",
+          "first_line": 19
+        },
+        {
+          "name": "exists_atkinsonStationary_finite_power_error",
+          "first_line": 56
+        }
+      ]
+    }
+  ]
+}

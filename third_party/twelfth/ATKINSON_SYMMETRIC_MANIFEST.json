@@ -1,0 +1,166 @@
+{
+  "scope": "Selected public source provenance. Records identify inspected source files/ranges; they do not assert that entire upstream files were copied. See PROVENANCE.md and retained file-level notices.",
+  "upstream": {
+    "repository": "https://github.com/smccolm/Lean",
+    "revision": "6e2d10c6c2252ee1575bb7ef12dea12e2f1a3af1",
+    "license": "MIT-0; selected PNT-derived material is Apache-2.0"
+  },
+  "source_records": [
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/StationaryOddRemainder.lean",
+      "module": "TaoTrudgianYang2025.StationaryOddRemainder",
+      "sha256": "915617a36fdd87843c27d591f6e1a6bf984871095bf02517f7cb787db1a76882",
+      "imports": [
+        "TaoTrudgianYang2025.AtkinsonLocalStationary"
+      ],
+      "selected_declarations": [
+        {
+          "name": "IntervalC2Bound.norm_deriv_sub_le",
+          "first_line": 18
+        },
+        {
+          "name": "IntervalC2Bound.norm_sub_linear_le",
+          "first_line": 28
+        },
+        {
+          "name": "norm_exp_real_phase_sub_linear_le",
+          "first_line": 61
+        },
+        {
+          "name": "abs_log_one_add_sub_cubic_le",
+          "first_line": 76
+        },
+        {
+          "name": "atkinsonRootCubicCorrection",
+          "first_line": 89
+        },
+        {
+          "name": "abs_atkinsonRootPhase_sub_cubic_le",
+          "first_line": 93
+        },
+        {
+          "name": "norm_atkinsonRootKernel_sub_cubic_le",
+          "first_line": 122
+        }
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/AtkinsonSymmetricStationary.lean",
+      "module": "TaoTrudgianYang2025.AtkinsonSymmetricStationary",
+      "sha256": "64cf31ede3144d452673f2074dc66b9e8dbe4169ec208f7cf210f0938148639d",
+      "imports": [
+        "TaoTrudgianYang2025.StationaryOddRemainder"
+      ],
+      "selected_declarations": [
+        {
+          "name": "atkinsonRootQuadraticKernel_reflect",
+          "first_line": 17
+        },
+        {
+          "name": "integral_atkinsonRootQuadratic_odd",
+          "first_line": 25
+        },
+        {
+          "name": "abs_atkinsonRootCubicCorrection_le",
+          "first_line": 45
+        },
+        {
+          "name": "IntervalC2Bound.atkinsonLocalSymmetric",
+          "first_line": 59
+        }
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/AtkinsonSymmetricReduction.lean",
+      "module": "TaoTrudgianYang2025.AtkinsonSymmetricReduction",
+      "sha256": "b01ac5945a80bce2b125e961e778ed74924bbd2c2af46f82fc399486a5cc0304",
+      "imports": [
+        "TaoTrudgianYang2025.AtkinsonSymmetricStationary",
+        "TaoTrudgianYang2025.AtkinsonStationaryMain"
+      ],
+      "selected_declarations": [
+        {
+          "name": "atkinsonSymmetricError",
+          "first_line": 18
+        },
+        {
+          "name": "atkinsonSymmetricError_tail_le",
+          "first_line": 23
+        },
+        {
+          "name": "IntervalC2Bound.atkinsonSymmetricApproximation",
+          "first_line": 34
+        },
+        {
+          "name": "exists_atkinsonPowerIntegral_finite_symmetric_approximation",
+          "first_line": 52
+        },
+        {
+          "name": "exists_atkinsonPowerIntegral_symmetric_approximation",
+          "first_line": 78
+        }
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/AtkinsonSymmetricBalance.lean",
+      "module": "TaoTrudgianYang2025.AtkinsonSymmetricBalance",
+      "sha256": "f3410a3dd745a318447bb8805733b1787657c929f5c0546d6f5f8658337b8e38",
+      "imports": [
+        "TaoTrudgianYang2025.AtkinsonSymmetricReduction",
+        "TaoTrudgianYang2025.AtkinsonStationaryPhysical"
+      ],
+      "selected_declarations": [
+        {
+          "name": "atkinsonSymmetricError_le_physical",
+          "first_line": 18
+        },
+        {
+          "name": "atkinsonSymmetric_error_le_of_power_balance",
+          "first_line": 59
+        },
+        {
+          "name": "exists_atkinsonPowerIntegral_symmetric_balance",
+          "first_line": 90
+        }
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/AtkinsonFourthRootRadius.lean",
+      "module": "TaoTrudgianYang2025.AtkinsonFourthRootRadius",
+      "sha256": "301460505655877899daaf84b29502d6c6fdf2b0c342574c5379872463aa6ca2",
+      "imports": [
+        "TaoTrudgianYang2025.AtkinsonSymmetricBalance"
+      ],
+      "selected_declarations": [
+        {
+          "name": "atkinsonSymmetricRadiusScale",
+          "first_line": 17
+        },
+        {
+          "name": "atkinsonSymmetricRadiusScale_pos",
+          "first_line": 20
+        },
+        {
+          "name": "atkinsonSymmetricRadiusScale_sq",
+          "first_line": 25
+        },
+        {
+          "name": "atkinsonSymmetricRadiusScale_fourth",
+          "first_line": 32
+        },
+        {
+          "name": "atkinsonSymmetricRadiusScale_balance",
+          "first_line": 38
+        },
+        {
+          "name": "exists_atkinsonPowerIntegral_fourthRoot_width",
+          "first_line": 66
+        },
+        {
+          "name": "exists_atkinsonPowerIntegral_fourthRoot_pair",
+          "first_line": 87
+        }
+      ]
+    }
+  ]
+}

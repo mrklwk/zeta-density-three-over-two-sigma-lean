@@ -1,0 +1,112 @@
+{
+  "scope": "Selected public source provenance. Records identify inspected source files/ranges; they do not assert that entire upstream files were copied. See PROVENANCE.md and retained file-level notices.",
+  "upstream": {
+    "repository": "https://github.com/smccolm/Lean",
+    "revision": "2ace9e7c09a69fdcd1edae1ab6deb7cb3b4df1be",
+    "license": "MIT; inherited Apache-2.0 material retains separate notices"
+  },
+  "source_records": [
+    {
+      "path": "RiemannZeta/GuthMaynard/LargeValuesReflection.lean",
+      "sha256": "3c96973604d743355a072b82d2bc95adc1012ed4a67c11259d27be13ae819949",
+      "imports": [
+        "Mathlib.Analysis.SpecialFunctions.Integrals.Basic",
+        "Mathlib.MeasureTheory.Integral.IntervalIntegral.IntegrationByParts",
+        "RiemannZeta.GuthMaynard.LargeValuesPoisson"
+      ]
+    },
+    {
+      "path": "RiemannZeta/GuthMaynard/LargeValuesPoisson.lean",
+      "sha256": "ab6f7c045b52b954abca9f851c5b8298cd222f444396d3684934fd1f0fe5bc09",
+      "imports": [
+        "Mathlib.Analysis.Distribution.SchwartzSpace.Fourier",
+        "Mathlib.Analysis.Fourier.PoissonSummation",
+        "Mathlib.Analysis.SpecialFunctions.Log.Deriv",
+        "Mathlib.Analysis.MellinInversion",
+        "RiemannZeta.GuthMaynard.TraceDispersion"
+      ]
+    },
+    {
+      "path": "RiemannZeta/GuthMaynard/TraceDispersion.lean",
+      "sha256": "968b96c4b101619e1d37aa769384e56589866008c6a0f49c254bdf60dcf849fb",
+      "imports": [
+        "Mathlib.Algebra.Order.Chebyshev",
+        "RiemannZeta.GuthMaynard.LargeValuesMatrix"
+      ]
+    },
+    {
+      "path": "RiemannZeta/GuthMaynard/LargeValuesMatrix.lean",
+      "sha256": "2cce887dbb6dd9138dee1d694804d4e0e454b455a1b544ac6ca76e14eed94ebc",
+      "imports": [
+        "Mathlib.Analysis.Matrix.PosDef",
+        "Mathlib.Analysis.CStarAlgebra.Matrix",
+        "Mathlib.LinearAlgebra.Matrix.Hermitian",
+        "Mathlib.LinearAlgebra.Matrix.NonsingularInverse",
+        "RiemannZeta.GuthMaynard.LargeValuesDefinitions"
+      ]
+    },
+    {
+      "path": "RiemannZeta/GuthMaynard/LargeValuesDefinitions.lean",
+      "sha256": "7625020e9100f085be7da519d24b0ca5d0cf5c3f20a575a5fa482a0e69569c8c",
+      "imports": [
+        "Mathlib.Analysis.Calculus.ContDiff.Defs",
+        "Mathlib.Analysis.Calculus.ContDiff.FTaylorSeries",
+        "Mathlib.Analysis.SpecialFunctions.Pow.Complex",
+        "Mathlib.Data.Finset.Prod",
+        "Mathlib.Analysis.Normed.Group.Bounded",
+        "PrimeNumberTheoremAnd.SmoothExistence",
+        "RiemannZeta.GuthMaynard.DirichletPolynomial"
+      ]
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/SmoothExistence.lean",
+      "sha256": "e689045a2d7f92c71c68fda6aa69a89d4a8692187475ba432ed010f453110ea0",
+      "imports": [
+        "Architect",
+        "Batteries.Tactic.Lemma",
+        "Mathlib.Geometry.Manifold.PartitionOfUnity",
+        "Mathlib.Tactic.Bound",
+        "PrimeNumberTheoremAnd.Mathlib.Algebra.Notation.Support"
+      ]
+    },
+    {
+      "path": "RiemannZeta/GuthMaynard/DirichletPolynomial.lean",
+      "sha256": "91230036bfc450342381261f1e841e19e711a58e9a2ef6bef9dc4645eb6fabd7",
+      "imports": [
+        "Mathlib.Data.Complex.Basic",
+        "Mathlib.Analysis.SpecialFunctions.Pow.Complex",
+        "Mathlib.Analysis.SpecialFunctions.Pow.Real",
+        "Mathlib.Data.Finset.Interval",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Data.Real.Basic",
+        "RiemannZeta.FiniteDirichletPolynomial"
+      ]
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Algebra/Notation/Support.lean",
+      "sha256": "e688bf925c2130b291c536d3b93b72c20e41ae95d530c90915921d75a6f52504",
+      "imports": [
+        "Mathlib.Algebra.Notation.Support"
+      ]
+    },
+    {
+      "path": "RiemannZeta/FiniteDirichletPolynomial.lean",
+      "sha256": "20d54718a39b90a9ca435eaea77d7e466062f2303a6f68f585a578464fe8bfe0",
+      "imports": [
+        "Mathlib.NumberTheory.LSeries.RiemannZeta",
+        "Mathlib.Analysis.Complex.Basic",
+        "Mathlib.Analysis.SpecialFunctions.Pow.Complex",
+        "Mathlib.Algebra.BigOperators.Group.Finset.Basic",
+        "RiemannZeta.CompletedZetaSymmetry"
+      ]
+    },
+    {
+      "path": "RiemannZeta/CompletedZetaSymmetry.lean",
+      "sha256": "31a1aa9ee8062dd13c80671107dd361bc1587d0ce2a718f880b42278fa49a39a",
+      "imports": [
+        "Mathlib.NumberTheory.LSeries.RiemannZeta",
+        "Mathlib.Analysis.Complex.Basic"
+      ]
+    }
+  ]
+}

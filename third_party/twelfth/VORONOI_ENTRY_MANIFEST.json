@@ -1,0 +1,36 @@
+{
+  "scope": "Selected public source provenance. Records identify inspected source files/ranges; they do not assert that entire upstream files were copied. See PROVENANCE.md and retained file-level notices.",
+  "upstream": {
+    "repository": "https://github.com/smccolm/Lean",
+    "revision": "6e2d10c6c2252ee1575bb7ef12dea12e2f1a3af1",
+    "license": "MIT-0; selected PNT-derived material is Apache-2.0"
+  },
+  "source_records": [
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/GuthMaynard/DFIProposition1.lean",
+      "sha256": "841c8ea474b358be0d5b88be0c629087bfd7f1efb946c5b761e804c1c68c1670",
+      "imports": [
+        "Mathlib.NumberTheory.Harmonic.GammaDeriv",
+        "Mathlib.NumberTheory.Harmonic.ZetaAsymp",
+        "Mathlib.Analysis.SpecialFunctions.Gamma.Beta",
+        "GuthMaynard.DivisorVoronoi"
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/ZetaAtkinsonPhase.lean",
+      "sha256": "55280d83109e036dc5e3d54ca0f4a04e5c814876f8653926301951a50384f57a",
+      "imports": [
+        "TaoTrudgianYang2025.ZetaAtkinsonReducedSource"
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/GuthMaynard/DivisorVoronoi.lean",
+      "sha256": "6aeff9e01fba3aafd4827151ed0b7c250a2cb81c70a623f5cb73dc6e033af5bf",
+      "imports": [
+        "Mathlib.Analysis.MellinInversion",
+        "Mathlib.MeasureTheory.Integral.DominatedConvergence",
+        "GuthMaynard.Estermann"
+      ]
+    }
+  ]
+}

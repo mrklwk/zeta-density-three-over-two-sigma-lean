@@ -1,0 +1,61 @@
+{
+  "scope": "Selected public source provenance. Records identify inspected source files/ranges; they do not assert that entire upstream files were copied. See PROVENANCE.md and retained file-level notices.",
+  "upstream": {
+    "repository": "https://github.com/jconorgrogan/prime-minor-arcs-2-15",
+    "revision": "f369f267b4dcfebf010c8e7baa2c9602e2960eba",
+    "license": "Apache-2.0"
+  },
+  "source_records": [
+    {
+      "path": "Proof/GuthMaynardJIterationPoisson.lean",
+      "original_direct_imports": [
+        "GuthMaynardJIterationDeterministic",
+        "Mathlib.Analysis.Fourier.PoissonSummation",
+        "Mathlib.MeasureTheory.Measure.Haar.NormedSpace"
+      ],
+      "selected_line_ranges": [
+        [
+          29,
+          30
+        ],
+        [
+          46,
+          48
+        ],
+        [
+          193,
+          276
+        ]
+      ],
+      "sha256": "75a44adce93e0f7f524f90e950bf820e3daf5574df41c81cc082e4c101a18d71"
+    },
+    {
+      "path": "Proof/GuthMaynardReflectionMellin.lean",
+      "original_direct_imports": [
+        "Mathlib.Analysis.MellinInversion",
+        "GuthMaynardReflectionKernelVdC"
+      ],
+      "selected_line_ranges": [
+        [
+          21,
+          67
+        ]
+      ],
+      "sha256": "40cdd9a1a6b93bb286ead002793beaf48aaf563350d88033b0fcfd981340e676"
+    },
+    {
+      "path": "Proof/GuthMaynardMellinRapidDecay.lean",
+      "original_direct_imports": [
+        "GuthMaynardMellinTail",
+        "Mathlib.Analysis.Distribution.SchwartzSpace.Fourier"
+      ],
+      "selected_line_ranges": [
+        [
+          22,
+          130
+        ]
+      ],
+      "sha256": "7de6663e9e12014e83a390080c96d5d8dcca72557e24600cafccef9e8a347805"
+    }
+  ]
+}

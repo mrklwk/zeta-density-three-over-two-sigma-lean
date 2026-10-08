@@ -1,0 +1,85 @@
+{
+  "scope": "Selected public source provenance. Records identify inspected source files/ranges; they do not assert that entire upstream files were copied. See PROVENANCE.md and retained file-level notices.",
+  "upstream": {
+    "repository": "https://github.com/smccolm/Lean",
+    "revision": "2ace9e7c09a69fdcd1edae1ab6deb7cb3b4df1be",
+    "license": "MIT; inherited Apache-2.0 material retains separate notices"
+  },
+  "source_records": [
+    {
+      "path": "Riemann Zeta/RiemannZeta/GuthMaynard/ZetaBounds.lean",
+      "original_direct_imports": [
+        "Mathlib.NumberTheory.AbelSummation",
+        "Mathlib.NumberTheory.LSeries.RiemannZeta",
+        "Mathlib.NumberTheory.LSeries.Dirichlet",
+        "Mathlib.NumberTheory.LSeries.SumCoeff",
+        "Mathlib.Analysis.MellinTransform",
+        "Mathlib.Analysis.Complex.RemovableSingularity",
+        "Mathlib.Analysis.Complex.JensenFormula"
+      ],
+      "selected_line_ranges": [
+        [
+          16,
+          311
+        ]
+      ],
+      "sha256": "16025d55a44e0b7d0950f8c2e1941ba212b6a3f2eedafcd21b239ef7e151e94c"
+    },
+    {
+      "path": "Riemann Zeta/RiemannZeta/GuthMaynard/ZeroCount.lean",
+      "original_direct_imports": [
+        "Mathlib.NumberTheory.LSeries.ZetaZeros",
+        "Mathlib.Analysis.Complex.Basic",
+        "Mathlib.Data.Finset.Basic",
+        "Mathlib.Topology.Instances.Complex",
+        "Mathlib.Data.Real.Basic",
+        "Mathlib.Analysis.Analytic.Order",
+        "Mathlib.Analysis.Calculus.Deriv.Star",
+        "Mathlib.Analysis.Complex.CauchyIntegral",
+        "Mathlib.Analysis.Complex.JensenFormula",
+        "Mathlib.Analysis.Analytic.Uniqueness",
+        "Mathlib.NumberTheory.LSeries.Dirichlet",
+        "Mathlib.NumberTheory.LSeries.HurwitzZetaValues",
+        "Mathlib.Analysis.Real.Pi.Bounds",
+        "RiemannZeta.GuthMaynard.ZetaBounds"
+      ],
+      "selected_line_ranges": [
+        [
+          59,
+          106
+        ],
+        [
+          423,
+          476
+        ],
+        [
+          504,
+          573
+        ]
+      ],
+      "sha256": "c095df38f38491475de315400db4b98c29d8c42331a791a481ab7c19ff7debd1"
+    },
+    {
+      "path": "Riemann Zeta/RiemannZeta/GuthMaynard/ExtractSeparated.lean",
+      "original_direct_imports": [
+        "Mathlib.Data.Finset.Max",
+        "Mathlib.Data.Int.Interval",
+        "RiemannZeta.GuthMaynard.Pigeonhole",
+        "RiemannZeta.GuthMaynard.DirichletPolynomial",
+        "RiemannZeta.GuthMaynard.Separated",
+        "RiemannZeta.GuthMaynard.ZeroDetector"
+      ],
+      "selected_line_ranges": [
+        [
+          304,
+          438
+        ],
+        [
+          440,
+          503
+        ]
+      ],
+      "sha256": "5649f8ee31bcb91c42c17e576722880fad49ebd3c22437a9769144649ef5fcdf"
+    }
+  ]
+}

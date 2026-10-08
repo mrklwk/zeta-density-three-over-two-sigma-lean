@@ -1,0 +1,66 @@
+{
+  "scope": "Selected public source provenance. Records identify inspected source files/ranges; they do not assert that entire upstream files were copied. See PROVENANCE.md and retained file-level notices.",
+  "upstream": {
+    "repository": "https://github.com/smccolm/Lean",
+    "revision": "6e2d10c6c2252ee1575bb7ef12dea12e2f1a3af1",
+    "license": "MIT-0; selected PNT-derived material is Apache-2.0"
+  },
+  "source_records": [
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/74 Gafni-Tao, 2026/Dependencies/PrimeNumberTheoremAndClean/PrimeNumberTheoremAnd/Mathlib/Analysis/SpecialFunctions/Gamma/DigammaSeries.lean",
+      "first_line": 55,
+      "excluded_declarations": [
+        "sum_inv_natCast_add_one_real",
+        "norm_inv_add_one_sub_inv_le'",
+        "hasSum_sub_succ_of_tendsto_zero",
+        "tsum_one_div_natCast_add_add_one_sq_le"
+      ],
+      "last_line": 480,
+      "license": "Apache-2.0",
+      "copyright": "Copyright (c) 2026 Robby Sneiderman",
+      "source_sha256": "32923ce2c186655e972ea123a42a953f2fb97f83e61c32f143a554e2d307befc"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/SpecialFunctions/Gamma/DigammaSeries.lean",
+      "sha256": "32923ce2c186655e972ea123a42a953f2fb97f83e61c32f143a554e2d307befc"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/ZetaDigammaLog.lean",
+      "first_line": 1,
+      "last_line": 235,
+      "license": "MIT-0",
+      "copyright": "Copyright 2026 S. McColm",
+      "source_sha256": "b4ee082bbfac1d665be670a4b88eac3c2587e7ef552de1d298294cd2c9d8dc26"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/SpecialFunctions/Gamma/DigammaSeries.lean",
+      "sha256": "32923ce2c186655e972ea123a42a953f2fb97f83e61c32f143a554e2d307befc",
+      "imports": [
+        "Mathlib.Analysis.SpecialFunctions.Gamma.Digamma",
+        "Mathlib.Analysis.SpecialFunctions.Gamma.Beta",
+        "Mathlib.Analysis.SpecialFunctions.Complex.Log",
+        "Mathlib.NumberTheory.Harmonic.Defs",
+        "Mathlib.NumberTheory.Harmonic.EulerMascheroni",
+        "Mathlib.Analysis.Calculus.UniformLimitsDeriv",
+        "Mathlib.Analysis.Complex.LocallyUniformLimit",
+        "Mathlib.Analysis.Normed.Group.FunctionSeries",
+        "Mathlib.Analysis.PSeries",
+        "Mathlib.Analysis.SpecialFunctions.Complex.LogBounds",
+        "Mathlib.Analysis.SpecialFunctions.Complex.LogDeriv",
+        "Mathlib.Analysis.SpecialFunctions.ExpDeriv",
+        "Mathlib.NumberTheory.Harmonic.Bounds",
+        "Mathlib.Topology.Algebra.InfiniteSum.Real",
+        "Mathlib.Topology.Algebra.IsUniformGroup.Basic"
+      ]
+    }
+  ],
+  "vendor_hash_qualification": {
+    "source": "PrimeNumberTheoremAnd/Mathlib/Analysis/SpecialFunctions/Gamma/DigammaSeries.lean",
+    "copyright": "Copyright (c) 2026 Robby Sneiderman",
+    "license": "Apache-2.0",
+    "vendor_documented_PNT_revision": "4ecb950126c4290293c5662dfe0e884123171df5",
+    "actual_selected_source_sha256": "32923ce2c186655e972ea123a42a953f2fb97f83e61c32f143a554e2d307befc",
+    "vendor_manifest_recorded_sha256": "496eb57daedb46fe25b84da2ef885ed68786265a3337d3a739e0f30228f2970f",
+    "note": "The selected bytes differ from the vendor manifest hash. The recorded vendor revision is not an unqualified byte-identity assertion."
+  }
+}

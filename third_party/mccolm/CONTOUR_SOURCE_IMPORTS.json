@@ -1,0 +1,162 @@
+{
+  "scope": "Selected public source provenance. Records identify inspected source files/ranges; they do not assert that entire upstream files were copied. See PROVENANCE.md and retained file-level notices.",
+  "upstream": {
+    "repository": "https://github.com/smccolm/Lean",
+    "revision": "2ace9e7c09a69fdcd1edae1ab6deb7cb3b4df1be",
+    "license": "MIT; inherited Apache-2.0 material retains separate notices"
+  },
+  "source_records": [
+    {
+      "path": "Riemann Zeta/RiemannZeta/GuthMaynard/ClassicalDensity.lean",
+      "original_direct_imports": [
+        "Mathlib.Analysis.Analytic.Order",
+        "Mathlib.Analysis.SpecialFunctions.Complex.Analytic",
+        "Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics",
+        "Mathlib.NumberTheory.LSeries.Dirichlet",
+        "Mathlib.NumberTheory.LSeries.Linearity",
+        "Mathlib.NumberTheory.LSeries.ZetaZeros",
+        "RiemannZeta.GuthMaynard.DyadicTransfer",
+        "RiemannZeta.GuthMaynard.InghamBound",
+        "RiemannZeta.GuthMaynard.ZeroCount"
+      ],
+      "selected_line_ranges": [
+        [
+          57,
+          147
+        ],
+        [
+          168,
+          177
+        ]
+      ],
+      "sha256": "5ce14f3c1e4460fbd0cd7f68e2e08d7235de9d21f93752215633c7a512f7cd14"
+    },
+    {
+      "path": "Riemann Zeta/RiemannZeta/GuthMaynard/TypeIICoverage.lean",
+      "original_direct_imports": [
+        "RiemannZeta.GuthMaynard.ClassicalDensity",
+        "RiemannZeta.GuthMaynard.PolynomialPowers",
+        "RiemannZeta.GuthMaynard.TypeIIContour",
+        "RiemannZeta.External.PNT.ResidueCalcOnRectangles",
+        "Mathlib.Analysis.MellinInversion",
+        "Mathlib.NumberTheory.LSeries.MellinEqDirichlet"
+      ],
+      "selected_line_ranges": [
+        [
+          20,
+          58
+        ],
+        [
+          225,
+          228
+        ],
+        [
+          235,
+          282
+        ],
+        [
+          316,
+          636
+        ],
+        [
+          680,
+          905
+        ],
+        [
+          1114,
+          1177
+        ]
+      ],
+      "sha256": "401c56e1ce9b0c4994ef2a3c14b28aa3294a1d98f048cd6106a2a6693f8625b2"
+    },
+    {
+      "path": "Riemann Zeta/RiemannZeta/External/PNT/Rectangle.lean",
+      "original_direct_imports": [
+        "Mathlib",
+        "Mathlib.Analysis.Complex.Convex",
+        "Mathlib.Analysis.InnerProductSpace.Basic",
+        "Mathlib.Analysis.Normed.Order.Lattice",
+        "Mathlib.Order.Interval.Set.Monotone"
+      ],
+      "selected_line_ranges": [
+        [
+          31,
+          34
+        ],
+        [
+          74,
+          79
+        ],
+        [
+          84,
+          95
+        ],
+        [
+          134,
+          141
+        ],
+        [
+          154,
+          161
+        ],
+        [
+          179,
+          183
+        ],
+        [
+          200,
+          219
+        ],
+        [
+          244,
+          251
+        ]
+      ],
+      "sha256": "4feab59d87074d7705b0d2549a9b87347d6a34e396c0845892820f9dab98a963",
+      "license": "Apache-2.0 (PNT+ adaptation as declared in source header)"
+    },
+    {
+      "path": "Riemann Zeta/RiemannZeta/External/PNT/ResidueCalcOnRectangles.lean",
+      "original_direct_imports": [
+        "Mathlib",
+        "Mathlib.Analysis.Complex.CauchyIntegral",
+        "Mathlib.Analysis.Complex.Convex",
+        "Mathlib.Analysis.Complex.RemovableSingularity",
+        "Mathlib.Analysis.SpecialFunctions.Integrals.Basic",
+        "RiemannZeta.External.PNT.Rectangle"
+      ],
+      "selected_line_ranges": [
+        [
+          23,
+          37
+        ],
+        [
+          47,
+          55
+        ],
+        [
+          102,
+          104
+        ],
+        [
+          116,
+          136
+        ],
+        [
+          151,
+          195
+        ],
+        [
+          401,
+          520
+        ],
+        [
+          526,
+          556
+        ]
+      ],
+      "sha256": "b4b304e5284683294591498f2094f8bd63c66603d0af8416a0869a86c6fe7307",
+      "license": "Apache-2.0 (PNT+ adaptation as declared in source header)"
+    }
+  ]
+}

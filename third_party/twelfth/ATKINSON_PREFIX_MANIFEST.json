@@ -1,0 +1,712 @@
+{
+  "scope": "Selected public source provenance. Records identify inspected source files/ranges; they do not assert that entire upstream files were copied. See PROVENANCE.md and retained file-level notices.",
+  "upstream": {
+    "repository": "https://github.com/smccolm/Lean",
+    "revision": "6e2d10c6c2252ee1575bb7ef12dea12e2f1a3af1",
+    "license": "MIT-0; selected PNT-derived material is Apache-2.0"
+  },
+  "source_records": [
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/AtkinsonIndexPhase.lean",
+      "module": "TaoTrudgianYang2025.AtkinsonIndexPhase",
+      "sha256": "f10d5b666446fd1505c6b574ccca5af7d81455f7dd3ecc15cdb65378310a5f8b",
+      "selected_declarations": [
+        {
+          "name": "atkinsonIndexRealPhase",
+          "first_line": 25
+        },
+        {
+          "name": "atkinsonIndexRealRatio",
+          "first_line": 31
+        },
+        {
+          "name": "atkinsonIndexRealRoot",
+          "first_line": 35
+        },
+        {
+          "name": "atkinsonIndexRealNormalizedPhase",
+          "first_line": 39
+        },
+        {
+          "name": "atkinsonIndexRealPhase_natCast",
+          "first_line": 48
+        },
+        {
+          "name": "atkinsonIndexRealPhase_eq_normalized",
+          "first_line": 53
+        },
+        {
+          "name": "hasDerivAt_atkinsonIndexRealRatio",
+          "first_line": 99
+        },
+        {
+          "name": "hasDerivAt_atkinsonIndexRealRoot",
+          "first_line": 112
+        },
+        {
+          "name": "hasDerivAt_atkinsonIndexRealNormalizedPhase",
+          "first_line": 144
+        },
+        {
+          "name": "hasDerivAt_atkinsonIndexRealPhase",
+          "first_line": 232
+        }
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/AtkinsonIndexCurvature.lean",
+      "module": "TaoTrudgianYang2025.AtkinsonIndexCurvature",
+      "sha256": "f92d9e401a8fceca084794c9f5315f67fb990c67def5d217d88d773bd01c815d",
+      "selected_declarations": [
+        {
+          "name": "atkinsonIndexRealSlope",
+          "first_line": 21
+        },
+        {
+          "name": "atkinsonIndexRealCurvature",
+          "first_line": 25
+        },
+        {
+          "name": "atkinsonIndexRealSlope_pos",
+          "first_line": 29
+        },
+        {
+          "name": "hasDerivAt_atkinsonIndexRealSlope",
+          "first_line": 38
+        },
+        {
+          "name": "hasDerivAt_deriv_atkinsonIndexRealPhase",
+          "first_line": 63
+        },
+        {
+          "name": "atkinsonIndexPhaseDifference",
+          "first_line": 76
+        },
+        {
+          "name": "hasDerivAt_atkinsonIndexPhaseDifference",
+          "first_line": 80
+        },
+        {
+          "name": "hasDerivAt_atkinsonIndexPhaseDifferenceSlope",
+          "first_line": 90
+        },
+        {
+          "name": "atkinsonIndexRealCurvature_neg",
+          "first_line": 100
+        }
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/AtkinsonIndexHeight.lean",
+      "module": "TaoTrudgianYang2025.AtkinsonIndexHeight",
+      "sha256": "1b2cf9b9da92ffc37f42585421dd8aa9ed56baae3170d221e566c0ea8405c645",
+      "selected_declarations": [
+        {
+          "name": "atkinsonIndexCurvatureMagnitude",
+          "first_line": 24
+        },
+        {
+          "name": "atkinsonIndexCurvatureMagnitude_eq_neg",
+          "first_line": 28
+        },
+        {
+          "name": "atkinsonIndexCurvatureMagnitude_pos",
+          "first_line": 36
+        },
+        {
+          "name": "hasDerivAt_atkinsonIndexRealSlope_height",
+          "first_line": 44
+        },
+        {
+          "name": "hasDerivAt_atkinsonIndexCurvatureMagnitude",
+          "first_line": 62
+        },
+        {
+          "name": "atkinsonIndexCurvatureMagnitude_deriv_pos",
+          "first_line": 102
+        },
+        {
+          "name": "strictMonoOn_atkinsonIndexCurvatureMagnitude",
+          "first_line": 116
+        },
+        {
+          "name": "atkinsonIndexCurvatureDifference_neg",
+          "first_line": 130
+        },
+        {
+          "name": "exists_atkinsonIndexCurvatureDifference_eq",
+          "first_line": 142
+        }
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/AtkinsonIndexScales.lean",
+      "module": "TaoTrudgianYang2025.AtkinsonIndexScales",
+      "sha256": "c4406ed1778f7710c694b654a989b20a817f9915afde4e15a442b7bd22024dfe",
+      "selected_declarations": [
+        {
+          "name": "atkinsonIndexSlopeLower",
+          "first_line": 21
+        },
+        {
+          "name": "atkinsonIndexSlopeUpper",
+          "first_line": 25
+        },
+        {
+          "name": "atkinsonIndexCurvatureDerivativeLower",
+          "first_line": 29
+        },
+        {
+          "name": "atkinsonIndexCurvatureDerivativeUpper",
+          "first_line": 34
+        },
+        {
+          "name": "atkinsonIndexBoxCurvatureLower",
+          "first_line": 39
+        },
+        {
+          "name": "atkinsonIndexBoxCurvatureUpper",
+          "first_line": 43
+        },
+        {
+          "name": "atkinsonIndexSlopeLower_pos",
+          "first_line": 46
+        },
+        {
+          "name": "atkinsonIndexSlopeUpper_pos",
+          "first_line": 52
+        },
+        {
+          "name": "atkinsonIndexSlopeLower_le",
+          "first_line": 62
+        },
+        {
+          "name": "atkinsonIndexSlope_le_upper",
+          "first_line": 75
+        },
+        {
+          "name": "atkinsonIndexCurvatureDerivativeLower_pos",
+          "first_line": 90
+        },
+        {
+          "name": "atkinsonIndexCurvatureDerivativeUpper_pos",
+          "first_line": 98
+        },
+        {
+          "name": "atkinsonIndexSlopeUpper_anti",
+          "first_line": 106
+        },
+        {
+          "name": "atkinsonIndexSlopeLower_anti",
+          "first_line": 116
+        },
+        {
+          "name": "atkinsonIndexCurvatureDerivative_box_bounds",
+          "first_line": 126
+        },
+        {
+          "name": "atkinsonIndexCurvatureDerivative_bounds",
+          "first_line": 167
+        },
+        {
+          "name": "atkinsonIndexCurvatureDifference_bounds",
+          "first_line": 270
+        }
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/AtkinsonIndexBProcess.lean",
+      "module": "TaoTrudgianYang2025.AtkinsonIndexBProcess",
+      "sha256": "d1c81a05fa84cb44ee27824cd17f284b800dfb5326169ac5fdbcc64b579b01f5",
+      "selected_declarations": [
+        {
+          "name": "atkinsonIndexPositiveDifference",
+          "first_line": 25
+        },
+        {
+          "name": "hasDerivAt_atkinsonIndexPositiveDifference",
+          "first_line": 28
+        },
+        {
+          "name": "hasDerivAt_atkinsonIndexPositiveDifferenceSlope",
+          "first_line": 37
+        },
+        {
+          "name": "exists_atkinsonIndexPositiveDifference_secondDifference",
+          "first_line": 49
+        },
+        {
+          "name": "atkinsonIndexPositiveDifferenceNat",
+          "first_line": 82
+        },
+        {
+          "name": "atkinsonIndexPositiveDifference_natCast",
+          "first_line": 89
+        },
+        {
+          "name": "atkinsonIndexBProcessLambda",
+          "first_line": 99
+        },
+        {
+          "name": "atkinsonIndexBProcessLambdaUpper",
+          "first_line": 104
+        },
+        {
+          "name": "atkinsonIndexBProcessLambda_pos",
+          "first_line": 108
+        },
+        {
+          "name": "atkinsonIndexPositiveDifferenceNat_secondDifference_bounds",
+          "first_line": 122
+        },
+        {
+          "name": "atkinsonIndexPositiveDifference_B_process",
+          "first_line": 197
+        }
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/AtkinsonIndexFirstDerivative.lean",
+      "module": "TaoTrudgianYang2025.AtkinsonIndexFirstDerivative",
+      "sha256": "23f551af065208fc740d63b41cfffe9ce9a1d496512a1239e78ef299a1b5c541",
+      "selected_declarations": [
+        {
+          "name": "atkinsonIndexFirstDerivativeLower",
+          "first_line": 24
+        },
+        {
+          "name": "atkinsonIndexFirstDerivativeUpper",
+          "first_line": 30
+        },
+        {
+          "name": "atkinsonIndexRealSlope_sub_eq",
+          "first_line": 36
+        },
+        {
+          "name": "atkinsonIndexRealSlopeDifference_box_bounds",
+          "first_line": 68
+        },
+        {
+          "name": "atkinsonIndexIncreasingDifferenceNat",
+          "first_line": 162
+        },
+        {
+          "name": "exists_atkinsonIndexIncreasingDifferenceNat_increment",
+          "first_line": 169
+        },
+        {
+          "name": "atkinsonIndexIncreasingDifferenceNat_increment_bounds",
+          "first_line": 212
+        },
+        {
+          "name": "atkinsonIndexIncreasingDifferenceNat_increment_anti",
+          "first_line": 247
+        },
+        {
+          "name": "atkinsonIndexIncreasingDifference_KL",
+          "first_line": 270
+        }
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/AtkinsonPrefixVectors.lean",
+      "module": "TaoTrudgianYang2025.AtkinsonPrefixVectors",
+      "sha256": "f4e6af4353f9499fad12bc99ef83776d0126c4b3b372e21d30b4e19b8ab4f5da",
+      "selected_declarations": [
+        {
+          "name": "atkinsonAlternatingCoefficient",
+          "first_line": 18
+        },
+        {
+          "name": "atkinsonPhaseVector",
+          "first_line": 20
+        },
+        {
+          "name": "atkinsonMaskedPhaseVector",
+          "first_line": 22
+        },
+        {
+          "name": "atkinsonPrefixGram",
+          "first_line": 25
+        },
+        {
+          "name": "atkinsonBlockCoefficientEnergy",
+          "first_line": 28
+        },
+        {
+          "name": "norm_atkinsonAlternatingCoefficient",
+          "first_line": 31
+        },
+        {
+          "name": "atkinsonPhaseTerm_eq_coefficient_vector",
+          "first_line": 35
+        },
+        {
+          "name": "atkinsonPhaseBlockSum_eq_masked",
+          "first_line": 40
+        },
+        {
+          "name": "atkinsonPrefixGram_eq_vector",
+          "first_line": 48
+        },
+        {
+          "name": "atkinsonMaskedPhaseVector_gram",
+          "first_line": 57
+        },
+        {
+          "name": "atkinsonPrefixGram_self",
+          "first_line": 71
+        },
+        {
+          "name": "norm_atkinsonPrefixGram_self",
+          "first_line": 75
+        },
+        {
+          "name": "atkinsonPrefixGram_swap",
+          "first_line": 79
+        },
+        {
+          "name": "atkinsonBlockCoefficientEnergy_nonneg",
+          "first_line": 88
+        }
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/AtkinsonMaximalGram.lean",
+      "module": "TaoTrudgianYang2025.AtkinsonMaximalGram",
+      "sha256": "27b37fcee7f7713f495ecf4bccca03d1063479398026a21f1130eea0fe371a50",
+      "selected_declarations": [
+        {
+          "name": "atkinsonPrefixGramMax",
+          "first_line": 58
+        },
+        {
+          "name": "norm_atkinsonPrefixGram_le_max",
+          "first_line": 61
+        },
+        {
+          "name": "atkinsonPrefixGramMax_nonneg",
+          "first_line": 67
+        },
+        {
+          "name": "atkinsonPrefixGramMax_self",
+          "first_line": 72
+        },
+        {
+          "name": "atkinsonPrefixGramMax_swap",
+          "first_line": 83
+        }
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/AtkinsonPrefixCancellation.lean",
+      "module": "TaoTrudgianYang2025.AtkinsonPrefixCancellation",
+      "sha256": "f7345d380da7acbca9df24c6a11f4c48df9965ea33c12bc6aca774ea8844f600",
+      "selected_declarations": [
+        {
+          "name": "atkinsonPrefixBProcessMajorant",
+          "first_line": 19
+        },
+        {
+          "name": "atkinsonIndexBProcessLambdaUpper_pos",
+          "first_line": 25
+        },
+        {
+          "name": "atkinsonPrefixBProcessMajorant_nonneg",
+          "first_line": 35
+        },
+        {
+          "name": "norm_atkinsonPrefixGram_le_bProcess",
+          "first_line": 43
+        },
+        {
+          "name": "atkinsonPrefixGramMax_le_bProcess",
+          "first_line": 66
+        },
+        {
+          "name": "atkinsonPrefixFirstDerivativeMajorant",
+          "first_line": 76
+        },
+        {
+          "name": "atkinsonPrefixFirstDerivativeMajorant_pos",
+          "first_line": 79
+        },
+        {
+          "name": "norm_atkinsonPrefixGram_le_firstDerivative",
+          "first_line": 88
+        },
+        {
+          "name": "atkinsonPrefixGramMax_le_firstDerivative",
+          "first_line": 120
+        },
+        {
+          "name": "atkinsonPrefixFirstDerivativeMajorant_eq_gap",
+          "first_line": 131
+        }
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/AtkinsonPrefixGapBound.lean",
+      "module": "TaoTrudgianYang2025.AtkinsonPrefixGapBound",
+      "sha256": "f820440b6935e83aef4ae2d33af5f3f99809924ee699bf9b2f8e170aba30f391",
+      "selected_declarations": [
+        {
+          "name": "norm_atkinsonPrefixGram_le_length",
+          "first_line": 18
+        },
+        {
+          "name": "atkinsonPrefixGramMax_le_length",
+          "first_line": 27
+        },
+        {
+          "name": "atkinsonOrderedPrefixGapMajorant",
+          "first_line": 35
+        },
+        {
+          "name": "atkinsonPrefixGapMajorant",
+          "first_line": 42
+        },
+        {
+          "name": "atkinsonPrefixGramMax_le_orderedGap",
+          "first_line": 46
+        },
+        {
+          "name": "atkinsonPrefixGapMajorant_self",
+          "first_line": 58
+        },
+        {
+          "name": "atkinsonPrefixGapMajorant_swap",
+          "first_line": 62
+        },
+        {
+          "name": "atkinsonPrefixGramMax_le_gap",
+          "first_line": 66
+        },
+        {
+          "name": "atkinsonPrefixGapMajorant_nonneg",
+          "first_line": 82
+        },
+        {
+          "name": "norm_atkinsonPrefixGram_le_gap",
+          "first_line": 89
+        }
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/AtkinsonNearGap.lean",
+      "module": "TaoTrudgianYang2025.AtkinsonNearGap",
+      "sha256": "05cf316b5aa265f7895e9a3e310c76a5e77ad4c4b8a470e035e9093620a2bfa0",
+      "selected_declarations": [
+        {
+          "name": "atkinson_mul_sqrt_div",
+          "first_line": 16
+        },
+        {
+          "name": "atkinson_near_slope_lower",
+          "first_line": 23
+        },
+        {
+          "name": "atkinson_near_slope_upper",
+          "first_line": 38
+        },
+        {
+          "name": "atkinson_near_half_period",
+          "first_line": 52
+        },
+        {
+          "name": "atkinsonOrderedPrefixGapMajorant_le_near",
+          "first_line": 67
+        },
+        {
+          "name": "atkinsonPrefixGapMajorant_le_near",
+          "first_line": 90
+        }
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/AtkinsonFarCurvature.lean",
+      "module": "TaoTrudgianYang2025.AtkinsonFarCurvature",
+      "sha256": "4bd9423c3cf727be4ce2aaf4b135a1ab94a5022f71db350a14fbfd2b541dc52c",
+      "selected_declarations": [
+        {
+          "name": "atkinson_far_slope_lower",
+          "first_line": 14
+        },
+        {
+          "name": "atkinson_far_box_curvature_bounds",
+          "first_line": 26
+        },
+        {
+          "name": "atkinson_far_lambda_bounds",
+          "first_line": 62
+        }
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/AtkinsonFarRadical.lean",
+      "module": "TaoTrudgianYang2025.AtkinsonFarRadical",
+      "sha256": "a828d83b0bd7059e37854ce37d7777e5b07aa40df4ea606ba4052d60cf190522",
+      "selected_declarations": [
+        {
+          "name": "atkinson_far_inverse_sqrt",
+          "first_line": 15
+        },
+        {
+          "name": "atkinson_far_second_factor",
+          "first_line": 28
+        },
+        {
+          "name": "atkinson_far_radical_identity",
+          "first_line": 42
+        },
+        {
+          "name": "atkinson_far_min_bProcess",
+          "first_line": 50
+        }
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/AtkinsonFarGap.lean",
+      "module": "TaoTrudgianYang2025.AtkinsonFarGap",
+      "sha256": "13455bedf4030e94646e578c4c3b9701679b153fec9cbb5d0372def6a5bc747b",
+      "selected_declarations": [
+        {
+          "name": "atkinsonOrderedPrefixGapMajorant_le_min_bProcess",
+          "first_line": 15
+        },
+        {
+          "name": "atkinsonOrderedPrefixGapMajorant_le_far",
+          "first_line": 22
+        },
+        {
+          "name": "atkinsonPrefixGapMajorant_le_far",
+          "first_line": 34
+        }
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/AtkinsonSourceCutoff.lean",
+      "module": "TaoTrudgianYang2025.AtkinsonSourceCutoff",
+      "sha256": "0d6e356732c494e409be4ee13f34f6637e6b757f482c24b35689eb85a4c49b89",
+      "selected_declarations": [
+        {
+          "name": "atkinsonSourceCutoff",
+          "first_line": 17
+        },
+        {
+          "name": "atkinsonSourceCutoff_lower",
+          "first_line": 19
+        },
+        {
+          "name": "atkinsonSourceCutoff_pos",
+          "first_line": 23
+        },
+        {
+          "name": "atkinsonSourceCutoff_le_small",
+          "first_line": 29
+        },
+        {
+          "name": "eventually_atkinsonSourceCutoff_small",
+          "first_line": 53
+        }
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/AtkinsonPacketGram.lean",
+      "module": "TaoTrudgianYang2025.AtkinsonPacketGram",
+      "sha256": "e5c5dfb3c890baed2457cc302bed363210e24c3a4138b9dfcfd1767e4acbdb9b",
+      "selected_declarations": [
+        {
+          "name": "atkinsonPacketCutoff",
+          "first_line": 17
+        },
+        {
+          "name": "atkinsonSourceCutoff_le_packet",
+          "first_line": 20
+        }
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/AtkinsonGramPhysicalCutoff.lean",
+      "module": "TaoTrudgianYang2025.AtkinsonGramPhysicalCutoff",
+      "sha256": "d6cda49f54dc1a436739f962eb81cb1c42312d0e5d7837a962d52bbb968fccb3",
+      "selected_declarations": [
+        {
+          "name": "atkinsonSourceCutoff_log_mono_height",
+          "first_line": 15
+        },
+        {
+          "name": "atkinsonPacketCutoff_le_height",
+          "first_line": 27
+        }
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/AtkinsonGramCutoffGeometry.lean",
+      "module": "TaoTrudgianYang2025.AtkinsonGramCutoffGeometry",
+      "sha256": "c1fe1ff2f13b2660119797964556246e109b0b99537a8d4f46b276bfce0d678b",
+      "selected_declarations": [
+        {
+          "name": "atkinson_doubled_height_half_power",
+          "first_line": 17
+        },
+        {
+          "name": "exists_atkinsonPhysicalCutoff_prefix_geometry",
+          "first_line": 27
+        },
+        {
+          "name": "atkinson_dyadic_prefix_geometry",
+          "first_line": 40
+        },
+        {
+          "name": "exists_atkinsonPhysicalPrefixGramMax_le_gap",
+          "first_line": 50
+        }
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/AtkinsonSaddlePhase.lean",
+      "module": "TaoTrudgianYang2025.AtkinsonSaddlePhase",
+      "sha256": "1c3df10184349dd8d70a2372186a4b347a162c231e92e88f32ec21e6fd33cfa0",
+      "selected_declarations": [
+        {
+          "name": "atkinsonSourcePhase",
+          "first_line": 19
+        }
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/AtkinsonSignedPhaseSeries.lean",
+      "module": "TaoTrudgianYang2025.AtkinsonSignedPhaseSeries",
+      "sha256": "12ce7878b5f727225680d3f2eea66111d70e73203056de0542aa285f798120b0",
+      "selected_declarations": [
+        {
+          "name": "atkinsonPositivePhaseTerm",
+          "first_line": 30
+        }
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/AtkinsonPhaseBlockBound.lean",
+      "module": "TaoTrudgianYang2025.AtkinsonPhaseBlockBound",
+      "sha256": "990ab4dadfa34dee8de773988b432a538431fa5eafc06c0a4a7689b55b0ea3d4",
+      "selected_declarations": [
+        {
+          "name": "atkinsonPhaseBlockSum",
+          "first_line": 17
+        }
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/FinitePrefixGram.lean",
+      "module": "TaoTrudgianYang2025.FinitePrefixGram",
+      "sha256": "e399cb278a023ad961d79419df7ab440519ecdb31818ff374546d39cdb5ad701",
+      "selected_declarations": [
+        {
+          "name": "sum_range_prefix_mask",
+          "first_line": 60
+        }
+      ]
+    }
+  ]
+}

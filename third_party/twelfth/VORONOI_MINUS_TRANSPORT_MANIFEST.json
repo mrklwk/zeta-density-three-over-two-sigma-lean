@@ -1,0 +1,31 @@
+{
+  "scope": "Selected public source provenance. Records identify inspected source files/ranges; they do not assert that entire upstream files were copied. See PROVENANCE.md and retained file-level notices.",
+  "upstream": {
+    "repository": "https://github.com/smccolm/Lean",
+    "revision": "6e2d10c6c2252ee1575bb7ef12dea12e2f1a3af1",
+    "license": "MIT-0; selected PNT-derived material is Apache-2.0"
+  },
+  "source_records": [
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/GuthMaynard/DFIEquation29.lean",
+      "sha256": "cefc812b75ffe3f47423b46b99d3d6c6bd0b339daf5c583ae6fb3eb36573ba6b",
+      "imports": [
+        "GuthMaynard.DFIEquation24",
+        "GuthMaynard.DFIBesselKernel",
+        "GuthMaynard.DFIBesselTransformBridge",
+        "GuthMaynard.DFIEquation28",
+        "GuthMaynard.ArithmeticCoefficients",
+        "GuthMaynard.GammaVerticalDecay",
+        "Mathlib.Analysis.SumIntegralComparisons",
+        "Mathlib.Analysis.SpecialFunctions.Integrals.Basic"
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/PointMeanMellinShift.lean",
+      "sha256": "e3a6a0e76d51b375d9c503a552310d227c1fdd078ab0fbb0d6e79443d1736a36",
+      "imports": [
+        "TaoTrudgianYang2025.PointMeanMellinVertical"
+      ]
+    }
+  ]
+}

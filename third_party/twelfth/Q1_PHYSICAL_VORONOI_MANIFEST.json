@@ -1,0 +1,40 @@
+{
+  "scope": "Selected public source provenance. Records identify inspected source files/ranges; they do not assert that entire upstream files were copied. See PROVENANCE.md and retained file-level notices.",
+  "upstream": {
+    "repository": "https://github.com/smccolm/Lean",
+    "revision": "6e2d10c6c2252ee1575bb7ef12dea12e2f1a3af1",
+    "license": "MIT-0; selected PNT-derived material is Apache-2.0"
+  },
+  "source_records": [
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/GuthMaynard/DFIVoronoiDual.lean",
+      "sha256": "5e38f8388adbbc7345089d097dcd883cb7044871851c893ee0dc18bbfa710f2e",
+      "imports": [
+        "GuthMaynard.DFIPeriodicBounds"
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/ZetaDivisorVoronoi.lean",
+      "sha256": "b8c1c49429619f709ebbb7b4e06dd2586c998cd80cd795271514de1d7e64c7e2",
+      "imports": [
+        "TaoTrudgianYang2025.ZetaSmoothDivisorTest",
+        "GuthMaynard.DFIProposition1Native"
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/ZetaAtkinsonVoronoi.lean",
+      "sha256": "a4238003c03d75171abae6f7c34070c8dbfb11f7bd4342f3128899b0eba0b403",
+      "imports": [
+        "TaoTrudgianYang2025.ZetaDivisorLatticePhase"
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/ZetaNeumannSeries.lean",
+      "sha256": "651f7f53742f73ce31fb9b78adab0f8575af446a09b05c73b25db22c1aa8f3cf",
+      "imports": [
+        "TaoTrudgianYang2025.ZetaNeumannRemainder",
+        "GuthMaynard.DFIEquation24"
+      ]
+    }
+  ]
+}

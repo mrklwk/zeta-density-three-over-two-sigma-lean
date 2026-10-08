@@ -1,0 +1,25 @@
+{
+  "scope": "Selected public source provenance. Records identify inspected source files/ranges; they do not assert that entire upstream files were copied. See PROVENANCE.md and retained file-level notices.",
+  "upstream": {
+    "repository": "https://github.com/jconorgrogan/prime-minor-arcs-2-15",
+    "revision": "f369f267b4dcfebf010c8e7baa2c9602e2960eba",
+    "license": "Apache-2.0"
+  },
+  "source_records": [
+    {
+      "path": "Proof/GammaCompactStrip.lean",
+      "original_direct_imports": [
+        "Mathlib.Analysis.SpecialFunctions.Gamma.Beta",
+        "Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp",
+        "Mathlib.Analysis.Real.Pi.Bounds"
+      ],
+      "selected_line_ranges": [
+        [
+          12,
+          356
+        ]
+      ],
+      "sha256": "294ad994e2a99790941ce7ac297798ebaa6029b14aa8da4dbc5c77e8f8f65269"
+    }
+  ]
+}

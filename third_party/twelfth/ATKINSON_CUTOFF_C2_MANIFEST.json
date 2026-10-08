@@ -1,0 +1,46 @@
+{
+  "scope": "Selected public source provenance. Records identify inspected source files/ranges; they do not assert that entire upstream files were copied. See PROVENANCE.md and retained file-level notices.",
+  "upstream": {
+    "repository": "https://github.com/smccolm/Lean",
+    "revision": "6e2d10c6c2252ee1575bb7ef12dea12e2f1a3af1",
+    "license": "MIT-0; selected PNT-derived material is Apache-2.0"
+  },
+  "source_records": [
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/ZetaCutoffDerivatives.lean",
+      "first_line": 55,
+      "last_line": 69,
+      "sha256": "6a9fc004574ef41e6479e20bab7fa36fd622f5efe4679f9e8391adb58dd5dbfb"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/ZetaBandSecondDerivatives.lean",
+      "first_line": 19,
+      "last_line": 66,
+      "sha256": "f83fdaed592f79cdafa3b206f296611259a392fa94ed786023042d3de0677d25"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/ZetaBandSecondDerivatives.lean",
+      "first_line": 72,
+      "last_line": 123,
+      "sha256": "f83fdaed592f79cdafa3b206f296611259a392fa94ed786023042d3de0677d25"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/ZetaBandPhysicalDerivatives.lean",
+      "first_line": 17,
+      "last_line": 124,
+      "sha256": "2d39041e50ae99f65f45c0654ce96b28a7a0d063a60d62ebb99c04e8d19281c9"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/SecondDerivativeComposition.lean",
+      "first_line": 17,
+      "last_line": 92,
+      "sha256": "a248d596f646dbbc5ce6aae52aa6bc3fcaf0252f0f281a7c77c476636766e005"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/ZetaBandSecondDerivatives.lean",
+      "first_line": 67,
+      "last_line": 71,
+      "sha256": "f83fdaed592f79cdafa3b206f296611259a392fa94ed786023042d3de0677d25"
+    }
+  ]
+}

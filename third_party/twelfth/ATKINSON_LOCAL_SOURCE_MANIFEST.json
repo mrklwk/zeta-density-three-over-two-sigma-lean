@@ -1,0 +1,68 @@
+{
+  "scope": "Selected public source provenance. Records identify inspected source files/ranges; they do not assert that entire upstream files were copied. See PROVENANCE.md and retained file-level notices.",
+  "upstream": {
+    "repository": "https://github.com/smccolm/Lean",
+    "revision": "6e2d10c6c2252ee1575bb7ef12dea12e2f1a3af1",
+    "license": "MIT-0; selected PNT-derived material is Apache-2.0"
+  },
+  "source_records": [
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/ZetaAtkinsonReducedSource.lean",
+      "module": "TaoTrudgianYang2025.ZetaAtkinsonReducedSource",
+      "sha256": "830a5792dcf5c0c636ec1abff383ddf85f96992e654e23edfaf6bec6a79c740f",
+      "imports": [
+        "TaoTrudgianYang2025.ZetaAtkinsonK0"
+      ],
+      "selected_declarations": [
+        {
+          "name": "exists_zetaSquarePhysicalGaussian_atkinson_reduced",
+          "first_line": 19
+        },
+        {
+          "name": "exists_zetaSquareLocalMean_le_atkinson_reduced",
+          "first_line": 50
+        }
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/ZetaAtkinsonMinusSource.lean",
+      "module": "TaoTrudgianYang2025.ZetaAtkinsonMinusSource",
+      "sha256": "d93eeb11b48e2d33e46aac06dc6d4fa7da557cf9e504e429c48138e1cac69a2a",
+      "imports": [
+        "TaoTrudgianYang2025.ZetaAtkinsonMainIntegral"
+      ],
+      "selected_declarations": [
+        {
+          "name": "exists_zetaSquarePhysicalGaussian_atkinson_minus_approximation",
+          "first_line": 17
+        },
+        {
+          "name": "exists_zetaSquareLocalMean_le_atkinson_minus",
+          "first_line": 34
+        }
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/ZetaAtkinsonTwoTermSource.lean",
+      "module": "TaoTrudgianYang2025.ZetaAtkinsonTwoTermSource",
+      "sha256": "59b6c4290bacbf7d3e281d14169e1691ff2a3669a9e52ff0a1d865f53afa9774",
+      "imports": [
+        "TaoTrudgianYang2025.ZetaNeumannSeries"
+      ],
+      "selected_declarations": [
+        {
+          "name": "exists_zetaAtkinsonBesselMinus_twoTerm_log_bound",
+          "first_line": 17
+        },
+        {
+          "name": "exists_zetaSquarePhysicalGaussian_atkinson_twoTerm_approximation",
+          "first_line": 38
+        },
+        {
+          "name": "exists_zetaSquareLocalMean_le_atkinson_twoTerm",
+          "first_line": 59
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,170 @@
+{
+  "version": "v0.4",
+  "classification": {
+    "arxiv": [
+      "math.NT"
+    ],
+    "msc2020": []
+  },
+  "alignment": {
+    "namespace": "MathCollab.Density.Stronger",
+    "statements": [
+      {
+        "source": "Zero-density estimate with analytic multiplicities",
+        "lean": "stronger_density_bound_native",
+        "module": "MathCollab.Density.Stronger.NativeDensity",
+        "status": "proved",
+        "note": "All actual zeros in the stated region, analytic multiplicity, every sigma>3/4 and epsilon>0, one C before all T>=2; sigma>=1 handled by empty count."
+      },
+      {
+        "source": "Literal physical twelfth-moment target",
+        "lean": "zeta_twelfth_physical_native",
+        "module": "MathCollab.Density.Stronger.NativeMoment",
+        "status": "proved",
+        "note": "Actual zeta on Re(s)=1/2, integral over [0,3T], eventual in T with K fixed first."
+      },
+      {
+        "source": "Literal dyadic twelfth-moment target",
+        "lean": "zeta_twelfth_dyadic_native",
+        "module": "MathCollab.Density.Stronger.NativeMoment",
+        "status": "proved",
+        "note": "Actual integral over [H,2H], eventual in H."
+      }
+    ]
+  },
+  "status": {
+    "scope": "Unconditional native zero-density and physical twelfth-moment statements. Verification scope and comment-only packaging changes are recorded in docs/VERIFICATION.md; no hosted registry acceptance is claimed.",
+    "sorry_count": 2,
+    "sorry_in_definitions": 0,
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "main_results": [
+      {
+        "declaration": "MathCollab.Density.Stronger.stronger_density_bound_native",
+        "file": "lean/MathCollab/Density/Stronger/NativeDensity.lean",
+        "sorry_count": 0,
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "literature_dependencies": []
+      },
+      {
+        "declaration": "MathCollab.Density.Stronger.zeta_twelfth_physical_native",
+        "file": "lean/MathCollab/Density/Stronger/NativeMoment.lean",
+        "sorry_count": 0,
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "literature_dependencies": []
+      },
+      {
+        "declaration": "MathCollab.Density.Stronger.zeta_twelfth_dyadic_native",
+        "file": "lean/MathCollab/Density/Stronger/NativeMoment.lean",
+        "sorry_count": 0,
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "literature_dependencies": []
+      }
+    ],
+    "note": "Two intentional Challenge specification holes only; Solution never imports Challenge. Production proof declarations have no admitted mathematical result. literature_dependencies records UNPROVED assumed results under the v0.4 schema; it stays empty because the selected moment/source arguments are proved locally. Mathematical literature attribution is recorded under sources."
+  },
+  "project": {
+    "name": "A zero-density estimate with exponent 3(1−σ)/(2σ) for the Riemann zeta function",
+    "description": "For every real sigma>3/4 and epsilon>0 there exists C>0 such that for all real T>=2, all actual Riemann zeta zeros with Re(rho)>=sigma and |Im(rho)|<=T, counted with analytic multiplicity, number at most C*T^(3*(1-sigma)/(2*sigma)+epsilon). The proof combines separately proved Type I Dirichlet-polynomial large-values and critical-line twelfth-moment bounds. The companion moment is the literal integral on [0,3T] bounded by K*T^(2+epsilon), eventually in T. No analytic premise remains in the final endpoints. Compared with Tao–Trudgian–Yang Table 2 and Kerr Theorem 6, the leading exponent improves for 3/4<sigma<23/29, agrees with the best located leading exponent on [23/29,7/8], and is weaker on (7/8,1). See docs/LITERATURE.md for scope and citations.",
+    "authors": [
+      "Mark Lewko"
+    ],
+    "license": "AGPL-3.0"
+  },
+  "sources": [
+    {
+      "title": "Selected Lean analytic proofs from Scott McColm repository, later pinned source",
+      "authors": [
+        "Scott McColm"
+      ],
+      "id": "https://github.com/smccolm/Lean/tree/6e2d10c6c2252ee1575bb7ef12dea12e2f1a3af1",
+      "type": "formalization",
+      "relationship": "adapts",
+      "license": "MIT-0",
+      "location": "Selected source slices enumerated in third_party/twelfth/ manifests and third_party/weyl/ provenance"
+    },
+    {
+      "title": "Selected Lean oscillatory, Abel/Jensen and contour proofs from earlier McColm pin",
+      "authors": [
+        "Scott McColm"
+      ],
+      "id": "https://github.com/smccolm/Lean/tree/2ace9e7c09a69fdcd1edae1ab6deb7cb3b4df1be",
+      "type": "formalization",
+      "relationship": "adapts",
+      "license": "MIT",
+      "location": "third_party/mccolm/SOURCE_IMPORTS.json, ANALYTIC_SOURCE_IMPORTS.json and CONTOUR_SOURCE_IMPORTS.json"
+    },
+    {
+      "title": "Selected Fourier, Poisson, Mellin and Gamma proofs from prime-minor-arcs-2-15",
+      "authors": [
+        "Conor Grogan"
+      ],
+      "id": "https://github.com/jconorgrogan/prime-minor-arcs-2-15/tree/f369f267b4dcfebf010c8e7baa2c9602e2960eba",
+      "type": "formalization",
+      "relationship": "adapts",
+      "license": "Apache-2.0",
+      "location": "third_party/grogan/SOURCE_IMPORTS.json, GAMMA_SOURCE_IMPORTS.json and MELLIN_SOURCE_IMPORTS.json"
+    },
+    {
+      "title": "Heath-Brown (1978), twelfth-moment paper",
+      "authors": [
+        "D. R. Heath-Brown"
+      ],
+      "id": "https://wiki.math.ntnu.no/_media/ma3001/2025h/analyticnumbertheory/heathbrowntwelfthmoment.pdf",
+      "type": "paper",
+      "relationship": "adapts",
+      "location": "Theorem 1 p.444; Lemma 3 p.455; equation (44) p.456"
+    },
+    {
+      "title": "Kerr (2019), large values and zero-density estimates",
+      "authors": [
+        "Bryce Kerr"
+      ],
+      "id": "https://arxiv.org/abs/1909.12075",
+      "type": "paper",
+      "relationship": "background",
+      "location": "Theorem 6 p.7; section 13 pp.43-44"
+    },
+    {
+      "title": "New exponent pairs, zero density estimates, and zero additive energy estimates: a systematic approach",
+      "authors": [
+        "Terence Tao",
+        "Timothy S. Trudgian",
+        "Andrew Yang"
+      ],
+      "id": "https://arxiv.org/abs/2501.16779",
+      "type": "paper",
+      "relationship": "background",
+      "location": "Table 2, printed p.33"
+    }
+  ],
+  "automation": {
+    "methods": [
+      {
+        "method": "agent",
+        "framework": "OpenAI Codex",
+        "tool_setup": "Material assistance with proof development, selected source adaptation, debugging, verification and writing."
+      }
+    ],
+    "notes": "Additional AI review used Claude. AI tools are not human authors or responsible maintainers; no human peer-review claim is made."
+  },
+  "fidelity": {
+    "divergences": "The formal proof uses full-line Mellin reflection, integer auxiliary scales, explicit detector/multiplicity bridges and the sufficient eventual T^(2+epsilon) twelfth-moment estimate. The exact log^17 refinement and effective numerical constants are not claimed."
+  },
+  "acknowledgements": "Scott McColm; Conor Grogan; PrimeNumberTheoremAnd contributors, including Robby Sneiderman; Lean/mathlib contributors. Original contributions are AGPL-3.0-only; inherited grants and notices are retained."
+}

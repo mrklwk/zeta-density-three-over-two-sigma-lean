@@ -1,0 +1,70 @@
+{
+  "scope": "Selected public source provenance. Records identify inspected source files/ranges; they do not assert that entire upstream files were copied. See PROVENANCE.md and retained file-level notices.",
+  "upstream": {
+    "repository": "https://github.com/smccolm/Lean",
+    "revision": "6e2d10c6c2252ee1575bb7ef12dea12e2f1a3af1",
+    "license": "MIT-0; selected PNT-derived material is Apache-2.0"
+  },
+  "source_records": [
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/GuthMaynard/SmoothZetaAFE.lean",
+      "first_line": 30,
+      "last_line": 91,
+      "source_sha256": "54c2f8456a30483b885592ff5d7f06808cabf61279f81ac7ad959277a93bd182"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/GuthMaynard/SmoothZetaAFE.lean",
+      "first_line": 94,
+      "last_line": 96,
+      "source_sha256": "54c2f8456a30483b885592ff5d7f06808cabf61279f81ac7ad959277a93bd182"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/GuthMaynard/SmoothZetaAFE.lean",
+      "first_line": 203,
+      "last_line": 223,
+      "source_sha256": "54c2f8456a30483b885592ff5d7f06808cabf61279f81ac7ad959277a93bd182"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/GuthMaynard/SmoothZetaAFE.lean",
+      "first_line": 227,
+      "last_line": 242,
+      "source_sha256": "54c2f8456a30483b885592ff5d7f06808cabf61279f81ac7ad959277a93bd182"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/GuthMaynard/SmoothZetaAFE.lean",
+      "first_line": 264,
+      "last_line": 280,
+      "source_sha256": "54c2f8456a30483b885592ff5d7f06808cabf61279f81ac7ad959277a93bd182"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/GuthMaynard/SmoothZetaAFE.lean",
+      "first_line": 789,
+      "last_line": 799,
+      "source_sha256": "54c2f8456a30483b885592ff5d7f06808cabf61279f81ac7ad959277a93bd182"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/GuthMaynard/HughesYoungAFE.lean",
+      "first_line": 468,
+      "last_line": 482,
+      "source_sha256": "fd83c2a67d8864f464b2faef437025db4ec69e95735a94abcc4c9dc059df9109"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/ZetaSquareContour.lean",
+      "first_line": 25,
+      "last_line": 152,
+      "source_sha256": "2bf39c6d8d51519ee63cc805b4eca687b0ad817d7557f6cdca008475299696eb"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/ZetaSquareContourShift.lean",
+      "first_line": 170,
+      "last_line": 258,
+      "source_sha256": "d3f84eb9d9b1cff35bc690db3a22241cba5183d72c86046f5334cd29c35e1f42"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/ZetaSquareSourceEntry.lean",
+      "first_line": 21,
+      "last_line": 54,
+      "source_sha256": "2960b549b6e7ede96e9c2d35e5f21810f820018be4f91690474e3472c5377681"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "scope": "Selected public source provenance. Records identify inspected source files/ranges; they do not assert that entire upstream files were copied. See PROVENANCE.md and retained file-level notices.",
+  "upstream": {
+    "repository": "https://github.com/smccolm/Lean",
+    "revision": "6e2d10c6c2252ee1575bb7ef12dea12e2f1a3af1",
+    "license": "MIT-0; selected PNT-derived material is Apache-2.0"
+  },
+  "source_records": [
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/ZetaSquareGaussianTransform.lean",
+      "sha256": "06ffe95d6fdeb66b5cff78d771ca5d29f066c113fa74b38e10719c3ecbb18577",
+      "imports": [
+        "TaoTrudgianYang2025.ZetaSquareGaussianTail",
+        "Mathlib.Analysis.SpecialFunctions.Gaussian.FourierTransform"
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/ZetaQuadraticGaussianDerivative.lean",
+      "sha256": "744bc41ef4efece81e6de458a2b477571998520cf3d7985a58207354ad6b75dd",
+      "imports": [
+        "TaoTrudgianYang2025.ZetaLogGaussianVariation"
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/ZetaSquareGammaPhase.lean",
+      "sha256": "16545c690d2cfcfd0f553af06253bea05afa7f088050109300a1ee478fa0e3b0",
+      "imports": [
+        "TaoTrudgianYang2025.ZetaDigammaLog",
+        "TaoTrudgianYang2025.ZetaSquareSourceEntry",
+        "GuthMaynard.HughesYoungGammaRatioJets"
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/ZetaSquareGammaQuadratic.lean",
+      "sha256": "09b1767a2489de5d7507be2266158c75743badfaef0ecdb51b7be48ad0e5b742",
+      "imports": [
+        "TaoTrudgianYang2025.ZetaSquareGammaPhase",
+        "TaoTrudgianYang2025.ZetaSquareGaussianTransform",
+        "Mathlib.Analysis.SpecialFunctions.Log.Deriv"
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/ZetaSquareGammaTransform.lean",
+      "sha256": "50ecf2ff46acb9771aadbf1dab0ecd5ff46446eb85cf3d7f41bbf84e8ac21874",
+      "imports": [
+        "TaoTrudgianYang2025.ZetaSquareGammaQuadratic"
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/GuthMaynard/HughesYoungFarShift.lean",
+      "sha256": "6b2d4e12833818e3f512329ba471b341ece2d279c56a6278b541adbd4cb213c9",
+      "imports": [
+        "GuthMaynard.HughesYoungNearDFI",
+        "GuthMaynard.HughesYoungEquation65"
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/GuthMaynard/HughesYoungEquation84SourceLine.lean",
+      "sha256": "dabaeb8bf999d216bbe54e1bb14feac69eaed14c13c9a8b6e33cfa86768bd0dc",
+      "imports": [
+        "GuthMaynard.HughesYoungEquation96DFIBridge",
+        "GuthMaynard.HughesYoungCentralBounds",
+        "GuthMaynard.HughesYoungFarShift"
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/ZetaSquareLocalMean.lean",
+      "sha256": "93b6cd5846bbd6aea7c467fa8e21898364be5b106e075a61af9cd7997598a5a7",
+      "imports": [
+        "TaoTrudgianYang2025.ZetaSquareSourceEntry"
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/ZetaSquareAveraging.lean",
+      "sha256": "1d8e77882163de42f6249d9a268697cf0edfa05a391de312e0a66ea91a497bf3",
+      "imports": [
+        "TaoTrudgianYang2025.ZetaSquareLocalMean"
+      ]
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/63 Tao-Trudgian-Yang, 2025/Extension/TaoTrudgianYang2025/ZetaSquareGaussianTail.lean",
+      "sha256": "8b44dd33fb7967173b18d6cafbfbb2ae01d53aa45d35a7f716c44884f41180c7",
+      "imports": [
+        "TaoTrudgianYang2025.ZetaSquareAveraging"
+      ]
+    }
+  ]
+}

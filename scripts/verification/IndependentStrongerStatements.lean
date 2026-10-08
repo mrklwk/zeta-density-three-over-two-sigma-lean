@@ -1,0 +1,4125 @@
+module
+-- Reversible module-visibility port of the audited development.
+public import GuthMaynard.SecondDerivative
+public import GuthMaynard.SecondOrderMeanValue
+public import GuthMaynard.VanDerCorput
+public import GuthMaynard.Weyl
+public import GuthMaynard.WeylExplicit
+public import GuthMaynard.WeylZeta
+public import MathCollab.Density.AbelZetaGrowth
+public import MathCollab.Density.AllFrequency
+public import MathCollab.Density.AnalyticTransforms
+public import MathCollab.Density.BandEnergy
+public import MathCollab.Density.BootstrapAbsorption
+public import MathCollab.Density.BootstrapDomain
+public import MathCollab.Density.BootstrapShell
+public import MathCollab.Density.BootstrapShells
+public import MathCollab.Density.BootstrapSupremum
+public import MathCollab.Density.Comparison
+public import MathCollab.Density.ComparisonAlgebra
+public import MathCollab.Density.ComparisonCutoff
+public import MathCollab.Density.ComparisonExpansion
+public import MathCollab.Density.CompletePairs
+public import MathCollab.Density.CutoffTransforms
+public import MathCollab.Density.DensityConclusion
+public import MathCollab.Density.DensityDyadicSummation
+public import MathCollab.Density.DensityExponentAccounting
+public import MathCollab.Density.DensitySlabBound
+public import MathCollab.Density.DensityTheorem
+public import MathCollab.Density.DetectorAdmissibility
+public import MathCollab.Density.DetectorBinomial
+public import MathCollab.Density.DetectorBlockExpansion
+public import MathCollab.Density.DetectorContour
+public import MathCollab.Density.DetectorConvolution
+public import MathCollab.Density.DetectorDyadic
+public import MathCollab.Density.DetectorError
+public import MathCollab.Density.DetectorEstimates
+public import MathCollab.Density.DetectorFamilyScales
+public import MathCollab.Density.DetectorGamma
+public import MathCollab.Density.DetectorIdentity
+public import MathCollab.Density.DetectorMellin
+public import MathCollab.Density.DetectorNormalization
+public import MathCollab.Density.DetectorParameters
+public import MathCollab.Density.DetectorPowerScales
+public import MathCollab.Density.DetectorPoweredHeight
+public import MathCollab.Density.DetectorPoweredPieces
+public import MathCollab.Density.DetectorTaylorFamily
+public import MathCollab.Density.DetectorTruncation
+public import MathCollab.Density.DivisorGrowth
+public import MathCollab.Density.DyadicBlocks
+public import MathCollab.Density.FiniteDetector
+public import MathCollab.Density.FixedBandError
+public import MathCollab.Density.FixedDetectorCover
+public import MathCollab.Density.GammaMellin
+public import MathCollab.Density.GammaStrip
+public import MathCollab.Density.IndexedZeroLargeValues
+public import MathCollab.Density.LargeValueDefinitions
+public import MathCollab.Density.LargeValues
+public import MathCollab.Density.LargeValuesOptimization
+public import MathCollab.Density.LocalCover
+public import MathCollab.Density.LocalZeroCount
+public import MathCollab.Density.MellinKernel
+public import MathCollab.Density.MollifierBound
+public import MathCollab.Density.MollifierCoefficients
+public import MathCollab.Density.MollifierDirichlet
+public import MathCollab.Density.Oscillatory
+public import MathCollab.Density.Packing
+public import MathCollab.Density.PoweredDetectorFamily
+public import MathCollab.Density.ProductGrouping
+public import MathCollab.Density.RectangleResidue
+public import MathCollab.Density.Reflection
+public import MathCollab.Density.ReflectionApplication
+public import MathCollab.Density.ReflectionAssembly
+public import MathCollab.Density.ReflectionDefinitions
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonAmplitude
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonAmplitudeIntegral
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonBandAmplitude
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonBandCancellation
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonBandSecondOrder
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonCarrierAlgebra
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonCarrierCoefficients
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonCarrierIntegrals
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonCoefficientEnergy
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonCoefficientVariation
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonCompactProfiles
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonCorrectionBounds
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonCorrectionSeries
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonCutoffVariation
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonDampedDyadic
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonDyadicGramBudget
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonEvaluatedPhases
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonFarCurvature
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonFarGap
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonFarRadical
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonFiniteSourceError
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonFiniteStationaryError
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonFiniteStationaryMain
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonFirstDerivative
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonFourthRootRadius
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonFrequencyTail
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonGapArithmetic
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonGapBudget
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonGaussianVariation
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonIndexBProcess
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonIndexCurvature
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonIndexFirstDerivative
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonIndexHeight
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonIndexPhase
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonIndexScales
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonK0Integral
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonK0Scales
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonK0Series
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonLeadingFinite
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonLeadingSeriesAlgebra
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonLeadingSeriesConvergence
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonLocalQuadratic
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonLocalStationary
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonLocalizedGapBudget
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonLocalizedGram
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonLocalizedPowers
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonMainIntegral
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonMainNormalization
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonMainVariation
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonMainWeight
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonNativeLocalMean
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonNaturalAmplitude
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonNaturalGaussianProfile
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonNearGap
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonNearGapBudget
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonPhysicalBudget
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonPhysicalCutoff
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonPhysicalPrefix
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonPowerAmplitude
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonPowerGapBudget
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonPowerIntegral
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonPowerPairBound
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonPowerWeight
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonPowerWeightRoot
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonPrefixCancellation
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonPrefixGapBound
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonPrefixMax
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonPrefixVectors
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonQuadraticKernel
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonResidualVariation
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonRootBand
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonRootFirstDerivative
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonRootIntegral
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonRootLogProfile
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonRootPhase
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonSaddleGaussianIdentities
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonSaddleNormalization
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonSaddlePhase
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonSaddleProfileNormalization
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonSaddleSupport
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonSaddleTaylor
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonSampleGeometry
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonSecondOrderIntegration
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonSeparatedReciprocal
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonSharpTruncation
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonSignedPhaseSeries
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonSignedSaddleProfile
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonSlopeDerivativeBounds
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonSourceAssembly
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonSourceBand
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonStationaryBlockBound
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonStationaryDyadic
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonStationaryEvaluation
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonStationaryMain
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonStationaryReduction
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonStationarySeries
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonStationarySourceAssembly
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonStationarySumError
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonStationarySumScale
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonStationaryTails
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonSymmetricBalance
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonSymmetricReduction
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonSymmetricStationary
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonTwoTermStationary
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonVoronoiTerms
+public import MathCollab.Density.Stronger.Atkinson.AtkinsonWeightedGram
+public import MathCollab.Density.Stronger.Atkinson.BesselComplexLaplace
+public import MathCollab.Density.Stronger.Atkinson.BesselK0
+public import MathCollab.Density.Stronger.Atkinson.BesselK0Convergence
+public import MathCollab.Density.Stronger.Atkinson.BesselK0Decay
+public import MathCollab.Density.Stronger.Atkinson.BesselK0Mellin
+public import MathCollab.Density.Stronger.Atkinson.BesselK0SourceIntegral
+public import MathCollab.Density.Stronger.Atkinson.BesselMellinBeta
+public import MathCollab.Density.Stronger.Atkinson.BesselMellinPairing
+public import MathCollab.Density.Stronger.Atkinson.BesselTransformBridge
+public import MathCollab.Density.Stronger.Atkinson.BesselTransforms
+public import MathCollab.Density.Stronger.Atkinson.BesselY0
+public import MathCollab.Density.Stronger.Atkinson.BesselY0Abel
+public import MathCollab.Density.Stronger.Atkinson.BesselY0Beta
+public import MathCollab.Density.Stronger.Atkinson.BesselY0Bounds
+public import MathCollab.Density.Stronger.Atkinson.BesselY0Mellin
+public import MathCollab.Density.Stronger.Atkinson.BesselY0Near
+public import MathCollab.Density.Stronger.Atkinson.ContinuousKernelPrimitive
+public import MathCollab.Density.Stronger.Atkinson.DivisorBandCutoff
+public import MathCollab.Density.Stronger.Atkinson.DivisorLatticePhase
+public import MathCollab.Density.Stronger.Atkinson.DivisorQuarterPrefix
+public import MathCollab.Density.Stronger.Atkinson.DivisorTestSmooth
+public import MathCollab.Density.Stronger.Atkinson.DivisorWeightFreezing
+public import MathCollab.Density.Stronger.Atkinson.DivisorWeightKernel
+public import MathCollab.Density.Stronger.Atkinson.DivisorWeightMass
+public import MathCollab.Density.Stronger.Atkinson.DivisorWeightReflection
+public import MathCollab.Density.Stronger.Atkinson.DivisorWeightSmooth
+public import MathCollab.Density.Stronger.Atkinson.DivisorWeightSource
+public import MathCollab.Density.Stronger.Atkinson.DivisorWeightVariation
+public import MathCollab.Density.Stronger.Atkinson.FiniteWeightVariation
+public import MathCollab.Density.Stronger.Atkinson.FiniteWeightedGram
+public import MathCollab.Density.Stronger.Atkinson.FresnelAbelLimit
+public import MathCollab.Density.Stronger.Atkinson.FresnelDampedTails
+public import MathCollab.Density.Stronger.Atkinson.FresnelEvaluation
+public import MathCollab.Density.Stronger.Atkinson.FresnelGaussianComparison
+public import MathCollab.Density.Stronger.Atkinson.FrozenDivisorGaussian
+public import MathCollab.Density.Stronger.Atkinson.FrozenWindow
+public import MathCollab.Density.Stronger.Atkinson.GammaGaussianTransform
+public import MathCollab.Density.Stronger.Atkinson.GammaPhase
+public import MathCollab.Density.Stronger.Atkinson.GammaQuadratic
+public import MathCollab.Density.Stronger.Atkinson.GaussianAveraging
+public import MathCollab.Density.Stronger.Atkinson.GaussianPolynomial
+public import MathCollab.Density.Stronger.Atkinson.GaussianZetaTail
+public import MathCollab.Density.Stronger.Atkinson.IntervalAmplitudeBounds
+public import MathCollab.Density.Stronger.Atkinson.IntervalAmplitudeRescaled
+public import MathCollab.Density.Stronger.Atkinson.IntervalSecondDerivativeBounds
+public import MathCollab.Density.Stronger.Atkinson.KernelApproximation
+public import MathCollab.Density.Stronger.Atkinson.LeadingDivisor
+public import MathCollab.Density.Stronger.Atkinson.LocalDivisorMean
+public import MathCollab.Density.Stronger.Atkinson.MainElementaryWeights
+public import MathCollab.Density.Stronger.Atkinson.MainReflection
+public import MathCollab.Density.Stronger.Atkinson.NearKernel
+public import MathCollab.Density.Stronger.Atkinson.NeumannContourKernel
+public import MathCollab.Density.Stronger.Atkinson.NeumannContourShift
+public import MathCollab.Density.Stronger.Atkinson.NeumannLaplaceAmplitude
+public import MathCollab.Density.Stronger.Atkinson.NeumannLaplaceMoments
+public import MathCollab.Density.Stronger.Atkinson.NeumannLaplaceRemainder
+public import MathCollab.Density.Stronger.Atkinson.NeumannLaplaceRepresentation
+public import MathCollab.Density.Stronger.Atkinson.NeumannRayFactorization
+public import MathCollab.Density.Stronger.Atkinson.NeumannRemainderSeries
+public import MathCollab.Density.Stronger.Atkinson.NeumannSchlafliEntry
+public import MathCollab.Density.Stronger.Atkinson.NeumannSourceBounds
+public import MathCollab.Density.Stronger.Atkinson.NeumannTwoTermExpansion
+public import MathCollab.Density.Stronger.Atkinson.OrdinaryDivisorContourShift
+public import MathCollab.Density.Stronger.Atkinson.OrdinaryDivisorDualSeries
+public import MathCollab.Density.Stronger.Atkinson.OrdinaryDivisorMellin
+public import MathCollab.Density.Stronger.Atkinson.OrdinaryDivisorResidue
+public import MathCollab.Density.Stronger.Atkinson.OrdinaryDivisorVoronoi
+public import MathCollab.Density.Stronger.Atkinson.QuadraticDivisorBand
+public import MathCollab.Density.Stronger.Atkinson.QuadraticDivisorShortening
+public import MathCollab.Density.Stronger.Atkinson.QuadraticGaussian
+public import MathCollab.Density.Stronger.Atkinson.RealFrozenSource
+public import MathCollab.Density.Stronger.Atkinson.ReciprocalSecondDerivativeBounds
+public import MathCollab.Density.Stronger.Atkinson.SecondDerivativeComposition
+public import MathCollab.Density.Stronger.Atkinson.SeparatedReciprocal
+public import MathCollab.Density.Stronger.Atkinson.ShortDivisorGeometry
+public import MathCollab.Density.Stronger.Atkinson.ShortDivisorSource
+public import MathCollab.Density.Stronger.Atkinson.SmoothDivisorMass
+public import MathCollab.Density.Stronger.Atkinson.SmoothDivisorSource
+public import MathCollab.Density.Stronger.Atkinson.SmoothDivisorSupport
+public import MathCollab.Density.Stronger.Atkinson.SmoothDivisorTail
+public import MathCollab.Density.Stronger.Atkinson.SmoothDivisorTest
+public import MathCollab.Density.Stronger.Atkinson.SourceErrorScales
+public import MathCollab.Density.Stronger.Atkinson.SourceLogScales
+public import MathCollab.Density.Stronger.Atkinson.StationaryOddRemainder
+public import MathCollab.Density.Stronger.Atkinson.TruncatedDyadicPartition
+public import MathCollab.Density.Stronger.Atkinson.VoronoiContourBounds
+public import MathCollab.Density.Stronger.Atkinson.VoronoiInverseWeights
+public import MathCollab.Density.Stronger.Atkinson.VoronoiMellinDecay
+public import MathCollab.Density.Stronger.Atkinson.VoronoiMellinInversion
+public import MathCollab.Density.Stronger.Atkinson.VoronoiMellinKernel
+public import MathCollab.Density.Stronger.Atkinson.VoronoiMinusConvergence
+public import MathCollab.Density.Stronger.Atkinson.VoronoiMinusTransport
+public import MathCollab.Density.Stronger.Atkinson.VoronoiMultiplierBounds
+public import MathCollab.Density.Stronger.Atkinson.VoronoiTest
+public import MathCollab.Density.Stronger.Atkinson.VoronoiTransforms
+public import MathCollab.Density.Stronger.Atkinson.VoronoiZetaFunctional
+public import MathCollab.Density.Stronger.Atkinson.VoronoiZetaGrowth
+public import MathCollab.Density.Stronger.Atkinson.ZetaAtkinsonMinusSource
+public import MathCollab.Density.Stronger.Atkinson.ZetaAtkinsonPhase
+public import MathCollab.Density.Stronger.Atkinson.ZetaAtkinsonReducedSource
+public import MathCollab.Density.Stronger.Atkinson.ZetaAtkinsonSaddle
+public import MathCollab.Density.Stronger.Atkinson.ZetaAtkinsonTwoTermSource
+public import MathCollab.Density.Stronger.Atkinson.ZetaAtkinsonVoronoi
+public import MathCollab.Density.Stronger.Atkinson.ZetaBandPhysicalDerivatives
+public import MathCollab.Density.Stronger.Atkinson.ZetaBandSecondDerivatives
+public import MathCollab.Density.Stronger.Atkinson.ZetaGaussianNaturalDerivatives
+public import MathCollab.Density.Stronger.Atkinson.ZetaLogGaussianVariation
+public import MathCollab.Density.Stronger.Atkinson.ZetaNeumannRemainder
+public import MathCollab.Density.Stronger.Atkinson.ZetaNeumannSeries
+public import MathCollab.Density.Stronger.Atkinson.ZetaQuadraticGaussianSecondDerivative
+public import MathCollab.Density.Stronger.Atkinson.ZetaQuadraticLogGaussianVariation
+public import MathCollab.Density.Stronger.AtkinsonCardinalityAbsorption
+public import MathCollab.Density.Stronger.AtkinsonGlobalCardinality
+public import MathCollab.Density.Stronger.AtkinsonHeightCover
+public import MathCollab.Density.Stronger.BoundedConvolution
+public import MathCollab.Density.Stronger.ConditionalAnalyticInputs
+public import MathCollab.Density.Stronger.ConditionalDensity
+public import MathCollab.Density.Stronger.ConditionalLongCount
+public import MathCollab.Density.Stronger.ConditionalMoment
+public import MathCollab.Density.Stronger.ConditionalStationarySource
+public import MathCollab.Density.Stronger.CriticalMoment
+public import MathCollab.Density.Stronger.DampedCutoff
+public import MathCollab.Density.Stronger.DyadicMoment
+public import MathCollab.Density.Stronger.FinalParameters
+public import MathCollab.Density.Stronger.FiniteConvolution
+public import MathCollab.Density.Stronger.FiniteOccupancy
+public import MathCollab.Density.Stronger.Fourth.Coefficients
+public import MathCollab.Density.Stronger.Fourth.DigammaLog
+public import MathCollab.Density.Stronger.Fourth.DigammaSeries
+public import MathCollab.Density.Stronger.Fourth.FourthMoment
+public import MathCollab.Density.Stronger.Fourth.GammaShiftAmplitude
+public import MathCollab.Density.Stronger.Fourth.GammaShiftLog
+public import MathCollab.Density.Stronger.Fourth.GaussianProducer
+public import MathCollab.Density.Stronger.Fourth.MeanValueCore
+public import MathCollab.Density.Stronger.Fourth.PrefixMean
+public import MathCollab.Density.Stronger.Fourth.SquareContour
+public import MathCollab.Density.Stronger.Fourth.SquareDivisorSeries
+public import MathCollab.Density.Stronger.Fourth.SquareGrowth
+public import MathCollab.Density.Stronger.Fourth.SquareKernel
+public import MathCollab.Density.Stronger.Fourth.SquareKernelFar
+public import MathCollab.Density.Stronger.Fourth.SquareLineShift
+public import MathCollab.Density.Stronger.Fourth.SquareNormalized
+public import MathCollab.Density.Stronger.Fourth.SquarePrefix
+public import MathCollab.Density.Stronger.Fourth.SquareSource
+public import MathCollab.Density.Stronger.Fourth.SquareTail
+public import MathCollab.Density.Stronger.Fourth.SquareTerm
+public import MathCollab.Density.Stronger.Fourth.SquareTruncation
+public import MathCollab.Density.Stronger.GenericTaylorFamily
+public import MathCollab.Density.Stronger.InitialDetector
+public import MathCollab.Density.Stronger.LongBlockDetection
+public import MathCollab.Density.Stronger.LongMeanCounting
+public import MathCollab.Density.Stronger.LongMeanScale
+public import MathCollab.Density.Stronger.LongMultiplicityReduction
+public import MathCollab.Density.Stronger.LongScalarBudget
+public import MathCollab.Density.Stronger.MellinEntire
+public import MathCollab.Density.Stronger.MomentFromPeaks
+public import MathCollab.Density.Stronger.MomentGrowth
+public import MathCollab.Density.Stronger.MomentPower
+public import MathCollab.Density.Stronger.NativeDensity
+public import MathCollab.Density.Stronger.NativeMoment
+public import MathCollab.Density.Stronger.NativePeaks
+public import MathCollab.Density.Stronger.Parameters
+public import MathCollab.Density.Stronger.Peaks.ClusterCount
+public import MathCollab.Density.Stronger.Peaks.Clusters
+public import MathCollab.Density.Stronger.Peaks.Inputs
+public import MathCollab.Density.Stronger.Peaks.WidthRanges
+public import MathCollab.Density.Stronger.PhysicalTwelfthTail
+public import MathCollab.Density.Stronger.PointMean.DivisorMellin
+public import MathCollab.Density.Stronger.PointMean.DoubleConvolution
+public import MathCollab.Density.Stronger.PointMean.DoublePole
+public import MathCollab.Density.Stronger.PointMean.Equation44
+public import MathCollab.Density.Stronger.PointMean.ExponentialMoments
+public import MathCollab.Density.Stronger.PointMean.ExponentialOverlap
+public import MathCollab.Density.Stronger.PointMean.FiniteRectangle
+public import MathCollab.Density.Stronger.PointMean.GammaConvolution
+public import MathCollab.Density.Stronger.PointMean.GammaDisplacement
+public import MathCollab.Density.Stronger.PointMean.GammaKernel
+public import MathCollab.Density.Stronger.PointMean.HorizontalEdges
+public import MathCollab.Density.Stronger.PointMean.IntegralOverlap
+public import MathCollab.Density.Stronger.PointMean.MellinBounds
+public import MathCollab.Density.Stronger.PointMean.MellinHorizontal
+public import MathCollab.Density.Stronger.PointMean.MellinShift
+public import MathCollab.Density.Stronger.PointMean.MellinVertical
+public import MathCollab.Density.Stronger.PointMean.MovingPole
+public import MathCollab.Density.Stronger.PointMean.Native
+public import MathCollab.Density.Stronger.PointMean.OffCriticalPositive
+public import MathCollab.Density.Stronger.PointMean.PeaksInput
+public import MathCollab.Density.Stronger.PointMean.Reflection
+public import MathCollab.Density.Stronger.PointMean.Statement
+public import MathCollab.Density.Stronger.PointMean.VerticalEdges
+public import MathCollab.Density.Stronger.PowerScales
+public import MathCollab.Density.Stronger.SeparatedCriticalSampling
+public import MathCollab.Density.Stronger.SeparatedMoment
+public import MathCollab.Density.Stronger.SeparatedVolume
+public import MathCollab.Density.Stronger.ShortExponentAccounting
+public import MathCollab.Density.Stronger.ShortFixedFamily
+public import MathCollab.Density.Stronger.ShortPoweredFamily
+public import MathCollab.Density.Stronger.ShortPoweredHeight
+public import MathCollab.Density.Stronger.ShortTaylorCover
+public import MathCollab.Density.Stronger.ShortZeroCount
+public import MathCollab.Density.Stronger.SmallResidue
+public import MathCollab.Density.Stronger.SmoothBlockContour
+public import MathCollab.Density.Stronger.SmoothContour
+public import MathCollab.Density.Stronger.SmoothContourEstimates
+public import MathCollab.Density.Stronger.SmoothContourIdentity
+public import MathCollab.Density.Stronger.SmoothDetector
+public import MathCollab.Density.Stronger.SmoothExpansion
+public import MathCollab.Density.Stronger.SmoothMellinIdentity
+public import MathCollab.Density.Stronger.SmoothPartition
+public import MathCollab.Density.Stronger.SmoothShortBlock
+public import MathCollab.Density.Stronger.TruncatedLayerCake
+public import MathCollab.Density.Stronger.UniformMellin
+public import MathCollab.Density.Stronger.WeightedCriticalMean
+public import MathCollab.Density.Stronger.WeightedTwelfth
+public import MathCollab.Density.UniformIBP
+public import MathCollab.Density.UniformThreshold
+public import MathCollab.Density.WeightedSquare
+public import MathCollab.Density.WeylInput
+public import MathCollab.Density.ZeroLargeValues
+public import MathCollab.Density.ZeroSeparation
+public import MathCollab.Density.ZetaConjugation
+public import MathCollab.Density.ZetaCounting
+public import MathCollab.Density.ZetaJensenInputs
+public import MathCollab.MathlibSmoke
+public import MathCollab.Smoke
+public import WeylPort.AFE.AFESecondLimits
+public import WeylPort.AFE.AFESecondModes
+public import WeylPort.AFE.AFESecondWeights
+public import WeylPort.AFE.AbelSawtooth
+public import WeylPort.AFE.AlternatingHarmonic
+public import WeylPort.AFE.ChiGammaFactor
+public import WeylPort.AFE.ChiReflection
+public import WeylPort.AFE.DampedWeightedKernel
+public import WeylPort.AFE.EulerMaclaurin
+public import WeylPort.AFE.ExponentialTails
+public import WeylPort.AFE.FiniteExponentialSums
+public import WeylPort.AFE.FirstDerivativeTest
+public import WeylPort.AFE.HarmonicDigamma
+public import WeylPort.AFE.LowerIntegralEstimate
+public import WeylPort.AFE.MonotoneAmplitude
+public import WeylPort.AFE.NonstationaryPhase
+public import WeylPort.AFE.Objects
+public import WeylPort.AFE.OscillatoryParts
+public import WeylPort.AFE.PartIISignReview
+public import WeylPort.AFE.PoissonApplications
+public import WeylPort.AFE.PoissonFourier
+public import WeylPort.AFE.PoissonPartI
+public import WeylPort.AFE.PoissonShift
+public import WeylPort.AFE.PowerWeights
+public import WeylPort.AFE.SecondCoeffBounds
+public import WeylPort.AFE.SecondCoefficients
+public import WeylPort.AFE.SecondEndpoints
+public import WeylPort.AFE.SecondModeTails
+public import WeylPort.AFE.SecondTailSharp
+public import WeylPort.AFE.UniformCoefficients
+public import WeylPort.AFE.UniformElementary
+public import WeylPort.AFE.UniformError
+public import WeylPort.AFE.UpperIntegralEstimate
+public import WeylPort.AFE.UpperModeTails
+public import WeylPort.AFE.WeightedIntegralAssembly
+public import WeylPort.AFE.WeightedIntegralPhase
+public import WeylPort.AFE.WeightedIntegralSums
+public import WeylPort.AFE.WeightedIntegrals
+public import WeylPort.AFE.ZetaTruncation
+public import WeylPort.ActualZeta
+public import WeylPort.Analytic.ComplexLaplace
+public import WeylPort.Analytic.DigammaSeries
+public import WeylPort.Analytic.EulerMaclaurin
+public import WeylPort.Analytic.NonstationaryFoundation
+public import WeylPort.Analytic.RealLaplace
+public import WeylPort.Analytic.ZetaContinuation
+public import WeylPort.Block
+public import WeylPort.CutoffSelection
+public import WeylPort.GapSum
+public import WeylPort.GrowthAlgebra
+public import WeylPort.Reflection
+public import WeylPort.ShortSum
+
+-- BEGIN MODULE VISIBILITY
+@[expose] public section
+-- END MODULE VISIBILITY
+
+#check @MathCollab.Density.Stronger.Atkinson.ofReal_cpow_critical_conjugate
+#print axioms MathCollab.Density.Stronger.Atkinson.ofReal_cpow_critical_conjugate
+#check @MathCollab.Density.Stronger.Atkinson.zetaAtkinsonDivisorTest_mul_carrier
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaAtkinsonDivisorTest_mul_carrier
+#check @MathCollab.Density.Stronger.Atkinson.zetaAtkinsonDivisorTest_eq_amplitude_phase
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaAtkinsonDivisorTest_eq_amplitude_phase
+#check @MathCollab.Density.Stronger.Atkinson.IntervalC1Bound.comp_sq
+#print axioms MathCollab.Density.Stronger.Atkinson.IntervalC1Bound.comp_sq
+#check @MathCollab.Density.Stronger.Atkinson.IntervalC1Bound.atkinsonRoot_of_primitive_bound
+#print axioms MathCollab.Density.Stronger.Atkinson.IntervalC1Bound.atkinsonRoot_of_primitive_bound
+#check @MathCollab.Density.Stronger.Atkinson.IntervalC1Bound.atkinsonRoot
+#print axioms MathCollab.Density.Stronger.Atkinson.IntervalC1Bound.atkinsonRoot
+#check @MathCollab.Density.Stronger.Atkinson.sqrt_exp_half
+#print axioms MathCollab.Density.Stronger.Atkinson.sqrt_exp_half
+#check @MathCollab.Density.Stronger.Atkinson.sqrt_zetaDivisorBandEdge
+#print axioms MathCollab.Density.Stronger.Atkinson.sqrt_zetaDivisorBandEdge
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonRootBand_length_le
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonRootBand_length_le
+#check @MathCollab.Density.Stronger.Atkinson.zetaDivisorBandCutoff_endpoints
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaDivisorBandCutoff_endpoints
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonPowerWeight_rootBand_endpoints
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonPowerWeight_rootBand_endpoints
+#check @MathCollab.Density.Stronger.Atkinson.exists_intervalC2Bound_atkinsonPowerWeight_root_band
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_intervalC2Bound_atkinsonPowerWeight_root_band
+#check @MathCollab.Density.Stronger.Atkinson.exists_intervalC2Bound_atkinsonSlopeQuotient_band
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_intervalC2Bound_atkinsonSlopeQuotient_band
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonRootSlope_outside_band
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonRootSlope_outside_band
+#check @MathCollab.Density.Stronger.Atkinson.norm_atkinsonRootKernel_integral_outside_band
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_atkinsonRootKernel_integral_outside_band
+#check @MathCollab.Density.Stronger.Atkinson.exists_intervalC1Bound_atkinsonPowerWeight_root_band
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_intervalC1Bound_atkinsonPowerWeight_root_band
+#check @MathCollab.Density.Stronger.Atkinson.exists_norm_atkinsonPowerIntegral_outside_band_le
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_norm_atkinsonPowerIntegral_outside_band_le
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonRootBand_derivative_bracket
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonRootBand_derivative_bracket
+#check @MathCollab.Density.Stronger.Atkinson.exists_norm_atkinsonPowerIntegral_band_secondOrder_le
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_norm_atkinsonPowerIntegral_band_secondOrder_le
+#check @MathCollab.Density.Stronger.Atkinson.exists_norm_atkinsonPowerIntegral_index_band_secondOrder_le
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_norm_atkinsonPowerIntegral_index_band_secondOrder_le
+#check @MathCollab.Density.Stronger.Atkinson.exists_norm_atkinsonPowerPair_band_secondOrder_le
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_norm_atkinsonPowerPair_band_secondOrder_le
+#check @MathCollab.Density.Stronger.Atkinson.neumannTwoTerm_complex_exp
+#print axioms MathCollab.Density.Stronger.Atkinson.neumannTwoTerm_complex_exp
+#check @MathCollab.Density.Stronger.Atkinson.atkinson_bessel_argument_rpow
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinson_bessel_argument_rpow
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonPowerIntegrand_bessel
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonPowerIntegrand_bessel
+#check @MathCollab.Density.Stronger.Atkinson.zetaAtkinsonTwoTermIntegrand_eq_carriers
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaAtkinsonTwoTermIntegrand_eq_carriers
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonBesselScale_quarter_normalization
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonBesselScale_quarter_normalization
+#check @MathCollab.Density.Stronger.Atkinson.norm_atkinsonPowerIntegrand
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_atkinsonPowerIntegrand
+#check @MathCollab.Density.Stronger.Atkinson.integrable_atkinsonPowerIntegrand
+#print axioms MathCollab.Density.Stronger.Atkinson.integrable_atkinsonPowerIntegrand
+#check @MathCollab.Density.Stronger.Atkinson.integral_zetaAtkinsonTwoTermIntegrand_eq_carriers
+#print axioms MathCollab.Density.Stronger.Atkinson.integral_zetaAtkinsonTwoTermIntegrand_eq_carriers
+#check @MathCollab.Density.Stronger.Atkinson.zetaAtkinsonTwoTerm_eq_carrierIntegral
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaAtkinsonTwoTerm_eq_carrierIntegral
+#check @MathCollab.Density.Stronger.Atkinson.exists_atkinsonBlockCoefficientEnergy_le
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_atkinsonBlockCoefficientEnergy_le
+#check @MathCollab.Density.Stronger.Atkinson.exists_sum_atkinsonPhaseBlockMax_sq_le_arithmeticGram
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_sum_atkinsonPhaseBlockMax_sq_le_arithmeticGram
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonCommonSaddleFactor_neg
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonCommonSaddleFactor_neg
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonCommonSaddleFactor_pos
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonCommonSaddleFactor_pos
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonCommonSaddleFactor_eq_rpow
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonCommonSaddleFactor_eq_rpow
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonFourthRootCoefficient_eq
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonFourthRootCoefficient_eq
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonCommonSaddleFactor_le_height
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonCommonSaddleFactor_le_height
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonFourthRootCoefficient_nonneg
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonFourthRootCoefficient_nonneg
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonFourthRootCoefficient_le_height
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonFourthRootCoefficient_le_height
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonFourthRootCoefficient_antitone
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonFourthRootCoefficient_antitone
+#check @MathCollab.Density.Stronger.Atkinson.finiteVariationBound_fourthRootCoefficient
+#print axioms MathCollab.Density.Stronger.Atkinson.finiteVariationBound_fourthRootCoefficient
+#check @MathCollab.Density.Stronger.Atkinson.contDiffAt_zetaMainMellinProfile
+#print axioms MathCollab.Density.Stronger.Atkinson.contDiffAt_zetaMainMellinProfile
+#check @MathCollab.Density.Stronger.Atkinson.zetaDivisorWeight_source_eq_profile
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaDivisorWeight_source_eq_profile
+#check @MathCollab.Density.Stronger.Atkinson.exists_intervalC1Bound_zetaMainMellinProfile
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_intervalC1Bound_zetaMainMellinProfile
+#check @MathCollab.Density.Stronger.Atkinson.contDiffAt_atkinsonPowerProfile
+#print axioms MathCollab.Density.Stronger.Atkinson.contDiffAt_atkinsonPowerProfile
+#check @MathCollab.Density.Stronger.Atkinson.exists_intervalC2Bound_atkinsonPowerRootProfile
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_intervalC2Bound_atkinsonPowerRootProfile
+#check @MathCollab.Density.Stronger.Atkinson.exists_norm_atkinsonPowerPair_far_le
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_norm_atkinsonPowerPair_far_le
+#check @MathCollab.Density.Stronger.Atkinson.atkinson_correction_height_absorb
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinson_correction_height_absorb
+#check @MathCollab.Density.Stronger.Atkinson.exists_norm_atkinsonCorrectionPair_le
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_norm_atkinsonCorrectionPair_le
+#check @MathCollab.Density.Stronger.Atkinson.exists_norm_atkinsonCorrectionTerm_le
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_norm_atkinsonCorrectionTerm_le
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonTwoTermCarrierIntegral_eq_leading_sub_correction
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonTwoTermCarrierIntegral_eq_leading_sub_correction
+#check @MathCollab.Density.Stronger.Atkinson.zetaAtkinsonTwoTerm_eq_leading_sub_correction
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaAtkinsonTwoTerm_eq_leading_sub_correction
+#check @MathCollab.Density.Stronger.Atkinson.summable_atkinsonCorrectionTerm
+#print axioms MathCollab.Density.Stronger.Atkinson.summable_atkinsonCorrectionTerm
+#check @MathCollab.Density.Stronger.Atkinson.exists_norm_atkinsonCorrectionSum_le
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_norm_atkinsonCorrectionSum_le
+#check @MathCollab.Density.Stronger.Atkinson.intervalC1Bound_zetaBandCutoff
+#print axioms MathCollab.Density.Stronger.Atkinson.intervalC1Bound_zetaBandCutoff
+#check @MathCollab.Density.Stronger.Atkinson.intervalC1Bound_zetaDivisorBandCutoff
+#print axioms MathCollab.Density.Stronger.Atkinson.intervalC1Bound_zetaDivisorBandCutoff
+#check @MathCollab.Density.Stronger.Atkinson.finiteVariationBound_zetaBandCutoff_sample
+#print axioms MathCollab.Density.Stronger.Atkinson.finiteVariationBound_zetaBandCutoff_sample
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonDyadicPhaseBound_nonneg
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonDyadicPhaseBound_nonneg
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonPhaseBlockMax_mono
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonPhaseBlockMax_mono
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonFullDyadicPhaseBound_nonneg
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonFullDyadicPhaseBound_nonneg
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonDyadicPhaseBound_le_full
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonDyadicPhaseBound_le_full
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonFullDyadicPhaseBound_le_undamped
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonFullDyadicPhaseBound_le_undamped
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonUndampedDyadicPhaseBound_nonneg
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonUndampedDyadicPhaseBound_nonneg
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonUndampedDyadicPhaseBound_mono
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonUndampedDyadicPhaseBound_mono
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonDyadicGramBudget_nonneg
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonDyadicGramBudget_nonneg
+#check @MathCollab.Density.Stronger.Atkinson.sum_atkinsonUndampedDyadicPhaseBound_sq_le_budget
+#print axioms MathCollab.Density.Stronger.Atkinson.sum_atkinsonUndampedDyadicPhaseBound_sq_le_budget
+#check @MathCollab.Density.Stronger.Atkinson.exp_positive_saddle_mul_fresnel
+#print axioms MathCollab.Density.Stronger.Atkinson.exp_positive_saddle_mul_fresnel
+#check @MathCollab.Density.Stronger.Atkinson.exp_negative_saddle_mul_fresnel
+#print axioms MathCollab.Density.Stronger.Atkinson.exp_negative_saddle_mul_fresnel
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonStationaryMain_sqrt
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonStationaryMain_sqrt
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonStationaryMain_neg_sqrt
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonStationaryMain_neg_sqrt
+#check @MathCollab.Density.Stronger.Atkinson.atkinson_far_slope_lower
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinson_far_slope_lower
+#check @MathCollab.Density.Stronger.Atkinson.atkinson_far_box_curvature_bounds
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinson_far_box_curvature_bounds
+#check @MathCollab.Density.Stronger.Atkinson.atkinson_far_lambda_bounds
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinson_far_lambda_bounds
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonOrderedPrefixGapMajorant_le_min_bProcess
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonOrderedPrefixGapMajorant_le_min_bProcess
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonOrderedPrefixGapMajorant_le_far
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonOrderedPrefixGapMajorant_le_far
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonPrefixGapMajorant_le_far
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonPrefixGapMajorant_le_far
+#check @MathCollab.Density.Stronger.Atkinson.atkinson_far_inverse_sqrt
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinson_far_inverse_sqrt
+#check @MathCollab.Density.Stronger.Atkinson.atkinson_far_second_factor
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinson_far_second_factor
+#check @MathCollab.Density.Stronger.Atkinson.atkinson_far_radical_identity
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinson_far_radical_identity
+#check @MathCollab.Density.Stronger.Atkinson.atkinson_far_min_bProcess
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinson_far_min_bProcess
+#check @MathCollab.Density.Stronger.Atkinson.exists_atkinsonStationary_finite_log_error
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_atkinsonStationary_finite_log_error
+#check @MathCollab.Density.Stronger.Atkinson.exists_atkinsonStationary_finite_power_error
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_atkinsonStationary_finite_power_error
+#check @MathCollab.Density.Stronger.Atkinson.exists_norm_atkinsonLeadingTerm_sub_stationary_le
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_norm_atkinsonLeadingTerm_sub_stationary_le
+#check @MathCollab.Density.Stronger.Atkinson.exists_norm_atkinsonLeadingFiniteSum_sub_stationary_mass_le
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_norm_atkinsonLeadingFiniteSum_sub_stationary_mass_le
+#check @MathCollab.Density.Stronger.Atkinson.exists_norm_atkinsonLeadingFiniteSum_sub_stationary_le
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_norm_atkinsonLeadingFiniteSum_sub_stationary_le
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonFiniteStationaryMain_eq_quadratic
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonFiniteStationaryMain_eq_quadratic
+#check @MathCollab.Density.Stronger.Atkinson.exists_atkinsonPowerIntegral_finite_stationary_approximation
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_atkinsonPowerIntegral_finite_stationary_approximation
+#check @MathCollab.Density.Stronger.Atkinson.norm_phaseIntegral_le_of_negative_slope
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_phaseIntegral_le_of_negative_slope
+#check @MathCollab.Density.Stronger.Atkinson.norm_phaseIntegral_le_of_positive_slope
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_phaseIntegral_le_of_positive_slope
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonSymmetricRadiusScale_pos
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonSymmetricRadiusScale_pos
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonSymmetricRadiusScale_sq
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonSymmetricRadiusScale_sq
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonSymmetricRadiusScale_fourth
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonSymmetricRadiusScale_fourth
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonSymmetricRadiusScale_balance
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonSymmetricRadiusScale_balance
+#check @MathCollab.Density.Stronger.Atkinson.exists_atkinsonPowerIntegral_fourthRoot_width
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_atkinsonPowerIntegral_fourthRoot_width
+#check @MathCollab.Density.Stronger.Atkinson.exists_atkinsonPowerIntegral_fourthRoot_pair
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_atkinsonPowerIntegral_fourthRoot_pair
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonRootSlope_far_positive
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonRootSlope_far_positive
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonRootSlope_far_negative
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonRootSlope_far_negative
+#check @MathCollab.Density.Stronger.Atkinson.norm_atkinsonRootKernel_integral_far
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_atkinsonRootKernel_integral_far
+#check @MathCollab.Density.Stronger.Atkinson.exists_norm_atkinsonPowerIntegral_far_le
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_norm_atkinsonPowerIntegral_far_le
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonArithmeticGapBudget_empty
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonArithmeticGapBudget_empty
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonArithmeticGapBudget_zero
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonArithmeticGapBudget_zero
+#check @MathCollab.Density.Stronger.Atkinson.atkinson_quarter_energy_power
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinson_quarter_energy_power
+#check @MathCollab.Density.Stronger.Atkinson.exists_atkinsonGapBudget_le_arithmetic
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_atkinsonGapBudget_le_arithmetic
+#check @MathCollab.Density.Stronger.Atkinson.exists_atkinsonPhysicalGapBudget_le_arithmetic
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_atkinsonPhysicalGapBudget_le_arithmetic
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonDyadicGramBudget_le_gapBudget
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonDyadicGramBudget_le_gapBudget
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonDyadicGapBudget_empty
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonDyadicGapBudget_empty
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonDyadicGapBudget_zero
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonDyadicGapBudget_zero
+#check @MathCollab.Density.Stronger.Atkinson.exists_atkinsonPhysicalGramBudget_le_gapBudget
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_atkinsonPhysicalGramBudget_le_gapBudget
+#check @MathCollab.Density.Stronger.Atkinson.third_mul_le_arsinh
+#print axioms MathCollab.Density.Stronger.Atkinson.third_mul_le_arsinh
+#check @MathCollab.Density.Stronger.Atkinson.quadraticFrequencyEnvelope_antitone
+#print axioms MathCollab.Density.Stronger.Atkinson.quadraticFrequencyEnvelope_antitone
+#check @MathCollab.Density.Stronger.Atkinson.norm_quadraticGaussian_increment_le
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_quadraticGaussian_increment_le
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonSaddleFrequency_nonneg
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonSaddleFrequency_nonneg
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonSaddleFrequency_monotone
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonSaddleFrequency_monotone
+#check @MathCollab.Density.Stronger.Atkinson.finiteVariationBound_atkinsonSaddleGaussian
+#print axioms MathCollab.Density.Stronger.Atkinson.finiteVariationBound_atkinsonSaddleGaussian
+#check @MathCollab.Density.Stronger.Atkinson.quadraticFrequencyEnvelope_saddle_le_physical
+#print axioms MathCollab.Density.Stronger.Atkinson.quadraticFrequencyEnvelope_saddle_le_physical
+#check @MathCollab.Density.Stronger.Atkinson.finiteVariationBound_atkinsonSaddleGaussian_physical
+#print axioms MathCollab.Density.Stronger.Atkinson.finiteVariationBound_atkinsonSaddleGaussian_physical
+#check @MathCollab.Density.Stronger.Atkinson.hasDerivAt_atkinsonIndexPositiveDifference
+#print axioms MathCollab.Density.Stronger.Atkinson.hasDerivAt_atkinsonIndexPositiveDifference
+#check @MathCollab.Density.Stronger.Atkinson.hasDerivAt_atkinsonIndexPositiveDifferenceSlope
+#print axioms MathCollab.Density.Stronger.Atkinson.hasDerivAt_atkinsonIndexPositiveDifferenceSlope
+#check @MathCollab.Density.Stronger.Atkinson.exists_atkinsonIndexPositiveDifference_secondDifference
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_atkinsonIndexPositiveDifference_secondDifference
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonIndexPositiveDifference_natCast
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonIndexPositiveDifference_natCast
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonIndexBProcessLambda_pos
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonIndexBProcessLambda_pos
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonIndexPositiveDifferenceNat_secondDifference_bounds
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonIndexPositiveDifferenceNat_secondDifference_bounds
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonIndexPositiveDifference_B_process
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonIndexPositiveDifference_B_process
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonIndexRealSlope_pos
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonIndexRealSlope_pos
+#check @MathCollab.Density.Stronger.Atkinson.hasDerivAt_atkinsonIndexRealSlope
+#print axioms MathCollab.Density.Stronger.Atkinson.hasDerivAt_atkinsonIndexRealSlope
+#check @MathCollab.Density.Stronger.Atkinson.hasDerivAt_deriv_atkinsonIndexRealPhase
+#print axioms MathCollab.Density.Stronger.Atkinson.hasDerivAt_deriv_atkinsonIndexRealPhase
+#check @MathCollab.Density.Stronger.Atkinson.hasDerivAt_atkinsonIndexPhaseDifference
+#print axioms MathCollab.Density.Stronger.Atkinson.hasDerivAt_atkinsonIndexPhaseDifference
+#check @MathCollab.Density.Stronger.Atkinson.hasDerivAt_atkinsonIndexPhaseDifferenceSlope
+#print axioms MathCollab.Density.Stronger.Atkinson.hasDerivAt_atkinsonIndexPhaseDifferenceSlope
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonIndexRealCurvature_neg
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonIndexRealCurvature_neg
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonIndexRealSlope_sub_eq
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonIndexRealSlope_sub_eq
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonIndexRealSlopeDifference_box_bounds
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonIndexRealSlopeDifference_box_bounds
+#check @MathCollab.Density.Stronger.Atkinson.exists_atkinsonIndexIncreasingDifferenceNat_increment
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_atkinsonIndexIncreasingDifferenceNat_increment
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonIndexIncreasingDifferenceNat_increment_bounds
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonIndexIncreasingDifferenceNat_increment_bounds
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonIndexIncreasingDifferenceNat_increment_anti
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonIndexIncreasingDifferenceNat_increment_anti
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonIndexIncreasingDifference_KL
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonIndexIncreasingDifference_KL
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonIndexCurvatureMagnitude_eq_neg
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonIndexCurvatureMagnitude_eq_neg
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonIndexCurvatureMagnitude_pos
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonIndexCurvatureMagnitude_pos
+#check @MathCollab.Density.Stronger.Atkinson.hasDerivAt_atkinsonIndexRealSlope_height
+#print axioms MathCollab.Density.Stronger.Atkinson.hasDerivAt_atkinsonIndexRealSlope_height
+#check @MathCollab.Density.Stronger.Atkinson.hasDerivAt_atkinsonIndexCurvatureMagnitude
+#print axioms MathCollab.Density.Stronger.Atkinson.hasDerivAt_atkinsonIndexCurvatureMagnitude
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonIndexCurvatureMagnitude_deriv_pos
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonIndexCurvatureMagnitude_deriv_pos
+#check @MathCollab.Density.Stronger.Atkinson.strictMonoOn_atkinsonIndexCurvatureMagnitude
+#print axioms MathCollab.Density.Stronger.Atkinson.strictMonoOn_atkinsonIndexCurvatureMagnitude
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonIndexCurvatureDifference_neg
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonIndexCurvatureDifference_neg
+#check @MathCollab.Density.Stronger.Atkinson.exists_atkinsonIndexCurvatureDifference_eq
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_atkinsonIndexCurvatureDifference_eq
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonIndexRealPhase_natCast
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonIndexRealPhase_natCast
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonIndexRealPhase_eq_normalized
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonIndexRealPhase_eq_normalized
+#check @MathCollab.Density.Stronger.Atkinson.hasDerivAt_atkinsonIndexRealRatio
+#print axioms MathCollab.Density.Stronger.Atkinson.hasDerivAt_atkinsonIndexRealRatio
+#check @MathCollab.Density.Stronger.Atkinson.hasDerivAt_atkinsonIndexRealRoot
+#print axioms MathCollab.Density.Stronger.Atkinson.hasDerivAt_atkinsonIndexRealRoot
+#check @MathCollab.Density.Stronger.Atkinson.hasDerivAt_atkinsonIndexRealNormalizedPhase
+#print axioms MathCollab.Density.Stronger.Atkinson.hasDerivAt_atkinsonIndexRealNormalizedPhase
+#check @MathCollab.Density.Stronger.Atkinson.hasDerivAt_atkinsonIndexRealPhase
+#print axioms MathCollab.Density.Stronger.Atkinson.hasDerivAt_atkinsonIndexRealPhase
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonIndexSlopeLower_pos
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonIndexSlopeLower_pos
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonIndexSlopeUpper_pos
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonIndexSlopeUpper_pos
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonIndexSlopeLower_le
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonIndexSlopeLower_le
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonIndexSlope_le_upper
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonIndexSlope_le_upper
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonIndexCurvatureDerivativeLower_pos
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonIndexCurvatureDerivativeLower_pos
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonIndexCurvatureDerivativeUpper_pos
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonIndexCurvatureDerivativeUpper_pos
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonIndexSlopeUpper_anti
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonIndexSlopeUpper_anti
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonIndexSlopeLower_anti
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonIndexSlopeLower_anti
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonIndexCurvatureDerivative_box_bounds
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonIndexCurvatureDerivative_box_bounds
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonIndexCurvatureDerivative_bounds
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonIndexCurvatureDerivative_bounds
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonIndexCurvatureDifference_bounds
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonIndexCurvatureDifference_bounds
+#check @MathCollab.Density.Stronger.Atkinson.norm_zetaAtkinsonK0_integrand
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_zetaAtkinsonK0_integrand
+#check @MathCollab.Density.Stronger.Atkinson.integrable_zetaAtkinsonK0_integrand
+#print axioms MathCollab.Density.Stronger.Atkinson.integrable_zetaAtkinsonK0_integrand
+#check @MathCollab.Density.Stronger.Atkinson.norm_integral_zetaAtkinsonK0_le
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_integral_zetaAtkinsonK0_le
+#check @MathCollab.Density.Stronger.Atkinson.exists_norm_integral_zetaAtkinsonK0_le
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_norm_integral_zetaAtkinsonK0_le
+#check @MathCollab.Density.Stronger.Atkinson.besselK0_source_power_absorb
+#print axioms MathCollab.Density.Stronger.Atkinson.besselK0_source_power_absorb
+#check @MathCollab.Density.Stronger.Atkinson.exists_norm_zetaAtkinsonBesselPlus_le_mul_G
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_norm_zetaAtkinsonBesselPlus_le_mul_G
+#check @MathCollab.Density.Stronger.Atkinson.exists_zetaAtkinsonBesselPlus_powerSaving
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_zetaAtkinsonBesselPlus_powerSaving
+#check @MathCollab.Density.Stronger.Atkinson.norm_divisorDirichletTerm_two
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_divisorDirichletTerm_two
+#check @MathCollab.Density.Stronger.Atkinson.exists_norm_zetaAtkinsonBesselPlusTerm_le
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_norm_zetaAtkinsonBesselPlusTerm_le
+#check @MathCollab.Density.Stronger.Atkinson.summable_zetaAtkinsonBesselPlusTerm
+#print axioms MathCollab.Density.Stronger.Atkinson.summable_zetaAtkinsonBesselPlusTerm
+#check @MathCollab.Density.Stronger.Atkinson.hasSum_zetaAtkinsonBesselPlusTerm
+#print axioms MathCollab.Density.Stronger.Atkinson.hasSum_zetaAtkinsonBesselPlusTerm
+#check @MathCollab.Density.Stronger.Atkinson.exists_norm_zetaAtkinsonBesselPlus_le
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_norm_zetaAtkinsonBesselPlus_le
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonBesselScale_nonneg
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonBesselScale_nonneg
+#check @MathCollab.Density.Stronger.Atkinson.summable_atkinsonLeadingTerm_iff_twoTerm
+#print axioms MathCollab.Density.Stronger.Atkinson.summable_atkinsonLeadingTerm_iff_twoTerm
+#check @MathCollab.Density.Stronger.Atkinson.tsum_zetaAtkinsonTwoTerm_eq_leading_sub_correction_of_summable
+#print axioms MathCollab.Density.Stronger.Atkinson.tsum_zetaAtkinsonTwoTerm_eq_leading_sub_correction_of_summable
+#check @MathCollab.Density.Stronger.Atkinson.exists_norm_tsum_zetaAtkinsonTwoTerm_sub_leading_le_of_summable
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_norm_tsum_zetaAtkinsonTwoTerm_sub_leading_le_of_summable
+#check @MathCollab.Density.Stronger.Atkinson.summable_zetaAtkinsonTwoTerm_of_band
+#print axioms MathCollab.Density.Stronger.Atkinson.summable_zetaAtkinsonTwoTerm_of_band
+#check @MathCollab.Density.Stronger.Atkinson.tsum_zetaAtkinsonTwoTerm_eq_leading_sub_correction
+#print axioms MathCollab.Density.Stronger.Atkinson.tsum_zetaAtkinsonTwoTerm_eq_leading_sub_correction
+#check @MathCollab.Density.Stronger.Atkinson.exists_norm_tsum_zetaAtkinsonTwoTerm_sub_leading_le
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_norm_tsum_zetaAtkinsonTwoTerm_sub_leading_le
+#check @MathCollab.Density.Stronger.Atkinson.IntervalC2Bound.atkinsonLocalQuadratic
+#print axioms MathCollab.Density.Stronger.Atkinson.IntervalC2Bound.atkinsonLocalQuadratic
+#check @MathCollab.Density.Stronger.Atkinson.IntervalC2Bound.atkinsonQuadraticApproximation
+#print axioms MathCollab.Density.Stronger.Atkinson.IntervalC2Bound.atkinsonQuadraticApproximation
+#check @MathCollab.Density.Stronger.Atkinson.exists_atkinsonPowerIntegral_local_quadratic_approximation
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_atkinsonPowerIntegral_local_quadratic_approximation
+#check @MathCollab.Density.Stronger.Atkinson.atkinson_far_gap_row_le
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinson_far_gap_row_le
+#check @MathCollab.Density.Stronger.Atkinson.atkinson_far_gap_double_sum_le
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinson_far_gap_double_sum_le
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonLocalizedGapBudget_zero_card
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonLocalizedGapBudget_zero_card
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonSeparatedGapBudget_le_localized
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonSeparatedGapBudget_le_localized
+#check @MathCollab.Density.Stronger.Atkinson.atkinson_height_interval_diameter
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinson_height_interval_diameter
+#check @MathCollab.Density.Stronger.Atkinson.exists_atkinsonPhysicalGramBudget_le_power
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_atkinsonPhysicalGramBudget_le_power
+#check @MathCollab.Density.Stronger.Atkinson.exists_sum_atkinsonUndampedDyadicPhaseBound_sq_le_power
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_sum_atkinsonUndampedDyadicPhaseBound_sq_le_power
+#check @MathCollab.Density.Stronger.Atkinson.atkinson_far_radical_eq_rpow
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinson_far_radical_eq_rpow
+#check @MathCollab.Density.Stronger.Atkinson.atkinson_weighted_diagonal_power
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinson_weighted_diagonal_power
+#check @MathCollab.Density.Stronger.Atkinson.atkinson_weighted_near_power
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinson_weighted_near_power
+#check @MathCollab.Density.Stronger.Atkinson.atkinson_weighted_far_power
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinson_weighted_far_power
+#check @MathCollab.Density.Stronger.Atkinson.integrable_zetaAtkinsonMainIntegrand
+#print axioms MathCollab.Density.Stronger.Atkinson.integrable_zetaAtkinsonMainIntegrand
+#check @MathCollab.Density.Stronger.Atkinson.zetaAtkinsonVoronoiMain_eq_reflection
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaAtkinsonVoronoiMain_eq_reflection
+#check @MathCollab.Density.Stronger.Atkinson.exists_norm_zetaAtkinsonVoronoiMain_le
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_norm_zetaAtkinsonVoronoiMain_le
+#check @MathCollab.Density.Stronger.Atkinson.exists_zetaAtkinsonVoronoiMain_log_bound
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_zetaAtkinsonVoronoiMain_log_bound
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonStationaryMain_sqrt_normalized
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonStationaryMain_sqrt_normalized
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonStationaryMain_neg_sqrt_normalized
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonStationaryMain_neg_sqrt_normalized
+#check @MathCollab.Density.Stronger.Atkinson.exists_finiteVariationBound_atkinsonMainWeights
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_finiteVariationBound_atkinsonMainWeights
+#check @MathCollab.Density.Stronger.Atkinson.zetaAtkinsonMainWeight_eq_amplitude
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaAtkinsonMainWeight_eq_amplitude
+#check @MathCollab.Density.Stronger.Atkinson.zetaAtkinsonMainWeight_carrier
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaAtkinsonMainWeight_carrier
+#check @MathCollab.Density.Stronger.Atkinson.exists_intervalC1Bound_zetaAtkinsonMainWeight
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_intervalC1Bound_zetaAtkinsonMainWeight
+#check @MathCollab.Density.Stronger.Atkinson.exists_zetaSquareLocalMean_le_atkinson_stationary
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_zetaSquareLocalMean_le_atkinson_stationary
+#check @MathCollab.Density.Stronger.Atkinson.localMeanStationaryInput_native
+#print axioms MathCollab.Density.Stronger.Atkinson.localMeanStationaryInput_native
+#check @MathCollab.Density.Stronger.Atkinson.exists_intervalC2Bound_atkinsonPowerWeight_normalized_natural
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_intervalC2Bound_atkinsonPowerWeight_normalized_natural
+#check @MathCollab.Density.Stronger.Atkinson.exists_intervalC2Bound_atkinsonPowerWeight_root_natural
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_intervalC2Bound_atkinsonPowerWeight_root_natural
+#check @MathCollab.Density.Stronger.Atkinson.IntervalC2Bound.comp_div
+#print axioms MathCollab.Density.Stronger.Atkinson.IntervalC2Bound.comp_div
+#check @MathCollab.Density.Stronger.Atkinson.exists_intervalC2Bound_zetaQuadraticLogGaussian_root_natural
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_intervalC2Bound_zetaQuadraticLogGaussian_root_natural
+#check @MathCollab.Density.Stronger.Atkinson.atkinson_mul_sqrt_div
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinson_mul_sqrt_div
+#check @MathCollab.Density.Stronger.Atkinson.atkinson_near_slope_lower
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinson_near_slope_lower
+#check @MathCollab.Density.Stronger.Atkinson.atkinson_near_slope_upper
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinson_near_slope_upper
+#check @MathCollab.Density.Stronger.Atkinson.atkinson_near_half_period
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinson_near_half_period
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonOrderedPrefixGapMajorant_le_near
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonOrderedPrefixGapMajorant_le_near
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonPrefixGapMajorant_le_near
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonPrefixGapMajorant_le_near
+#check @MathCollab.Density.Stronger.Atkinson.atkinson_near_gap_row_le
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinson_near_gap_row_le
+#check @MathCollab.Density.Stronger.Atkinson.atkinson_gap_row_le_near_add_far
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinson_gap_row_le_near_add_far
+#check @MathCollab.Density.Stronger.Atkinson.atkinson_gap_double_sum_le_near_add_far
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinson_gap_double_sum_le_near_add_far
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonSeparatedGapBudget_empty
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonSeparatedGapBudget_empty
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonArithmeticGapBudget_le_separated
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonArithmeticGapBudget_le_separated
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonSourceCutoff_le_natural
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonSourceCutoff_le_natural
+#check @MathCollab.Density.Stronger.Atkinson.atkinson_clog_le_height_log
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinson_clog_le_height_log
+#check @MathCollab.Density.Stronger.Atkinson.atkinson_harmonic_le_height_log
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinson_harmonic_le_height_log
+#check @MathCollab.Density.Stronger.Atkinson.eventually_atkinson_height_log_pow_le_rpow
+#print axioms MathCollab.Density.Stronger.Atkinson.eventually_atkinson_height_log_pow_le_rpow
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonPhysicalCutoff_le_natural
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonPhysicalCutoff_le_natural
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonPhysical_cutoff_scale_identity
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonPhysical_cutoff_scale_identity
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonPhysical_diagonal_scale
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonPhysical_diagonal_scale
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonPhysical_near_scale
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonPhysical_near_scale
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonPhysical_far_scale
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonPhysical_far_scale
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonPowerGapTerm_epsilon_factor
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonPowerGapTerm_epsilon_factor
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonPhysical_gap_term_zero_le
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonPhysical_gap_term_zero_le
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonPhysical_gap_budget_log_le
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonPhysical_gap_budget_log_le
+#check @MathCollab.Density.Stronger.Atkinson.exists_atkinsonPhysicalGapBudget_le_twoTerm
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_atkinsonPhysicalGapBudget_le_twoTerm
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonSourceCutoff_lower
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonSourceCutoff_lower
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonSourceCutoff_pos
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonSourceCutoff_pos
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonSourceCutoff_le_small
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonSourceCutoff_le_small
+#check @MathCollab.Density.Stronger.Atkinson.eventually_atkinsonSourceCutoff_small
+#print axioms MathCollab.Density.Stronger.Atkinson.eventually_atkinsonSourceCutoff_small
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonSourceCutoff_le_packet
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonSourceCutoff_le_packet
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonSourceCutoff_log_mono_height
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonSourceCutoff_log_mono_height
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonPacketCutoff_le_height
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonPacketCutoff_le_height
+#check @MathCollab.Density.Stronger.Atkinson.atkinson_doubled_height_half_power
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinson_doubled_height_half_power
+#check @MathCollab.Density.Stronger.Atkinson.exists_atkinsonPhysicalCutoff_prefix_geometry
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_atkinsonPhysicalCutoff_prefix_geometry
+#check @MathCollab.Density.Stronger.Atkinson.atkinson_dyadic_prefix_geometry
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinson_dyadic_prefix_geometry
+#check @MathCollab.Density.Stronger.Atkinson.exists_atkinsonPhysicalPrefixGramMax_le_gap
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_atkinsonPhysicalPrefixGramMax_le_gap
+#check @MathCollab.Density.Stronger.Atkinson.exists_norm_physical_atkinsonPrefixGram_le_near
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_norm_physical_atkinsonPrefixGram_le_near
+#check @MathCollab.Density.Stronger.Atkinson.exists_norm_physical_atkinsonPrefixGram_le_far
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_norm_physical_atkinsonPrefixGram_le_far
+#check @MathCollab.Density.Stronger.Atkinson.sqrt_mul_exp_neg_half_log
+#print axioms MathCollab.Density.Stronger.Atkinson.sqrt_mul_exp_neg_half_log
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonPowerWeight_eq_amplitude
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonPowerWeight_eq_amplitude
+#check @MathCollab.Density.Stronger.Atkinson.atkinson_harmonic_mono
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinson_harmonic_mono
+#check @MathCollab.Density.Stronger.Atkinson.atkinson_localized_gap_term_eq
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinson_localized_gap_term_eq
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonPowerGapTerm_mono_index
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonPowerGapTerm_mono_index
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonLocalizedGapBudget_le_power
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonLocalizedGapBudget_le_power
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonPowerGapBudget_zero_card
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonPowerGapBudget_zero_card
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonPowerIntegrand_sq
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonPowerIntegrand_sq
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonPowerIntegral_eq_root
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonPowerIntegral_eq_root
+#check @MathCollab.Density.Stronger.Atkinson.exists_norm_atkinsonPowerIntegral_le
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_norm_atkinsonPowerIntegral_le
+#check @MathCollab.Density.Stronger.Atkinson.exists_norm_atkinsonPowerPair_le
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_norm_atkinsonPowerPair_le
+#check @MathCollab.Density.Stronger.Atkinson.exists_intervalC1Bound_atkinsonPowerWeight
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_intervalC1Bound_atkinsonPowerWeight
+#check @MathCollab.Density.Stronger.Atkinson.exists_intervalC1Bound_atkinsonPowerWeight_root
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_intervalC1Bound_atkinsonPowerWeight_root
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonIndexBProcessLambdaUpper_pos
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonIndexBProcessLambdaUpper_pos
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonPrefixBProcessMajorant_nonneg
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonPrefixBProcessMajorant_nonneg
+#check @MathCollab.Density.Stronger.Atkinson.norm_atkinsonPrefixGram_le_bProcess
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_atkinsonPrefixGram_le_bProcess
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonPrefixGramMax_le_bProcess
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonPrefixGramMax_le_bProcess
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonPrefixFirstDerivativeMajorant_pos
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonPrefixFirstDerivativeMajorant_pos
+#check @MathCollab.Density.Stronger.Atkinson.norm_atkinsonPrefixGram_le_firstDerivative
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_atkinsonPrefixGram_le_firstDerivative
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonPrefixGramMax_le_firstDerivative
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonPrefixGramMax_le_firstDerivative
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonPrefixFirstDerivativeMajorant_eq_gap
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonPrefixFirstDerivativeMajorant_eq_gap
+#check @MathCollab.Density.Stronger.Atkinson.norm_atkinsonPrefixGram_le_length
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_atkinsonPrefixGram_le_length
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonPrefixGramMax_le_length
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonPrefixGramMax_le_length
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonPrefixGramMax_le_orderedGap
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonPrefixGramMax_le_orderedGap
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonPrefixGapMajorant_self
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonPrefixGapMajorant_self
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonPrefixGapMajorant_swap
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonPrefixGapMajorant_swap
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonPrefixGramMax_le_gap
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonPrefixGramMax_le_gap
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonPrefixGapMajorant_nonneg
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonPrefixGapMajorant_nonneg
+#check @MathCollab.Density.Stronger.Atkinson.norm_atkinsonPrefixGram_le_gap
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_atkinsonPrefixGram_le_gap
+#check @MathCollab.Density.Stronger.Atkinson.norm_atkinsonPrefixGram_le_max
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_atkinsonPrefixGram_le_max
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonPrefixGramMax_nonneg
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonPrefixGramMax_nonneg
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonPrefixGramMax_self
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonPrefixGramMax_self
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonPrefixGramMax_swap
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonPrefixGramMax_swap
+#check @MathCollab.Density.Stronger.Atkinson.sum_range_prefix_mask
+#print axioms MathCollab.Density.Stronger.Atkinson.sum_range_prefix_mask
+#check @MathCollab.Density.Stronger.Atkinson.norm_atkinsonAlternatingCoefficient
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_atkinsonAlternatingCoefficient
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonPhaseTerm_eq_coefficient_vector
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonPhaseTerm_eq_coefficient_vector
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonPhaseBlockSum_eq_masked
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonPhaseBlockSum_eq_masked
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonPrefixGram_eq_vector
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonPrefixGram_eq_vector
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonMaskedPhaseVector_gram
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonMaskedPhaseVector_gram
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonPrefixGram_self
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonPrefixGram_self
+#check @MathCollab.Density.Stronger.Atkinson.norm_atkinsonPrefixGram_self
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_atkinsonPrefixGram_self
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonPrefixGram_swap
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonPrefixGram_swap
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonBlockCoefficientEnergy_nonneg
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonBlockCoefficientEnergy_nonneg
+#check @MathCollab.Density.Stronger.Atkinson.norm_atkinsonRootQuadraticKernel
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_atkinsonRootQuadraticKernel
+#check @MathCollab.Density.Stronger.Atkinson.continuous_atkinsonRootQuadraticKernel
+#print axioms MathCollab.Density.Stronger.Atkinson.continuous_atkinsonRootQuadraticKernel
+#check @MathCollab.Density.Stronger.Atkinson.one_lt_atkinsonSaddleCurvature
+#print axioms MathCollab.Density.Stronger.Atkinson.one_lt_atkinsonSaddleCurvature
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonSaddleCurvature_mul_root
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonSaddleCurvature_mul_root
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonSaddle_squareRoot_normalization
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonSaddle_squareRoot_normalization
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonRootQuadraticKernel_translate
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonRootQuadraticKernel_translate
+#check @MathCollab.Density.Stronger.Atkinson.integral_atkinsonRootQuadraticKernel
+#print axioms MathCollab.Density.Stronger.Atkinson.integral_atkinsonRootQuadraticKernel
+#check @MathCollab.Density.Stronger.Atkinson.norm_integral_atkinsonRootQuadraticKernel_sub_fresnel_le
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_integral_atkinsonRootQuadraticKernel_sub_fresnel_le
+#check @MathCollab.Density.Stronger.Atkinson.zetaMainMellinProfile_saddle_eq_root
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaMainMellinProfile_saddle_eq_root
+#check @MathCollab.Density.Stronger.Atkinson.exists_finiteVariationBound_saddleMellin
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_finiteVariationBound_saddleMellin
+#check @MathCollab.Density.Stronger.Atkinson.finiteVariationBound_saddleCutoff
+#print axioms MathCollab.Density.Stronger.Atkinson.finiteVariationBound_saddleCutoff
+#check @MathCollab.Density.Stronger.Atkinson.exists_finiteVariationBound_saddleResidual
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_finiteVariationBound_saddleResidual
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonRootBandLower_pos
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonRootBandLower_pos
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonRootBand_order
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonRootBand_order
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonRootBand_square_mem
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonRootBand_square_mem
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonRootBand_physical
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonRootBand_physical
+#check @MathCollab.Density.Stronger.Atkinson.zetaAtkinsonSaddle_inverse_root
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaAtkinsonSaddle_inverse_root
+#check @MathCollab.Density.Stronger.Atkinson.abs_atkinsonRootSlope_zero_le_band
+#print axioms MathCollab.Density.Stronger.Atkinson.abs_atkinsonRootSlope_zero_le_band
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonPowerIntegral_eq_root_band
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonPowerIntegral_eq_root_band
+#check @MathCollab.Density.Stronger.Atkinson.norm_atkinsonRootPhase_integral_right
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_atkinsonRootPhase_integral_right
+#check @MathCollab.Density.Stronger.Atkinson.norm_atkinsonRootPhase_integral_left
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_atkinsonRootPhase_integral_left
+#check @MathCollab.Density.Stronger.Atkinson.norm_atkinsonRootKernel
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_atkinsonRootKernel
+#check @MathCollab.Density.Stronger.Atkinson.continuousAt_atkinsonRootKernel
+#print axioms MathCollab.Density.Stronger.Atkinson.continuousAt_atkinsonRootKernel
+#check @MathCollab.Density.Stronger.Atkinson.intervalIntegrable_atkinsonRootKernel
+#print axioms MathCollab.Density.Stronger.Atkinson.intervalIntegrable_atkinsonRootKernel
+#check @MathCollab.Density.Stronger.Atkinson.norm_atkinsonRootKernel_integral_le_length
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_atkinsonRootKernel_integral_le_length
+#check @MathCollab.Density.Stronger.Atkinson.norm_atkinsonRootKernel_integral_le_four
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_atkinsonRootKernel_integral_le_four
+#check @MathCollab.Density.Stronger.Atkinson.zetaQuadraticLogGaussian_root_rescale
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaQuadraticLogGaussian_root_rescale
+#check @MathCollab.Density.Stronger.Atkinson.zetaAtkinsonPhase_sq
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaAtkinsonPhase_sq
+#check @MathCollab.Density.Stronger.Atkinson.contDiffAt_atkinsonRootPhase
+#print axioms MathCollab.Density.Stronger.Atkinson.contDiffAt_atkinsonRootPhase
+#check @MathCollab.Density.Stronger.Atkinson.hasDerivAt_atkinsonRootPhase
+#print axioms MathCollab.Density.Stronger.Atkinson.hasDerivAt_atkinsonRootPhase
+#check @MathCollab.Density.Stronger.Atkinson.hasDerivAt_atkinsonRootSlope
+#print axioms MathCollab.Density.Stronger.Atkinson.hasDerivAt_atkinsonRootSlope
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonRootSlope_strictAnti
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonRootSlope_strictAnti
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonRootSlope_factored
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonRootSlope_factored
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonRootSlope_le_neg_two
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonRootSlope_le_neg_two
+#check @MathCollab.Density.Stronger.Atkinson.two_le_atkinsonRootSlope
+#print axioms MathCollab.Density.Stronger.Atkinson.two_le_atkinsonRootSlope
+#check @MathCollab.Density.Stronger.Atkinson.zetaGaussianQuadraticIntegral_neg
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaGaussianQuadraticIntegral_neg
+#check @MathCollab.Density.Stronger.Atkinson.zetaGaussianQuadraticIntegral_at_saddle
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaGaussianQuadraticIntegral_at_saddle
+#check @MathCollab.Density.Stronger.Atkinson.zetaGaussianQuadraticIntegral_at_neg_saddle
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaGaussianQuadraticIntegral_at_neg_saddle
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonSaddleGaussian_eq
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonSaddleGaussian_eq
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonSaddleRoot_neg
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonSaddleRoot_neg
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonSaddleRoot_mul_neg
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonSaddleRoot_mul_neg
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonSaddleRoot_sum_neg
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonSaddleRoot_sum_neg
+#check @MathCollab.Density.Stronger.Atkinson.zetaAtkinsonSaddle_mul_neg
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaAtkinsonSaddle_mul_neg
+#check @MathCollab.Density.Stronger.Atkinson.log_atkinsonSaddleRoot_div_sqrt
+#print axioms MathCollab.Density.Stronger.Atkinson.log_atkinsonSaddleRoot_div_sqrt
+#check @MathCollab.Density.Stronger.Atkinson.log_atkinsonSaddleRoot_sq_sub_log
+#print axioms MathCollab.Density.Stronger.Atkinson.log_atkinsonSaddleRoot_sq_sub_log
+#check @MathCollab.Density.Stronger.Atkinson.zetaAtkinsonSaddle_log_argument
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaAtkinsonSaddle_log_argument
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonDualPhase_neg
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonDualPhase_neg
+#check @MathCollab.Density.Stronger.Atkinson.zetaAtkinsonPhase_at_saddle
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaAtkinsonPhase_at_saddle
+#check @MathCollab.Density.Stronger.Atkinson.atkinson_sqrt_frequency_normalized
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinson_sqrt_frequency_normalized
+#check @MathCollab.Density.Stronger.Atkinson.atkinson_sqrt_frequency_radical
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinson_sqrt_frequency_radical
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonDualPhase_sqrt
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonDualPhase_sqrt
+#check @MathCollab.Density.Stronger.Atkinson.zetaAtkinsonPhase_saddle_sqrt
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaAtkinsonPhase_saddle_sqrt
+#check @MathCollab.Density.Stronger.Atkinson.zetaAtkinsonPhase_saddle_neg_sqrt
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaAtkinsonPhase_saddle_neg_sqrt
+#check @MathCollab.Density.Stronger.Atkinson.exp_atkinson_natural_pi
+#print axioms MathCollab.Density.Stronger.Atkinson.exp_atkinson_natural_pi
+#check @MathCollab.Density.Stronger.Atkinson.exp_zetaAtkinsonPhase_saddle_sqrt
+#print axioms MathCollab.Density.Stronger.Atkinson.exp_zetaAtkinsonPhase_saddle_sqrt
+#check @MathCollab.Density.Stronger.Atkinson.exp_zetaAtkinsonPhase_saddle_neg_sqrt
+#print axioms MathCollab.Density.Stronger.Atkinson.exp_zetaAtkinsonPhase_saddle_neg_sqrt
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonSaddle_quarter_power_curvature
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonSaddle_quarter_power_curvature
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonSaddleProfile_div_curvature
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonSaddleProfile_div_curvature
+#check @MathCollab.Density.Stronger.Atkinson.log_zetaDivisorBandEdge
+#print axioms MathCollab.Density.Stronger.Atkinson.log_zetaDivisorBandEdge
+#check @MathCollab.Density.Stronger.Atkinson.zetaDivisorBand_log_bound
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaDivisorBand_log_bound
+#check @MathCollab.Density.Stronger.Atkinson.zetaDivisorBandCutoff_log_bound
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaDivisorBandCutoff_log_bound
+#check @MathCollab.Density.Stronger.Atkinson.arsinh_abs
+#print axioms MathCollab.Density.Stronger.Atkinson.arsinh_abs
+#check @MathCollab.Density.Stronger.Atkinson.abs_le_three_mul_of_arsinh_bound
+#print axioms MathCollab.Density.Stronger.Atkinson.abs_le_three_mul_of_arsinh_bound
+#check @MathCollab.Density.Stronger.Atkinson.abs_frequency_le_of_saddle_log_bound
+#print axioms MathCollab.Density.Stronger.Atkinson.abs_frequency_le_of_saddle_log_bound
+#check @MathCollab.Density.Stronger.Atkinson.abs_frequency_le_of_saddle_cutoff
+#print axioms MathCollab.Density.Stronger.Atkinson.abs_frequency_le_of_saddle_cutoff
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonStationaryMain_eq_zero_of_frequency
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonStationaryMain_eq_zero_of_frequency
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonStationaryMain_pair_eq_zero_of_index
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonStationaryMain_pair_eq_zero_of_index
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonStationaryMain_pair_eq_zero_after_cutoff
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonStationaryMain_pair_eq_zero_after_cutoff
+#check @MathCollab.Density.Stronger.Atkinson.abs_log_one_add_sub_quadratic_le
+#print axioms MathCollab.Density.Stronger.Atkinson.abs_log_one_add_sub_quadratic_le
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonRootPhase_sub_quadratic
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonRootPhase_sub_quadratic
+#check @MathCollab.Density.Stronger.Atkinson.abs_atkinsonRootPhase_sub_quadratic_le
+#print axioms MathCollab.Density.Stronger.Atkinson.abs_atkinsonRootPhase_sub_quadratic_le
+#check @MathCollab.Density.Stronger.Atkinson.norm_exp_real_phase_sub_le
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_exp_real_phase_sub_le
+#check @MathCollab.Density.Stronger.Atkinson.norm_atkinsonRootKernel_sub_quadratic_le
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_atkinsonRootKernel_sub_quadratic_le
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonSaddleRoot_small_frequency
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonSaddleRoot_small_frequency
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonSaddleRoot_small_frequency_window
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonSaddleRoot_small_frequency_window
+#check @MathCollab.Density.Stronger.Atkinson.sqrt_nat_small_frequency
+#print axioms MathCollab.Density.Stronger.Atkinson.sqrt_nat_small_frequency
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonSaddleRoot_inverse_identity
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonSaddleRoot_inverse_identity
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonSaddleRoot_monotone
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonSaddleRoot_monotone
+#check @MathCollab.Density.Stronger.Atkinson.zetaAtkinsonSaddle_monotone
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaAtkinsonSaddle_monotone
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonPositiveRootSample_monotone
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonPositiveRootSample_monotone
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonNegativeRootSample_antitone
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonNegativeRootSample_antitone
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonRootSample_mem
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonRootSample_mem
+#check @MathCollab.Density.Stronger.Atkinson.hasDerivAt_atkinsonRootKernel
+#print axioms MathCollab.Density.Stronger.Atkinson.hasDerivAt_atkinsonRootKernel
+#check @MathCollab.Density.Stronger.Atkinson.IntervalC2Bound.atkinsonRoot_secondOrder
+#print axioms MathCollab.Density.Stronger.Atkinson.IntervalC2Bound.atkinsonRoot_secondOrder
+#check @MathCollab.Density.Stronger.Atkinson.atkinson_isSeparated_div
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinson_isSeparated_div
+#check @MathCollab.Density.Stronger.Atkinson.atkinson_sum_inv_gap_le_harmonic
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinson_sum_inv_gap_le_harmonic
+#check @MathCollab.Density.Stronger.Atkinson.atkinson_sum_inv_gap_le_harmonic_ceil
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinson_sum_inv_gap_le_harmonic_ceil
+#check @MathCollab.Density.Stronger.Atkinson.exists_norm_atkinsonLeadingTerm_band_le
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_norm_atkinsonLeadingTerm_band_le
+#check @MathCollab.Density.Stronger.Atkinson.summable_atkinsonLeadingTerm_of_band
+#print axioms MathCollab.Density.Stronger.Atkinson.summable_atkinsonLeadingTerm_of_band
+#check @MathCollab.Density.Stronger.Atkinson.exists_norm_atkinsonLeadingSum_sub_band_finite_le
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_norm_atkinsonLeadingSum_sub_band_finite_le
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonBand_tail_scale_le
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonBand_tail_scale_le
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonStationaryLeadingTerm_eq_signed
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonStationaryLeadingTerm_eq_signed
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonStationaryLeadingFiniteSum_eq_signed
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonStationaryLeadingFiniteSum_eq_signed
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonStationaryLeadingSum_eq_signed
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonStationaryLeadingSum_eq_signed
+#check @MathCollab.Density.Stronger.Atkinson.norm_atkinsonCommonMainPhase_le
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_atkinsonCommonMainPhase_le
+#check @MathCollab.Density.Stronger.Atkinson.norm_atkinsonStationaryLeadingSum_le_signed
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_atkinsonStationaryLeadingSum_le_signed
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonNegativePhaseTerm_eq_conj
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonNegativePhaseTerm_eq_conj
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonRootKernel_at_saddle
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonRootKernel_at_saddle
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonPowerWeight_at_saddle
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonPowerWeight_at_saddle
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonPowerWeight_at_neg_saddle
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonPowerWeight_at_neg_saddle
+#check @MathCollab.Density.Stronger.Atkinson.IntervalC2Bound.restrict
+#print axioms MathCollab.Density.Stronger.Atkinson.IntervalC2Bound.restrict
+#check @MathCollab.Density.Stronger.Atkinson.hasDerivAt_atkinsonRootSlopeFirst
+#print axioms MathCollab.Density.Stronger.Atkinson.hasDerivAt_atkinsonRootSlopeFirst
+#check @MathCollab.Density.Stronger.Atkinson.iteratedDeriv_two_atkinsonRootSlope
+#print axioms MathCollab.Density.Stronger.Atkinson.iteratedDeriv_two_atkinsonRootSlope
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonRootSlope_derivative_bounds
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonRootSlope_derivative_bounds
+#check @MathCollab.Density.Stronger.Atkinson.intervalC2Bound_atkinsonSlope_reciprocal_band
+#print axioms MathCollab.Density.Stronger.Atkinson.intervalC2Bound_atkinsonSlope_reciprocal_band
+#check @MathCollab.Density.Stronger.Atkinson.packet_width_scales
+#print axioms MathCollab.Density.Stronger.Atkinson.packet_width_scales
+#check @MathCollab.Density.Stronger.Atkinson.localMeanPacketInput_of_sourceToPrefix
+#print axioms MathCollab.Density.Stronger.Atkinson.localMeanPacketInput_of_sourceToPrefix
+#check @MathCollab.Density.Stronger.Atkinson.exists_atkinsonLeading_source_band_bound
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_atkinsonLeading_source_band_bound
+#check @MathCollab.Density.Stronger.Atkinson.norm_atkinsonNegativePhaseBlockSum
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_atkinsonNegativePhaseBlockSum
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonStationaryBlock_eq_signed
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonStationaryBlock_eq_signed
+#check @MathCollab.Density.Stronger.Atkinson.exists_norm_atkinsonStationaryBlock_le
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_norm_atkinsonStationaryBlock_le
+#check @MathCollab.Density.Stronger.Atkinson.exists_atkinsonSourceCutoff_block_bound
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_atkinsonSourceCutoff_block_bound
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonStationaryLeadingFiniteSum_eq_dyadic
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonStationaryLeadingFiniteSum_eq_dyadic
+#check @MathCollab.Density.Stronger.Atkinson.norm_atkinsonStationaryLeadingFiniteSum_le_blocks
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_atkinsonStationaryLeadingFiniteSum_le_blocks
+#check @MathCollab.Density.Stronger.Atkinson.exists_norm_atkinsonStationaryFiniteSum_le_dyadic
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_norm_atkinsonStationaryFiniteSum_le_dyadic
+#check @MathCollab.Density.Stronger.Atkinson.exists_norm_atkinsonStationarySum_le_dyadic
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_norm_atkinsonStationarySum_le_dyadic
+#check @MathCollab.Density.Stronger.Atkinson.exists_norm_atkinsonStationarySum_le_fullDyadic
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_norm_atkinsonStationarySum_le_fullDyadic
+#check @MathCollab.Density.Stronger.Atkinson.exists_norm_atkinsonStationarySum_le_undamped
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_norm_atkinsonStationarySum_le_undamped
+#check @MathCollab.Density.Stronger.Atkinson.exists_atkinsonPowerIntegral_small_frequency_stationary
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_atkinsonPowerIntegral_small_frequency_stationary
+#check @MathCollab.Density.Stronger.Atkinson.exists_atkinsonPowerIntegral_small_n_pair_stationary
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_atkinsonPowerIntegral_small_n_pair_stationary
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonStationaryMain_eq_phase
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonStationaryMain_eq_phase
+#check @MathCollab.Density.Stronger.Atkinson.exists_norm_atkinsonFiniteStationaryMain_sub_main_le
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_norm_atkinsonFiniteStationaryMain_sub_main_le
+#check @MathCollab.Density.Stronger.Atkinson.exists_atkinsonPowerIntegral_stationary_approximation
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_atkinsonPowerIntegral_stationary_approximation
+#check @MathCollab.Density.Stronger.Atkinson.exists_atkinsonPowerIntegral_quadratic_approximation
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_atkinsonPowerIntegral_quadratic_approximation
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonStationaryLeadingTerm_zero
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonStationaryLeadingTerm_zero
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonStationaryLeadingTerm_eq_zero_after_cutoff
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonStationaryLeadingTerm_eq_zero_after_cutoff
+#check @MathCollab.Density.Stronger.Atkinson.hasSum_atkinsonStationaryLeadingTerm
+#print axioms MathCollab.Density.Stronger.Atkinson.hasSum_atkinsonStationaryLeadingTerm
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonStationaryLeadingSum_eq_finite
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonStationaryLeadingSum_eq_finite
+#check @MathCollab.Density.Stronger.Atkinson.localMeanSourceToPrefix_of_stationary
+#print axioms MathCollab.Density.Stronger.Atkinson.localMeanSourceToPrefix_of_stationary
+#check @MathCollab.Density.Stronger.Atkinson.localMeanPacketInput_of_stationary
+#print axioms MathCollab.Density.Stronger.Atkinson.localMeanPacketInput_of_stationary
+#check @MathCollab.Density.Stronger.Atkinson.exists_atkinsonLeadingSum_sub_stationary_bound
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_atkinsonLeadingSum_sub_stationary_bound
+#check @MathCollab.Density.Stronger.Atkinson.exists_atkinsonLeadingSum_sub_stationary_above_fourthRoot
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_atkinsonLeadingSum_sub_stationary_above_fourthRoot
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonSourceCutoff_le_natural
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonSourceCutoff_le_natural
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonStationary_scale_identity
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonStationary_scale_identity
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonStationary_cutoff_scale_le
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonStationary_cutoff_scale_le
+#check @MathCollab.Density.Stronger.Atkinson.IntervalC1Bound.restrict
+#print axioms MathCollab.Density.Stronger.Atkinson.IntervalC1Bound.restrict
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonRootSlope_le_neg_window
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonRootSlope_le_neg_window
+#check @MathCollab.Density.Stronger.Atkinson.window_le_atkinsonRootSlope
+#print axioms MathCollab.Density.Stronger.Atkinson.window_le_atkinsonRootSlope
+#check @MathCollab.Density.Stronger.Atkinson.norm_atkinsonRootKernel_integral_right_window
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_atkinsonRootKernel_integral_right_window
+#check @MathCollab.Density.Stronger.Atkinson.norm_atkinsonRootKernel_integral_left_window
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_atkinsonRootKernel_integral_left_window
+#check @MathCollab.Density.Stronger.Atkinson.IntervalC1Bound.atkinsonRoot_right_window
+#print axioms MathCollab.Density.Stronger.Atkinson.IntervalC1Bound.atkinsonRoot_right_window
+#check @MathCollab.Density.Stronger.Atkinson.IntervalC1Bound.atkinsonRoot_left_window
+#print axioms MathCollab.Density.Stronger.Atkinson.IntervalC1Bound.atkinsonRoot_left_window
+#check @MathCollab.Density.Stronger.Atkinson.IntervalC1Bound.atkinsonRoot_sub_local
+#print axioms MathCollab.Density.Stronger.Atkinson.IntervalC1Bound.atkinsonRoot_sub_local
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonSymmetricError_le_physical
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonSymmetricError_le_physical
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonSymmetric_error_le_of_power_balance
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonSymmetric_error_le_of_power_balance
+#check @MathCollab.Density.Stronger.Atkinson.exists_atkinsonPowerIntegral_symmetric_balance
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_atkinsonPowerIntegral_symmetric_balance
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonSymmetricError_tail_le
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonSymmetricError_tail_le
+#check @MathCollab.Density.Stronger.Atkinson.IntervalC2Bound.atkinsonSymmetricApproximation
+#print axioms MathCollab.Density.Stronger.Atkinson.IntervalC2Bound.atkinsonSymmetricApproximation
+#check @MathCollab.Density.Stronger.Atkinson.exists_atkinsonPowerIntegral_finite_symmetric_approximation
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_atkinsonPowerIntegral_finite_symmetric_approximation
+#check @MathCollab.Density.Stronger.Atkinson.exists_atkinsonPowerIntegral_symmetric_approximation
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_atkinsonPowerIntegral_symmetric_approximation
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonRootQuadraticKernel_reflect
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonRootQuadraticKernel_reflect
+#check @MathCollab.Density.Stronger.Atkinson.integral_atkinsonRootQuadratic_odd
+#print axioms MathCollab.Density.Stronger.Atkinson.integral_atkinsonRootQuadratic_odd
+#check @MathCollab.Density.Stronger.Atkinson.abs_atkinsonRootCubicCorrection_le
+#print axioms MathCollab.Density.Stronger.Atkinson.abs_atkinsonRootCubicCorrection_le
+#check @MathCollab.Density.Stronger.Atkinson.IntervalC2Bound.atkinsonLocalSymmetric
+#print axioms MathCollab.Density.Stronger.Atkinson.IntervalC2Bound.atkinsonLocalSymmetric
+#check @MathCollab.Density.Stronger.Atkinson.exists_tsum_zetaAtkinsonTwoTerm_sub_leading_bound
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_tsum_zetaAtkinsonTwoTerm_sub_leading_bound
+#check @MathCollab.Density.Stronger.Atkinson.exists_tsum_zetaAtkinsonTwoTerm_sub_stationary_above_fourthRoot
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_tsum_zetaAtkinsonTwoTerm_sub_stationary_above_fourthRoot
+#check @MathCollab.Density.Stronger.Atkinson.norm_atkinsonPhaseBlockSum_le_max
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_atkinsonPhaseBlockSum_le_max
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonPhaseBlockMax_nonneg
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonPhaseBlockMax_nonneg
+#check @MathCollab.Density.Stronger.Atkinson.exists_atkinsonPhaseBlockMax_prefix
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_atkinsonPhaseBlockMax_prefix
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonMaximizingPrefix_le
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonMaximizingPrefix_le
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonMaximizingPrefix_spec
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonMaximizingPrefix_spec
+#check @MathCollab.Density.Stronger.Atkinson.sum_atkinsonPhaseBlockMax_sq_le_selectedGram
+#print axioms MathCollab.Density.Stronger.Atkinson.sum_atkinsonPhaseBlockMax_sq_le_selectedGram
+#check @MathCollab.Density.Stronger.Atkinson.sum_atkinsonPhaseBlockMax_sq_le_gramMax
+#print axioms MathCollab.Density.Stronger.Atkinson.sum_atkinsonPhaseBlockMax_sq_le_gramMax
+#check @MathCollab.Density.Stronger.Atkinson.card_mul_atkinsonPhaseBlockMax_lower_sq_le_gramMax
+#print axioms MathCollab.Density.Stronger.Atkinson.card_mul_atkinsonPhaseBlockMax_lower_sq_le_gramMax
+#check @MathCollab.Density.Stronger.Atkinson.integrableOn_cpow_mul_cexp_neg_complex_mul_Ioi
+#print axioms MathCollab.Density.Stronger.Atkinson.integrableOn_cpow_mul_cexp_neg_complex_mul_Ioi
+#check @MathCollab.Density.Stronger.Atkinson.hasDerivAt_dfiComplexLaplace
+#print axioms MathCollab.Density.Stronger.Atkinson.hasDerivAt_dfiComplexLaplace
+#check @MathCollab.Density.Stronger.Atkinson.analyticOnNhd_dfiComplexLaplace
+#print axioms MathCollab.Density.Stronger.Atkinson.analyticOnNhd_dfiComplexLaplace
+#check @MathCollab.Density.Stronger.Atkinson.dfiComplexLaplace_ofReal
+#print axioms MathCollab.Density.Stronger.Atkinson.dfiComplexLaplace_ofReal
+#check @MathCollab.Density.Stronger.Atkinson.dfiComplexLaplace_eq
+#print axioms MathCollab.Density.Stronger.Atkinson.dfiComplexLaplace_eq
+#check @MathCollab.Density.Stronger.Atkinson.one_add_sq_div_two_le_cosh
+#print axioms MathCollab.Density.Stronger.Atkinson.one_add_sq_div_two_le_cosh
+#check @MathCollab.Density.Stronger.Atkinson.dfiBesselK0_integrand_le_gaussian
+#print axioms MathCollab.Density.Stronger.Atkinson.dfiBesselK0_integrand_le_gaussian
+#check @MathCollab.Density.Stronger.Atkinson.integrableOn_dfiBesselK0_integrand
+#print axioms MathCollab.Density.Stronger.Atkinson.integrableOn_dfiBesselK0_integrand
+#check @MathCollab.Density.Stronger.Atkinson.abs_dfiBesselK0_le
+#print axioms MathCollab.Density.Stronger.Atkinson.abs_dfiBesselK0_le
+#check @MathCollab.Density.Stronger.Atkinson.abs_dfiBesselK0_le_two_div_sqrt
+#print axioms MathCollab.Density.Stronger.Atkinson.abs_dfiBesselK0_le_two_div_sqrt
+#check @MathCollab.Density.Stronger.Atkinson.integrableOn_cpow_mul_exp_neg_mul_Ioi
+#print axioms MathCollab.Density.Stronger.Atkinson.integrableOn_cpow_mul_exp_neg_mul_Ioi
+#check @MathCollab.Density.Stronger.Atkinson.norm_cpow_mul_exp_neg_cosh
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_cpow_mul_exp_neg_cosh
+#check @MathCollab.Density.Stronger.Atkinson.integral_norm_cpow_mul_exp_neg_cosh_Ioi
+#print axioms MathCollab.Density.Stronger.Atkinson.integral_norm_cpow_mul_exp_neg_cosh_Ioi
+#check @MathCollab.Density.Stronger.Atkinson.integrableOn_inv_cosh_rpow_Ioi
+#print axioms MathCollab.Density.Stronger.Atkinson.integrableOn_inv_cosh_rpow_Ioi
+#check @MathCollab.Density.Stronger.Atkinson.integrableOn_dfiBesselK0_mellin_joint
+#print axioms MathCollab.Density.Stronger.Atkinson.integrableOn_dfiBesselK0_mellin_joint
+#check @MathCollab.Density.Stronger.Atkinson.integral_inv_cosh_cpow_Ioi_eq
+#print axioms MathCollab.Density.Stronger.Atkinson.integral_inv_cosh_cpow_Ioi_eq
+#check @MathCollab.Density.Stronger.Atkinson.dfiBesselK0_ofReal_eq_integral
+#print axioms MathCollab.Density.Stronger.Atkinson.dfiBesselK0_ofReal_eq_integral
+#check @MathCollab.Density.Stronger.Atkinson.mellinConvergent_dfiBesselK0
+#print axioms MathCollab.Density.Stronger.Atkinson.mellinConvergent_dfiBesselK0
+#check @MathCollab.Density.Stronger.Atkinson.mellinConvergent_dfiBesselK0_mul_sqrt
+#print axioms MathCollab.Density.Stronger.Atkinson.mellinConvergent_dfiBesselK0_mul_sqrt
+#check @MathCollab.Density.Stronger.Atkinson.dfiBesselK0_nonneg
+#print axioms MathCollab.Density.Stronger.Atkinson.dfiBesselK0_nonneg
+#check @MathCollab.Density.Stronger.Atkinson.dfiBesselK0_le_exp_mul_half
+#print axioms MathCollab.Density.Stronger.Atkinson.dfiBesselK0_le_exp_mul_half
+#check @MathCollab.Density.Stronger.Atkinson.abs_dfiBesselK0_exp_le
+#print axioms MathCollab.Density.Stronger.Atkinson.abs_dfiBesselK0_exp_le
+#check @MathCollab.Density.Stronger.Atkinson.exp_neg_le_factorial_div_pow
+#print axioms MathCollab.Density.Stronger.Atkinson.exp_neg_le_factorial_div_pow
+#check @MathCollab.Density.Stronger.Atkinson.zetaBesselK0PowerConstant_pos
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaBesselK0PowerConstant_pos
+#check @MathCollab.Density.Stronger.Atkinson.abs_dfiBesselK0_pow_le
+#print axioms MathCollab.Density.Stronger.Atkinson.abs_dfiBesselK0_pow_le
+#check @MathCollab.Density.Stronger.Atkinson.abs_dfiBesselK0_source_le
+#print axioms MathCollab.Density.Stronger.Atkinson.abs_dfiBesselK0_source_le
+#check @MathCollab.Density.Stronger.Atkinson.integral_cpow_mul_dfiBesselK0_Ioi_eq_beta
+#print axioms MathCollab.Density.Stronger.Atkinson.integral_cpow_mul_dfiBesselK0_Ioi_eq_beta
+#check @MathCollab.Density.Stronger.Atkinson.half_beta_mul_Gamma_eq_besselK0MellinSymbol
+#print axioms MathCollab.Density.Stronger.Atkinson.half_beta_mul_Gamma_eq_besselK0MellinSymbol
+#check @MathCollab.Density.Stronger.Atkinson.integral_cpow_mul_dfiBesselK0_Ioi_eq
+#print axioms MathCollab.Density.Stronger.Atkinson.integral_cpow_mul_dfiBesselK0_Ioi_eq
+#check @MathCollab.Density.Stronger.Atkinson.mellin_dfiBesselK0_mul_sqrt
+#print axioms MathCollab.Density.Stronger.Atkinson.mellin_dfiBesselK0_mul_sqrt
+#check @MathCollab.Density.Stronger.Atkinson.stronglyMeasurable_dfiBesselK0
+#print axioms MathCollab.Density.Stronger.Atkinson.stronglyMeasurable_dfiBesselK0
+#check @MathCollab.Density.Stronger.Atkinson.norm_zetaBesselK0SourceIntegrand_le
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_zetaBesselK0SourceIntegrand_le
+#check @MathCollab.Density.Stronger.Atkinson.integrable_zetaBesselK0SourceIntegrand
+#print axioms MathCollab.Density.Stronger.Atkinson.integrable_zetaBesselK0SourceIntegrand
+#check @MathCollab.Density.Stronger.Atkinson.norm_integral_zetaBesselK0SourceIntegrand_le
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_integral_zetaBesselK0SourceIntegrand_le
+#check @MathCollab.Density.Stronger.Atkinson.exists_norm_integral_zetaBesselK0SourceIntegrand_le
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_norm_integral_zetaBesselK0SourceIntegrand_le
+#check @MathCollab.Density.Stronger.Atkinson.dfiBesselK0MellinSymbol_two_mul
+#print axioms MathCollab.Density.Stronger.Atkinson.dfiBesselK0MellinSymbol_two_mul
+#check @MathCollab.Density.Stronger.Atkinson.dfiBesselY0MellinSymbol_two_mul
+#print axioms MathCollab.Density.Stronger.Atkinson.dfiBesselY0MellinSymbol_two_mul
+#check @MathCollab.Density.Stronger.Atkinson.integral_cpow_mul_exp_neg_mul_Ioi_eq
+#print axioms MathCollab.Density.Stronger.Atkinson.integral_cpow_mul_exp_neg_mul_Ioi_eq
+#check @MathCollab.Density.Stronger.Atkinson.image_sq_Ioo_zero_one
+#print axioms MathCollab.Density.Stronger.Atkinson.image_sq_Ioo_zero_one
+#check @MathCollab.Density.Stronger.Atkinson.betaIntegral_eq_integral_Ioo
+#print axioms MathCollab.Density.Stronger.Atkinson.betaIntegral_eq_integral_Ioo
+#check @MathCollab.Density.Stronger.Atkinson.betaIntegral_square_substitution
+#print axioms MathCollab.Density.Stronger.Atkinson.betaIntegral_square_substitution
+#check @MathCollab.Density.Stronger.Atkinson.abs_two_mul_smul_sq_cpow_neg_half
+#print axioms MathCollab.Density.Stronger.Atkinson.abs_two_mul_smul_sq_cpow_neg_half
+#check @MathCollab.Density.Stronger.Atkinson.integral_one_sub_sq_cpow_Ioo_eq_half_beta
+#print axioms MathCollab.Density.Stronger.Atkinson.integral_one_sub_sq_cpow_Ioo_eq_half_beta
+#check @MathCollab.Density.Stronger.Atkinson.image_tanh_Ioi_zero
+#print axioms MathCollab.Density.Stronger.Atkinson.image_tanh_Ioi_zero
+#check @MathCollab.Density.Stronger.Atkinson.hasDerivAt_tanh_recip_cosh_sq
+#print axioms MathCollab.Density.Stronger.Atkinson.hasDerivAt_tanh_recip_cosh_sq
+#check @MathCollab.Density.Stronger.Atkinson.one_sub_tanh_sq_eq_inv_cosh_sq
+#print axioms MathCollab.Density.Stronger.Atkinson.one_sub_tanh_sq_eq_inv_cosh_sq
+#check @MathCollab.Density.Stronger.Atkinson.inv_sq_mul_inv_sq_cpow_sub_one
+#print axioms MathCollab.Density.Stronger.Atkinson.inv_sq_mul_inv_sq_cpow_sub_one
+#check @MathCollab.Density.Stronger.Atkinson.tanh_jacobian_smul_one_sub_sq_cpow
+#print axioms MathCollab.Density.Stronger.Atkinson.tanh_jacobian_smul_one_sub_sq_cpow
+#check @MathCollab.Density.Stronger.Atkinson.integral_cosh_cpow_neg_two_mul_Ioi_eq
+#print axioms MathCollab.Density.Stronger.Atkinson.integral_cosh_cpow_neg_two_mul_Ioi_eq
+#check @MathCollab.Density.Stronger.Atkinson.integrableOn_one_sub_sq_cpow_Ioo
+#print axioms MathCollab.Density.Stronger.Atkinson.integrableOn_one_sub_sq_cpow_Ioo
+#check @MathCollab.Density.Stronger.Atkinson.integrableOn_cosh_cpow_neg_two_mul_Ioi
+#print axioms MathCollab.Density.Stronger.Atkinson.integrableOn_cosh_cpow_neg_two_mul_Ioi
+#check @MathCollab.Density.Stronger.Atkinson.MellinConvergent.aestronglyMeasurable_positive
+#print axioms MathCollab.Density.Stronger.Atkinson.MellinConvergent.aestronglyMeasurable_positive
+#check @MathCollab.Density.Stronger.Atkinson.MellinConvergent.integrableOn_rpow_mul_norm
+#print axioms MathCollab.Density.Stronger.Atkinson.MellinConvergent.integrableOn_rpow_mul_norm
+#check @MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.continuous_mellin_vertical
+#print axioms MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.continuous_mellin_vertical
+#check @MathCollab.Density.Stronger.Atkinson.verticalIntegral'_mellin_mul_mellin_one_sub
+#print axioms MathCollab.Density.Stronger.Atkinson.verticalIntegral'_mellin_mul_mellin_one_sub
+#check @MathCollab.Density.Stronger.Atkinson.dfiVoronoiPlusMultiplier_eq_scaled_K0_mellin
+#print axioms MathCollab.Density.Stronger.Atkinson.dfiVoronoiPlusMultiplier_eq_scaled_K0_mellin
+#check @MathCollab.Density.Stronger.Atkinson.verticalIntegral'_congr_line
+#print axioms MathCollab.Density.Stronger.Atkinson.verticalIntegral'_congr_line
+#check @MathCollab.Density.Stronger.Atkinson.verticalIntegral'_const_mul_bridge
+#print axioms MathCollab.Density.Stronger.Atkinson.verticalIntegral'_const_mul_bridge
+#check @MathCollab.Density.Stronger.Atkinson.dfiVoronoiPlusTransform_mellin_eq_bessel
+#print axioms MathCollab.Density.Stronger.Atkinson.dfiVoronoiPlusTransform_mellin_eq_bessel
+#check @MathCollab.Density.Stronger.Atkinson.dfiBesselY0MellinSymbol_eq_cos_mul_K0
+#print axioms MathCollab.Density.Stronger.Atkinson.dfiBesselY0MellinSymbol_eq_cos_mul_K0
+#check @MathCollab.Density.Stronger.Atkinson.dfiVoronoiMinusMultiplier_eq_scaled_Y0_symbol
+#print axioms MathCollab.Density.Stronger.Atkinson.dfiVoronoiMinusMultiplier_eq_scaled_Y0_symbol
+#check @MathCollab.Density.Stronger.Atkinson.verticalIntegral_dfiVoronoiMinus_mellin_thirteenSixteenths_eq_bessel
+#print axioms MathCollab.Density.Stronger.Atkinson.verticalIntegral_dfiVoronoiMinus_mellin_thirteenSixteenths_eq_bessel
+#check @MathCollab.Density.Stronger.Atkinson.integrableOn_dfiBesselY0Tail_integrand
+#print axioms MathCollab.Density.Stronger.Atkinson.integrableOn_dfiBesselY0Tail_integrand
+#check @MathCollab.Density.Stronger.Atkinson.intervalIntegrable_dfiBesselY0Osc_integrand
+#print axioms MathCollab.Density.Stronger.Atkinson.intervalIntegrable_dfiBesselY0Osc_integrand
+#check @MathCollab.Density.Stronger.Atkinson.integral_cpow_mul_damped_cexp_Ioi
+#print axioms MathCollab.Density.Stronger.Atkinson.integral_cpow_mul_damped_cexp_Ioi
+#check @MathCollab.Density.Stronger.Atkinson.integral_cpow_mul_damped_cexp_neg_Ioi
+#print axioms MathCollab.Density.Stronger.Atkinson.integral_cpow_mul_damped_cexp_neg_Ioi
+#check @MathCollab.Density.Stronger.Atkinson.integral_cpow_mul_damped_sin_Ioi
+#print axioms MathCollab.Density.Stronger.Atkinson.integral_cpow_mul_damped_sin_Ioi
+#check @MathCollab.Density.Stronger.Atkinson.tendsto_dfiDampedSineFactor
+#print axioms MathCollab.Density.Stronger.Atkinson.tendsto_dfiDampedSineFactor
+#check @MathCollab.Density.Stronger.Atkinson.dfiDampedSineFactor_limit_eq
+#print axioms MathCollab.Density.Stronger.Atkinson.dfiDampedSineFactor_limit_eq
+#check @MathCollab.Density.Stronger.Atkinson.image_sin_Ioo_zero_halfPi
+#print axioms MathCollab.Density.Stronger.Atkinson.image_sin_Ioo_zero_halfPi
+#check @MathCollab.Density.Stronger.Atkinson.cos_mul_one_sub_sin_sq_cpow
+#print axioms MathCollab.Density.Stronger.Atkinson.cos_mul_one_sub_sin_sq_cpow
+#check @MathCollab.Density.Stronger.Atkinson.integral_cos_cpow_neg_eq_beta
+#print axioms MathCollab.Density.Stronger.Atkinson.integral_cos_cpow_neg_eq_beta
+#check @MathCollab.Density.Stronger.Atkinson.abs_two_mul_smul_sq_cpow_general
+#print axioms MathCollab.Density.Stronger.Atkinson.abs_two_mul_smul_sq_cpow_general
+#check @MathCollab.Density.Stronger.Atkinson.integral_beta_tail_Ioo
+#print axioms MathCollab.Density.Stronger.Atkinson.integral_beta_tail_Ioo
+#check @MathCollab.Density.Stronger.Atkinson.tanh_jacobian_beta_integrand
+#print axioms MathCollab.Density.Stronger.Atkinson.tanh_jacobian_beta_integrand
+#check @MathCollab.Density.Stronger.Atkinson.integral_sinh_cpow_neg_Ioi_eq_beta
+#print axioms MathCollab.Density.Stronger.Atkinson.integral_sinh_cpow_neg_Ioi_eq_beta
+#check @MathCollab.Density.Stronger.Atkinson.image_sinh_Ioi_zero
+#print axioms MathCollab.Density.Stronger.Atkinson.image_sinh_Ioi_zero
+#check @MathCollab.Density.Stronger.Atkinson.sinh_tail_jacobian
+#print axioms MathCollab.Density.Stronger.Atkinson.sinh_tail_jacobian
+#check @MathCollab.Density.Stronger.Atkinson.integral_tail_power_eq_beta
+#print axioms MathCollab.Density.Stronger.Atkinson.integral_tail_power_eq_beta
+#check @MathCollab.Density.Stronger.Atkinson.norm_neumannLaplaceIntegral_le
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_neumannLaplaceIntegral_le
+#check @MathCollab.Density.Stronger.Atkinson.abs_dfiBesselY0_le_seven_div_sqrt
+#print axioms MathCollab.Density.Stronger.Atkinson.abs_dfiBesselY0_le_seven_div_sqrt
+#check @MathCollab.Density.Stronger.Atkinson.probe_dfiBesselY0Osc_eq_integral_sin_real
+#print axioms MathCollab.Density.Stronger.Atkinson.probe_dfiBesselY0Osc_eq_integral_sin_real
+#check @MathCollab.Density.Stronger.Atkinson.probe_dfiBesselY0Osc_eq_integral_sin
+#print axioms MathCollab.Density.Stronger.Atkinson.probe_dfiBesselY0Osc_eq_integral_sin
+#check @MathCollab.Density.Stronger.Atkinson.probe_abs_dfiBesselY0Osc_le_halfPi
+#print axioms MathCollab.Density.Stronger.Atkinson.probe_abs_dfiBesselY0Osc_le_halfPi
+#check @MathCollab.Density.Stronger.Atkinson.probe_aestronglyMeasurable_dfiBesselY0Osc
+#print axioms MathCollab.Density.Stronger.Atkinson.probe_aestronglyMeasurable_dfiBesselY0Osc
+#check @MathCollab.Density.Stronger.Atkinson.probe_aestronglyMeasurable_dfiBesselY0Tail
+#print axioms MathCollab.Density.Stronger.Atkinson.probe_aestronglyMeasurable_dfiBesselY0Tail
+#check @MathCollab.Density.Stronger.Atkinson.probe_aestronglyMeasurable_dfiBesselY0
+#print axioms MathCollab.Density.Stronger.Atkinson.probe_aestronglyMeasurable_dfiBesselY0
+#check @MathCollab.Density.Stronger.Atkinson.probe_abs_dfiBesselY0_le_quarter_near
+#print axioms MathCollab.Density.Stronger.Atkinson.probe_abs_dfiBesselY0_le_quarter_near
+#check @MathCollab.Density.Stronger.Atkinson.probe_mellinConvergent_dfiBesselY0
+#print axioms MathCollab.Density.Stronger.Atkinson.probe_mellinConvergent_dfiBesselY0
+#check @MathCollab.Density.Stronger.Atkinson.probe_tendsto_damped_dfiBesselY0_mellin
+#print axioms MathCollab.Density.Stronger.Atkinson.probe_tendsto_damped_dfiBesselY0_mellin
+#check @MathCollab.Density.Stronger.Atkinson.probe_integrableOn_cos_cpow_neg_Ioc
+#print axioms MathCollab.Density.Stronger.Atkinson.probe_integrableOn_cos_cpow_neg_Ioc
+#check @MathCollab.Density.Stronger.Atkinson.probe_integrableOn_cos_rpow_neg_Ioc
+#print axioms MathCollab.Density.Stronger.Atkinson.probe_integrableOn_cos_rpow_neg_Ioc
+#check @MathCollab.Density.Stronger.Atkinson.probe_integrableOn_tail_rpow_div_sqrt
+#print axioms MathCollab.Density.Stronger.Atkinson.probe_integrableOn_tail_rpow_div_sqrt
+#check @MathCollab.Density.Stronger.Atkinson.probe_tendsto_damped_tail_factor
+#print axioms MathCollab.Density.Stronger.Atkinson.probe_tendsto_damped_tail_factor
+#check @MathCollab.Density.Stronger.Atkinson.probe_norm_damped_sineFactor_le
+#print axioms MathCollab.Density.Stronger.Atkinson.probe_norm_damped_sineFactor_le
+#check @MathCollab.Density.Stronger.Atkinson.probe_tendsto_damped_osc_factor
+#print axioms MathCollab.Density.Stronger.Atkinson.probe_tendsto_damped_osc_factor
+#check @MathCollab.Density.Stronger.Atkinson.probe_integrableOn_damped_osc_joint
+#print axioms MathCollab.Density.Stronger.Atkinson.probe_integrableOn_damped_osc_joint
+#check @MathCollab.Density.Stronger.Atkinson.probe_integrableOn_eps_add_rpow_div_sqrt
+#print axioms MathCollab.Density.Stronger.Atkinson.probe_integrableOn_eps_add_rpow_div_sqrt
+#check @MathCollab.Density.Stronger.Atkinson.probe_integrableOn_damped_tail_joint
+#print axioms MathCollab.Density.Stronger.Atkinson.probe_integrableOn_damped_tail_joint
+#check @MathCollab.Density.Stronger.Atkinson.probe_integral_cpow_mul_damped_y0Osc_Ioi
+#print axioms MathCollab.Density.Stronger.Atkinson.probe_integral_cpow_mul_damped_y0Osc_Ioi
+#check @MathCollab.Density.Stronger.Atkinson.probe_integral_cpow_mul_damped_y0Tail_Ioi
+#print axioms MathCollab.Density.Stronger.Atkinson.probe_integral_cpow_mul_damped_y0Tail_Ioi
+#check @MathCollab.Density.Stronger.Atkinson.probe_integrableOn_damped_y0Osc_mellin
+#print axioms MathCollab.Density.Stronger.Atkinson.probe_integrableOn_damped_y0Osc_mellin
+#check @MathCollab.Density.Stronger.Atkinson.probe_integrableOn_damped_y0Tail_mellin
+#print axioms MathCollab.Density.Stronger.Atkinson.probe_integrableOn_damped_y0Tail_mellin
+#check @MathCollab.Density.Stronger.Atkinson.probe_integral_cpow_mul_damped_y0_Ioi
+#print axioms MathCollab.Density.Stronger.Atkinson.probe_integral_cpow_mul_damped_y0_Ioi
+#check @MathCollab.Density.Stronger.Atkinson.probe_integral_cpow_mul_dfiBesselY0_Ioi_eq_beta
+#print axioms MathCollab.Density.Stronger.Atkinson.probe_integral_cpow_mul_dfiBesselY0_Ioi_eq_beta
+#check @MathCollab.Density.Stronger.Atkinson.probe_y0_beta_combination_eq_k0_beta
+#print axioms MathCollab.Density.Stronger.Atkinson.probe_y0_beta_combination_eq_k0_beta
+#check @MathCollab.Density.Stronger.Atkinson.probe_integral_cpow_mul_dfiBesselY0_Ioi_eq
+#print axioms MathCollab.Density.Stronger.Atkinson.probe_integral_cpow_mul_dfiBesselY0_Ioi_eq
+#check @MathCollab.Density.Stronger.Atkinson.mellinConvergent_dfiBesselY0_mul_sqrt
+#print axioms MathCollab.Density.Stronger.Atkinson.mellinConvergent_dfiBesselY0_mul_sqrt
+#check @MathCollab.Density.Stronger.Atkinson.mellin_dfiBesselY0_mul_sqrt
+#print axioms MathCollab.Density.Stronger.Atkinson.mellin_dfiBesselY0_mul_sqrt
+#check @MathCollab.Density.Stronger.Atkinson.abs_dfiBesselY0Tail_le_quarter
+#print axioms MathCollab.Density.Stronger.Atkinson.abs_dfiBesselY0Tail_le_quarter
+#check @MathCollab.Density.Stronger.Atkinson.IntervalC1Bound.continuousKernel_of_primitive_bound
+#print axioms MathCollab.Density.Stronger.Atkinson.IntervalC1Bound.continuousKernel_of_primitive_bound
+#check @MathCollab.Density.Stronger.Atkinson.zetaBandCutoff_nonneg
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaBandCutoff_nonneg
+#check @MathCollab.Density.Stronger.Atkinson.zetaBandCutoff_le_one
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaBandCutoff_le_one
+#check @MathCollab.Density.Stronger.Atkinson.contDiff_zetaBandCutoff
+#print axioms MathCollab.Density.Stronger.Atkinson.contDiff_zetaBandCutoff
+#check @MathCollab.Density.Stronger.Atkinson.zetaBandCutoff_eq_one
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaBandCutoff_eq_one
+#check @MathCollab.Density.Stronger.Atkinson.zetaBandCutoff_eq_zero_left
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaBandCutoff_eq_zero_left
+#check @MathCollab.Density.Stronger.Atkinson.zetaBandCutoff_eq_zero_right
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaBandCutoff_eq_zero_right
+#check @MathCollab.Density.Stronger.Atkinson.support_zetaBandCutoff
+#print axioms MathCollab.Density.Stronger.Atkinson.support_zetaBandCutoff
+#check @MathCollab.Density.Stronger.Atkinson.zetaDivisorBandEdge_pos
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaDivisorBandEdge_pos
+#check @MathCollab.Density.Stronger.Atkinson.zetaDivisorBandEdge_strictMono
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaDivisorBandEdge_strictMono
+#check @MathCollab.Density.Stronger.Atkinson.zetaDivisorBandCutoff_eq_one
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaDivisorBandCutoff_eq_one
+#check @MathCollab.Density.Stronger.Atkinson.support_zetaDivisorBandCutoff
+#print axioms MathCollab.Density.Stronger.Atkinson.support_zetaDivisorBandCutoff
+#check @MathCollab.Density.Stronger.Atkinson.contDiff_zetaDivisorBandCutoff
+#print axioms MathCollab.Density.Stronger.Atkinson.contDiff_zetaDivisorBandCutoff
+#check @MathCollab.Density.Stronger.Atkinson.norm_zetaDivisorLatticePhase
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_zetaDivisorLatticePhase
+#check @MathCollab.Density.Stronger.Atkinson.zetaDivisorLatticePhase_nat
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaDivisorLatticePhase_nat
+#check @MathCollab.Density.Stronger.Atkinson.contDiff_zetaDivisorLatticePhase
+#print axioms MathCollab.Density.Stronger.Atkinson.contDiff_zetaDivisorLatticePhase
+#check @MathCollab.Density.Stronger.Atkinson.norm_zetaAtkinsonDivisorTest
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_zetaAtkinsonDivisorTest
+#check @MathCollab.Density.Stronger.Atkinson.zetaAtkinsonDivisorTest_nat
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaAtkinsonDivisorTest_nat
+#check @MathCollab.Density.Stronger.Atkinson.support_zetaAtkinsonDivisorTest
+#print axioms MathCollab.Density.Stronger.Atkinson.support_zetaAtkinsonDivisorTest
+#check @MathCollab.Density.Stronger.Atkinson.contDiff_zetaAtkinsonDivisorTest
+#print axioms MathCollab.Density.Stronger.Atkinson.contDiff_zetaAtkinsonDivisorTest
+#check @MathCollab.Density.Stronger.Atkinson.zetaSmoothDivisorSum_eq_atkinson_test
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaSmoothDivisorSum_eq_atkinson_test
+#check @MathCollab.Density.Stronger.Atkinson.norm_divisorDirichletTerm_quarter_le_prefix
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_divisorDirichletTerm_quarter_le_prefix
+#check @MathCollab.Density.Stronger.Atkinson.exists_sum_norm_divisorDirichletTerm_quarter_le
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_sum_norm_divisorDirichletTerm_quarter_le
+#check @MathCollab.Density.Stronger.Atkinson.contDiff_zetaGaussianQuadraticIntegral
+#print axioms MathCollab.Density.Stronger.Atkinson.contDiff_zetaGaussianQuadraticIntegral
+#check @MathCollab.Density.Stronger.Atkinson.contDiffAt_ofReal_cpow_positive
+#print axioms MathCollab.Density.Stronger.Atkinson.contDiffAt_ofReal_cpow_positive
+#check @MathCollab.Density.Stronger.Atkinson.contDiffAt_zetaShortDivisorTestFunction
+#print axioms MathCollab.Density.Stronger.Atkinson.contDiffAt_zetaShortDivisorTestFunction
+#check @MathCollab.Density.Stronger.Atkinson.contDiffOn_zetaShortDivisorTestFunction
+#print axioms MathCollab.Density.Stronger.Atkinson.contDiffOn_zetaShortDivisorTestFunction
+#check @MathCollab.Density.Stronger.Atkinson.summable_zetaSquareFrozenDivisorContribution
+#print axioms MathCollab.Density.Stronger.Atkinson.summable_zetaSquareFrozenDivisorContribution
+#check @MathCollab.Density.Stronger.Atkinson.norm_zetaSquareDivisor_freezing_error
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_zetaSquareDivisor_freezing_error
+#check @MathCollab.Density.Stronger.Atkinson.min_self_inv_le_min_one
+#print axioms MathCollab.Density.Stronger.Atkinson.min_self_inv_le_min_one
+#check @MathCollab.Density.Stronger.Atkinson.exists_norm_zetaSquareDivisor_freezing_error_le
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_norm_zetaSquareDivisor_freezing_error_le
+#check @MathCollab.Density.Stronger.Atkinson.exists_norm_zetaSquareLeadingDivisor_sub_frozen_le
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_norm_zetaSquareLeadingDivisor_sub_frozen_le
+#check @MathCollab.Density.Stronger.Atkinson.exists_norm_zetaSquareSource_sub_frozen_le
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_norm_zetaSquareSource_sub_frozen_le
+#check @MathCollab.Density.Stronger.Atkinson.differentiable_zetaDivisorWeightNumerator
+#print axioms MathCollab.Density.Stronger.Atkinson.differentiable_zetaDivisorWeightNumerator
+#check @MathCollab.Density.Stronger.Atkinson.zetaDivisorWeightNumerator_zero
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaDivisorWeightNumerator_zero
+#check @MathCollab.Density.Stronger.Atkinson.zetaDivisorWeightNumerator_neg
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaDivisorWeightNumerator_neg
+#check @MathCollab.Density.Stronger.Atkinson.zetaDivisorWeightKernel_neg
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaDivisorWeightKernel_neg
+#check @MathCollab.Density.Stronger.Atkinson.continuous_zetaDivisorWeightKernel_right
+#print axioms MathCollab.Density.Stronger.Atkinson.continuous_zetaDivisorWeightKernel_right
+#check @MathCollab.Density.Stronger.Atkinson.integrable_zetaDivisorWeightEnvelope
+#print axioms MathCollab.Density.Stronger.Atkinson.integrable_zetaDivisorWeightEnvelope
+#check @MathCollab.Density.Stronger.Atkinson.norm_zetaDivisorWeightNumerator_right
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_zetaDivisorWeightNumerator_right
+#check @MathCollab.Density.Stronger.Atkinson.norm_zetaDivisorWeightNumerator_right_le
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_zetaDivisorWeightNumerator_right_le
+#check @MathCollab.Density.Stronger.Atkinson.norm_zetaDivisorWeightKernel_right_le
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_zetaDivisorWeightKernel_right_le
+#check @MathCollab.Density.Stronger.Atkinson.integrable_zetaDivisorWeightKernel_right
+#print axioms MathCollab.Density.Stronger.Atkinson.integrable_zetaDivisorWeightKernel_right
+#check @MathCollab.Density.Stronger.Atkinson.exists_norm_zetaDivisorWeight_le
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_norm_zetaDivisorWeight_le
+#check @MathCollab.Density.Stronger.Atkinson.min_one_le_rpow
+#print axioms MathCollab.Density.Stronger.Atkinson.min_one_le_rpow
+#check @MathCollab.Density.Stronger.Atkinson.norm_divisorCritical_mul_ratio_rpow
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_divisorCritical_mul_ratio_rpow
+#check @MathCollab.Density.Stronger.Atkinson.norm_divisorCritical_mul_min_le
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_divisorCritical_mul_min_le
+#check @MathCollab.Density.Stronger.Atkinson.summable_divisorCritical_min
+#print axioms MathCollab.Density.Stronger.Atkinson.summable_divisorCritical_min
+#check @MathCollab.Density.Stronger.Atkinson.tsum_divisorCritical_min_le
+#print axioms MathCollab.Density.Stronger.Atkinson.tsum_divisorCritical_min_le
+#check @MathCollab.Density.Stronger.Atkinson.summable_norm_source_divisor_weight
+#print axioms MathCollab.Density.Stronger.Atkinson.summable_norm_source_divisor_weight
+#check @MathCollab.Density.Stronger.Atkinson.exists_tsum_norm_source_divisor_weight_le
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_tsum_norm_source_divisor_weight_le
+#check @MathCollab.Density.Stronger.Atkinson.exists_tsum_divisorCritical_min_height_le
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_tsum_divisorCritical_min_height_le
+#check @MathCollab.Density.Stronger.Atkinson.zetaDivisorWeight_finiteRectangle
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaDivisorWeight_finiteRectangle
+#check @MathCollab.Density.Stronger.Atkinson.norm_zetaDivisorWeightKernel_horizontal_le
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_zetaDivisorWeightKernel_horizontal_le
+#check @MathCollab.Density.Stronger.Atkinson.tendsto_zetaDivisorWeight_horizontal_zero
+#print axioms MathCollab.Density.Stronger.Atkinson.tendsto_zetaDivisorWeight_horizontal_zero
+#check @MathCollab.Density.Stronger.Atkinson.hIntegral_zetaDivisorWeight_bottom
+#print axioms MathCollab.Density.Stronger.Atkinson.hIntegral_zetaDivisorWeight_bottom
+#check @MathCollab.Density.Stronger.Atkinson.vIntegral_zetaDivisorWeight_left
+#print axioms MathCollab.Density.Stronger.Atkinson.vIntegral_zetaDivisorWeight_left
+#check @MathCollab.Density.Stronger.Atkinson.zetaDivisorWeight_truncated_reflection
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaDivisorWeight_truncated_reflection
+#check @MathCollab.Density.Stronger.Atkinson.tendsto_zetaDivisorWeight_vertical
+#print axioms MathCollab.Density.Stronger.Atkinson.tendsto_zetaDivisorWeight_vertical
+#check @MathCollab.Density.Stronger.Atkinson.zetaDivisorWeight_add_neg
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaDivisorWeight_add_neg
+#check @MathCollab.Density.Stronger.Atkinson.zetaDivisorWeight_zero
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaDivisorWeight_zero
+#check @MathCollab.Density.Stronger.Atkinson.exists_norm_zetaDivisorWeight_min_le
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_norm_zetaDivisorWeight_min_le
+#check @MathCollab.Density.Stronger.Atkinson.hasDerivAt_zetaDivisorWeightKernel_complex
+#print axioms MathCollab.Density.Stronger.Atkinson.hasDerivAt_zetaDivisorWeightKernel_complex
+#check @MathCollab.Density.Stronger.Atkinson.norm_zetaDivisorWeightNumerator_local_le
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_zetaDivisorWeightNumerator_local_le
+#check @MathCollab.Density.Stronger.Atkinson.hasDerivAt_zetaDivisorWeight
+#print axioms MathCollab.Density.Stronger.Atkinson.hasDerivAt_zetaDivisorWeight
+#check @MathCollab.Density.Stronger.Atkinson.differentiable_zetaDivisorWeight
+#print axioms MathCollab.Density.Stronger.Atkinson.differentiable_zetaDivisorWeight
+#check @MathCollab.Density.Stronger.Atkinson.contDiff_zetaDivisorWeight_complex
+#print axioms MathCollab.Density.Stronger.Atkinson.contDiff_zetaDivisorWeight_complex
+#check @MathCollab.Density.Stronger.Atkinson.contDiff_zetaDivisorWeight
+#print axioms MathCollab.Density.Stronger.Atkinson.contDiff_zetaDivisorWeight
+#check @MathCollab.Density.Stronger.Atkinson.zetaDivisorWeightArgument_re
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaDivisorWeightArgument_re
+#check @MathCollab.Density.Stronger.Atkinson.zetaDivisorWeightArgument_im
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaDivisorWeightArgument_im
+#check @MathCollab.Density.Stronger.Atkinson.divisorDirichletTerm_add_eq_mul_exp
+#print axioms MathCollab.Density.Stronger.Atkinson.divisorDirichletTerm_add_eq_mul_exp
+#check @MathCollab.Density.Stronger.Atkinson.zetaSquareLeadingDivisorTerm_eq_weightKernel
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaSquareLeadingDivisorTerm_eq_weightKernel
+#check @MathCollab.Density.Stronger.Atkinson.zetaSquareLeadingDivisorContribution_eq_weight
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaSquareLeadingDivisorContribution_eq_weight
+#check @MathCollab.Density.Stronger.Atkinson.hasSum_zetaSquareLeadingDivisor_weighted
+#print axioms MathCollab.Density.Stronger.Atkinson.hasSum_zetaSquareLeadingDivisor_weighted
+#check @MathCollab.Density.Stronger.Atkinson.exp_neg_zetaDivisorWeightArgument_re
+#print axioms MathCollab.Density.Stronger.Atkinson.exp_neg_zetaDivisorWeightArgument_re
+#check @MathCollab.Density.Stronger.Atkinson.exists_norm_source_zetaDivisorWeight_min_le
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_norm_source_zetaDivisorWeight_min_le
+#check @MathCollab.Density.Stronger.Atkinson.hasDerivAt_zetaDivisorWeightKernel_real
+#print axioms MathCollab.Density.Stronger.Atkinson.hasDerivAt_zetaDivisorWeightKernel_real
+#check @MathCollab.Density.Stronger.Atkinson.norm_zetaDivisorWeightKernel_real_sub_le
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_zetaDivisorWeightKernel_real_sub_le
+#check @MathCollab.Density.Stronger.Atkinson.exists_norm_zetaDivisorWeight_real_sub_le
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_norm_zetaDivisorWeight_real_sub_le
+#check @MathCollab.Density.Stronger.Atkinson.exists_norm_zetaDivisorWeight_real_sub_min_le
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_norm_zetaDivisorWeight_real_sub_min_le
+#check @MathCollab.Density.Stronger.Atkinson.abs_log_height_shift_le
+#print axioms MathCollab.Density.Stronger.Atkinson.abs_log_height_shift_le
+#check @MathCollab.Density.Stronger.Atkinson.zetaDivisorWeightArgument_height_shift
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaDivisorWeightArgument_height_shift
+#check @MathCollab.Density.Stronger.Atkinson.exp_zetaDivisorWeightArgument_re
+#print axioms MathCollab.Density.Stronger.Atkinson.exp_zetaDivisorWeightArgument_re
+#check @MathCollab.Density.Stronger.Atkinson.exists_norm_source_zetaDivisorWeight_height_sub_le
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_norm_source_zetaDivisorWeight_height_sub_le
+#check @MathCollab.Density.Stronger.Atkinson.FiniteVariationBound.mono
+#print axioms MathCollab.Density.Stronger.Atkinson.FiniteVariationBound.mono
+#check @MathCollab.Density.Stronger.Atkinson.FiniteVariationBound.congr
+#print axioms MathCollab.Density.Stronger.Atkinson.FiniteVariationBound.congr
+#check @MathCollab.Density.Stronger.Atkinson.finiteVariationBound_const
+#print axioms MathCollab.Density.Stronger.Atkinson.finiteVariationBound_const
+#check @MathCollab.Density.Stronger.Atkinson.FiniteVariationBound.mul
+#print axioms MathCollab.Density.Stronger.Atkinson.FiniteVariationBound.mul
+#check @MathCollab.Density.Stronger.Atkinson.finiteVariationBound_of_monotone
+#print axioms MathCollab.Density.Stronger.Atkinson.finiteVariationBound_of_monotone
+#check @MathCollab.Density.Stronger.Atkinson.finiteVariationBound_of_antitone
+#print axioms MathCollab.Density.Stronger.Atkinson.finiteVariationBound_of_antitone
+#check @MathCollab.Density.Stronger.Atkinson.finiteVariationBound_of_envelope
+#print axioms MathCollab.Density.Stronger.Atkinson.finiteVariationBound_of_envelope
+#check @MathCollab.Density.Stronger.Atkinson.finiteVariationBound_comp_of_lipschitz
+#print axioms MathCollab.Density.Stronger.Atkinson.finiteVariationBound_comp_of_lipschitz
+#check @MathCollab.Density.Stronger.Atkinson.norm_sum_mul_le_discrete_parts
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_sum_mul_le_discrete_parts
+#check @MathCollab.Density.Stronger.Atkinson.FiniteVariationBound.norm_sum_mul_le
+#print axioms MathCollab.Density.Stronger.Atkinson.FiniteVariationBound.norm_sum_mul_le
+#check @MathCollab.Density.Stronger.Atkinson.norm_conj_eq
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_conj_eq
+#check @MathCollab.Density.Stronger.Atkinson.norm_phaseAlign_le_one
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_phaseAlign_le_one
+#check @MathCollab.Density.Stronger.Atkinson.phaseAlign_mul
+#print axioms MathCollab.Density.Stronger.Atkinson.phaseAlign_mul
+#check @MathCollab.Density.Stronger.Atkinson.norm_sum_mul_sq_le
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_sum_mul_sq_le
+#check @MathCollab.Density.Stronger.Atkinson.sum_norm_sq_sum_le_gram
+#print axioms MathCollab.Density.Stronger.Atkinson.sum_norm_sq_sum_le_gram
+#check @MathCollab.Density.Stronger.Atkinson.sum_norm_coefficient_vector_sq_le_gram
+#print axioms MathCollab.Density.Stronger.Atkinson.sum_norm_coefficient_vector_sq_le_gram
+#check @MathCollab.Density.Stronger.Atkinson.card_mul_lower_sq_le_coefficient_gram
+#print axioms MathCollab.Density.Stronger.Atkinson.card_mul_lower_sq_le_coefficient_gram
+#check @MathCollab.Density.Stronger.Atkinson.fresnelGaussianBase
+#print axioms MathCollab.Density.Stronger.Atkinson.fresnelGaussianBase
+#check @MathCollab.Density.Stronger.Atkinson.continuousAt_fresnelGaussianValue_damping
+#print axioms MathCollab.Density.Stronger.Atkinson.continuousAt_fresnelGaussianValue_damping
+#check @MathCollab.Density.Stronger.Atkinson.fresnelDampedKernel_zero
+#print axioms MathCollab.Density.Stronger.Atkinson.fresnelDampedKernel_zero
+#check @MathCollab.Density.Stronger.Atkinson.continuous_fresnelDampedWindow
+#print axioms MathCollab.Density.Stronger.Atkinson.continuous_fresnelDampedWindow
+#check @MathCollab.Density.Stronger.Atkinson.norm_atkinsonQuadraticWindow_sub_gaussianValue_le
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_atkinsonQuadraticWindow_sub_gaussianValue_le
+#check @MathCollab.Density.Stronger.Atkinson.continuous_fresnelDampedKernel
+#print axioms MathCollab.Density.Stronger.Atkinson.continuous_fresnelDampedKernel
+#check @MathCollab.Density.Stronger.Atkinson.fresnelDampedKernel_eq_weighted
+#print axioms MathCollab.Density.Stronger.Atkinson.fresnelDampedKernel_eq_weighted
+#check @MathCollab.Density.Stronger.Atkinson.norm_fresnelDampedKernel
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_fresnelDampedKernel
+#check @MathCollab.Density.Stronger.Atkinson.fresnelDampedKernel_neg
+#print axioms MathCollab.Density.Stronger.Atkinson.fresnelDampedKernel_neg
+#check @MathCollab.Density.Stronger.Atkinson.intervalC1Bound_gaussian_damping
+#print axioms MathCollab.Density.Stronger.Atkinson.intervalC1Bound_gaussian_damping
+#check @MathCollab.Density.Stronger.Atkinson.norm_fresnelPhase_integral_le
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_fresnelPhase_integral_le
+#check @MathCollab.Density.Stronger.Atkinson.norm_integral_fresnelDampedKernel_le
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_integral_fresnelDampedKernel_le
+#check @MathCollab.Density.Stronger.Atkinson.fresnelGaussianValue_eq_cartesian
+#print axioms MathCollab.Density.Stronger.Atkinson.fresnelGaussianValue_eq_cartesian
+#check @MathCollab.Density.Stronger.Atkinson.fresnelGaussianValue_eq_phase
+#print axioms MathCollab.Density.Stronger.Atkinson.fresnelGaussianValue_eq_phase
+#check @MathCollab.Density.Stronger.Atkinson.norm_fresnelGaussianValue
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_fresnelGaussianValue
+#check @MathCollab.Density.Stronger.Atkinson.norm_atkinsonQuadraticWindow_sub_fresnel_le
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_atkinsonQuadraticWindow_sub_fresnel_le
+#check @MathCollab.Density.Stronger.Atkinson.tendsto_atkinsonQuadraticWindow
+#print axioms MathCollab.Density.Stronger.Atkinson.tendsto_atkinsonQuadraticWindow
+#check @MathCollab.Density.Stronger.Atkinson.integrable_fresnelDampedKernel
+#print axioms MathCollab.Density.Stronger.Atkinson.integrable_fresnelDampedKernel
+#check @MathCollab.Density.Stronger.Atkinson.integral_Ioi_fresnelDampedKernel
+#print axioms MathCollab.Density.Stronger.Atkinson.integral_Ioi_fresnelDampedKernel
+#check @MathCollab.Density.Stronger.Atkinson.norm_integral_Ioi_fresnelDampedKernel_le
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_integral_Ioi_fresnelDampedKernel_le
+#check @MathCollab.Density.Stronger.Atkinson.integral_symmetric_fresnelDampedKernel
+#print axioms MathCollab.Density.Stronger.Atkinson.integral_symmetric_fresnelDampedKernel
+#check @MathCollab.Density.Stronger.Atkinson.norm_gaussianValue_sub_fresnelDampedWindow_le
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_gaussianValue_sub_fresnelDampedWindow_le
+#check @MathCollab.Density.Stronger.Atkinson.divisorDirichletTerm_height_shift
+#print axioms MathCollab.Density.Stronger.Atkinson.divisorDirichletTerm_height_shift
+#check @MathCollab.Density.Stronger.Atkinson.zetaSquareFrozenDivisorContribution_eq_phase
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaSquareFrozenDivisorContribution_eq_phase
+#check @MathCollab.Density.Stronger.Atkinson.zetaSquareFrozenDivisorContribution_mul_gaussian
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaSquareFrozenDivisorContribution_mul_gaussian
+#check @MathCollab.Density.Stronger.Atkinson.summable_norm_zetaFrozenDivisorCoefficient
+#print axioms MathCollab.Density.Stronger.Atkinson.summable_norm_zetaFrozenDivisorCoefficient
+#check @MathCollab.Density.Stronger.Atkinson.integrable_zetaFrozenDivisorGaussianTerm
+#print axioms MathCollab.Density.Stronger.Atkinson.integrable_zetaFrozenDivisorGaussianTerm
+#check @MathCollab.Density.Stronger.Atkinson.summable_integral_norm_zetaFrozenDivisorGaussianTerm
+#print axioms MathCollab.Density.Stronger.Atkinson.summable_integral_norm_zetaFrozenDivisorGaussianTerm
+#check @MathCollab.Density.Stronger.Atkinson.hasSum_zetaFrozenDivisorGaussianMean
+#print axioms MathCollab.Density.Stronger.Atkinson.hasSum_zetaFrozenDivisorGaussianMean
+#check @MathCollab.Density.Stronger.Atkinson.norm_zetaGaussianQuadraticIntegral_le_mass
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_zetaGaussianQuadraticIntegral_le_mass
+#check @MathCollab.Density.Stronger.Atkinson.summable_zetaFrozenDivisorQuadraticTerm
+#print axioms MathCollab.Density.Stronger.Atkinson.summable_zetaFrozenDivisorQuadraticTerm
+#check @MathCollab.Density.Stronger.Atkinson.norm_zetaFrozenDivisorGaussianMean_sub_quadratic_le
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_zetaFrozenDivisorGaussianMean_sub_quadratic_le
+#check @MathCollab.Density.Stronger.Atkinson.exists_norm_zetaFrozenDivisorGaussianMean_sub_quadratic_le
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_norm_zetaFrozenDivisorGaussianMean_sub_quadratic_le
+#check @MathCollab.Density.Stronger.Atkinson.norm_zetaSquareFrozenDivisorContribution
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_zetaSquareFrozenDivisorContribution
+#check @MathCollab.Density.Stronger.Atkinson.continuous_zetaSquareFrozenDivisorIntegral
+#print axioms MathCollab.Density.Stronger.Atkinson.continuous_zetaSquareFrozenDivisorIntegral
+#check @MathCollab.Density.Stronger.Atkinson.norm_zetaSquareFrozenDivisorIntegral_le_mass
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_zetaSquareFrozenDivisorIntegral_le_mass
+#check @MathCollab.Density.Stronger.Atkinson.integrable_zetaSquareFrozenDivisor_gaussian
+#print axioms MathCollab.Density.Stronger.Atkinson.integrable_zetaSquareFrozenDivisor_gaussian
+#check @MathCollab.Density.Stronger.Atkinson.norm_zetaFrozenDivisorGaussianMean_sub_window_le
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_zetaFrozenDivisorGaussianMean_sub_window_le
+#check @MathCollab.Density.Stronger.Atkinson.zetaSquareGaussianWindow_eq_height_shift
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaSquareGaussianWindow_eq_height_shift
+#check @MathCollab.Density.Stronger.Atkinson.exists_abs_zetaSquareGaussianWindow_sub_frozen_window_le
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_abs_zetaSquareGaussianWindow_sub_frozen_window_le
+#check @MathCollab.Density.Stronger.Atkinson.exists_abs_zetaSquareGaussianWindow_sub_quadratic_le
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_abs_zetaSquareGaussianWindow_sub_quadratic_le
+#check @MathCollab.Density.Stronger.Atkinson.integrable_physical_gaussian
+#print axioms MathCollab.Density.Stronger.Atkinson.integrable_physical_gaussian
+#check @MathCollab.Density.Stronger.Atkinson.physical_gaussian_tail_le
+#print axioms MathCollab.Density.Stronger.Atkinson.physical_gaussian_tail_le
+#check @MathCollab.Density.Stronger.Atkinson.norm_zetaSquareGammaGaussianIntegrand
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_zetaSquareGammaGaussianIntegrand
+#check @MathCollab.Density.Stronger.Atkinson.integrable_zetaSquareGammaGaussianIntegrand
+#print axioms MathCollab.Density.Stronger.Atkinson.integrable_zetaSquareGammaGaussianIntegrand
+#check @MathCollab.Density.Stronger.Atkinson.norm_zetaSquareGammaGaussianTransform_sub_quadratic_le
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_zetaSquareGammaGaussianTransform_sub_quadratic_le
+#check @MathCollab.Density.Stronger.Atkinson.norm_zetaSquareGammaGaussianTransform_le
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_zetaSquareGammaGaussianTransform_le
+#check @MathCollab.Density.Stronger.Atkinson.digamma_conj
+#print axioms MathCollab.Density.Stronger.Atkinson.digamma_conj
+#check @MathCollab.Density.Stronger.Atkinson.norm_zetaSquareReflectedGammaPhase
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_zetaSquareReflectedGammaPhase
+#check @MathCollab.Density.Stronger.Atkinson.zetaSquareReflectedGammaPhase_zero
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaSquareReflectedGammaPhase_zero
+#check @MathCollab.Density.Stronger.Atkinson.zetaSquareReflectedGammaPhase_mul_zeta
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaSquareReflectedGammaPhase_mul_zeta
+#check @MathCollab.Density.Stronger.Atkinson.zetaSquareGammaNormalization_reflected_factor
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaSquareGammaNormalization_reflected_factor
+#check @MathCollab.Density.Stronger.Atkinson.hasDerivAt_zetaSquareReflectedGammaPhase
+#print axioms MathCollab.Density.Stronger.Atkinson.hasDerivAt_zetaSquareReflectedGammaPhase
+#check @MathCollab.Density.Stronger.Atkinson.abs_zetaSquareGammaFrequency_add_log_le
+#print axioms MathCollab.Density.Stronger.Atkinson.abs_zetaSquareGammaFrequency_add_log_le
+#check @MathCollab.Density.Stronger.Atkinson.abs_log_shift_sub_linear_le
+#print axioms MathCollab.Density.Stronger.Atkinson.abs_log_shift_sub_linear_le
+#check @MathCollab.Density.Stronger.Atkinson.hasDerivAt_zetaSquareGammaQuadraticAngle
+#print axioms MathCollab.Density.Stronger.Atkinson.hasDerivAt_zetaSquareGammaQuadraticAngle
+#check @MathCollab.Density.Stronger.Atkinson.abs_zetaSquareGammaFrequency_linear_error_le
+#print axioms MathCollab.Density.Stronger.Atkinson.abs_zetaSquareGammaFrequency_linear_error_le
+#check @MathCollab.Density.Stronger.Atkinson.norm_zetaSquareReflectedGammaPhase_sub_quadratic_le
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_zetaSquareReflectedGammaPhase_sub_quadratic_le
+#check @MathCollab.Density.Stronger.Atkinson.zetaSquareGammaQuadratic_gaussian_identity
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaSquareGammaQuadratic_gaussian_identity
+#check @MathCollab.Density.Stronger.Atkinson.norm_integral_zetaSquareGammaPhase_sub_quadratic_le
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_integral_zetaSquareGammaPhase_sub_quadratic_le
+#check @MathCollab.Density.Stronger.Atkinson.summable_weighted_local_integral_norm_zetaSquareNormalizedContribution
+#print axioms MathCollab.Density.Stronger.Atkinson.summable_weighted_local_integral_norm_zetaSquareNormalizedContribution
+#check @MathCollab.Density.Stronger.Atkinson.hasSum_zetaSquareWeightedLocalMean
+#print axioms MathCollab.Density.Stronger.Atkinson.hasSum_zetaSquareWeightedLocalMean
+#check @MathCollab.Density.Stronger.Atkinson.continuous_zetaGaussianWeight
+#print axioms MathCollab.Density.Stronger.Atkinson.continuous_zetaGaussianWeight
+#check @MathCollab.Density.Stronger.Atkinson.zetaGaussianWeight_pos
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaGaussianWeight_pos
+#check @MathCollab.Density.Stronger.Atkinson.zetaGaussianWeight_le_one
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaGaussianWeight_le_one
+#check @MathCollab.Density.Stronger.Atkinson.zetaGaussianWeight_local_lower
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaGaussianWeight_local_lower
+#check @MathCollab.Density.Stronger.Atkinson.hasSum_zetaSquareGaussianWindow
+#print axioms MathCollab.Density.Stronger.Atkinson.hasSum_zetaSquareGaussianWindow
+#check @MathCollab.Density.Stronger.Atkinson.zetaSquareLocalMean_le_gaussian_window
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaSquareLocalMean_le_gaussian_window
+#check @MathCollab.Density.Stronger.Atkinson.zetaSquareLocalMean_le_gaussian_divisor_series
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaSquareLocalMean_le_gaussian_divisor_series
+#check @MathCollab.Density.Stronger.Atkinson.integrable_abs_pow_mul_exp_neg_mul_sq
+#print axioms MathCollab.Density.Stronger.Atkinson.integrable_abs_pow_mul_exp_neg_mul_sq
+#check @MathCollab.Density.Stronger.Atkinson.integrable_exp_sub_mul_sq_mul_add_abs_pow
+#print axioms MathCollab.Density.Stronger.Atkinson.integrable_exp_sub_mul_sq_mul_add_abs_pow
+#check @MathCollab.Density.Stronger.Atkinson.exists_zetaMomentCriticalNorm_linear_bound
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_zetaMomentCriticalNorm_linear_bound
+#check @MathCollab.Density.Stronger.Atkinson.continuous_zetaSquareCenteredGaussian
+#print axioms MathCollab.Density.Stronger.Atkinson.continuous_zetaSquareCenteredGaussian
+#check @MathCollab.Density.Stronger.Atkinson.zetaSquareCenteredGaussian_nonneg
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaSquareCenteredGaussian_nonneg
+#check @MathCollab.Density.Stronger.Atkinson.zetaSquareCenteredGaussian_majorant
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaSquareCenteredGaussian_majorant
+#check @MathCollab.Density.Stronger.Atkinson.integrable_zetaSquareCenteredGaussian
+#print axioms MathCollab.Density.Stronger.Atkinson.integrable_zetaSquareCenteredGaussian
+#check @MathCollab.Density.Stronger.Atkinson.zetaGaussianWeight_affine
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaGaussianWeight_affine
+#check @MathCollab.Density.Stronger.Atkinson.zetaSquareGaussianWindow_eq_centered
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaSquareGaussianWindow_eq_centered
+#check @MathCollab.Density.Stronger.Atkinson.integrable_zetaSquareGaussian_physical
+#print axioms MathCollab.Density.Stronger.Atkinson.integrable_zetaSquareGaussian_physical
+#check @MathCollab.Density.Stronger.Atkinson.zetaSquareGaussianMean_eq_physical
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaSquareGaussianMean_eq_physical
+#check @MathCollab.Density.Stronger.Atkinson.zetaSquareCenteredGaussian_tail_majorant
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaSquareCenteredGaussian_tail_majorant
+#check @MathCollab.Density.Stronger.Atkinson.exists_zetaSquareGaussian_tail_bound
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_zetaSquareGaussian_tail_bound
+#check @MathCollab.Density.Stronger.Atkinson.exists_zetaSquareGaussian_log_tail_bound
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_zetaSquareGaussian_log_tail_bound
+#check @MathCollab.Density.Stronger.Atkinson.exists_zetaSquareGaussian_source_approximation
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_zetaSquareGaussian_source_approximation
+#check @MathCollab.Density.Stronger.Atkinson.IntervalC1Bound.derivative_integrable
+#print axioms MathCollab.Density.Stronger.Atkinson.IntervalC1Bound.derivative_integrable
+#check @MathCollab.Density.Stronger.Atkinson.IntervalC1Bound.mono
+#print axioms MathCollab.Density.Stronger.Atkinson.IntervalC1Bound.mono
+#check @MathCollab.Density.Stronger.Atkinson.intervalC1Bound_const
+#print axioms MathCollab.Density.Stronger.Atkinson.intervalC1Bound_const
+#check @MathCollab.Density.Stronger.Atkinson.IntervalC1Bound.mul
+#print axioms MathCollab.Density.Stronger.Atkinson.IntervalC1Bound.mul
+#check @MathCollab.Density.Stronger.Atkinson.intervalC1Bound_ofReal_of_deriv_nonneg
+#print axioms MathCollab.Density.Stronger.Atkinson.intervalC1Bound_ofReal_of_deriv_nonneg
+#check @MathCollab.Density.Stronger.Atkinson.intervalC1Bound_ofReal_of_deriv_nonpos
+#print axioms MathCollab.Density.Stronger.Atkinson.intervalC1Bound_ofReal_of_deriv_nonpos
+#check @MathCollab.Density.Stronger.Atkinson.IntervalC1Bound.join
+#print axioms MathCollab.Density.Stronger.Atkinson.IntervalC1Bound.join
+#check @MathCollab.Density.Stronger.Atkinson.exists_intervalC1Bound_rescaled
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_intervalC1Bound_rescaled
+#check @MathCollab.Density.Stronger.Atkinson.intervalC2Bound_const
+#print axioms MathCollab.Density.Stronger.Atkinson.intervalC2Bound_const
+#check @MathCollab.Density.Stronger.Atkinson.IntervalC2Bound.mono
+#print axioms MathCollab.Density.Stronger.Atkinson.IntervalC2Bound.mono
+#check @MathCollab.Density.Stronger.Atkinson.iteratedDeriv_two_mul
+#print axioms MathCollab.Density.Stronger.Atkinson.iteratedDeriv_two_mul
+#check @MathCollab.Density.Stronger.Atkinson.IntervalC2Bound.mul
+#print axioms MathCollab.Density.Stronger.Atkinson.IntervalC2Bound.mul
+#check @MathCollab.Density.Stronger.Atkinson.exists_intervalC2Bound_fixed
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_intervalC2Bound_fixed
+#check @MathCollab.Density.Stronger.Atkinson.IntervalC2Bound.norm_sub_le
+#print axioms MathCollab.Density.Stronger.Atkinson.IntervalC2Bound.norm_sub_le
+#check @MathCollab.Density.Stronger.Atkinson.zetaSquareKernelErrorMajorant_nonneg
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaSquareKernelErrorMajorant_nonneg
+#check @MathCollab.Density.Stronger.Atkinson.integrable_zetaSquareKernelErrorMajorant
+#print axioms MathCollab.Density.Stronger.Atkinson.integrable_zetaSquareKernelErrorMajorant
+#check @MathCollab.Density.Stronger.Atkinson.exists_norm_normalized_zetaSquareRightKernel_far_le
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_norm_normalized_zetaSquareRightKernel_far_le
+#check @MathCollab.Density.Stronger.Atkinson.continuous_zetaSquareLeadingRightKernel
+#print axioms MathCollab.Density.Stronger.Atkinson.continuous_zetaSquareLeadingRightKernel
+#check @MathCollab.Density.Stronger.Atkinson.norm_zetaSquareLeadingRightKernel
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_zetaSquareLeadingRightKernel
+#check @MathCollab.Density.Stronger.Atkinson.exists_norm_zetaSquareLeadingRightKernel_far_le
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_norm_zetaSquareLeadingRightKernel_far_le
+#check @MathCollab.Density.Stronger.Atkinson.exists_norm_zetaSquareRightKernel_sub_leading_le
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_norm_zetaSquareRightKernel_sub_leading_le
+#check @MathCollab.Density.Stronger.Atkinson.integrable_zetaSquareRightKernel_error
+#print axioms MathCollab.Density.Stronger.Atkinson.integrable_zetaSquareRightKernel_error
+#check @MathCollab.Density.Stronger.Atkinson.integrable_zetaSquareLeadingRightKernel
+#print axioms MathCollab.Density.Stronger.Atkinson.integrable_zetaSquareLeadingRightKernel
+#check @MathCollab.Density.Stronger.Atkinson.exists_integral_norm_zetaSquareRightKernel_error_le
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_integral_norm_zetaSquareRightKernel_error_le
+#check @MathCollab.Density.Stronger.Atkinson.norm_zetaSquareLeadingDivisorTerm
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_zetaSquareLeadingDivisorTerm
+#check @MathCollab.Density.Stronger.Atkinson.integrable_zetaSquareLeadingDivisorTerm
+#print axioms MathCollab.Density.Stronger.Atkinson.integrable_zetaSquareLeadingDivisorTerm
+#check @MathCollab.Density.Stronger.Atkinson.summable_integral_norm_zetaSquareLeadingDivisorTerm
+#print axioms MathCollab.Density.Stronger.Atkinson.summable_integral_norm_zetaSquareLeadingDivisorTerm
+#check @MathCollab.Density.Stronger.Atkinson.hasSum_zetaSquareLeadingDivisorContribution
+#print axioms MathCollab.Density.Stronger.Atkinson.hasSum_zetaSquareLeadingDivisorContribution
+#check @MathCollab.Density.Stronger.Atkinson.norm_zetaSquareDivisorTerm_error
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_zetaSquareDivisorTerm_error
+#check @MathCollab.Density.Stronger.Atkinson.exists_norm_zetaSquareDivisorContribution_error_le
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_norm_zetaSquareDivisorContribution_error_le
+#check @MathCollab.Density.Stronger.Atkinson.exists_norm_zetaSquareDivisorIntegral_sub_leading_le
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_norm_zetaSquareDivisorIntegral_sub_leading_le
+#check @MathCollab.Density.Stronger.Atkinson.continuous_zetaSquareRightKernel_height
+#print axioms MathCollab.Density.Stronger.Atkinson.continuous_zetaSquareRightKernel_height
+#check @MathCollab.Density.Stronger.Atkinson.continuous_zetaSquareDivisorTerm_height
+#print axioms MathCollab.Density.Stronger.Atkinson.continuous_zetaSquareDivisorTerm_height
+#check @MathCollab.Density.Stronger.Atkinson.exists_zetaSquareRightKernel_compact_majorant
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_zetaSquareRightKernel_compact_majorant
+#check @MathCollab.Density.Stronger.Atkinson.continuous_zetaSquareDivisorContribution
+#print axioms MathCollab.Density.Stronger.Atkinson.continuous_zetaSquareDivisorContribution
+#check @MathCollab.Density.Stronger.Atkinson.exists_zetaSquareDivisorContribution_compact_bound
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_zetaSquareDivisorContribution_compact_bound
+#check @MathCollab.Density.Stronger.Atkinson.continuous_zetaSquareGammaNormalization
+#print axioms MathCollab.Density.Stronger.Atkinson.continuous_zetaSquareGammaNormalization
+#check @MathCollab.Density.Stronger.Atkinson.continuous_zetaSquareNormalizedContribution
+#print axioms MathCollab.Density.Stronger.Atkinson.continuous_zetaSquareNormalizedContribution
+#check @MathCollab.Density.Stronger.Atkinson.exists_zetaSquareNormalizedContribution_compact_bound
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_zetaSquareNormalizedContribution_compact_bound
+#check @MathCollab.Density.Stronger.Atkinson.summable_local_integral_norm_zetaSquareNormalizedContribution
+#print axioms MathCollab.Density.Stronger.Atkinson.summable_local_integral_norm_zetaSquareNormalizedContribution
+#check @MathCollab.Density.Stronger.Atkinson.hasSum_zetaSquareLocalMean
+#print axioms MathCollab.Density.Stronger.Atkinson.hasSum_zetaSquareLocalMean
+#check @MathCollab.Density.Stronger.Atkinson.zetaSquareLocalMean_eq_divisor_series
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaSquareLocalMean_eq_divisor_series
+#check @MathCollab.Density.Stronger.Atkinson.intervalC1Bound_source_sqrt
+#print axioms MathCollab.Density.Stronger.Atkinson.intervalC1Bound_source_sqrt
+#check @MathCollab.Density.Stronger.Atkinson.mul_exp_neg_half_log_eq_sqrt
+#print axioms MathCollab.Density.Stronger.Atkinson.mul_exp_neg_half_log_eq_sqrt
+#check @MathCollab.Density.Stronger.Atkinson.intervalC1Bound_source_log
+#print axioms MathCollab.Density.Stronger.Atkinson.intervalC1Bound_source_log
+#check @MathCollab.Density.Stronger.Atkinson.sourceLogWeight_le_three_log
+#print axioms MathCollab.Density.Stronger.Atkinson.sourceLogWeight_le_three_log
+#check @MathCollab.Density.Stronger.Atkinson.IntervalC1Bound.reflection_source
+#print axioms MathCollab.Density.Stronger.Atkinson.IntervalC1Bound.reflection_source
+#check @MathCollab.Density.Stronger.Atkinson.norm_poleShift_gammaReal_sq_sub_exp_le
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_poleShift_gammaReal_sq_sub_exp_le
+#check @MathCollab.Density.Stronger.Atkinson.zetaSquareRightKernel_normalized_reflected
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaSquareRightKernel_normalized_reflected
+#check @MathCollab.Density.Stronger.Atkinson.norm_rightContour_shift_le
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_rightContour_shift_le
+#check @MathCollab.Density.Stronger.Atkinson.norm_near_pole_gamma_error_le
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_near_pole_gamma_error_le
+#check @MathCollab.Density.Stronger.Atkinson.norm_zetaSquareRightKernel_sub_leading_near_le
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_zetaSquareRightKernel_sub_leading_near_le
+#check @MathCollab.Density.Stronger.Atkinson.differentiableAt_neumannContourKernel
+#print axioms MathCollab.Density.Stronger.Atkinson.differentiableAt_neumannContourKernel
+#check @MathCollab.Density.Stronger.Atkinson.norm_neumannContourKernel
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_neumannContourKernel
+#check @MathCollab.Density.Stronger.Atkinson.neumannContourKernel_slit_vertical
+#print axioms MathCollab.Density.Stronger.Atkinson.neumannContourKernel_slit_vertical
+#check @MathCollab.Density.Stronger.Atkinson.norm_neumannContourKernel_vertical_le
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_neumannContourKernel_vertical_le
+#check @MathCollab.Density.Stronger.Atkinson.norm_neumannContourKernel_horizontal_le
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_neumannContourKernel_horizontal_le
+#check @MathCollab.Density.Stronger.Atkinson.continuousOn_neumannContourKernel_vertical
+#print axioms MathCollab.Density.Stronger.Atkinson.continuousOn_neumannContourKernel_vertical
+#check @MathCollab.Density.Stronger.Atkinson.integrableOn_neumannContourKernel_vertical
+#print axioms MathCollab.Density.Stronger.Atkinson.integrableOn_neumannContourKernel_vertical
+#check @MathCollab.Density.Stronger.Atkinson.neumannContourKernel_finite_rectangle
+#print axioms MathCollab.Density.Stronger.Atkinson.neumannContourKernel_finite_rectangle
+#check @MathCollab.Density.Stronger.Atkinson.norm_neumannContourKernel_horizontal_integral_le
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_neumannContourKernel_horizontal_integral_le
+#check @MathCollab.Density.Stronger.Atkinson.tendsto_neumannContourKernel_horizontal_integral
+#print axioms MathCollab.Density.Stronger.Atkinson.tendsto_neumannContourKernel_horizontal_integral
+#check @MathCollab.Density.Stronger.Atkinson.neumannContourKernel_infinite_rectangle
+#print axioms MathCollab.Density.Stronger.Atkinson.neumannContourKernel_infinite_rectangle
+#check @MathCollab.Density.Stronger.Atkinson.neumannLaplaceAmplitude_zero
+#print axioms MathCollab.Density.Stronger.Atkinson.neumannLaplaceAmplitude_zero
+#check @MathCollab.Density.Stronger.Atkinson.norm_neumannLaplaceAmplitude_le_one
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_neumannLaplaceAmplitude_le_one
+#check @MathCollab.Density.Stronger.Atkinson.neumann_sqrt_re_ge_one
+#print axioms MathCollab.Density.Stronger.Atkinson.neumann_sqrt_re_ge_one
+#check @MathCollab.Density.Stronger.Atkinson.norm_neumannLaplaceAmplitude_sub_linear_le
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_neumannLaplaceAmplitude_sub_linear_le
+#check @MathCollab.Density.Stronger.Atkinson.integrableOn_neumannLaplaceMomentIntegrand
+#print axioms MathCollab.Density.Stronger.Atkinson.integrableOn_neumannLaplaceMomentIntegrand
+#check @MathCollab.Density.Stronger.Atkinson.neumannLaplaceMomentIntegrand_nonneg
+#print axioms MathCollab.Density.Stronger.Atkinson.neumannLaplaceMomentIntegrand_nonneg
+#check @MathCollab.Density.Stronger.Atkinson.neumannLaplaceMomentIntegrand_eq_mul
+#print axioms MathCollab.Density.Stronger.Atkinson.neumannLaplaceMomentIntegrand_eq_mul
+#check @MathCollab.Density.Stronger.Atkinson.neumannLaplaceMoment_eq_gamma
+#print axioms MathCollab.Density.Stronger.Atkinson.neumannLaplaceMoment_eq_gamma
+#check @MathCollab.Density.Stronger.Atkinson.neumannLaplaceMoment_zero
+#print axioms MathCollab.Density.Stronger.Atkinson.neumannLaplaceMoment_zero
+#check @MathCollab.Density.Stronger.Atkinson.neumannLaplaceMoment_one
+#print axioms MathCollab.Density.Stronger.Atkinson.neumannLaplaceMoment_one
+#check @MathCollab.Density.Stronger.Atkinson.neumannLaplaceMoment_two
+#print axioms MathCollab.Density.Stronger.Atkinson.neumannLaplaceMoment_two
+#check @MathCollab.Density.Stronger.Atkinson.neumannRayCoefficient_eq
+#print axioms MathCollab.Density.Stronger.Atkinson.neumannRayCoefficient_eq
+#check @MathCollab.Density.Stronger.Atkinson.norm_neumannRayCoefficient_le_one
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_neumannRayCoefficient_le_one
+#check @MathCollab.Density.Stronger.Atkinson.norm_neumannLaplaceIntegrand_sub_linear_le
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_neumannLaplaceIntegrand_sub_linear_le
+#check @MathCollab.Density.Stronger.Atkinson.norm_neumannLaplaceIntegral_sub_moments_le
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_neumannLaplaceIntegral_sub_moments_le
+#check @MathCollab.Density.Stronger.Atkinson.norm_neumannLaplaceIntegral_sub_approximation_le
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_neumannLaplaceIntegral_sub_approximation_le
+#check @MathCollab.Density.Stronger.Atkinson.neumann_sine_integral_eq_cosine
+#print axioms MathCollab.Density.Stronger.Atkinson.neumann_sine_integral_eq_cosine
+#check @MathCollab.Density.Stronger.Atkinson.neumann_schlafli_complex_identity
+#print axioms MathCollab.Density.Stronger.Atkinson.neumann_schlafli_complex_identity
+#check @MathCollab.Density.Stronger.Atkinson.dfiBesselY0_eq_neumannVerticalIntegral
+#print axioms MathCollab.Density.Stronger.Atkinson.dfiBesselY0_eq_neumannVerticalIntegral
+#check @MathCollab.Density.Stronger.Atkinson.neumann_cpow_positive_real_mul
+#print axioms MathCollab.Density.Stronger.Atkinson.neumann_cpow_positive_real_mul
+#check @MathCollab.Density.Stronger.Atkinson.continuous_neumannLaplaceAmplitude
+#print axioms MathCollab.Density.Stronger.Atkinson.continuous_neumannLaplaceAmplitude
+#check @MathCollab.Density.Stronger.Atkinson.neumannContourKernel_unit_ray
+#print axioms MathCollab.Density.Stronger.Atkinson.neumannContourKernel_unit_ray
+#check @MathCollab.Density.Stronger.Atkinson.norm_neumannLaplaceIntegrand_le
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_neumannLaplaceIntegrand_le
+#check @MathCollab.Density.Stronger.Atkinson.integrableOn_neumannLaplaceIntegrand
+#print axioms MathCollab.Density.Stronger.Atkinson.integrableOn_neumannLaplaceIntegrand
+#check @MathCollab.Density.Stronger.Atkinson.neumannVerticalIntegral_one_eq_laplace
+#print axioms MathCollab.Density.Stronger.Atkinson.neumannVerticalIntegral_one_eq_laplace
+#check @MathCollab.Density.Stronger.Atkinson.dfiBesselY0_eq_neumannLaplaceIntegral
+#print axioms MathCollab.Density.Stronger.Atkinson.dfiBesselY0_eq_neumannLaplaceIntegral
+#check @MathCollab.Density.Stronger.Atkinson.norm_divisorDirichletTerm_real
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_divisorDirichletTerm_real
+#check @MathCollab.Density.Stronger.Atkinson.exists_norm_zetaNeumannRemainderTerm_le
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_norm_zetaNeumannRemainderTerm_le
+#check @MathCollab.Density.Stronger.Atkinson.summable_zetaNeumannRemainderTerm
+#print axioms MathCollab.Density.Stronger.Atkinson.summable_zetaNeumannRemainderTerm
+#check @MathCollab.Density.Stronger.Atkinson.zetaAtkinsonTwoTerm_eq_sub
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaAtkinsonTwoTerm_eq_sub
+#check @MathCollab.Density.Stronger.Atkinson.exists_norm_tsum_zetaNeumannRemainderTerm_le
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_norm_tsum_zetaNeumannRemainderTerm_le
+#check @MathCollab.Density.Stronger.Atkinson.continuousAt_neumannVerticalIntegral
+#print axioms MathCollab.Density.Stronger.Atkinson.continuousAt_neumannVerticalIntegral
+#check @MathCollab.Density.Stronger.Atkinson.neumannContourHalfPowers_imaginary_axis
+#print axioms MathCollab.Density.Stronger.Atkinson.neumannContourHalfPowers_imaginary_axis
+#check @MathCollab.Density.Stronger.Atkinson.neumannContourKernel_imaginary_axis
+#print axioms MathCollab.Density.Stronger.Atkinson.neumannContourKernel_imaginary_axis
+#check @MathCollab.Density.Stronger.Atkinson.neumannVerticalIntegral_zero_eq_tail
+#print axioms MathCollab.Density.Stronger.Atkinson.neumannVerticalIntegral_zero_eq_tail
+#check @MathCollab.Density.Stronger.Atkinson.neumannContourHalfPowers_sine
+#print axioms MathCollab.Density.Stronger.Atkinson.neumannContourHalfPowers_sine
+#check @MathCollab.Density.Stronger.Atkinson.neumannContourKernel_angular_change
+#print axioms MathCollab.Density.Stronger.Atkinson.neumannContourKernel_angular_change
+#check @MathCollab.Density.Stronger.Atkinson.measurable_dfiBesselY0
+#print axioms MathCollab.Density.Stronger.Atkinson.measurable_dfiBesselY0
+#check @MathCollab.Density.Stronger.Atkinson.measurable_neumannTwoTerm
+#print axioms MathCollab.Density.Stronger.Atkinson.measurable_neumannTwoTerm
+#check @MathCollab.Density.Stronger.Atkinson.neumann_source_argument_bounds
+#print axioms MathCollab.Density.Stronger.Atkinson.neumann_source_argument_bounds
+#check @MathCollab.Density.Stronger.Atkinson.abs_neumann_source_remainder_le
+#print axioms MathCollab.Density.Stronger.Atkinson.abs_neumann_source_remainder_le
+#check @MathCollab.Density.Stronger.Atkinson.abs_dfiBesselY0_source_le_seven
+#print axioms MathCollab.Density.Stronger.Atkinson.abs_dfiBesselY0_source_le_seven
+#check @MathCollab.Density.Stronger.Atkinson.neumann_source_height_absorb
+#print axioms MathCollab.Density.Stronger.Atkinson.neumann_source_height_absorb
+#check @MathCollab.Density.Stronger.Atkinson.neumannTwoTermErrorConstant_pos
+#print axioms MathCollab.Density.Stronger.Atkinson.neumannTwoTermErrorConstant_pos
+#check @MathCollab.Density.Stronger.Atkinson.neumannTwoTerm_eq_ray_approximation
+#print axioms MathCollab.Density.Stronger.Atkinson.neumannTwoTerm_eq_ray_approximation
+#check @MathCollab.Density.Stronger.Atkinson.abs_dfiBesselY0_sub_neumannTwoTerm_le
+#print axioms MathCollab.Density.Stronger.Atkinson.abs_dfiBesselY0_sub_neumannTwoTerm_le
+#check @MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.ordinaryDivisor_vertical_shift
+#print axioms MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.ordinaryDivisor_vertical_shift
+#check @MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.ordinaryDivisorSum_eq_main_add_left
+#print axioms MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.ordinaryDivisorSum_eq_main_add_left
+#check @MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.ordinaryDivisorSum_eq_main_add_reflected
+#print axioms MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.ordinaryDivisorSum_eq_main_add_reflected
+#check @MathCollab.Density.Stronger.Atkinson.norm_divisorDirichletTerm_reflected
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_divisorDirichletTerm_reflected
+#check @MathCollab.Density.Stronger.Atkinson.continuous_divisorDirichletTerm_reflected
+#print axioms MathCollab.Density.Stronger.Atkinson.continuous_divisorDirichletTerm_reflected
+#check @MathCollab.Density.Stronger.Atkinson.integrable_ordinaryDivisorDualTerm
+#print axioms MathCollab.Density.Stronger.Atkinson.integrable_ordinaryDivisorDualTerm
+#check @MathCollab.Density.Stronger.Atkinson.integral_norm_ordinaryDivisorDualTerm
+#print axioms MathCollab.Density.Stronger.Atkinson.integral_norm_ordinaryDivisorDualTerm
+#check @MathCollab.Density.Stronger.Atkinson.summable_integral_norm_ordinaryDivisorDualTerm
+#print axioms MathCollab.Density.Stronger.Atkinson.summable_integral_norm_ordinaryDivisorDualTerm
+#check @MathCollab.Density.Stronger.Atkinson.tsum_ordinaryDivisorDualTerm
+#print axioms MathCollab.Density.Stronger.Atkinson.tsum_ordinaryDivisorDualTerm
+#check @MathCollab.Density.Stronger.Atkinson.integrable_zetaSquare_dualMultiplier
+#print axioms MathCollab.Density.Stronger.Atkinson.integrable_zetaSquare_dualMultiplier
+#check @MathCollab.Density.Stronger.Atkinson.divisorWeight_mul_dualTransform
+#print axioms MathCollab.Density.Stronger.Atkinson.divisorWeight_mul_dualTransform
+#check @MathCollab.Density.Stronger.Atkinson.summable_divisorWeight_dualTransform
+#print axioms MathCollab.Density.Stronger.Atkinson.summable_divisorWeight_dualTransform
+#check @MathCollab.Density.Stronger.Atkinson.tsum_divisorWeight_dualTransform
+#print axioms MathCollab.Density.Stronger.Atkinson.tsum_divisorWeight_dualTransform
+#check @MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.integrable_ordinaryDivisorMellinTerm
+#print axioms MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.integrable_ordinaryDivisorMellinTerm
+#check @MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.integral_norm_ordinaryDivisorMellinTerm
+#print axioms MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.integral_norm_ordinaryDivisorMellinTerm
+#check @MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.summable_integral_norm_ordinaryDivisorMellinTerm
+#print axioms MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.summable_integral_norm_ordinaryDivisorMellinTerm
+#check @MathCollab.Density.Stronger.Atkinson.divisorWeight_mul_mellinInv
+#print axioms MathCollab.Density.Stronger.Atkinson.divisorWeight_mul_mellinInv
+#check @MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.ordinaryDivisorSum_eq_zetaSquareMellinIntegral
+#print axioms MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.ordinaryDivisorSum_eq_zetaSquareMellinIntegral
+#check @MathCollab.Density.Stronger.Atkinson.ordinaryDivisorMellinIntegrand_eq_poleCleared
+#print axioms MathCollab.Density.Stronger.Atkinson.ordinaryDivisorMellinIntegrand_eq_poleCleared
+#check @MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.differentiable_ordinaryDivisorMellinNumerator
+#print axioms MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.differentiable_ordinaryDivisorMellinNumerator
+#check @MathCollab.Density.Stronger.Atkinson.ordinaryDivisorMellinNumerator_one
+#print axioms MathCollab.Density.Stronger.Atkinson.ordinaryDivisorMellinNumerator_one
+#check @MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.deriv_ordinaryDivisorMellinNumerator_one
+#print axioms MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.deriv_ordinaryDivisorMellinNumerator_one
+#check @MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.ordinaryDivisor_laurent_mainTerm
+#print axioms MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.ordinaryDivisor_laurent_mainTerm
+#check @MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.ordinaryDivisor_finiteRectangle
+#print axioms MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.ordinaryDivisor_finiteRectangle
+#check @MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.integrable_dualMultiplier_of_quadratic_bound
+#print axioms MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.integrable_dualMultiplier_of_quadratic_bound
+#check @MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.integrable_voronoiMinusMultiplier
+#print axioms MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.integrable_voronoiMinusMultiplier
+#check @MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.integrable_voronoiPlusMultiplier
+#print axioms MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.integrable_voronoiPlusMultiplier
+#check @MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.summable_divisorWeight_voronoiMinus
+#print axioms MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.summable_divisorWeight_voronoiMinus
+#check @MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.summable_divisorWeight_voronoiPlus
+#print axioms MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.summable_divisorWeight_voronoiPlus
+#check @MathCollab.Density.Stronger.Atkinson.ordinaryDivisorVoronoi_native
+#print axioms MathCollab.Density.Stronger.Atkinson.ordinaryDivisorVoronoi_native
+#check @MathCollab.Density.Stronger.Atkinson.divisor_index_bounds_of_frequency
+#print axioms MathCollab.Density.Stronger.Atkinson.divisor_index_bounds_of_frequency
+#check @MathCollab.Density.Stronger.Atkinson.mem_zetaQuadraticDivisorBand_iff
+#print axioms MathCollab.Density.Stronger.Atkinson.mem_zetaQuadraticDivisorBand_iff
+#check @MathCollab.Density.Stronger.Atkinson.zero_not_mem_zetaQuadraticDivisorBand
+#print axioms MathCollab.Density.Stronger.Atkinson.zero_not_mem_zetaQuadraticDivisorBand
+#check @MathCollab.Density.Stronger.Atkinson.zetaQuadraticDivisorBand_index_bounds
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaQuadraticDivisorBand_index_bounds
+#check @MathCollab.Density.Stronger.Atkinson.frequency_le_of_not_mem_zetaQuadraticDivisorBand
+#print axioms MathCollab.Density.Stronger.Atkinson.frequency_le_of_not_mem_zetaQuadraticDivisorBand
+#check @MathCollab.Density.Stronger.Atkinson.zetaFrozenDivisorCoefficient_zero
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaFrozenDivisorCoefficient_zero
+#check @MathCollab.Density.Stronger.Atkinson.norm_zetaQuadraticDivisorTerm_off_band_le
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_zetaQuadraticDivisorTerm_off_band_le
+#check @MathCollab.Density.Stronger.Atkinson.norm_zetaFrozenDivisorQuadraticSum_sub_short_le
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_zetaFrozenDivisorQuadraticSum_sub_short_le
+#check @MathCollab.Density.Stronger.Atkinson.exists_norm_zetaFrozenDivisorQuadraticSum_sub_short_le
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_norm_zetaFrozenDivisorQuadraticSum_sub_short_le
+#check @MathCollab.Density.Stronger.Atkinson.exists_abs_zetaSquareGaussianWindow_sub_short_le
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_abs_zetaSquareGaussianWindow_sub_short_le
+#check @MathCollab.Density.Stronger.Atkinson.zetaGaussianQuadraticCoefficient_re
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaGaussianQuadraticCoefficient_re
+#check @MathCollab.Density.Stronger.Atkinson.zetaGaussianQuadraticCoefficient_im
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaGaussianQuadraticCoefficient_im
+#check @MathCollab.Density.Stronger.Atkinson.zetaGaussianQuadraticCoefficient_re_pos
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaGaussianQuadraticCoefficient_re_pos
+#check @MathCollab.Density.Stronger.Atkinson.zetaGaussianQuadraticIntegral_eq
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaGaussianQuadraticIntegral_eq
+#check @MathCollab.Density.Stronger.Atkinson.integrable_zetaGaussianQuadraticIntegrand
+#print axioms MathCollab.Density.Stronger.Atkinson.integrable_zetaGaussianQuadraticIntegrand
+#check @MathCollab.Density.Stronger.Atkinson.inverse_re_lower_of_im_le_re
+#print axioms MathCollab.Density.Stronger.Atkinson.inverse_re_lower_of_im_le_re
+#check @MathCollab.Density.Stronger.Atkinson.norm_fourierGaussian_le_of_im_le_re
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_fourierGaussian_le_of_im_le_re
+#check @MathCollab.Density.Stronger.Atkinson.norm_zetaGaussianQuadraticIntegral_le
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_zetaGaussianQuadraticIntegral_le
+#check @MathCollab.Density.Stronger.Atkinson.norm_zetaGaussianQuadraticIntegral_tail
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_zetaGaussianQuadraticIntegral_tail
+#check @MathCollab.Density.Stronger.Atkinson.hasDerivAt_zetaGaussianQuadraticIntegral
+#print axioms MathCollab.Density.Stronger.Atkinson.hasDerivAt_zetaGaussianQuadraticIntegral
+#check @MathCollab.Density.Stronger.Atkinson.inverse_norm_zetaGaussianQuadraticCoefficient_le
+#print axioms MathCollab.Density.Stronger.Atkinson.inverse_norm_zetaGaussianQuadraticCoefficient_le
+#check @MathCollab.Density.Stronger.Atkinson.norm_deriv_zetaGaussianQuadraticIntegral_le
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_deriv_zetaGaussianQuadraticIntegral_le
+#check @MathCollab.Density.Stronger.Atkinson.exists_abs_zetaSquareNorm_sub_frozen_le
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_abs_zetaSquareNorm_sub_frozen_le
+#check @MathCollab.Density.Stronger.Atkinson.iteratedDeriv_two_real_inv
+#print axioms MathCollab.Density.Stronger.Atkinson.iteratedDeriv_two_real_inv
+#check @MathCollab.Density.Stronger.Atkinson.intervalC2Bound_real_reciprocal
+#print axioms MathCollab.Density.Stronger.Atkinson.intervalC2Bound_real_reciprocal
+#check @MathCollab.Density.Stronger.Atkinson.IntervalC2Bound.deriv_c1
+#print axioms MathCollab.Density.Stronger.Atkinson.IntervalC2Bound.deriv_c1
+#check @MathCollab.Density.Stronger.Atkinson.iteratedDeriv_ofReal_fun
+#print axioms MathCollab.Density.Stronger.Atkinson.iteratedDeriv_ofReal_fun
+#check @MathCollab.Density.Stronger.Atkinson.iteratedDeriv_two_comp_real
+#print axioms MathCollab.Density.Stronger.Atkinson.iteratedDeriv_two_comp_real
+#check @MathCollab.Density.Stronger.Atkinson.IntervalC2Bound.congr_of_eventuallyEq
+#print axioms MathCollab.Density.Stronger.Atkinson.IntervalC2Bound.congr_of_eventuallyEq
+#check @MathCollab.Density.Stronger.Atkinson.IntervalC2Bound.absorb_scale
+#print axioms MathCollab.Density.Stronger.Atkinson.IntervalC2Bound.absorb_scale
+#check @MathCollab.Density.Stronger.Atkinson.exists_real_profile_derivative_bound
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_real_profile_derivative_bound
+#check @MathCollab.Density.Stronger.Atkinson.separated_subset_card_le_one_of_diameter
+#print axioms MathCollab.Density.Stronger.Atkinson.separated_subset_card_le_one_of_diameter
+#check @MathCollab.Density.Stronger.Atkinson.separated_annulus_card_le_two
+#print axioms MathCollab.Density.Stronger.Atkinson.separated_annulus_card_le_two
+#check @MathCollab.Density.Stronger.Atkinson.sum_inv_distance_near_le_harmonic
+#print axioms MathCollab.Density.Stronger.Atkinson.sum_inv_distance_near_le_harmonic
+#check @MathCollab.Density.Stronger.Atkinson.exp_sub_one_le_two_mul
+#print axioms MathCollab.Density.Stronger.Atkinson.exp_sub_one_le_two_mul
+#check @MathCollab.Density.Stronger.Atkinson.zetaQuadraticDivisorBand_abs_sub_center_le
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaQuadraticDivisorBand_abs_sub_center_le
+#check @MathCollab.Density.Stronger.Atkinson.exists_zetaQuadraticDivisorBand_physical_bounds
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_zetaQuadraticDivisorBand_physical_bounds
+#check @MathCollab.Density.Stronger.Atkinson.zetaQuadraticDivisorTerm_eq_testFunction
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaQuadraticDivisorTerm_eq_testFunction
+#check @MathCollab.Density.Stronger.Atkinson.zetaShortQuadraticDivisorSum_eq_divisor_test
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaShortQuadraticDivisorSum_eq_divisor_test
+#check @MathCollab.Density.Stronger.Atkinson.exists_zetaSquareGaussianMean_short_approximation
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_zetaSquareGaussianMean_short_approximation
+#check @MathCollab.Density.Stronger.Atkinson.exists_zetaSquarePhysicalGaussian_short_approximation
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_zetaSquarePhysicalGaussian_short_approximation
+#check @MathCollab.Density.Stronger.Atkinson.exists_zetaSquareLocalMean_le_short_divisor
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_zetaSquareLocalMean_le_short_divisor
+#check @MathCollab.Density.Stronger.Atkinson.exists_norm_zetaShortDivisorTestFunction_le
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_norm_zetaShortDivisorTestFunction_le
+#check @MathCollab.Density.Stronger.Atkinson.exists_norm_zetaSmoothDivisorTest_le
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_norm_zetaSmoothDivisorTest_le
+#check @MathCollab.Density.Stronger.Atkinson.integrable_zetaSmoothDivisorTest
+#print axioms MathCollab.Density.Stronger.Atkinson.integrable_zetaSmoothDivisorTest
+#check @MathCollab.Density.Stronger.Atkinson.zetaSmoothDivisorTest_integral_norm_eq_physical
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaSmoothDivisorTest_integral_norm_eq_physical
+#check @MathCollab.Density.Stronger.Atkinson.exists_integral_norm_zetaSmoothDivisorTest_le
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_integral_norm_zetaSmoothDivisorTest_le
+#check @MathCollab.Density.Stronger.Atkinson.exists_zetaSquareGaussianMean_smooth_approximation
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_zetaSquareGaussianMean_smooth_approximation
+#check @MathCollab.Density.Stronger.Atkinson.exists_zetaSquareLocalMean_le_smooth_divisor
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_zetaSquareLocalMean_le_smooth_divisor
+#check @MathCollab.Density.Stronger.Atkinson.exists_zetaSquarePhysicalGaussian_smooth_approximation
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_zetaSquarePhysicalGaussian_smooth_approximation
+#check @MathCollab.Density.Stronger.Atkinson.zetaDivisorBandEdge_outer_bounds
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaDivisorBandEdge_outer_bounds
+#check @MathCollab.Density.Stronger.Atkinson.support_zetaSmoothDivisorTest_physical
+#print axioms MathCollab.Density.Stronger.Atkinson.support_zetaSmoothDivisorTest_physical
+#check @MathCollab.Density.Stronger.Atkinson.eventually_zetaSmoothDivisorTest_support_physical
+#print axioms MathCollab.Density.Stronger.Atkinson.eventually_zetaSmoothDivisorTest_support_physical
+#check @MathCollab.Density.Stronger.Atkinson.norm_zetaSmoothDivisorSum_sub_short_le
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_zetaSmoothDivisorSum_sub_short_le
+#check @MathCollab.Density.Stronger.Atkinson.exists_norm_zetaSmoothDivisorSum_sub_short_le
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_norm_zetaSmoothDivisorSum_sub_short_le
+#check @MathCollab.Density.Stronger.Atkinson.exists_zetaSmoothDivisor_log_tail_bound
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_zetaSmoothDivisor_log_tail_bound
+#check @MathCollab.Density.Stronger.Atkinson.zetaSmoothDivisorTest_eq_zero_left
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaSmoothDivisorTest_eq_zero_left
+#check @MathCollab.Density.Stronger.Atkinson.support_zetaSmoothDivisorTest
+#print axioms MathCollab.Density.Stronger.Atkinson.support_zetaSmoothDivisorTest
+#check @MathCollab.Density.Stronger.Atkinson.contDiff_zetaSmoothDivisorTest
+#print axioms MathCollab.Density.Stronger.Atkinson.contDiff_zetaSmoothDivisorTest
+#check @MathCollab.Density.Stronger.Atkinson.zetaSmoothDivisorTerm_eq_cutoff
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaSmoothDivisorTerm_eq_cutoff
+#check @MathCollab.Density.Stronger.Atkinson.norm_zetaSmoothDivisorTerm_le
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_zetaSmoothDivisorTerm_le
+#check @MathCollab.Density.Stronger.Atkinson.summable_zetaSmoothDivisorTerm
+#print axioms MathCollab.Density.Stronger.Atkinson.summable_zetaSmoothDivisorTerm
+#check @MathCollab.Density.Stronger.Atkinson.zetaSmoothDivisorTerm_eq_on_band
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaSmoothDivisorTerm_eq_on_band
+#check @MathCollab.Density.Stronger.Atkinson.source_log_monomial_le_one
+#print axioms MathCollab.Density.Stronger.Atkinson.source_log_monomial_le_one
+#check @MathCollab.Density.Stronger.Atkinson.source_scaled_window_square_le
+#print axioms MathCollab.Density.Stronger.Atkinson.source_scaled_window_square_le
+#check @MathCollab.Density.Stronger.Atkinson.source_window_square_le_height
+#print axioms MathCollab.Density.Stronger.Atkinson.source_window_square_le_height
+#check @MathCollab.Density.Stronger.Atkinson.source_scaled_window_fourth_le
+#print axioms MathCollab.Density.Stronger.Atkinson.source_scaled_window_fourth_le
+#check @MathCollab.Density.Stronger.Atkinson.source_scaled_quadratic_phase_error_le
+#print axioms MathCollab.Density.Stronger.Atkinson.source_scaled_quadratic_phase_error_le
+#check @MathCollab.Density.Stronger.Atkinson.exists_zetaSquareGaussianWindow_log_error
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_zetaSquareGaussianWindow_log_error
+#check @MathCollab.Density.Stronger.Atkinson.exists_logGaussian_power_tail_bound
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_logGaussian_power_tail_bound
+#check @MathCollab.Density.Stronger.Atkinson.exists_zetaQuadraticDivisor_log_tail_bound
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_zetaQuadraticDivisor_log_tail_bound
+#check @MathCollab.Density.Stronger.Atkinson.eventually_const_log_pow_le_rpow
+#print axioms MathCollab.Density.Stronger.Atkinson.eventually_const_log_pow_le_rpow
+#check @MathCollab.Density.Stronger.Atkinson.gaussian_width_sq_le_height
+#print axioms MathCollab.Density.Stronger.Atkinson.gaussian_width_sq_le_height
+#check @MathCollab.Density.Stronger.Atkinson.eventually_zeta_source_log_window_scales
+#print axioms MathCollab.Density.Stronger.Atkinson.eventually_zeta_source_log_window_scales
+#check @MathCollab.Density.Stronger.Atkinson.IntervalC2Bound.norm_deriv_sub_le
+#print axioms MathCollab.Density.Stronger.Atkinson.IntervalC2Bound.norm_deriv_sub_le
+#check @MathCollab.Density.Stronger.Atkinson.IntervalC2Bound.norm_sub_linear_le
+#print axioms MathCollab.Density.Stronger.Atkinson.IntervalC2Bound.norm_sub_linear_le
+#check @MathCollab.Density.Stronger.Atkinson.norm_exp_real_phase_sub_linear_le
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_exp_real_phase_sub_linear_le
+#check @MathCollab.Density.Stronger.Atkinson.abs_log_one_add_sub_cubic_le
+#print axioms MathCollab.Density.Stronger.Atkinson.abs_log_one_add_sub_cubic_le
+#check @MathCollab.Density.Stronger.Atkinson.abs_atkinsonRootPhase_sub_cubic_le
+#print axioms MathCollab.Density.Stronger.Atkinson.abs_atkinsonRootPhase_sub_cubic_le
+#check @MathCollab.Density.Stronger.Atkinson.norm_atkinsonRootKernel_sub_cubic_le
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_atkinsonRootKernel_sub_cubic_le
+#check @MathCollab.Density.Stronger.Atkinson.truncatedDyadicLength_le_width
+#print axioms MathCollab.Density.Stronger.Atkinson.truncatedDyadicLength_le_width
+#check @MathCollab.Density.Stronger.Atkinson.truncatedDyadic_start_lt
+#print axioms MathCollab.Density.Stronger.Atkinson.truncatedDyadic_start_lt
+#check @MathCollab.Density.Stronger.Atkinson.truncatedDyadic_endpoint_le
+#print axioms MathCollab.Density.Stronger.Atkinson.truncatedDyadic_endpoint_le
+#check @MathCollab.Density.Stronger.Atkinson.truncatedDyadicLength_pos
+#print axioms MathCollab.Density.Stronger.Atkinson.truncatedDyadicLength_pos
+#check @MathCollab.Density.Stronger.Atkinson.truncatedDyadicLength_eq_width
+#print axioms MathCollab.Density.Stronger.Atkinson.truncatedDyadicLength_eq_width
+#check @MathCollab.Density.Stronger.Atkinson.sum_range_min_pow_eq_truncatedDyadic
+#print axioms MathCollab.Density.Stronger.Atkinson.sum_range_min_pow_eq_truncatedDyadic
+#check @MathCollab.Density.Stronger.Atkinson.sum_range_eq_truncatedDyadic
+#print axioms MathCollab.Density.Stronger.Atkinson.sum_range_eq_truncatedDyadic
+#check @MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.exists_ordinaryDivisorMellin_strip_decay
+#print axioms MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.exists_ordinaryDivisorMellin_strip_decay
+#check @MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.continuous_ordinaryDivisorMellin_vertical
+#print axioms MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.continuous_ordinaryDivisorMellin_vertical
+#check @MathCollab.Density.Stronger.Atkinson.integrable_of_continuous_quadratic_tail
+#print axioms MathCollab.Density.Stronger.Atkinson.integrable_of_continuous_quadratic_tail
+#check @MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.integrable_ordinaryDivisorMellin_vertical
+#print axioms MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.integrable_ordinaryDivisorMellin_vertical
+#check @MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.ordinaryDivisor_horizontal_limits
+#print axioms MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.ordinaryDivisor_horizontal_limits
+#check @MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.mellin_invWeight_add_one
+#print axioms MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.mellin_invWeight_add_one
+#check @MathCollab.Density.Stronger.Atkinson.dfiVoronoiInvWeightIterate_zero
+#print axioms MathCollab.Density.Stronger.Atkinson.dfiVoronoiInvWeightIterate_zero
+#check @MathCollab.Density.Stronger.Atkinson.dfiVoronoiInvWeightIterate_succ
+#print axioms MathCollab.Density.Stronger.Atkinson.dfiVoronoiInvWeightIterate_succ
+#check @MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.mellin_invWeightIterate_add_nat
+#print axioms MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.mellin_invWeightIterate_add_nat
+#check @MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.mellin_polynomial_decay
+#print axioms MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.mellin_polynomial_decay
+#check @MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.exists_mellin_interval_bound
+#print axioms MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.exists_mellin_interval_bound
+#check @MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.exists_mellin_one_add_abs_pow_line_bound
+#print axioms MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.exists_mellin_one_add_abs_pow_line_bound
+#check @MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.exists_mellin_strip_bound
+#print axioms MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.exists_mellin_strip_bound
+#check @MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.differentiable_mellin
+#print axioms MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.differentiable_mellin
+#check @MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.exists_mellin_pow_boundary_bound
+#print axioms MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.exists_mellin_pow_boundary_bound
+#check @MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.exists_mellin_pow_strip_bound
+#print axioms MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.exists_mellin_pow_strip_bound
+#check @MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.exists_mellin_weighted_strip_bound
+#print axioms MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.exists_mellin_weighted_strip_bound
+#check @MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.eventuallyEq_zero_atTop
+#print axioms MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.eventuallyEq_zero_atTop
+#check @MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.eventuallyEq_zero_atZero
+#print axioms MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.eventuallyEq_zero_atZero
+#check @MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.isBigO_atTop
+#print axioms MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.isBigO_atTop
+#check @MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.isBigO_atZero
+#print axioms MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.isBigO_atZero
+#check @MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.mellinConvergent
+#print axioms MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.mellinConvergent
+#check @MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.mellinInversion
+#print axioms MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.mellinInversion
+#check @MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.mellin_hasDerivAt_one
+#print axioms MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.mellin_hasDerivAt_one
+#check @MathCollab.Density.Stronger.Atkinson.mellin_apply_one
+#print axioms MathCollab.Density.Stronger.Atkinson.mellin_apply_one
+#check @MathCollab.Density.Stronger.Atkinson.mellin_log_smul_apply_one
+#print axioms MathCollab.Density.Stronger.Atkinson.mellin_log_smul_apply_one
+#check @MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.contDiff_mellinKernel
+#print axioms MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.contDiff_mellinKernel
+#check @MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.hasCompactSupport_mellinKernel
+#print axioms MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.hasCompactSupport_mellinKernel
+#check @MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.mellinKernelSchwartz_apply
+#print axioms MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.mellinKernelSchwartz_apply
+#check @MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.mellin_eq_fourier_mellinKernel
+#print axioms MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.mellin_eq_fourier_mellinKernel
+#check @MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.verticalIntegrable_mellin
+#print axioms MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.verticalIntegrable_mellin
+#check @MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.integrable_sqWeight_norm_mellin
+#print axioms MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.integrable_sqWeight_norm_mellin
+#check @MathCollab.Density.Stronger.Atkinson.differentiableAt_dfiVoronoiMinusIntegrand
+#print axioms MathCollab.Density.Stronger.Atkinson.differentiableAt_dfiVoronoiMinusIntegrand
+#check @MathCollab.Density.Stronger.Atkinson.norm_voronoiNatPower_le_one
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_voronoiNatPower_le_one
+#check @MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.exists_minusIntegrand_strip_decay
+#print axioms MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.exists_minusIntegrand_strip_decay
+#check @MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.continuous_minusIntegrand_vertical
+#print axioms MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.continuous_minusIntegrand_vertical
+#check @MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.integrable_minusIntegrand_vertical
+#print axioms MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.integrable_minusIntegrand_vertical
+#check @MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.minusIntegrand_horizontal_limits
+#print axioms MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.minusIntegrand_horizontal_limits
+#check @MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.minusIntegrand_finite_rectangle
+#print axioms MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.minusIntegrand_finite_rectangle
+#check @MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.minusTransform_eq_thirteenSixteenths
+#print axioms MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.minusTransform_eq_thirteenSixteenths
+#check @MathCollab.Density.Stronger.Atkinson.dfiVoronoiMinusTransform_mellin_eq_bessel
+#print axioms MathCollab.Density.Stronger.Atkinson.dfiVoronoiMinusTransform_mellin_eq_bessel
+#check @MathCollab.Density.Stronger.Atkinson.norm_Gamma_voronoi_extended_strip
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_Gamma_voronoi_extended_strip
+#check @MathCollab.Density.Stronger.Atkinson.norm_dfiPeriodicArchimedeanFactor_strip_le
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_dfiPeriodicArchimedeanFactor_strip_le
+#check @MathCollab.Density.Stronger.Atkinson.norm_dfiVoronoiMinusMultiplier_strip_le
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_dfiVoronoiMinusMultiplier_strip_le
+#check @MathCollab.Density.Stronger.Atkinson.norm_dfiVoronoiPlusMultiplier_strip_le
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_dfiVoronoiPlusMultiplier_strip_le
+#check @MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.continuous
+#print axioms MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.continuous
+#check @MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.hasCompactSupport
+#print axioms MathCollab.Density.Stronger.Atkinson.DFIVoronoiTestFunction.hasCompactSupport
+#check @MathCollab.Density.Stronger.Atkinson.differentiableAt_dfiPeriodicArchimedeanFactor_of_re_pos
+#print axioms MathCollab.Density.Stronger.Atkinson.differentiableAt_dfiPeriodicArchimedeanFactor_of_re_pos
+#check @MathCollab.Density.Stronger.Atkinson.differentiableAt_dfiVoronoiMinusMultiplier_of_re_lt_one
+#print axioms MathCollab.Density.Stronger.Atkinson.differentiableAt_dfiVoronoiMinusMultiplier_of_re_lt_one
+#check @MathCollab.Density.Stronger.Atkinson.differentiableAt_dfiVoronoiPlusMultiplier_of_re_lt_one
+#print axioms MathCollab.Density.Stronger.Atkinson.differentiableAt_dfiVoronoiPlusMultiplier_of_re_lt_one
+#check @MathCollab.Density.Stronger.Atkinson.verticalIntegral'_eq_realIntegral
+#print axioms MathCollab.Density.Stronger.Atkinson.verticalIntegral'_eq_realIntegral
+#check @MathCollab.Density.Stronger.Atkinson.four_mul_cos_half_sq
+#print axioms MathCollab.Density.Stronger.Atkinson.four_mul_cos_half_sq
+#check @MathCollab.Density.Stronger.Atkinson.riemannZeta_eq_voronoiFactor
+#print axioms MathCollab.Density.Stronger.Atkinson.riemannZeta_eq_voronoiFactor
+#check @MathCollab.Density.Stronger.Atkinson.riemannZeta_sq_eq_voronoiMultipliers
+#print axioms MathCollab.Density.Stronger.Atkinson.riemannZeta_sq_eq_voronoiMultipliers
+#check @MathCollab.Density.Stronger.Atkinson.norm_Gamma_voronoi_strip_sharp
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_Gamma_voronoi_strip_sharp
+#check @MathCollab.Density.Stronger.Atkinson.norm_complex_cos_le_exp_abs_im
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_complex_cos_le_exp_abs_im
+#check @MathCollab.Density.Stronger.Atkinson.norm_voronoiFactor_one_le
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_voronoiFactor_one_le
+#check @MathCollab.Density.Stronger.Atkinson.norm_voronoiFactor_one_mul_cos_le
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_voronoiFactor_one_mul_cos_le
+#check @MathCollab.Density.Stronger.Atkinson.norm_riemannZeta_voronoi_strip
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_riemannZeta_voronoi_strip
+#check @MathCollab.Density.Stronger.Atkinson.exists_zetaSquarePhysicalGaussian_atkinson_minus_approximation
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_zetaSquarePhysicalGaussian_atkinson_minus_approximation
+#check @MathCollab.Density.Stronger.Atkinson.exists_zetaSquareLocalMean_le_atkinson_minus
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_zetaSquareLocalMean_le_atkinson_minus
+#check @MathCollab.Density.Stronger.Atkinson.hasDerivAt_zetaAtkinsonPhase
+#print axioms MathCollab.Density.Stronger.Atkinson.hasDerivAt_zetaAtkinsonPhase
+#check @MathCollab.Density.Stronger.Atkinson.hasDerivAt_zetaAtkinsonPhaseDerivative
+#print axioms MathCollab.Density.Stronger.Atkinson.hasDerivAt_zetaAtkinsonPhaseDerivative
+#check @MathCollab.Density.Stronger.Atkinson.hasDerivAt_deriv_zetaAtkinsonPhase
+#print axioms MathCollab.Density.Stronger.Atkinson.hasDerivAt_deriv_zetaAtkinsonPhase
+#check @MathCollab.Density.Stronger.Atkinson.exists_zetaSquarePhysicalGaussian_atkinson_reduced
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_zetaSquarePhysicalGaussian_atkinson_reduced
+#check @MathCollab.Density.Stronger.Atkinson.exists_zetaSquareLocalMean_le_atkinson_reduced
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_zetaSquareLocalMean_le_atkinson_reduced
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonSaddleRoot_pos
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonSaddleRoot_pos
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonSaddleRoot_equation
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonSaddleRoot_equation
+#check @MathCollab.Density.Stronger.Atkinson.atkinsonSaddleRoot_sub_pos
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinsonSaddleRoot_sub_pos
+#check @MathCollab.Density.Stronger.Atkinson.atkinson_saddle_equation_iff
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinson_saddle_equation_iff
+#check @MathCollab.Density.Stronger.Atkinson.zetaAtkinsonSaddle_pos
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaAtkinsonSaddle_pos
+#check @MathCollab.Density.Stronger.Atkinson.zetaAtkinsonPhase_deriv_factored
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaAtkinsonPhase_deriv_factored
+#check @MathCollab.Density.Stronger.Atkinson.zetaAtkinsonPhase_stationary_iff
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaAtkinsonPhase_stationary_iff
+#check @MathCollab.Density.Stronger.Atkinson.zetaAtkinsonPhase_stationary
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaAtkinsonPhase_stationary
+#check @MathCollab.Density.Stronger.Atkinson.zetaAtkinsonSaddle_zero
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaAtkinsonSaddle_zero
+#check @MathCollab.Density.Stronger.Atkinson.zetaAtkinsonPhase_secondDeriv_saddle
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaAtkinsonPhase_secondDeriv_saddle
+#check @MathCollab.Density.Stronger.Atkinson.zetaAtkinsonPhase_secondDeriv_saddle_neg
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaAtkinsonPhase_secondDeriv_saddle_neg
+#check @MathCollab.Density.Stronger.Atkinson.exists_zetaAtkinsonBesselMinus_twoTerm_log_bound
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_zetaAtkinsonBesselMinus_twoTerm_log_bound
+#check @MathCollab.Density.Stronger.Atkinson.exists_zetaSquarePhysicalGaussian_atkinson_twoTerm_approximation
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_zetaSquarePhysicalGaussian_atkinson_twoTerm_approximation
+#check @MathCollab.Density.Stronger.Atkinson.exists_zetaSquareLocalMean_le_atkinson_twoTerm
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_zetaSquareLocalMean_le_atkinson_twoTerm
+#check @MathCollab.Density.Stronger.Atkinson.ordinaryDivisorVoronoi_bessel
+#print axioms MathCollab.Density.Stronger.Atkinson.ordinaryDivisorVoronoi_bessel
+#check @MathCollab.Density.Stronger.Atkinson.zetaSmoothDivisorSum_eq_atkinson_bessel
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaSmoothDivisorSum_eq_atkinson_bessel
+#check @MathCollab.Density.Stronger.Atkinson.exists_zetaSquarePhysicalGaussian_atkinson_approximation
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_zetaSquarePhysicalGaussian_atkinson_approximation
+#check @MathCollab.Density.Stronger.Atkinson.exists_zetaSquareLocalMean_le_atkinson_bessel
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_zetaSquareLocalMean_le_atkinson_bessel
+#check @MathCollab.Density.Stronger.Atkinson.exp_gap_lower
+#print axioms MathCollab.Density.Stronger.Atkinson.exp_gap_lower
+#check @MathCollab.Density.Stronger.Atkinson.zetaDivisorBandEdge_normalized_gap_lower
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaDivisorBandEdge_normalized_gap_lower
+#check @MathCollab.Density.Stronger.Atkinson.zetaDivisorBandCutoff_inverse_widths
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaDivisorBandCutoff_inverse_widths
+#check @MathCollab.Density.Stronger.Atkinson.zetaBandCutoff_mul_height
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaBandCutoff_mul_height
+#check @MathCollab.Density.Stronger.Atkinson.zetaDivisorBandCutoff_root_rescale
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaDivisorBandCutoff_root_rescale
+#check @MathCollab.Density.Stronger.Atkinson.exists_intervalC2Bound_zetaDivisorBandCutoff_root
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_intervalC2Bound_zetaDivisorBandCutoff_root
+#check @MathCollab.Density.Stronger.Atkinson.support_iteratedDeriv_smoothTransition
+#print axioms MathCollab.Density.Stronger.Atkinson.support_iteratedDeriv_smoothTransition
+#check @MathCollab.Density.Stronger.Atkinson.exists_norm_iteratedDeriv_smoothTransition_le
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_norm_iteratedDeriv_smoothTransition_le
+#check @MathCollab.Density.Stronger.Atkinson.deriv_smoothTransition_quadratic
+#print axioms MathCollab.Density.Stronger.Atkinson.deriv_smoothTransition_quadratic
+#check @MathCollab.Density.Stronger.Atkinson.iteratedDeriv_two_smoothTransition_quadratic
+#print axioms MathCollab.Density.Stronger.Atkinson.iteratedDeriv_two_smoothTransition_quadratic
+#check @MathCollab.Density.Stronger.Atkinson.exists_intervalC2Bound_quadraticTransition
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_intervalC2Bound_quadraticTransition
+#check @MathCollab.Density.Stronger.Atkinson.sq_mul_gaussian_eighth_le
+#print axioms MathCollab.Density.Stronger.Atkinson.sq_mul_gaussian_eighth_le
+#check @MathCollab.Density.Stronger.Atkinson.abs_mul_gaussian_eighth_le
+#print axioms MathCollab.Density.Stronger.Atkinson.abs_mul_gaussian_eighth_le
+#check @MathCollab.Density.Stronger.Atkinson.norm_deriv_zetaGaussianQuadraticIntegral_le_natural
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_deriv_zetaGaussianQuadraticIntegral_le_natural
+#check @MathCollab.Density.Stronger.Atkinson.norm_iteratedDeriv_two_zetaGaussianQuadraticIntegral_le_natural
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_iteratedDeriv_two_zetaGaussianQuadraticIntegral_le_natural
+#check @MathCollab.Density.Stronger.Atkinson.exists_intervalC2Bound_quadraticGaussian_profile_natural
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_intervalC2Bound_quadraticGaussian_profile_natural
+#check @MathCollab.Density.Stronger.Atkinson.zetaLogGaussianEnvelope_bounds
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaLogGaussianEnvelope_bounds
+#check @MathCollab.Density.Stronger.Atkinson.contDiffAt_zetaLogGaussianEnvelope
+#print axioms MathCollab.Density.Stronger.Atkinson.contDiffAt_zetaLogGaussianEnvelope
+#check @MathCollab.Density.Stronger.Atkinson.hasDerivAt_zetaLogGaussianEnvelope
+#print axioms MathCollab.Density.Stronger.Atkinson.hasDerivAt_zetaLogGaussianEnvelope
+#check @MathCollab.Density.Stronger.Atkinson.intervalC1Bound_zetaLogGaussianEnvelope
+#print axioms MathCollab.Density.Stronger.Atkinson.intervalC1Bound_zetaLogGaussianEnvelope
+#check @MathCollab.Density.Stronger.Atkinson.atkinson_center_mem_physical
+#print axioms MathCollab.Density.Stronger.Atkinson.atkinson_center_mem_physical
+#check @MathCollab.Density.Stronger.Atkinson.integrable_zetaAtkinson_kernel_of_support_bound
+#print axioms MathCollab.Density.Stronger.Atkinson.integrable_zetaAtkinson_kernel_of_support_bound
+#check @MathCollab.Density.Stronger.Atkinson.integrable_zetaAtkinsonY0Integrand
+#print axioms MathCollab.Density.Stronger.Atkinson.integrable_zetaAtkinsonY0Integrand
+#check @MathCollab.Density.Stronger.Atkinson.integrable_zetaNeumannRemainderIntegrand
+#print axioms MathCollab.Density.Stronger.Atkinson.integrable_zetaNeumannRemainderIntegrand
+#check @MathCollab.Density.Stronger.Atkinson.zetaAtkinsonTwoTermIntegrand_eq_sub
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaAtkinsonTwoTermIntegrand_eq_sub
+#check @MathCollab.Density.Stronger.Atkinson.integrable_zetaAtkinsonTwoTermIntegrand
+#print axioms MathCollab.Density.Stronger.Atkinson.integrable_zetaAtkinsonTwoTermIntegrand
+#check @MathCollab.Density.Stronger.Atkinson.norm_integral_zetaNeumannRemainder_le
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_integral_zetaNeumannRemainder_le
+#check @MathCollab.Density.Stronger.Atkinson.exists_norm_integral_zetaNeumannRemainder_le
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_norm_integral_zetaNeumannRemainder_le
+#check @MathCollab.Density.Stronger.Atkinson.zetaAtkinsonY0Term_eq_native
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaAtkinsonY0Term_eq_native
+#check @MathCollab.Density.Stronger.Atkinson.summable_zetaAtkinsonY0Term
+#print axioms MathCollab.Density.Stronger.Atkinson.summable_zetaAtkinsonY0Term
+#check @MathCollab.Density.Stronger.Atkinson.summable_zetaAtkinsonTwoTerm
+#print axioms MathCollab.Density.Stronger.Atkinson.summable_zetaAtkinsonTwoTerm
+#check @MathCollab.Density.Stronger.Atkinson.zetaAtkinsonBesselMinus_sub_twoTerm
+#print axioms MathCollab.Density.Stronger.Atkinson.zetaAtkinsonBesselMinus_sub_twoTerm
+#check @MathCollab.Density.Stronger.Atkinson.exists_norm_zetaAtkinsonBesselMinus_sub_twoTerm_le
+#print axioms MathCollab.Density.Stronger.Atkinson.exists_norm_zetaAtkinsonBesselMinus_sub_twoTerm_le
+#check @MathCollab.Density.Stronger.Atkinson.hasDerivAt_deriv_zetaGaussianQuadraticIntegral
+#print axioms MathCollab.Density.Stronger.Atkinson.hasDerivAt_deriv_zetaGaussianQuadraticIntegral
+#check @MathCollab.Density.Stronger.Atkinson.norm_iteratedDeriv_two_zetaGaussianQuadraticIntegral_le
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_iteratedDeriv_two_zetaGaussianQuadraticIntegral_le
+#check @MathCollab.Density.Stronger.Atkinson.norm_iteratedDeriv_two_zetaGaussianQuadraticIntegral_le_polynomial
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_iteratedDeriv_two_zetaGaussianQuadraticIntegral_le_polynomial
+#check @MathCollab.Density.Stronger.Atkinson.deriv_zetaQuadraticLogGaussian
+#print axioms MathCollab.Density.Stronger.Atkinson.deriv_zetaQuadraticLogGaussian
+#check @MathCollab.Density.Stronger.Atkinson.norm_deriv_zetaQuadraticLogGaussian_le
+#print axioms MathCollab.Density.Stronger.Atkinson.norm_deriv_zetaQuadraticLogGaussian_le
+#check @MathCollab.Density.Stronger.Atkinson.intervalC1Bound_zetaQuadraticLogGaussian
+#print axioms MathCollab.Density.Stronger.Atkinson.intervalC1Bound_zetaQuadraticLogGaussian
+#check @MathCollab.Density.Stronger.atkinsonAbsorptionLength_pos
+#print axioms MathCollab.Density.Stronger.atkinsonAbsorptionLength_pos
+#check @MathCollab.Density.Stronger.atkinsonAbsorptionLength_radical
+#print axioms MathCollab.Density.Stronger.atkinsonAbsorptionLength_radical
+#check @MathCollab.Density.Stronger.atkinsonAbsorptionLength_absorbs
+#print axioms MathCollab.Density.Stronger.atkinsonAbsorptionLength_absorbs
+#check @MathCollab.Density.Stronger.atkinson_card_le_of_packet
+#print axioms MathCollab.Density.Stronger.atkinson_card_le_of_packet
+#check @MathCollab.Density.Stronger.atkinson_covered_card_budget
+#print axioms MathCollab.Density.Stronger.atkinson_covered_card_budget
+#check @MathCollab.Density.Stronger.atkinson_card_le_of_local_packets
+#print axioms MathCollab.Density.Stronger.atkinson_card_le_of_local_packets
+#check @MathCollab.Density.Stronger.atkinson_count_exponent_budget
+#print axioms MathCollab.Density.Stronger.atkinson_count_exponent_budget
+#check @MathCollab.Density.Stronger.atkinsonHeightFiber_subset
+#print axioms MathCollab.Density.Stronger.atkinsonHeightFiber_subset
+#check @MathCollab.Density.Stronger.atkinsonHeightBin_mem_range
+#print axioms MathCollab.Density.Stronger.atkinsonHeightBin_mem_range
+#check @MathCollab.Density.Stronger.atkinsonHeightFiber_interval
+#print axioms MathCollab.Density.Stronger.atkinsonHeightFiber_interval
+#check @MathCollab.Density.Stronger.atkinsonHeightFiber_card_partition
+#print axioms MathCollab.Density.Stronger.atkinsonHeightFiber_card_partition
+#check @MathCollab.Density.Stronger.atkinson_card_le_of_height_fibers
+#print axioms MathCollab.Density.Stronger.atkinson_card_le_of_height_fibers
+#check @MathCollab.Density.Stronger.bounded_convolution_subpower
+#print axioms MathCollab.Density.Stronger.bounded_convolution_subpower
+#check @MathCollab.Density.Stronger.bounded_convolution_eventually_le
+#print axioms MathCollab.Density.Stronger.bounded_convolution_eventually_le
+#check @MathCollab.Density.Stronger.zeta_twelfth_physical_of_analytic_inputs
+#print axioms MathCollab.Density.Stronger.zeta_twelfth_physical_of_analytic_inputs
+#check @MathCollab.Density.Stronger.stronger_density_bound_of_analytic_inputs
+#print axioms MathCollab.Density.Stronger.stronger_density_bound_of_analytic_inputs
+#check @MathCollab.Density.Stronger.smoothLongZeroCount_bound_of_twelfth_moment
+#print axioms MathCollab.Density.Stronger.smoothLongZeroCount_bound_of_twelfth_moment
+#check @MathCollab.Density.Stronger.stronger_slab_bound_of_twelfth_moment
+#print axioms MathCollab.Density.Stronger.stronger_slab_bound_of_twelfth_moment
+#check @MathCollab.Density.Stronger.stronger_density_bound_of_twelfth_moment
+#print axioms MathCollab.Density.Stronger.stronger_density_bound_of_twelfth_moment
+#check @MathCollab.Density.Stronger.separated_weightedMean_bound_of_twelfth_bound
+#print axioms MathCollab.Density.Stronger.separated_weightedMean_bound_of_twelfth_bound
+#check @MathCollab.Density.Stronger.long_mean_count_eventually_of_twelfth_bound
+#print axioms MathCollab.Density.Stronger.long_mean_count_eventually_of_twelfth_bound
+#check @MathCollab.Density.Stronger.log_height_cube_div_le
+#print axioms MathCollab.Density.Stronger.log_height_cube_div_le
+#check @MathCollab.Density.Stronger.eventually_zeta_high_log_budget
+#print axioms MathCollab.Density.Stronger.eventually_zeta_high_log_budget
+#check @MathCollab.Density.Stronger.zeta_twelfth_high_eventually_of_tail
+#print axioms MathCollab.Density.Stronger.zeta_twelfth_high_eventually_of_tail
+#check @MathCollab.Density.Stronger.zeta_twelfth_dyadic_of_fourth_and_tail
+#print axioms MathCollab.Density.Stronger.zeta_twelfth_dyadic_of_fourth_and_tail
+#check @MathCollab.Density.Stronger.zeta_twelfth_physical_of_dyadic
+#print axioms MathCollab.Density.Stronger.zeta_twelfth_physical_of_dyadic
+#check @MathCollab.Density.Stronger.zeta_twelfth_physical_of_fourth_and_tail
+#print axioms MathCollab.Density.Stronger.zeta_twelfth_physical_of_fourth_and_tail
+#check @MathCollab.Density.Stronger.pointValue_peak_card_of_stationary_source
+#print axioms MathCollab.Density.Stronger.pointValue_peak_card_of_stationary_source
+#check @MathCollab.Density.Stronger.zeta_twelfth_physical_of_stationary_source
+#print axioms MathCollab.Density.Stronger.zeta_twelfth_physical_of_stationary_source
+#check @MathCollab.Density.Stronger.stronger_density_bound_of_stationary_source
+#print axioms MathCollab.Density.Stronger.stronger_density_bound_of_stationary_source
+#check @MathCollab.Density.Stronger.continuous_zetaMomentCriticalNorm
+#print axioms MathCollab.Density.Stronger.continuous_zetaMomentCriticalNorm
+#check @MathCollab.Density.Stronger.isClosed_pointValueSuperlevel
+#print axioms MathCollab.Density.Stronger.isClosed_pointValueSuperlevel
+#check @MathCollab.Density.Stronger.measurableSet_pointValueSuperlevel
+#print axioms MathCollab.Density.Stronger.measurableSet_pointValueSuperlevel
+#check @MathCollab.Density.Stronger.pointValueSuperlevel_subset_Icc
+#print axioms MathCollab.Density.Stronger.pointValueSuperlevel_subset_Icc
+#check @MathCollab.Density.Stronger.integrableOn_zeta_twelfth_pointValueSuperlevel
+#print axioms MathCollab.Density.Stronger.integrableOn_zeta_twelfth_pointValueSuperlevel
+#check @MathCollab.Density.Stronger.pointValue_power_tail_measure_le
+#print axioms MathCollab.Density.Stronger.pointValue_power_tail_measure_le
+#check @MathCollab.Density.Stronger.zeta_twelfth_high_integral_le_log
+#print axioms MathCollab.Density.Stronger.zeta_twelfth_high_integral_le_log
+#check @MathCollab.Density.Stronger.zeta_twelfth_low_integral_le_fourth
+#print axioms MathCollab.Density.Stronger.zeta_twelfth_low_integral_le_fourth
+#check @MathCollab.Density.Stronger.zeta_twelfth_integral_le_high_add_fourth
+#print axioms MathCollab.Density.Stronger.zeta_twelfth_integral_le_high_add_fourth
+#check @MathCollab.Density.Stronger.dampedCutoff_contDiff
+#print axioms MathCollab.Density.Stronger.dampedCutoff_contDiff
+#check @MathCollab.Density.Stronger.dampedCutoff_tsupport
+#print axioms MathCollab.Density.Stronger.dampedCutoff_tsupport
+#check @MathCollab.Density.Stronger.damping_power_bound
+#print axioms MathCollab.Density.Stronger.damping_power_bound
+#check @MathCollab.Density.Stronger.norm_iteratedDeriv_damping_le
+#print axioms MathCollab.Density.Stronger.norm_iteratedDeriv_damping_le
+#check @MathCollab.Density.Stronger.tsupport_iteratedDeriv_subset
+#print axioms MathCollab.Density.Stronger.tsupport_iteratedDeriv_subset
+#check @MathCollab.Density.Stronger.dampedCutoff_uniform_derivatives
+#print axioms MathCollab.Density.Stronger.dampedCutoff_uniform_derivatives
+#check @MathCollab.Density.Stronger.exists_dyadic_cutoff
+#print axioms MathCollab.Density.Stronger.exists_dyadic_cutoff
+#check @MathCollab.Density.Stronger.exists_dyadic_count_sq_le_rpow
+#print axioms MathCollab.Density.Stronger.exists_dyadic_count_sq_le_rpow
+#check @MathCollab.Density.Stronger.integral_zero_le_of_dyadic
+#print axioms MathCollab.Density.Stronger.integral_zero_le_of_dyadic
+#check @MathCollab.Density.Stronger.exists_stronger_loss_parameters
+#print axioms MathCollab.Density.Stronger.exists_stronger_loss_parameters
+#check @MathCollab.Density.Stronger.finiteBlock_pow_support
+#print axioms MathCollab.Density.Stronger.finiteBlock_pow_support
+#check @MathCollab.Density.Stronger.finiteBlock_pow_lower
+#print axioms MathCollab.Density.Stronger.finiteBlock_pow_lower
+#check @MathCollab.Density.Stronger.finiteBlock_pow_LSeriesSummable
+#print axioms MathCollab.Density.Stronger.finiteBlock_pow_LSeriesSummable
+#check @MathCollab.Density.Stronger.finiteBlock_LSeries_pow
+#print axioms MathCollab.Density.Stronger.finiteBlock_LSeries_pow
+#check @MathCollab.Density.Stronger.finiteBlock_pow_LSeries_sum
+#print axioms MathCollab.Density.Stronger.finiteBlock_pow_LSeries_sum
+#check @MathCollab.Density.Stronger.exists_finiteBlock_powered_piece
+#print axioms MathCollab.Density.Stronger.exists_finiteBlock_powered_piece
+#check @MathCollab.Density.Stronger.sum_nat_occupancy_eq_sum_superlevel
+#print axioms MathCollab.Density.Stronger.sum_nat_occupancy_eq_sum_superlevel
+#check @MathCollab.Density.Stronger.sum_pos_nat_inv_sq_le_two
+#print axioms MathCollab.Density.Stronger.sum_pos_nat_inv_sq_le_two
+#check @MathCollab.Density.Stronger.sum_nat_occupancy_le_of_superlevels
+#print axioms MathCollab.Density.Stronger.sum_nat_occupancy_le_of_superlevels
+#check @MathCollab.Density.Stronger.Fourth.divisorDirichletTerm_eq_divisorWeight_mul_cpow
+#print axioms MathCollab.Density.Stronger.Fourth.divisorDirichletTerm_eq_divisorWeight_mul_cpow
+#check @MathCollab.Density.Stronger.Fourth.norm_fourth_divisorTerm_vertical
+#print axioms MathCollab.Density.Stronger.Fourth.norm_fourth_divisorTerm_vertical
+#check @MathCollab.Density.Stronger.Fourth.zetaFourthCoeff_zero
+#print axioms MathCollab.Density.Stronger.Fourth.zetaFourthCoeff_zero
+#check @MathCollab.Density.Stronger.Fourth.zetaFourthCoeff_one
+#print axioms MathCollab.Density.Stronger.Fourth.zetaFourthCoeff_one
+#check @MathCollab.Density.Stronger.Fourth.norm_zetaFourthCoeff
+#print axioms MathCollab.Density.Stronger.Fourth.norm_zetaFourthCoeff
+#check @MathCollab.Density.Stronger.Fourth.exists_norm_sq_zetaFourthCoeff_le
+#print axioms MathCollab.Density.Stronger.Fourth.exists_norm_sq_zetaFourthCoeff_le
+#check @MathCollab.Density.Stronger.Fourth.sum_rpow_sub_one_dyadic_le
+#print axioms MathCollab.Density.Stronger.Fourth.sum_rpow_sub_one_dyadic_le
+#check @MathCollab.Density.Stronger.Fourth.exists_sum_sq_zetaFourthCoeff_dyadic_le
+#print axioms MathCollab.Density.Stronger.Fourth.exists_sum_sq_zetaFourthCoeff_dyadic_le
+#check @MathCollab.Density.Stronger.Fourth.Digamma.shift_ne_zero
+#print axioms MathCollab.Density.Stronger.Fourth.Digamma.shift_ne_zero
+#check @MathCollab.Density.Stronger.Fourth.Digamma.integral_shift_inv
+#print axioms MathCollab.Density.Stronger.Fourth.Digamma.integral_shift_inv
+#check @MathCollab.Density.Stronger.Fourth.Digamma.norm_shift_mono
+#print axioms MathCollab.Density.Stronger.Fourth.Digamma.norm_shift_mono
+#check @MathCollab.Density.Stronger.Fourth.Digamma.norm_reciprocal_log_step_le
+#print axioms MathCollab.Density.Stronger.Fourth.Digamma.norm_reciprocal_log_step_le
+#check @MathCollab.Density.Stronger.Fourth.Digamma.sum_reciprocal_sq_le
+#print axioms MathCollab.Density.Stronger.Fourth.Digamma.sum_reciprocal_sq_le
+#check @MathCollab.Density.Stronger.Fourth.Digamma.norm_sum_reciprocal_sub_log_le
+#print axioms MathCollab.Density.Stronger.Fourth.Digamma.norm_sum_reciprocal_sub_log_le
+#check @MathCollab.Density.Stronger.Fourth.Digamma.tendsto_log_nat_shift_sub_log
+#print axioms MathCollab.Density.Stronger.Fourth.Digamma.tendsto_log_nat_shift_sub_log
+#check @MathCollab.Density.Stronger.Fourth.Digamma.norm_digamma_sub_log_le
+#print axioms MathCollab.Density.Stronger.Fourth.Digamma.norm_digamma_sub_log_le
+#check @MathCollab.Density.Stronger.Fourth.Digamma.abs_re_digamma_sub_log_im_le
+#print axioms MathCollab.Density.Stronger.Fourth.Digamma.abs_re_digamma_sub_log_im_le
+#check @MathCollab.Density.Stronger.Fourth.Digamma.norm_natCast_add_one
+#print axioms MathCollab.Density.Stronger.Fourth.Digamma.norm_natCast_add_one
+#check @MathCollab.Density.Stronger.Fourth.Digamma.sum_inv_natCast_add_one
+#print axioms MathCollab.Density.Stronger.Fourth.Digamma.sum_inv_natCast_add_one
+#check @MathCollab.Density.Stronger.Fourth.Digamma.inv_add_one_sub_inv_eq
+#print axioms MathCollab.Density.Stronger.Fourth.Digamma.inv_add_one_sub_inv_eq
+#check @MathCollab.Density.Stronger.Fourth.Digamma.norm_inv_add_one_sub_inv_le
+#print axioms MathCollab.Density.Stronger.Fourth.Digamma.norm_inv_add_one_sub_inv_le
+#check @MathCollab.Density.Stronger.Fourth.Digamma.summable_one_div_natCast_add_one_sq
+#print axioms MathCollab.Density.Stronger.Fourth.Digamma.summable_one_div_natCast_add_one_sq
+#check @MathCollab.Density.Stronger.Fourth.Digamma.logGammaSeq_succ_sub
+#print axioms MathCollab.Density.Stronger.Fourth.Digamma.logGammaSeq_succ_sub
+#check @MathCollab.Density.Stronger.Fourth.Digamma.cauchySeq_logGammaSeq
+#print axioms MathCollab.Density.Stronger.Fourth.Digamma.cauchySeq_logGammaSeq
+#check @MathCollab.Density.Stronger.Fourth.Digamma.exp_logGammaSeq
+#print axioms MathCollab.Density.Stronger.Fourth.Digamma.exp_logGammaSeq
+#check @MathCollab.Density.Stronger.Fourth.Digamma.hasSum_digamma_of_re_pos
+#print axioms MathCollab.Density.Stronger.Fourth.Digamma.hasSum_digamma_of_re_pos
+#check @MathCollab.Density.Stronger.Fourth.zeta_fourth_dyadic
+#print axioms MathCollab.Density.Stronger.Fourth.zeta_fourth_dyadic
+#check @MathCollab.Density.Stronger.Fourth.zetaGammaShiftError_nonneg
+#print axioms MathCollab.Density.Stronger.Fourth.zetaGammaShiftError_nonneg
+#check @MathCollab.Density.Stronger.Fourth.zetaGammaShiftAmplitude_zero
+#print axioms MathCollab.Density.Stronger.Fourth.zetaGammaShiftAmplitude_zero
+#check @MathCollab.Density.Stronger.Fourth.hasDerivAt_zetaGammaShiftAmplitude
+#print axioms MathCollab.Density.Stronger.Fourth.hasDerivAt_zetaGammaShiftAmplitude
+#check @MathCollab.Density.Stronger.Fourth.amplitude_derivative_norm_le
+#print axioms MathCollab.Density.Stronger.Fourth.amplitude_derivative_norm_le
+#check @MathCollab.Density.Stronger.Fourth.norm_zetaGammaShiftAmplitude_le
+#print axioms MathCollab.Density.Stronger.Fourth.norm_zetaGammaShiftAmplitude_le
+#check @MathCollab.Density.Stronger.Fourth.norm_zetaGammaShiftAmplitude_sub_one_le
+#print axioms MathCollab.Density.Stronger.Fourth.norm_zetaGammaShiftAmplitude_sub_one_le
+#check @MathCollab.Density.Stronger.Fourth.norm_gammaReal_shift_sq_sub_exp_le
+#print axioms MathCollab.Density.Stronger.Fourth.norm_gammaReal_shift_sq_sub_exp_le
+#check @MathCollab.Density.Stronger.Fourth.zetaGammaLeadingLog_mul_re
+#print axioms MathCollab.Density.Stronger.Fourth.zetaGammaLeadingLog_mul_re
+#check @MathCollab.Density.Stronger.Fourth.norm_gammaReal_shift_sq_le_exp
+#print axioms MathCollab.Density.Stronger.Fourth.norm_gammaReal_shift_sq_le_exp
+#check @MathCollab.Density.Stronger.Fourth.hasDerivAt_Gamma_eq_mul_digamma_of_re_pos
+#print axioms MathCollab.Density.Stronger.Fourth.hasDerivAt_Gamma_eq_mul_digamma_of_re_pos
+#check @MathCollab.Density.Stronger.Fourth.hasDerivAt_gammaReal
+#print axioms MathCollab.Density.Stronger.Fourth.hasDerivAt_gammaReal
+#check @MathCollab.Density.Stronger.Fourth.norm_log_sub_le_of_im_le_neg
+#print axioms MathCollab.Density.Stronger.Fourth.norm_log_sub_le_of_im_le_neg
+#check @MathCollab.Density.Stronger.Fourth.zetaGammaHalfShift_re_pos
+#print axioms MathCollab.Density.Stronger.Fourth.zetaGammaHalfShift_re_pos
+#check @MathCollab.Density.Stronger.Fourth.zetaGammaHalfShift_im_le
+#print axioms MathCollab.Density.Stronger.Fourth.zetaGammaHalfShift_im_le
+#check @MathCollab.Density.Stronger.Fourth.log_negative_height_eq
+#print axioms MathCollab.Density.Stronger.Fourth.log_negative_height_eq
+#check @MathCollab.Density.Stronger.Fourth.norm_zetaGammaHalfShift_sub_negative_height_le
+#print axioms MathCollab.Density.Stronger.Fourth.norm_zetaGammaHalfShift_sub_negative_height_le
+#check @MathCollab.Density.Stronger.Fourth.norm_zetaGammaHalfShift_digamma_sub_le
+#print axioms MathCollab.Density.Stronger.Fourth.norm_zetaGammaHalfShift_digamma_sub_le
+#check @MathCollab.Density.Stronger.Fourth.exists_integral_sq_fourthPolynomial_le
+#print axioms MathCollab.Density.Stronger.Fourth.exists_integral_sq_fourthPolynomial_le
+#check @MathCollab.Density.Stronger.Fourth.exists_integral_sq_fourthDivisorSum_le
+#print axioms MathCollab.Density.Stronger.Fourth.exists_integral_sq_fourthDivisorSum_le
+#check @MathCollab.Density.Stronger.Fourth.integrable_gaussian_dirichletPrefix_prod
+#print axioms MathCollab.Density.Stronger.Fourth.integrable_gaussian_dirichletPrefix_prod
+#check @MathCollab.Density.Stronger.Fourth.intervalIntegrable_gaussianPrefixMean
+#print axioms MathCollab.Density.Stronger.Fourth.intervalIntegrable_gaussianPrefixMean
+#check @MathCollab.Density.Stronger.Fourth.integral_gaussianPrefixMean_swap
+#print axioms MathCollab.Density.Stronger.Fourth.integral_gaussianPrefixMean_swap
+#check @MathCollab.Density.Stronger.Fourth.exists_integral_gaussian_fourthPolynomial_le
+#print axioms MathCollab.Density.Stronger.Fourth.exists_integral_gaussian_fourthPolynomial_le
+#check @MathCollab.Density.Stronger.Fourth.critical_norm_matches_existing
+#print axioms MathCollab.Density.Stronger.Fourth.critical_norm_matches_existing
+#check @MathCollab.Density.Stronger.Fourth.fourth_height_power_identity
+#print axioms MathCollab.Density.Stronger.Fourth.fourth_height_power_identity
+#check @MathCollab.Density.Stronger.Fourth.exists_fourth_dyadic_budget
+#print axioms MathCollab.Density.Stronger.Fourth.exists_fourth_dyadic_budget
+#check @MathCollab.Density.Stronger.Fourth.exists_scaled_gaussian_fourthPolynomial_le
+#print axioms MathCollab.Density.Stronger.Fourth.exists_scaled_gaussian_fourthPolynomial_le
+#check @MathCollab.Density.Stronger.Fourth.sum_sq_le_card_mul_sum_sq
+#print axioms MathCollab.Density.Stronger.Fourth.sum_sq_le_card_mul_sum_sq
+#check @MathCollab.Density.Stronger.Fourth.complex_sum_sq_le_card_mul_sum_sq
+#print axioms MathCollab.Density.Stronger.Fourth.complex_sum_sq_le_card_mul_sum_sq
+#check @MathCollab.Density.Stronger.Fourth.integral_cexp_int
+#print axioms MathCollab.Density.Stronger.Fourth.integral_cexp_int
+#check @MathCollab.Density.Stronger.Fourth.integral_conj_fourier_term_mul_fourier_term
+#print axioms MathCollab.Density.Stronger.Fourth.integral_conj_fourier_term_mul_fourier_term
+#check @MathCollab.Density.Stronger.Fourth.integral_conj_trigPoly_mul_trigPoly
+#print axioms MathCollab.Density.Stronger.Fourth.integral_conj_trigPoly_mul_trigPoly
+#check @MathCollab.Density.Stronger.Fourth.integral_norm_sq_trigPoly
+#print axioms MathCollab.Density.Stronger.Fourth.integral_norm_sq_trigPoly
+#check @MathCollab.Density.Stronger.Fourth.continuous_trigPoly
+#print axioms MathCollab.Density.Stronger.Fourth.continuous_trigPoly
+#check @MathCollab.Density.Stronger.Fourth.integral_sawtooth_cexp
+#print axioms MathCollab.Density.Stronger.Fourth.integral_sawtooth_cexp
+#check @MathCollab.Density.Stronger.Fourth.integral_sawtooth_cexp_all
+#print axioms MathCollab.Density.Stronger.Fourth.integral_sawtooth_cexp_all
+#check @MathCollab.Density.Stronger.Fourth.integral_sawtooth_conj_fourier_mul_fourier
+#print axioms MathCollab.Density.Stronger.Fourth.integral_sawtooth_conj_fourier_mul_fourier
+#check @MathCollab.Density.Stronger.Fourth.integral_sawtooth_conj_trigPoly_mul_trigPoly
+#print axioms MathCollab.Density.Stronger.Fourth.integral_sawtooth_conj_trigPoly_mul_trigPoly
+#check @MathCollab.Density.Stronger.Fourth.norm_sawtooth_conj_trigPoly_mul_trigPoly_le
+#print axioms MathCollab.Density.Stronger.Fourth.norm_sawtooth_conj_trigPoly_mul_trigPoly_le
+#check @MathCollab.Density.Stronger.Fourth.hilbertForm_norm_le
+#print axioms MathCollab.Density.Stronger.Fourth.hilbertForm_norm_le
+#check @MathCollab.Density.Stronger.Fourth.nat_hilbertForm_norm_le
+#print axioms MathCollab.Density.Stronger.Fourth.nat_hilbertForm_norm_le
+#check @MathCollab.Density.Stronger.Fourth.abs_inv_log_sub_sub_div_le_one
+#print axioms MathCollab.Density.Stronger.Fourth.abs_inv_log_sub_sub_div_le_one
+#check @MathCollab.Density.Stronger.Fourth.norm_complex_log_kernel_error_le_one
+#print axioms MathCollab.Density.Stronger.Fourth.norm_complex_log_kernel_error_le_one
+#check @MathCollab.Density.Stronger.Fourth.logHilbertQuad_eq_main_add_error
+#print axioms MathCollab.Density.Stronger.Fourth.logHilbertQuad_eq_main_add_error
+#check @MathCollab.Density.Stronger.Fourth.logKernelErrorQuad_norm_le
+#print axioms MathCollab.Density.Stronger.Fourth.logKernelErrorQuad_norm_le
+#check @MathCollab.Density.Stronger.Fourth.natMainQuad_eq_scaled_hilbert
+#print axioms MathCollab.Density.Stronger.Fourth.natMainQuad_eq_scaled_hilbert
+#check @MathCollab.Density.Stronger.Fourth.natScaledCoeff_l2_le
+#print axioms MathCollab.Density.Stronger.Fourth.natScaledCoeff_l2_le
+#check @MathCollab.Density.Stronger.Fourth.natMainQuad_norm_le
+#print axioms MathCollab.Density.Stronger.Fourth.natMainQuad_norm_le
+#check @MathCollab.Density.Stronger.Fourth.logHilbertQuad_norm_le
+#print axioms MathCollab.Density.Stronger.Fourth.logHilbertQuad_norm_le
+#check @MathCollab.Density.Stronger.Fourth.norm_endpointTwist
+#print axioms MathCollab.Density.Stronger.Fourth.norm_endpointTwist
+#check @MathCollab.Density.Stronger.Fourth.integral_conj_dirichlet_term_mul_dirichlet_term
+#print axioms MathCollab.Density.Stronger.Fourth.integral_conj_dirichlet_term_mul_dirichlet_term
+#check @MathCollab.Density.Stronger.Fourth.integral_conj_dirichletTime_mul_dirichletTime
+#print axioms MathCollab.Density.Stronger.Fourth.integral_conj_dirichletTime_mul_dirichletTime
+#check @MathCollab.Density.Stronger.Fourth.continuous_dirichletTime
+#print axioms MathCollab.Density.Stronger.Fourth.continuous_dirichletTime
+#check @MathCollab.Density.Stronger.Fourth.ofReal_integral_norm_sq_dirichletTime
+#print axioms MathCollab.Density.Stronger.Fourth.ofReal_integral_norm_sq_dirichletTime
+#check @MathCollab.Density.Stronger.Fourth.integral_norm_sq_dirichletTime_le
+#print axioms MathCollab.Density.Stronger.Fourth.integral_norm_sq_dirichletTime_le
+#check @MathCollab.Density.Stronger.Fourth.norm_sum_mul_sq_le
+#print axioms MathCollab.Density.Stronger.Fourth.norm_sum_mul_sq_le
+#check @MathCollab.Density.Stronger.Fourth.dirichletTime_shift
+#print axioms MathCollab.Density.Stronger.Fourth.dirichletTime_shift
+#check @MathCollab.Density.Stronger.Fourth.integral_norm_sq_dirichletTime_interval_le
+#print axioms MathCollab.Density.Stronger.Fourth.integral_norm_sq_dirichletTime_interval_le
+#check @MathCollab.Density.Stronger.Fourth.integral_norm_sq_dirichletTime_reflected_le
+#print axioms MathCollab.Density.Stronger.Fourth.integral_norm_sq_dirichletTime_reflected_le
+#check @MathCollab.Density.Stronger.Fourth.continuous_dirichletPrefix
+#print axioms MathCollab.Density.Stronger.Fourth.continuous_dirichletPrefix
+#check @MathCollab.Density.Stronger.Fourth.dirichletPrefix_one
+#print axioms MathCollab.Density.Stronger.Fourth.dirichletPrefix_one
+#check @MathCollab.Density.Stronger.Fourth.dirichletPrefix_double
+#print axioms MathCollab.Density.Stronger.Fourth.dirichletPrefix_double
+#check @MathCollab.Density.Stronger.Fourth.dirichletPrefix_pow_two
+#print axioms MathCollab.Density.Stronger.Fourth.dirichletPrefix_pow_two
+#check @MathCollab.Density.Stronger.Fourth.norm_dirichletPrefix_pow_two_sq_le
+#print axioms MathCollab.Density.Stronger.Fourth.norm_dirichletPrefix_pow_two_sq_le
+#check @MathCollab.Density.Stronger.Fourth.integral_norm_sq_dirichletPrefix_le_blocks
+#print axioms MathCollab.Density.Stronger.Fourth.integral_norm_sq_dirichletPrefix_le_blocks
+#check @MathCollab.Density.Stronger.Fourth.integral_norm_sq_dirichletPrefix_le
+#print axioms MathCollab.Density.Stronger.Fourth.integral_norm_sq_dirichletPrefix_le
+#check @MathCollab.Density.Stronger.Fourth.integral_norm_sq_dirichletPrefix_reflected_le
+#print axioms MathCollab.Density.Stronger.Fourth.integral_norm_sq_dirichletPrefix_reflected_le
+#check @MathCollab.Density.Stronger.Fourth.fourth_divisorTerm_eq_coeff_phase
+#print axioms MathCollab.Density.Stronger.Fourth.fourth_divisorTerm_eq_coeff_phase
+#check @MathCollab.Density.Stronger.Fourth.sum_fourth_divisorTerm_eq_prefix
+#print axioms MathCollab.Density.Stronger.Fourth.sum_fourth_divisorTerm_eq_prefix
+#check @MathCollab.Density.Stronger.Fourth.norm_dirichletPrefix_le
+#print axioms MathCollab.Density.Stronger.Fourth.norm_dirichletPrefix_le
+#check @MathCollab.Density.Stronger.Fourth.continuous_dirichletPrefix_reflected
+#print axioms MathCollab.Density.Stronger.Fourth.continuous_dirichletPrefix_reflected
+#check @MathCollab.Density.Stronger.Fourth.integrable_gaussian_dirichletPrefix_norm_pow
+#print axioms MathCollab.Density.Stronger.Fourth.integrable_gaussian_dirichletPrefix_norm_pow
+#check @MathCollab.Density.Stronger.Fourth.norm_hughesYoungAuxiliaryZero_le_polynomial
+#print axioms MathCollab.Density.Stronger.Fourth.norm_hughesYoungAuxiliaryZero_le_polynomial
+#check @MathCollab.Density.Stronger.Fourth.gaussianPolynomial_nonneg
+#print axioms MathCollab.Density.Stronger.Fourth.gaussianPolynomial_nonneg
+#check @MathCollab.Density.Stronger.Fourth.exists_zetaSquareNumerator_strip_gaussian
+#print axioms MathCollab.Density.Stronger.Fourth.exists_zetaSquareNumerator_strip_gaussian
+#check @MathCollab.Density.Stronger.Fourth.continuous_zetaSquareContour_vertical
+#print axioms MathCollab.Density.Stronger.Fourth.continuous_zetaSquareContour_vertical
+#check @MathCollab.Density.Stronger.Fourth.gaussianPolynomial_le
+#print axioms MathCollab.Density.Stronger.Fourth.gaussianPolynomial_le
+#check @MathCollab.Density.Stronger.Fourth.integrable_gaussianPolynomial
+#print axioms MathCollab.Density.Stronger.Fourth.integrable_gaussianPolynomial
+#check @MathCollab.Density.Stronger.Fourth.tendsto_gaussianPolynomial_zero
+#print axioms MathCollab.Density.Stronger.Fourth.tendsto_gaussianPolynomial_zero
+#check @MathCollab.Density.Stronger.Fourth.norm_zetaSquareContour_le_of_lower
+#print axioms MathCollab.Density.Stronger.Fourth.norm_zetaSquareContour_le_of_lower
+#check @MathCollab.Density.Stronger.Fourth.integrable_zetaSquareContour_vertical
+#print axioms MathCollab.Density.Stronger.Fourth.integrable_zetaSquareContour_vertical
+#check @MathCollab.Density.Stronger.Fourth.tendsto_hIntegral_zetaSquare_top_zero
+#print axioms MathCollab.Density.Stronger.Fourth.tendsto_hIntegral_zetaSquare_top_zero
+#check @MathCollab.Density.Stronger.Fourth.tendsto_hIntegral'_zetaSquare_top_zero
+#print axioms MathCollab.Density.Stronger.Fourth.tendsto_hIntegral'_zetaSquare_top_zero
+#check @MathCollab.Density.Stronger.Fourth.zetaSquareAFE_vertical_limit
+#print axioms MathCollab.Density.Stronger.Fourth.zetaSquareAFE_vertical_limit
+#check @MathCollab.Density.Stronger.Fourth.tendsto_zetaSquare_vertical_integral
+#print axioms MathCollab.Density.Stronger.Fourth.tendsto_zetaSquare_vertical_integral
+#check @MathCollab.Density.Stronger.Fourth.completedZeta_square_eq_vertical_integrals
+#print axioms MathCollab.Density.Stronger.Fourth.completedZeta_square_eq_vertical_integrals
+#check @MathCollab.Density.Stronger.Fourth.zetaSquareNorm_eq_vertical_integrals
+#print axioms MathCollab.Density.Stronger.Fourth.zetaSquareNorm_eq_vertical_integrals
+#check @MathCollab.Density.Stronger.Fourth.exists_zetaSquareRightKernel_uniform_gaussian_bound
+#print axioms MathCollab.Density.Stronger.Fourth.exists_zetaSquareRightKernel_uniform_gaussian_bound
+#check @MathCollab.Density.Stronger.Fourth.integrable_zetaSquareRightKernel
+#print axioms MathCollab.Density.Stronger.Fourth.integrable_zetaSquareRightKernel
+#check @MathCollab.Density.Stronger.Fourth.summable_divisorDirichletTerm
+#print axioms MathCollab.Density.Stronger.Fourth.summable_divisorDirichletTerm
+#check @MathCollab.Density.Stronger.Fourth.tsum_divisorDirichletTerm
+#print axioms MathCollab.Density.Stronger.Fourth.tsum_divisorDirichletTerm
+#check @MathCollab.Density.Stronger.Fourth.continuous_divisorDirichletTerm_vertical
+#print axioms MathCollab.Density.Stronger.Fourth.continuous_divisorDirichletTerm_vertical
+#check @MathCollab.Density.Stronger.Fourth.norm_zetaSquareDivisorTerm
+#print axioms MathCollab.Density.Stronger.Fourth.norm_zetaSquareDivisorTerm
+#check @MathCollab.Density.Stronger.Fourth.integrable_zetaSquareDivisorTerm
+#print axioms MathCollab.Density.Stronger.Fourth.integrable_zetaSquareDivisorTerm
+#check @MathCollab.Density.Stronger.Fourth.integral_norm_zetaSquareDivisorTerm
+#print axioms MathCollab.Density.Stronger.Fourth.integral_norm_zetaSquareDivisorTerm
+#check @MathCollab.Density.Stronger.Fourth.summable_integral_norm_zetaSquareDivisorTerm
+#print axioms MathCollab.Density.Stronger.Fourth.summable_integral_norm_zetaSquareDivisorTerm
+#check @MathCollab.Density.Stronger.Fourth.tsum_zetaSquareDivisorTerm
+#print axioms MathCollab.Density.Stronger.Fourth.tsum_zetaSquareDivisorTerm
+#check @MathCollab.Density.Stronger.Fourth.hasSum_zetaSquareDivisorContribution
+#print axioms MathCollab.Density.Stronger.Fourth.hasSum_zetaSquareDivisorContribution
+#check @MathCollab.Density.Stronger.Fourth.completedZeta_square_eq_divisor_series
+#print axioms MathCollab.Density.Stronger.Fourth.completedZeta_square_eq_divisor_series
+#check @MathCollab.Density.Stronger.Fourth.hasSum_zetaSquareNormalizedContribution
+#print axioms MathCollab.Density.Stronger.Fourth.hasSum_zetaSquareNormalizedContribution
+#check @MathCollab.Density.Stronger.Fourth.zetaSquareNorm_eq_divisor_series
+#print axioms MathCollab.Density.Stronger.Fourth.zetaSquareNorm_eq_divisor_series
+#check @MathCollab.Density.Stronger.Fourth.norm_Gamma_le_realGamma_re
+#print axioms MathCollab.Density.Stronger.Fourth.norm_Gamma_le_realGamma_re
+#check @MathCollab.Density.Stronger.Fourth.norm_GammaR_le_realGamma_re
+#print axioms MathCollab.Density.Stronger.Fourth.norm_GammaR_le_realGamma_re
+#check @MathCollab.Density.Stronger.Fourth.exists_norm_GammaR_strip_le
+#print axioms MathCollab.Density.Stronger.Fourth.exists_norm_GammaR_strip_le
+#check @MathCollab.Density.Stronger.Fourth.norm_completedXiNumerator_right_strip_le
+#print axioms MathCollab.Density.Stronger.Fourth.norm_completedXiNumerator_right_strip_le
+#check @MathCollab.Density.Stronger.Fourth.exists_completedXiNumerator_strip_cubic_high
+#print axioms MathCollab.Density.Stronger.Fourth.exists_completedXiNumerator_strip_cubic_high
+#check @MathCollab.Density.Stronger.Fourth.exists_completedXiNumerator_strip_cubic
+#print axioms MathCollab.Density.Stronger.Fourth.exists_completedXiNumerator_strip_cubic
+#check @MathCollab.Density.Stronger.Fourth.zetaGammaShiftError_le_quadratic
+#print axioms MathCollab.Density.Stronger.Fourth.zetaGammaShiftError_le_quadratic
+#check @MathCollab.Density.Stronger.Fourth.exp_zetaGammaLeadingLog_vertical_le
+#print axioms MathCollab.Density.Stronger.Fourth.exp_zetaGammaLeadingLog_vertical_le
+#check @MathCollab.Density.Stronger.Fourth.exists_norm_zetaFourthKernel_near_le
+#print axioms MathCollab.Density.Stronger.Fourth.exists_norm_zetaFourthKernel_near_le
+#check @MathCollab.Density.Stronger.Fourth.exists_norm_zetaFourthKernel_le
+#print axioms MathCollab.Density.Stronger.Fourth.exists_norm_zetaFourthKernel_le
+#check @MathCollab.Density.Stronger.Fourth.integrable_zetaFourthKernel_vertical
+#print axioms MathCollab.Density.Stronger.Fourth.integrable_zetaFourthKernel_vertical
+#check @MathCollab.Density.Stronger.Fourth.exists_integral_norm_zetaFourthKernel_le
+#print axioms MathCollab.Density.Stronger.Fourth.exists_integral_norm_zetaFourthKernel_le
+#check @MathCollab.Density.Stronger.Fourth.abs_polynomial_mul_exp_le_gaussian
+#print axioms MathCollab.Density.Stronger.Fourth.abs_polynomial_mul_exp_le_gaussian
+#check @MathCollab.Density.Stronger.Fourth.norm_vertical_shift_le
+#print axioms MathCollab.Density.Stronger.Fourth.norm_vertical_shift_le
+#check @MathCollab.Density.Stronger.Fourth.vertical_shift_re_le_norm
+#print axioms MathCollab.Density.Stronger.Fourth.vertical_shift_re_le_norm
+#check @MathCollab.Density.Stronger.Fourth.norm_complex_sin_le_exp_abs_im
+#print axioms MathCollab.Density.Stronger.Fourth.norm_complex_sin_le_exp_abs_im
+#check @MathCollab.Density.Stronger.Fourth.norm_inv_gamma_critical_half_le
+#print axioms MathCollab.Density.Stronger.Fourth.norm_inv_gamma_critical_half_le
+#check @MathCollab.Density.Stronger.Fourth.exists_norm_inv_gammaReal_critical_le
+#print axioms MathCollab.Density.Stronger.Fourth.exists_norm_inv_gammaReal_critical_le
+#check @MathCollab.Density.Stronger.Fourth.exists_norm_inv_zetaSquareGammaNormalization_le
+#print axioms MathCollab.Density.Stronger.Fourth.exists_norm_inv_zetaSquareGammaNormalization_le
+#check @MathCollab.Density.Stronger.Fourth.norm_zetaSquarePoleShift_le_polynomial
+#print axioms MathCollab.Density.Stronger.Fourth.norm_zetaSquarePoleShift_le_polynomial
+#check @MathCollab.Density.Stronger.Fourth.exists_norm_zetaFourthKernel_far_le
+#print axioms MathCollab.Density.Stronger.Fourth.exists_norm_zetaFourthKernel_far_le
+#check @MathCollab.Density.Stronger.Fourth.integral_zetaFourthTerm_vertical_eq_of_le
+#print axioms MathCollab.Density.Stronger.Fourth.integral_zetaFourthTerm_vertical_eq_of_le
+#check @MathCollab.Density.Stronger.Fourth.integral_zetaFourthTerm_vertical_eq
+#print axioms MathCollab.Density.Stronger.Fourth.integral_zetaFourthTerm_vertical_eq
+#check @MathCollab.Density.Stronger.Fourth.zetaFourthContribution_one
+#print axioms MathCollab.Density.Stronger.Fourth.zetaFourthContribution_one
+#check @MathCollab.Density.Stronger.Fourth.zetaFourthContribution_line_eq
+#print axioms MathCollab.Density.Stronger.Fourth.zetaFourthContribution_line_eq
+#check @MathCollab.Density.Stronger.Fourth.hasSum_zetaFourthContribution
+#print axioms MathCollab.Density.Stronger.Fourth.hasSum_zetaFourthContribution
+#check @MathCollab.Density.Stronger.Fourth.zetaFourthRightPiece_eq_tsum
+#print axioms MathCollab.Density.Stronger.Fourth.zetaFourthRightPiece_eq_tsum
+#check @MathCollab.Density.Stronger.Fourth.gammaReal_conj
+#print axioms MathCollab.Density.Stronger.Fourth.gammaReal_conj
+#check @MathCollab.Density.Stronger.Fourth.continuous_GammaR_afe_vertical
+#print axioms MathCollab.Density.Stronger.Fourth.continuous_GammaR_afe_vertical
+#check @MathCollab.Density.Stronger.Fourth.continuous_zetaSquareRightKernel
+#print axioms MathCollab.Density.Stronger.Fourth.continuous_zetaSquareRightKernel
+#check @MathCollab.Density.Stronger.Fourth.zetaSquareContourIntegrand_eq_rightKernel_mul_divisor
+#print axioms MathCollab.Density.Stronger.Fourth.zetaSquareContourIntegrand_eq_rightKernel_mul_divisor
+#check @MathCollab.Density.Stronger.Fourth.zetaSquareRightKernel_conj
+#print axioms MathCollab.Density.Stronger.Fourth.zetaSquareRightKernel_conj
+#check @MathCollab.Density.Stronger.Fourth.completedZeta_square_eq_divisor_integrals
+#print axioms MathCollab.Density.Stronger.Fourth.completedZeta_square_eq_divisor_integrals
+#check @MathCollab.Density.Stronger.Fourth.zetaSquareContour_right_conj
+#print axioms MathCollab.Density.Stronger.Fourth.zetaSquareContour_right_conj
+#check @MathCollab.Density.Stronger.Fourth.zetaSquareDivisorIntegral_conj
+#print axioms MathCollab.Density.Stronger.Fourth.zetaSquareDivisorIntegral_conj
+#check @MathCollab.Density.Stronger.Fourth.conj_zetaSquareGammaNormalization
+#print axioms MathCollab.Density.Stronger.Fourth.conj_zetaSquareGammaNormalization
+#check @MathCollab.Density.Stronger.Fourth.zetaSquareNorm_eq_reflected_source
+#print axioms MathCollab.Density.Stronger.Fourth.zetaSquareNorm_eq_reflected_source
+#check @MathCollab.Density.Stronger.Fourth.zetaSquareNorm_eq_two_re_fourthRightPiece
+#print axioms MathCollab.Density.Stronger.Fourth.zetaSquareNorm_eq_two_re_fourthRightPiece
+#check @MathCollab.Density.Stronger.Fourth.zetaFourthRightPiece_neg
+#print axioms MathCollab.Density.Stronger.Fourth.zetaFourthRightPiece_neg
+#check @MathCollab.Density.Stronger.Fourth.zetaFourthRightPiece_re_nonneg
+#print axioms MathCollab.Density.Stronger.Fourth.zetaFourthRightPiece_re_nonneg
+#check @MathCollab.Density.Stronger.Fourth.zeta_fourth_le_four_mul_rightPiece_sq
+#print axioms MathCollab.Density.Stronger.Fourth.zeta_fourth_le_four_mul_rightPiece_sq
+#check @MathCollab.Density.Stronger.Fourth.norm_zetaSquareGammaNormalization
+#print axioms MathCollab.Density.Stronger.Fourth.norm_zetaSquareGammaNormalization
+#check @MathCollab.Density.Stronger.Fourth.norm_gammaSquare_div_zetaSquareGammaNormalization
+#print axioms MathCollab.Density.Stronger.Fourth.norm_gammaSquare_div_zetaSquareGammaNormalization
+#check @MathCollab.Density.Stronger.Fourth.criticalPoint_pole_product
+#print axioms MathCollab.Density.Stronger.Fourth.criticalPoint_pole_product
+#check @MathCollab.Density.Stronger.Fourth.zetaSquarePoleShift_eq_source
+#print axioms MathCollab.Density.Stronger.Fourth.zetaSquarePoleShift_eq_source
+#check @MathCollab.Density.Stronger.Fourth.poleShift_sub_one_identity
+#print axioms MathCollab.Density.Stronger.Fourth.poleShift_sub_one_identity
+#check @MathCollab.Density.Stronger.Fourth.norm_poleShift_linear_sub_one_le
+#print axioms MathCollab.Density.Stronger.Fourth.norm_poleShift_linear_sub_one_le
+#check @MathCollab.Density.Stronger.Fourth.norm_zetaSquarePoleShift_le
+#print axioms MathCollab.Density.Stronger.Fourth.norm_zetaSquarePoleShift_le
+#check @MathCollab.Density.Stronger.Fourth.norm_zetaSquarePoleShift_sub_one_le
+#print axioms MathCollab.Density.Stronger.Fourth.norm_zetaSquarePoleShift_sub_one_le
+#check @MathCollab.Density.Stronger.Fourth.zetaFourthKernel_one
+#print axioms MathCollab.Density.Stronger.Fourth.zetaFourthKernel_one
+#check @MathCollab.Density.Stronger.Fourth.continuous_zetaFourthKernel_vertical
+#print axioms MathCollab.Density.Stronger.Fourth.continuous_zetaFourthKernel_vertical
+#check @MathCollab.Density.Stronger.Fourth.norm_zetaFourthKernel_vertical
+#print axioms MathCollab.Density.Stronger.Fourth.norm_zetaFourthKernel_vertical
+#check @MathCollab.Density.Stronger.Fourth.zetaFourthRightPiece_eq_divisor_integral
+#print axioms MathCollab.Density.Stronger.Fourth.zetaFourthRightPiece_eq_divisor_integral
+#check @MathCollab.Density.Stronger.Fourth.integrable_zetaFourthKernel_mul_divisor
+#print axioms MathCollab.Density.Stronger.Fourth.integrable_zetaFourthKernel_mul_divisor
+#check @MathCollab.Density.Stronger.Fourth.integral_weighted_sq_le
+#print axioms MathCollab.Density.Stronger.Fourth.integral_weighted_sq_le
+#check @MathCollab.Density.Stronger.Fourth.exists_norm_sq_fourthPrefix_le_gaussian
+#print axioms MathCollab.Density.Stronger.Fourth.exists_norm_sq_fourthPrefix_le_gaussian
+#check @MathCollab.Density.Stronger.Fourth.arithmeticZeta_mul_self_eq_sigma_zero
+#print axioms MathCollab.Density.Stronger.Fourth.arithmeticZeta_mul_self_eq_sigma_zero
+#check @MathCollab.Density.Stronger.Fourth.riemannZeta_sq_eq_divisorLSeries
+#print axioms MathCollab.Density.Stronger.Fourth.riemannZeta_sq_eq_divisorLSeries
+#check @MathCollab.Density.Stronger.Fourth.divisorLSeries_summable
+#print axioms MathCollab.Density.Stronger.Fourth.divisorLSeries_summable
+#check @MathCollab.Density.Stronger.Fourth.completedXiNumerator_eq
+#print axioms MathCollab.Density.Stronger.Fourth.completedXiNumerator_eq
+#check @MathCollab.Density.Stronger.Fourth.completedXiNumerator_one_sub
+#print axioms MathCollab.Density.Stronger.Fourth.completedXiNumerator_one_sub
+#check @MathCollab.Density.Stronger.Fourth.differentiable_completedXiNumerator
+#print axioms MathCollab.Density.Stronger.Fourth.differentiable_completedXiNumerator
+#check @MathCollab.Density.Stronger.Fourth.one_sub_afeCriticalPoint
+#print axioms MathCollab.Density.Stronger.Fourth.one_sub_afeCriticalPoint
+#check @MathCollab.Density.Stronger.Fourth.afeCriticalPoint_ne_zero
+#print axioms MathCollab.Density.Stronger.Fourth.afeCriticalPoint_ne_zero
+#check @MathCollab.Density.Stronger.Fourth.afeCriticalPoint_ne_one
+#print axioms MathCollab.Density.Stronger.Fourth.afeCriticalPoint_ne_one
+#check @MathCollab.Density.Stronger.Fourth.hughesYoungAuxiliaryZero_zero
+#print axioms MathCollab.Density.Stronger.Fourth.hughesYoungAuxiliaryZero_zero
+#check @MathCollab.Density.Stronger.Fourth.hughesYoungAuxiliaryZero_neg
+#print axioms MathCollab.Density.Stronger.Fourth.hughesYoungAuxiliaryZero_neg
+#check @MathCollab.Density.Stronger.Fourth.differentiable_hughesYoungAuxiliaryZero
+#print axioms MathCollab.Density.Stronger.Fourth.differentiable_hughesYoungAuxiliaryZero
+#check @MathCollab.Density.Stronger.Fourth.completedRiemannZeta_eq_zeta_mul_GammaR
+#print axioms MathCollab.Density.Stronger.Fourth.completedRiemannZeta_eq_zeta_mul_GammaR
+#check @MathCollab.Density.Stronger.Fourth.afeCriticalPoint_neg_eq_star
+#print axioms MathCollab.Density.Stronger.Fourth.afeCriticalPoint_neg_eq_star
+#check @MathCollab.Density.Stronger.Fourth.riemannZeta_afeCriticalPoint_neg_eq_star
+#print axioms MathCollab.Density.Stronger.Fourth.riemannZeta_afeCriticalPoint_neg_eq_star
+#check @MathCollab.Density.Stronger.Fourth.zetaSquarePoleNormalization_ne_zero
+#print axioms MathCollab.Density.Stronger.Fourth.zetaSquarePoleNormalization_ne_zero
+#check @MathCollab.Density.Stronger.Fourth.zetaSquarePoleNormalization_neg
+#print axioms MathCollab.Density.Stronger.Fourth.zetaSquarePoleNormalization_neg
+#check @MathCollab.Density.Stronger.Fourth.zetaSquarePoleNormalization_eq
+#print axioms MathCollab.Density.Stronger.Fourth.zetaSquarePoleNormalization_eq
+#check @MathCollab.Density.Stronger.Fourth.zetaSquarePoleNormalization_norm_lower
+#print axioms MathCollab.Density.Stronger.Fourth.zetaSquarePoleNormalization_norm_lower
+#check @MathCollab.Density.Stronger.Fourth.differentiable_zetaSquareContourNumerator
+#print axioms MathCollab.Density.Stronger.Fourth.differentiable_zetaSquareContourNumerator
+#check @MathCollab.Density.Stronger.Fourth.zetaSquareContourNumerator_neg
+#print axioms MathCollab.Density.Stronger.Fourth.zetaSquareContourNumerator_neg
+#check @MathCollab.Density.Stronger.Fourth.zetaSquareContourNumerator_zero
+#print axioms MathCollab.Density.Stronger.Fourth.zetaSquareContourNumerator_zero
+#check @MathCollab.Density.Stronger.Fourth.zetaSquareContourIntegrand_neg
+#print axioms MathCollab.Density.Stronger.Fourth.zetaSquareContourIntegrand_neg
+#check @MathCollab.Density.Stronger.Fourth.zetaSquare_finiteRectangle
+#print axioms MathCollab.Density.Stronger.Fourth.zetaSquare_finiteRectangle
+#check @MathCollab.Density.Stronger.Fourth.hIntegral_zetaSquare_bottom
+#print axioms MathCollab.Density.Stronger.Fourth.hIntegral_zetaSquare_bottom
+#check @MathCollab.Density.Stronger.Fourth.vIntegral_zetaSquare_left
+#print axioms MathCollab.Density.Stronger.Fourth.vIntegral_zetaSquare_left
+#check @MathCollab.Density.Stronger.Fourth.zetaSquareAFE_truncated_native
+#print axioms MathCollab.Density.Stronger.Fourth.zetaSquareAFE_truncated_native
+#check @MathCollab.Density.Stronger.Fourth.zetaSquareGammaNormalization_ne_zero
+#print axioms MathCollab.Density.Stronger.Fourth.zetaSquareGammaNormalization_ne_zero
+#check @MathCollab.Density.Stronger.Fourth.zetaSquareGammaNormalization_neg
+#print axioms MathCollab.Density.Stronger.Fourth.zetaSquareGammaNormalization_neg
+#check @MathCollab.Density.Stronger.Fourth.completedZeta_square_eq_norm_mul_gamma
+#print axioms MathCollab.Density.Stronger.Fourth.completedZeta_square_eq_norm_mul_gamma
+#check @MathCollab.Density.Stronger.Fourth.zetaSquareNorm_eq_truncated_source
+#print axioms MathCollab.Density.Stronger.Fourth.zetaSquareNorm_eq_truncated_source
+#check @MathCollab.Density.Stronger.Fourth.tsum_nat_rpow_tail_le
+#print axioms MathCollab.Density.Stronger.Fourth.tsum_nat_rpow_tail_le
+#check @MathCollab.Density.Stronger.Fourth.fourth_divisorWeight_le_rpow
+#print axioms MathCollab.Density.Stronger.Fourth.fourth_divisorWeight_le_rpow
+#check @MathCollab.Density.Stronger.Fourth.tsum_fourth_divisorWeight_tail_le
+#print axioms MathCollab.Density.Stronger.Fourth.tsum_fourth_divisorWeight_tail_le
+#check @MathCollab.Density.Stronger.Fourth.exists_norm_zetaFourthTail_cutoff_le
+#print axioms MathCollab.Density.Stronger.Fourth.exists_norm_zetaFourthTail_cutoff_le
+#check @MathCollab.Density.Stronger.Fourth.fourth_tail_scale_le
+#print axioms MathCollab.Density.Stronger.Fourth.fourth_tail_scale_le
+#check @MathCollab.Density.Stronger.Fourth.exists_norm_fourthRightPiece_sub_cutoff_le
+#print axioms MathCollab.Density.Stronger.Fourth.exists_norm_fourthRightPiece_sub_cutoff_le
+#check @MathCollab.Density.Stronger.Fourth.zetaFourthTerm_zero
+#print axioms MathCollab.Density.Stronger.Fourth.zetaFourthTerm_zero
+#check @MathCollab.Density.Stronger.Fourth.differentiableAt_zetaFourthKernel
+#print axioms MathCollab.Density.Stronger.Fourth.differentiableAt_zetaFourthKernel
+#check @MathCollab.Density.Stronger.Fourth.differentiableAt_zetaFourthTerm
+#print axioms MathCollab.Density.Stronger.Fourth.differentiableAt_zetaFourthTerm
+#check @MathCollab.Density.Stronger.Fourth.norm_zetaFourthTerm_vertical
+#print axioms MathCollab.Density.Stronger.Fourth.norm_zetaFourthTerm_vertical
+#check @MathCollab.Density.Stronger.Fourth.norm_fourth_divisorTerm_le_card
+#print axioms MathCollab.Density.Stronger.Fourth.norm_fourth_divisorTerm_le_card
+#check @MathCollab.Density.Stronger.Fourth.zetaFourthTerm_one
+#print axioms MathCollab.Density.Stronger.Fourth.zetaFourthTerm_one
+#check @MathCollab.Density.Stronger.Fourth.zetaFourthTerm_boundaryRect_zero
+#print axioms MathCollab.Density.Stronger.Fourth.zetaFourthTerm_boundaryRect_zero
+#check @MathCollab.Density.Stronger.Fourth.exists_norm_zetaFourthKernel_strip_le
+#print axioms MathCollab.Density.Stronger.Fourth.exists_norm_zetaFourthKernel_strip_le
+#check @MathCollab.Density.Stronger.Fourth.continuous_zetaFourthTerm_vertical
+#print axioms MathCollab.Density.Stronger.Fourth.continuous_zetaFourthTerm_vertical
+#check @MathCollab.Density.Stronger.Fourth.exists_norm_zetaFourthTerm_strip_le
+#print axioms MathCollab.Density.Stronger.Fourth.exists_norm_zetaFourthTerm_strip_le
+#check @MathCollab.Density.Stronger.Fourth.integrable_zetaFourthTerm_vertical
+#print axioms MathCollab.Density.Stronger.Fourth.integrable_zetaFourthTerm_vertical
+#check @MathCollab.Density.Stronger.Fourth.tendsto_zetaFourthTerm_horizontal_of_sq_eq
+#print axioms MathCollab.Density.Stronger.Fourth.tendsto_zetaFourthTerm_horizontal_of_sq_eq
+#check @MathCollab.Density.Stronger.Fourth.integral_norm_zetaFourthTerm_vertical
+#print axioms MathCollab.Density.Stronger.Fourth.integral_norm_zetaFourthTerm_vertical
+#check @MathCollab.Density.Stronger.Fourth.exists_norm_zetaFourthContribution_le
+#print axioms MathCollab.Density.Stronger.Fourth.exists_norm_zetaFourthContribution_le
+#check @MathCollab.Density.Stronger.Fourth.summable_fourth_divisorWeight
+#print axioms MathCollab.Density.Stronger.Fourth.summable_fourth_divisorWeight
+#check @MathCollab.Density.Stronger.Fourth.zetaFourthPrefix_eq_integral
+#print axioms MathCollab.Density.Stronger.Fourth.zetaFourthPrefix_eq_integral
+#check @MathCollab.Density.Stronger.Fourth.zetaFourthPrefix_line_eq
+#print axioms MathCollab.Density.Stronger.Fourth.zetaFourthPrefix_line_eq
+#check @MathCollab.Density.Stronger.Fourth.zetaFourthRightPiece_eq_prefix_add_tail
+#print axioms MathCollab.Density.Stronger.Fourth.zetaFourthRightPiece_eq_prefix_add_tail
+#check @MathCollab.Density.Stronger.Fourth.summable_norm_zetaFourthTail
+#print axioms MathCollab.Density.Stronger.Fourth.summable_norm_zetaFourthTail
+#check @MathCollab.Density.Stronger.Fourth.exists_norm_zetaFourthTail_le
+#print axioms MathCollab.Density.Stronger.Fourth.exists_norm_zetaFourthTail_le
+#check @MathCollab.Density.Stronger.Fourth.exists_norm_fourthRightPiece_sub_prefix_le
+#print axioms MathCollab.Density.Stronger.Fourth.exists_norm_fourthRightPiece_sub_prefix_le
+#check @MathCollab.Density.Stronger.Fourth.zeta_fourth_le_prefix_add_tail
+#print axioms MathCollab.Density.Stronger.Fourth.zeta_fourth_le_prefix_add_tail
+#check @MathCollab.Density.Stronger.Fourth.exists_zeta_fourth_le_prefix_add_weightTail
+#print axioms MathCollab.Density.Stronger.Fourth.exists_zeta_fourth_le_prefix_add_weightTail
+#check @MathCollab.Density.Stronger.norm_genericTaylorCoefficient_le
+#print axioms MathCollab.Density.Stronger.norm_genericTaylorCoefficient_le
+#check @MathCollab.Density.Stronger.norm_genericTaylorPolynomial_le
+#print axioms MathCollab.Density.Stronger.norm_genericTaylorPolynomial_le
+#check @MathCollab.Density.Stronger.norm_genericTaylor_tail_le
+#print axioms MathCollab.Density.Stronger.norm_genericTaylor_tail_le
+#check @MathCollab.Density.Stronger.genericBlock_eq_normalized
+#print axioms MathCollab.Density.Stronger.genericBlock_eq_normalized
+#check @MathCollab.Density.Stronger.norm_normalizedGenericBlock
+#print axioms MathCollab.Density.Stronger.norm_normalizedGenericBlock
+#check @MathCollab.Density.Stronger.hasSum_genericTaylorPolynomial
+#print axioms MathCollab.Density.Stronger.hasSum_genericTaylorPolynomial
+#check @MathCollab.Density.Stronger.norm_genericTaylor_tsum_ge
+#print axioms MathCollab.Density.Stronger.norm_genericTaylor_tsum_ge
+#check @MathCollab.Density.Stronger.norm_fixedGenericTaylor_tail_le
+#print axioms MathCollab.Density.Stronger.norm_fixedGenericTaylor_tail_le
+#check @MathCollab.Density.Stronger.exists_genericTaylor_component
+#print axioms MathCollab.Density.Stronger.exists_genericTaylor_component
+#check @MathCollab.Density.Stronger.norm_residue_le
+#print axioms MathCollab.Density.Stronger.norm_residue_le
+#check @MathCollab.Density.Stronger.detector_eventually_small
+#print axioms MathCollab.Density.Stronger.detector_eventually_small
+#check @MathCollab.Density.Stronger.detectorTail_decomposition
+#print axioms MathCollab.Density.Stronger.detectorTail_decomposition
+#check @MathCollab.Density.Stronger.detectorTail_eventually_large
+#print axioms MathCollab.Density.Stronger.detectorTail_eventually_large
+#check @MathCollab.Density.Stronger.negligible_residue_le_detector_height
+#print axioms MathCollab.Density.Stronger.negligible_residue_le_detector_height
+#check @MathCollab.Density.Stronger.smoothMollifierBlock_eventually_detects_mean
+#print axioms MathCollab.Density.Stronger.smoothMollifierBlock_eventually_detects_mean
+#check @MathCollab.Density.Stronger.smoothDetector_eventually_detects_mean
+#print axioms MathCollab.Density.Stronger.smoothDetector_eventually_detects_mean
+#check @MathCollab.Density.Stronger.long_mean_twelfth_count
+#print axioms MathCollab.Density.Stronger.long_mean_twelfth_count
+#check @MathCollab.Density.Stronger.smooth_long_mean_or_short_powered_cover
+#print axioms MathCollab.Density.Stronger.smooth_long_mean_or_short_powered_cover
+#check @MathCollab.Density.Stronger.long_mean_count_le_physical_moment
+#print axioms MathCollab.Density.Stronger.long_mean_count_le_physical_moment
+#check @MathCollab.Density.Stronger.weightedCriticalMean_detecting_scale
+#print axioms MathCollab.Density.Stronger.weightedCriticalMean_detecting_scale
+#check @MathCollab.Density.Stronger.weightedCriticalMean_long_scale
+#print axioms MathCollab.Density.Stronger.weightedCriticalMean_long_scale
+#check @MathCollab.Density.Stronger.smoothLongZeroFinset_subset
+#print axioms MathCollab.Density.Stronger.smoothLongZeroFinset_subset
+#check @MathCollab.Density.Stronger.smooth_zeroCount_partition
+#print axioms MathCollab.Density.Stronger.smooth_zeroCount_partition
+#check @MathCollab.Density.Stronger.smoothLongZeroFinset_eventually_detects_mean
+#print axioms MathCollab.Density.Stronger.smoothLongZeroFinset_eventually_detects_mean
+#check @MathCollab.Density.Stronger.smoothLongZeroCount_physical_moment_reduction
+#print axioms MathCollab.Density.Stronger.smoothLongZeroCount_physical_moment_reduction
+#check @MathCollab.Density.Stronger.log_pow_eventually_le_rpow
+#print axioms MathCollab.Density.Stronger.log_pow_eventually_le_rpow
+#check @MathCollab.Density.Stronger.log_twelfth_eventually_le_rpow
+#print axioms MathCollab.Density.Stronger.log_twelfth_eventually_le_rpow
+#check @MathCollab.Density.Stronger.long_count_scale_identity
+#print axioms MathCollab.Density.Stronger.long_count_scale_identity
+#check @MathCollab.Density.Stronger.long_count_scalar_log_eventually
+#print axioms MathCollab.Density.Stronger.long_count_scalar_log_eventually
+#check @MathCollab.Density.Stronger.long_count_scalar_eventually
+#print axioms MathCollab.Density.Stronger.long_count_scalar_eventually
+#check @MathCollab.Density.Stronger.long_count_scalar_local_log_eventually
+#print axioms MathCollab.Density.Stronger.long_count_scalar_local_log_eventually
+#check @MathCollab.Density.Stronger.positive_compact_cutoff_isBigO_atTop
+#print axioms MathCollab.Density.Stronger.positive_compact_cutoff_isBigO_atTop
+#check @MathCollab.Density.Stronger.positive_compact_cutoff_isBigO_zero
+#print axioms MathCollab.Density.Stronger.positive_compact_cutoff_isBigO_zero
+#check @MathCollab.Density.Stronger.positive_compact_cutoff_mellin_hasDerivAt
+#print axioms MathCollab.Density.Stronger.positive_compact_cutoff_mellin_hasDerivAt
+#check @MathCollab.Density.Stronger.positive_compact_cutoff_mellin_differentiable
+#print axioms MathCollab.Density.Stronger.positive_compact_cutoff_mellin_differentiable
+#check @MathCollab.Density.Stronger.dampedCutoff_mellin_entire
+#print axioms MathCollab.Density.Stronger.dampedCutoff_mellin_entire
+#check @MathCollab.Density.Stronger.actual_fourth_moment_eventually
+#print axioms MathCollab.Density.Stronger.actual_fourth_moment_eventually
+#check @MathCollab.Density.Stronger.pointValue_volume_le_of_peak_card
+#print axioms MathCollab.Density.Stronger.pointValue_volume_le_of_peak_card
+#check @MathCollab.Density.Stronger.zeta_twelfth_physical_of_peak_card
+#print axioms MathCollab.Density.Stronger.zeta_twelfth_physical_of_peak_card
+#check @MathCollab.Density.Stronger.stronger_density_bound_of_peak_card
+#print axioms MathCollab.Density.Stronger.stronger_density_bound_of_peak_card
+#check @MathCollab.Density.Stronger.zetaMomentCriticalNorm_eventually_lt_slab_power
+#print axioms MathCollab.Density.Stronger.zetaMomentCriticalNorm_eventually_lt_slab_power
+#check @MathCollab.Density.Stronger.zetaMomentCriticalNorm_twelfth_eventually_le_cube
+#print axioms MathCollab.Density.Stronger.zetaMomentCriticalNorm_twelfth_eventually_le_cube
+#check @MathCollab.Density.Stronger.twelfth_tangent_bound
+#print axioms MathCollab.Density.Stronger.twelfth_tangent_bound
+#check @MathCollab.Density.Stronger.integral_weighted_twelfth
+#print axioms MathCollab.Density.Stronger.integral_weighted_twelfth
+#check @MathCollab.Density.Stronger.stronger_density_bound_native
+#print axioms MathCollab.Density.Stronger.stronger_density_bound_native
+#check @MathCollab.Density.Stronger.zeta_twelfth_dyadic_native
+#print axioms MathCollab.Density.Stronger.zeta_twelfth_dyadic_native
+#check @MathCollab.Density.Stronger.zeta_twelfth_physical_native
+#print axioms MathCollab.Density.Stronger.zeta_twelfth_physical_native
+#check @MathCollab.Density.Stronger.pointValue_peak_card_native
+#print axioms MathCollab.Density.Stronger.pointValue_peak_card_native
+#check @MathCollab.Density.Stronger.pointValue_volume_native
+#print axioms MathCollab.Density.Stronger.pointValue_volume_native
+#check @MathCollab.Density.Stronger.smoothingExponent_pos
+#print axioms MathCollab.Density.Stronger.smoothingExponent_pos
+#check @MathCollab.Density.Stronger.smoothingExponent_lt_one
+#print axioms MathCollab.Density.Stronger.smoothingExponent_lt_one
+#check @MathCollab.Density.Stronger.smoothingExponent_eq
+#print axioms MathCollab.Density.Stronger.smoothingExponent_eq
+#check @MathCollab.Density.Stronger.densityExponent_pos
+#print axioms MathCollab.Density.Stronger.densityExponent_pos
+#check @MathCollab.Density.Stronger.densityExponent_lt_density_hypothesis
+#print axioms MathCollab.Density.Stronger.densityExponent_lt_density_hypothesis
+#check @MathCollab.Density.Stronger.exists_detector_exponent
+#print axioms MathCollab.Density.Stronger.exists_detector_exponent
+#check @MathCollab.Density.Stronger.short_exponent_identities
+#print axioms MathCollab.Density.Stronger.short_exponent_identities
+#check @MathCollab.Density.Stronger.long_exponent_identity
+#print axioms MathCollab.Density.Stronger.long_exponent_identity
+#check @MathCollab.Density.Stronger.long_exponent_saving
+#print axioms MathCollab.Density.Stronger.long_exponent_saving
+#check @MathCollab.Density.Stronger.detector_error_scale
+#print axioms MathCollab.Density.Stronger.detector_error_scale
+#check @MathCollab.Density.Stronger.Peaks.atkinsonLocalMeanExcess_threshold_iff
+#print axioms MathCollab.Density.Stronger.Peaks.atkinsonLocalMeanExcess_threshold_iff
+#check @MathCollab.Density.Stronger.Peaks.exists_atkinsonLocalMeanExcess_card_le_above_fourthRoot
+#print axioms MathCollab.Density.Stronger.Peaks.exists_atkinsonLocalMeanExcess_card_le_above_fourthRoot
+#check @MathCollab.Density.Stronger.Peaks.exists_pointCluster_localMean_bound
+#print axioms MathCollab.Density.Stronger.Peaks.exists_pointCluster_localMean_bound
+#check @MathCollab.Density.Stronger.Peaks.localMean_lower_bound_of_peak_mass
+#print axioms MathCollab.Density.Stronger.Peaks.localMean_lower_bound_of_peak_mass
+#check @MathCollab.Density.Stronger.Peaks.exists_pointCluster_superlevel_entry
+#print axioms MathCollab.Density.Stronger.Peaks.exists_pointCluster_superlevel_entry
+#check @MathCollab.Density.Stronger.Peaks.exists_pointCluster_superlevel_count
+#print axioms MathCollab.Density.Stronger.Peaks.exists_pointCluster_superlevel_count
+#check @MathCollab.Density.Stronger.Peaks.occupancy_inverse_power_budget
+#print axioms MathCollab.Density.Stronger.Peaks.occupancy_inverse_power_budget
+#check @MathCollab.Density.Stronger.Peaks.exists_pointValue_card_le_with_width
+#print axioms MathCollab.Density.Stronger.Peaks.exists_pointValue_card_le_with_width
+#check @MathCollab.Density.Stronger.Peaks.pointCluster_subset
+#print axioms MathCollab.Density.Stronger.Peaks.pointCluster_subset
+#check @MathCollab.Density.Stronger.Peaks.mem_pointClusterBins_iff
+#print axioms MathCollab.Density.Stronger.Peaks.mem_pointClusterBins_iff
+#check @MathCollab.Density.Stronger.Peaks.pointCluster_card_partition
+#print axioms MathCollab.Density.Stronger.Peaks.pointCluster_card_partition
+#check @MathCollab.Density.Stronger.Peaks.pointCluster_interval
+#print axioms MathCollab.Density.Stronger.Peaks.pointCluster_interval
+#check @MathCollab.Density.Stronger.Peaks.pointCluster_symmetric_interval
+#print axioms MathCollab.Density.Stronger.Peaks.pointCluster_symmetric_interval
+#check @MathCollab.Density.Stronger.Peaks.pointClusterCenter_range
+#print axioms MathCollab.Density.Stronger.Peaks.pointClusterCenter_range
+#check @MathCollab.Density.Stronger.Peaks.pointClusterCenter_injective
+#print axioms MathCollab.Density.Stronger.Peaks.pointClusterCenter_injective
+#check @MathCollab.Density.Stronger.Peaks.pointClusterCenters_card
+#print axioms MathCollab.Density.Stronger.Peaks.pointClusterCenters_card
+#check @MathCollab.Density.Stronger.Peaks.pointClusterCenter_gap_of_same_parity
+#print axioms MathCollab.Density.Stronger.Peaks.pointClusterCenter_gap_of_same_parity
+#check @MathCollab.Density.Stronger.Peaks.pointClusterCenters_separated
+#print axioms MathCollab.Density.Stronger.Peaks.pointClusterCenters_separated
+#check @MathCollab.Density.Stronger.Peaks.card_eq_sum_parity_cards
+#print axioms MathCollab.Density.Stronger.Peaks.card_eq_sum_parity_cards
+#check @MathCollab.Density.Stronger.Peaks.eventually_pointValue_log_scales
+#print axioms MathCollab.Density.Stronger.Peaks.eventually_pointValue_log_scales
+#check @MathCollab.Density.Stronger.Peaks.pointValueWidth_error_absorption
+#print axioms MathCollab.Density.Stronger.Peaks.pointValueWidth_error_absorption
+#check @MathCollab.Density.Stronger.Peaks.pointValueWidth_count_identity
+#print axioms MathCollab.Density.Stronger.Peaks.pointValueWidth_count_identity
+#check @MathCollab.Density.Stronger.Peaks.exists_pointValue_card_le_source_range
+#print axioms MathCollab.Density.Stronger.Peaks.exists_pointValue_card_le_source_range
+#check @MathCollab.Density.Stronger.Peaks.eventually_pointValue_source_lower_range
+#print axioms MathCollab.Density.Stronger.Peaks.eventually_pointValue_source_lower_range
+#check @MathCollab.Density.Stronger.Peaks.pointValue_count_mul_twelfth_identity
+#print axioms MathCollab.Density.Stronger.Peaks.pointValue_count_mul_twelfth_identity
+#check @MathCollab.Density.Stronger.Peaks.pointValue_count_mul_twelfth_le_growth
+#print axioms MathCollab.Density.Stronger.Peaks.pointValue_count_mul_twelfth_le_growth
+#check @MathCollab.Density.Stronger.Peaks.eventually_pointValue_high_budget
+#print axioms MathCollab.Density.Stronger.Peaks.eventually_pointValue_high_budget
+#check @MathCollab.Density.Stronger.Peaks.exists_pointValue_twelfth_weighted_card_le_of_inputs
+#print axioms MathCollab.Density.Stronger.Peaks.exists_pointValue_twelfth_weighted_card_le_of_inputs
+#check @MathCollab.Density.Stronger.Peaks.pointValue_peak_card_of_inputs
+#print axioms MathCollab.Density.Stronger.Peaks.pointValue_peak_card_of_inputs
+#check @MathCollab.Density.Stronger.physical_tail_geometry
+#print axioms MathCollab.Density.Stronger.physical_tail_geometry
+#check @MathCollab.Density.Stronger.weightedCriticalTwelfth_tail_pointwise
+#print axioms MathCollab.Density.Stronger.weightedCriticalTwelfth_tail_pointwise
+#check @MathCollab.Density.Stronger.integrable_translated_critical_twelfth
+#print axioms MathCollab.Density.Stronger.integrable_translated_critical_twelfth
+#check @MathCollab.Density.Stronger.weightedCriticalTwelfth_physical_tail
+#print axioms MathCollab.Density.Stronger.weightedCriticalTwelfth_physical_tail
+#check @MathCollab.Density.Stronger.PointMean.continuous_heathBrownDivisorMellinSeriesTerm
+#print axioms MathCollab.Density.Stronger.PointMean.continuous_heathBrownDivisorMellinSeriesTerm
+#check @MathCollab.Density.Stronger.PointMean.norm_heathBrownDivisorMellinSeriesTerm_le
+#print axioms MathCollab.Density.Stronger.PointMean.norm_heathBrownDivisorMellinSeriesTerm_le
+#check @MathCollab.Density.Stronger.PointMean.integrable_heathBrownDivisorMellinSeriesTerm
+#print axioms MathCollab.Density.Stronger.PointMean.integrable_heathBrownDivisorMellinSeriesTerm
+#check @MathCollab.Density.Stronger.PointMean.summable_integral_norm_heathBrownDivisorMellinSeriesTerm
+#print axioms MathCollab.Density.Stronger.PointMean.summable_integral_norm_heathBrownDivisorMellinSeriesTerm
+#check @MathCollab.Density.Stronger.PointMean.integral_heathBrownDivisorMellinSeriesTerm
+#print axioms MathCollab.Density.Stronger.PointMean.integral_heathBrownDivisorMellinSeriesTerm
+#check @MathCollab.Density.Stronger.PointMean.tsum_heathBrownDivisorMellinSeriesTerm_eq
+#print axioms MathCollab.Density.Stronger.PointMean.tsum_heathBrownDivisorMellinSeriesTerm_eq
+#check @MathCollab.Density.Stronger.PointMean.heathBrown_smoothed_divisor_eq_right_mellin
+#print axioms MathCollab.Density.Stronger.PointMean.heathBrown_smoothed_divisor_eq_right_mellin
+#check @MathCollab.Density.Stronger.PointMean.integrable_heathBrownCriticalWeighted
+#print axioms MathCollab.Density.Stronger.PointMean.integrable_heathBrownCriticalWeighted
+#check @MathCollab.Density.Stronger.PointMean.heathBrownCriticalWeighted_nonneg
+#print axioms MathCollab.Density.Stronger.PointMean.heathBrownCriticalWeighted_nonneg
+#check @MathCollab.Density.Stronger.PointMean.integrable_heathBrown_reserve_sq_mul_critical_add
+#print axioms MathCollab.Density.Stronger.PointMean.integrable_heathBrown_reserve_sq_mul_critical_add
+#check @MathCollab.Density.Stronger.PointMean.integral_heathBrown_reserve_sq_mul_critical_add
+#print axioms MathCollab.Density.Stronger.PointMean.integral_heathBrown_reserve_sq_mul_critical_add
+#check @MathCollab.Density.Stronger.PointMean.integrable_heathBrown_reserve_sq_snd_mul_critical_add
+#print axioms MathCollab.Density.Stronger.PointMean.integrable_heathBrown_reserve_sq_snd_mul_critical_add
+#check @MathCollab.Density.Stronger.PointMean.integral_heathBrown_reserve_sq_snd_mul_critical_add
+#print axioms MathCollab.Density.Stronger.PointMean.integral_heathBrown_reserve_sq_snd_mul_critical_add
+#check @MathCollab.Density.Stronger.PointMean.heathBrownStrongDoubleIntegrand_nonneg
+#print axioms MathCollab.Density.Stronger.PointMean.heathBrownStrongDoubleIntegrand_nonneg
+#check @MathCollab.Density.Stronger.PointMean.heathBrownStrongDoubleIntegrand_le
+#print axioms MathCollab.Density.Stronger.PointMean.heathBrownStrongDoubleIntegrand_le
+#check @MathCollab.Density.Stronger.PointMean.integrable_heathBrownStrongDoubleMajorant
+#print axioms MathCollab.Density.Stronger.PointMean.integrable_heathBrownStrongDoubleMajorant
+#check @MathCollab.Density.Stronger.PointMean.integrable_heathBrownStrongDoubleIntegrand
+#print axioms MathCollab.Density.Stronger.PointMean.integrable_heathBrownStrongDoubleIntegrand
+#check @MathCollab.Density.Stronger.PointMean.integral_heathBrownStrongDoubleIntegrand_le
+#print axioms MathCollab.Density.Stronger.PointMean.integral_heathBrownStrongDoubleIntegrand_le
+#check @MathCollab.Density.Stronger.PointMean.integral_strongKernel_mul_strongMoment_eq_double
+#print axioms MathCollab.Density.Stronger.PointMean.integral_strongKernel_mul_strongMoment_eq_double
+#check @MathCollab.Density.Stronger.PointMean.integrable_strongKernel_mul_strongMoment
+#print axioms MathCollab.Density.Stronger.PointMean.integrable_strongKernel_mul_strongMoment
+#check @MathCollab.Density.Stronger.PointMean.integral_strongKernel_mul_strongMoment_le
+#print axioms MathCollab.Density.Stronger.PointMean.integral_strongKernel_mul_strongMoment_le
+#check @MathCollab.Density.Stronger.PointMean.rectangleIntegral'_const_div_sq_eq_zero
+#print axioms MathCollab.Density.Stronger.PointMean.rectangleIntegral'_const_div_sq_eq_zero
+#check @MathCollab.Density.Stronger.PointMean.rectangleIntegral'_div_sq_eq_deriv
+#print axioms MathCollab.Density.Stronger.PointMean.rectangleIntegral'_div_sq_eq_deriv
+#check @MathCollab.Density.Stronger.PointMean.heathBrown_equation44_of_lemmaThree
+#print axioms MathCollab.Density.Stronger.PointMean.heathBrown_equation44_of_lemmaThree
+#check @MathCollab.Density.Stronger.PointMean.heathBrown_equation44_native
+#print axioms MathCollab.Density.Stronger.PointMean.heathBrown_equation44_native
+#check @MathCollab.Density.Stronger.PointMean.integrable_heathBrownMellinCriticalMoment
+#print axioms MathCollab.Density.Stronger.PointMean.integrable_heathBrownMellinCriticalMoment
+#check @MathCollab.Density.Stronger.PointMean.integrable_heathBrownFullCriticalMoment
+#print axioms MathCollab.Density.Stronger.PointMean.integrable_heathBrownFullCriticalMoment
+#check @MathCollab.Density.Stronger.PointMean.heathBrownMellinCriticalMoment_le_full
+#print axioms MathCollab.Density.Stronger.PointMean.heathBrownMellinCriticalMoment_le_full
+#check @MathCollab.Density.Stronger.PointMean.heathBrownMellinCriticalMoment_nonneg
+#print axioms MathCollab.Density.Stronger.PointMean.heathBrownMellinCriticalMoment_nonneg
+#check @MathCollab.Density.Stronger.PointMean.heathBrownFullCriticalMoment_nonneg
+#print axioms MathCollab.Density.Stronger.PointMean.heathBrownFullCriticalMoment_nonneg
+#check @MathCollab.Density.Stronger.PointMean.exp_neg_abs_le_half_pow_floor
+#print axioms MathCollab.Density.Stronger.PointMean.exp_neg_abs_le_half_pow_floor
+#check @MathCollab.Density.Stronger.PointMean.separated_distance_shell_card_le_two
+#print axioms MathCollab.Density.Stronger.PointMean.separated_distance_shell_card_le_two
+#check @MathCollab.Density.Stronger.PointMean.sum_exp_neg_abs_sub_le_four
+#print axioms MathCollab.Density.Stronger.PointMean.sum_exp_neg_abs_sub_le_four
+#check @MathCollab.Density.Stronger.PointMean.heathBrownGammaPoleNumerator_zero
+#print axioms MathCollab.Density.Stronger.PointMean.heathBrownGammaPoleNumerator_zero
+#check @MathCollab.Density.Stronger.PointMean.heathBrownZetaSquareMellinIntegrand_eq_gammaPoleCleared
+#print axioms MathCollab.Density.Stronger.PointMean.heathBrownZetaSquareMellinIntegrand_eq_gammaPoleCleared
+#check @MathCollab.Density.Stronger.PointMean.heathBrown_gammaPole_finite_rectangle
+#print axioms MathCollab.Density.Stronger.PointMean.heathBrown_gammaPole_finite_rectangle
+#check @MathCollab.Density.Stronger.PointMean.two_lt_log_of_ten_le
+#print axioms MathCollab.Density.Stronger.PointMean.two_lt_log_of_ten_le
+#check @MathCollab.Density.Stronger.PointMean.heathBrownLemmaThreeDelta_pos
+#print axioms MathCollab.Density.Stronger.PointMean.heathBrownLemmaThreeDelta_pos
+#check @MathCollab.Density.Stronger.PointMean.heathBrownLemmaThreeDelta_lt_half
+#print axioms MathCollab.Density.Stronger.PointMean.heathBrownLemmaThreeDelta_lt_half
+#check @MathCollab.Density.Stronger.PointMean.heathBrownLemmaThreeRadius_pos
+#print axioms MathCollab.Density.Stronger.PointMean.heathBrownLemmaThreeRadius_pos
+#check @MathCollab.Density.Stronger.PointMean.heathBrownLemmaThree_finiteRectangle
+#print axioms MathCollab.Density.Stronger.PointMean.heathBrownLemmaThree_finiteRectangle
+#check @MathCollab.Density.Stronger.PointMean.heathBrownLemmaThree_rectangle_eq_edges
+#print axioms MathCollab.Density.Stronger.PointMean.heathBrownLemmaThree_rectangle_eq_edges
+#check @MathCollab.Density.Stronger.PointMean.integrable_inv_delta_sq_add_sq
+#print axioms MathCollab.Density.Stronger.PointMean.integrable_inv_delta_sq_add_sq
+#check @MathCollab.Density.Stronger.PointMean.integral_inv_delta_sq_add_sq
+#print axioms MathCollab.Density.Stronger.PointMean.integral_inv_delta_sq_add_sq
+#check @MathCollab.Density.Stronger.PointMean.heathBrownGammaReserveKernel_sq_le
+#print axioms MathCollab.Density.Stronger.PointMean.heathBrownGammaReserveKernel_sq_le
+#check @MathCollab.Density.Stronger.PointMean.integrable_heathBrownGammaReserveKernel_sq
+#print axioms MathCollab.Density.Stronger.PointMean.integrable_heathBrownGammaReserveKernel_sq
+#check @MathCollab.Density.Stronger.PointMean.integral_heathBrownGammaReserveKernel_sq_le
+#print axioms MathCollab.Density.Stronger.PointMean.integral_heathBrownGammaReserveKernel_sq_le
+#check @MathCollab.Density.Stronger.PointMean.heathBrownStrongGammaConvolutionIntegrand_nonneg
+#print axioms MathCollab.Density.Stronger.PointMean.heathBrownStrongGammaConvolutionIntegrand_nonneg
+#check @MathCollab.Density.Stronger.PointMean.heathBrown_strong_exponential_reserve
+#print axioms MathCollab.Density.Stronger.PointMean.heathBrown_strong_exponential_reserve
+#check @MathCollab.Density.Stronger.PointMean.heathBrownStrongGammaConvolutionIntegrand_le
+#print axioms MathCollab.Density.Stronger.PointMean.heathBrownStrongGammaConvolutionIntegrand_le
+#check @MathCollab.Density.Stronger.PointMean.integrable_heathBrownGammaReserveKernel_sq_sub
+#print axioms MathCollab.Density.Stronger.PointMean.integrable_heathBrownGammaReserveKernel_sq_sub
+#check @MathCollab.Density.Stronger.PointMean.integral_heathBrownGammaReserveKernel_sq_sub
+#print axioms MathCollab.Density.Stronger.PointMean.integral_heathBrownGammaReserveKernel_sq_sub
+#check @MathCollab.Density.Stronger.PointMean.integrable_heathBrownStrongGammaConvolutionIntegrand
+#print axioms MathCollab.Density.Stronger.PointMean.integrable_heathBrownStrongGammaConvolutionIntegrand
+#check @MathCollab.Density.Stronger.PointMean.integral_heathBrownStrongGammaConvolutionIntegrand_le
+#print axioms MathCollab.Density.Stronger.PointMean.integral_heathBrownStrongGammaConvolutionIntegrand_le
+#check @MathCollab.Density.Stronger.PointMean.re_digamma_le_log_height_add_four
+#print axioms MathCollab.Density.Stronger.PointMean.re_digamma_le_log_height_add_four
+#check @MathCollab.Density.Stronger.PointMean.exists_norm_Gamma_sq_right_displacement_le
+#print axioms MathCollab.Density.Stronger.PointMean.exists_norm_Gamma_sq_right_displacement_le
+#check @MathCollab.Density.Stronger.PointMean.exists_norm_Gamma_right_displacement_le
+#print axioms MathCollab.Density.Stronger.PointMean.exists_norm_Gamma_right_displacement_le
+#check @MathCollab.Density.Stronger.PointMean.norm_Gamma_half_vertical_le_exp
+#print axioms MathCollab.Density.Stronger.PointMean.norm_Gamma_half_vertical_le_exp
+#check @MathCollab.Density.Stronger.PointMean.add_one_mul_exp_neg_pi_half_le
+#print axioms MathCollab.Density.Stronger.PointMean.add_one_mul_exp_neg_pi_half_le
+#check @MathCollab.Density.Stronger.PointMean.norm_Gamma_positive_strip_strong
+#print axioms MathCollab.Density.Stronger.PointMean.norm_Gamma_positive_strip_strong
+#check @MathCollab.Density.Stronger.PointMean.Gamma_displaced_strong_bound
+#print axioms MathCollab.Density.Stronger.PointMean.Gamma_displaced_strong_bound
+#check @MathCollab.Density.Stronger.PointMean.heathBrown_Gamma_shift_kernel_strong_bound
+#print axioms MathCollab.Density.Stronger.PointMean.heathBrown_Gamma_shift_kernel_strong_bound
+#check @MathCollab.Density.Stronger.PointMean.eventually_log_sq_le_rpow
+#print axioms MathCollab.Density.Stronger.PointMean.eventually_log_sq_le_rpow
+#check @MathCollab.Density.Stronger.PointMean.eventually_const_mul_rpow_le_rpow
+#print axioms MathCollab.Density.Stronger.PointMean.eventually_const_mul_rpow_le_rpow
+#check @MathCollab.Density.Stronger.PointMean.eventually_heathBrownLemmaThreeRadius_le_half_identity
+#print axioms MathCollab.Density.Stronger.PointMean.eventually_heathBrownLemmaThreeRadius_le_half_identity
+#check @MathCollab.Density.Stronger.PointMean.exists_norm_Gamma_heathBrown_small_horizontal_strong_le
+#print axioms MathCollab.Density.Stronger.PointMean.exists_norm_Gamma_heathBrown_small_horizontal_strong_le
+#check @MathCollab.Density.Stronger.PointMean.exists_norm_heathBrownLemmaThree_horizontal_integrand_le
+#print axioms MathCollab.Density.Stronger.PointMean.exists_norm_heathBrownLemmaThree_horizontal_integrand_le
+#check @MathCollab.Density.Stronger.PointMean.exists_norm_heathBrownLemmaThree_horizontalEdge_le
+#print axioms MathCollab.Density.Stronger.PointMean.exists_norm_heathBrownLemmaThree_horizontalEdge_le
+#check @MathCollab.Density.Stronger.PointMean.heathBrown_logSquare_exponential_absorption
+#print axioms MathCollab.Density.Stronger.PointMean.heathBrown_logSquare_exponential_absorption
+#check @MathCollab.Density.Stronger.PointMean.eventually_norm_heathBrownLemmaThree_horizontalEdges_le_one
+#print axioms MathCollab.Density.Stronger.PointMean.eventually_norm_heathBrownLemmaThree_horizontalEdges_le_one
+#check @MathCollab.Density.Stronger.PointMean.intervalIntegrable_exp_neg_abs_sub_mul
+#print axioms MathCollab.Density.Stronger.PointMean.intervalIntegrable_exp_neg_abs_sub_mul
+#check @MathCollab.Density.Stronger.PointMean.sum_intervalIntegral_exp_neg_abs_sub_mul_eq
+#print axioms MathCollab.Density.Stronger.PointMean.sum_intervalIntegral_exp_neg_abs_sub_mul_eq
+#check @MathCollab.Density.Stronger.PointMean.sum_intervalIntegral_exp_neg_abs_sub_mul_le_four
+#print axioms MathCollab.Density.Stronger.PointMean.sum_intervalIntegral_exp_neg_abs_sub_mul_le_four
+#check @MathCollab.Density.Stronger.PointMean.sum_intervalIntegral_exp_kernel_zeta_sq_le_four
+#print axioms MathCollab.Density.Stronger.PointMean.sum_intervalIntegral_exp_kernel_zeta_sq_le_four
+#check @MathCollab.Density.Stronger.PointMean.sum_truncated_exp_kernel_zeta_sq_le_four
+#print axioms MathCollab.Density.Stronger.PointMean.sum_truncated_exp_kernel_zeta_sq_le_four
+#check @MathCollab.Density.Stronger.PointMean.sum_truncated_exp_kernel_zeta_sq_le_localSecondMoment
+#print axioms MathCollab.Density.Stronger.PointMean.sum_truncated_exp_kernel_zeta_sq_le_localSecondMoment
+#check @MathCollab.Density.Stronger.PointMean.summable_heathBrownSmoothedDivisorMajorant
+#print axioms MathCollab.Density.Stronger.PointMean.summable_heathBrownSmoothedDivisorMajorant
+#check @MathCollab.Density.Stronger.PointMean.heathBrownSmoothedDivisorMajorant_nonneg
+#print axioms MathCollab.Density.Stronger.PointMean.heathBrownSmoothedDivisorMajorant_nonneg
+#check @MathCollab.Density.Stronger.PointMean.norm_heathBrownSmoothedDivisorTerm_le
+#print axioms MathCollab.Density.Stronger.PointMean.norm_heathBrownSmoothedDivisorTerm_le
+#check @MathCollab.Density.Stronger.PointMean.summable_norm_heathBrownSmoothedDivisorTerm
+#print axioms MathCollab.Density.Stronger.PointMean.summable_norm_heathBrownSmoothedDivisorTerm
+#check @MathCollab.Density.Stronger.PointMean.norm_heathBrownSmoothedDivisorSeries_le
+#print axioms MathCollab.Density.Stronger.PointMean.norm_heathBrownSmoothedDivisorSeries_le
+#check @MathCollab.Density.Stronger.PointMean.exists_norm_Gamma_heathBrown_residue_strip_le
+#print axioms MathCollab.Density.Stronger.PointMean.exists_norm_Gamma_heathBrown_residue_strip_le
+#check @MathCollab.Density.Stronger.PointMean.exists_norm_Gamma_heathBrown_movingPole_le
+#print axioms MathCollab.Density.Stronger.PointMean.exists_norm_Gamma_heathBrown_movingPole_le
+#check @MathCollab.Density.Stronger.PointMean.norm_digamma_small_strip_le_linear
+#print axioms MathCollab.Density.Stronger.PointMean.norm_digamma_small_strip_le_linear
+#check @MathCollab.Density.Stronger.PointMean.exists_norm_heathBrownMovingPoleResidue_le
+#print axioms MathCollab.Density.Stronger.PointMean.exists_norm_heathBrownMovingPoleResidue_le
+#check @MathCollab.Density.Stronger.PointMean.heathBrown_Gamma_wide_strip_decay
+#print axioms MathCollab.Density.Stronger.PointMean.heathBrown_Gamma_wide_strip_decay
+#check @MathCollab.Density.Stronger.PointMean.heathBrown_Gamma_wide_strip_norm_le
+#print axioms MathCollab.Density.Stronger.PointMean.heathBrown_Gamma_wide_strip_norm_le
+#check @MathCollab.Density.Stronger.PointMean.norm_heathBrownZetaSquareMellinIntegrand_horizontal_le
+#print axioms MathCollab.Density.Stronger.PointMean.norm_heathBrownZetaSquareMellinIntegrand_horizontal_le
+#check @MathCollab.Density.Stronger.PointMean.norm_heathBrownMellin_HIntegral'_le
+#print axioms MathCollab.Density.Stronger.PointMean.norm_heathBrownMellin_HIntegral'_le
+#check @MathCollab.Density.Stronger.PointMean.tendsto_heathBrownMellin_HIntegral'_zero
+#print axioms MathCollab.Density.Stronger.PointMean.tendsto_heathBrownMellin_HIntegral'_zero
+#check @MathCollab.Density.Stronger.PointMean.tendsto_heathBrownMellin_HIntegral'_neg_zero
+#print axioms MathCollab.Density.Stronger.PointMean.tendsto_heathBrownMellin_HIntegral'_neg_zero
+#check @MathCollab.Density.Stronger.PointMean.pintz2023_RectangleIntegral'_eq_edges
+#print axioms MathCollab.Density.Stronger.PointMean.pintz2023_RectangleIntegral'_eq_edges
+#check @MathCollab.Density.Stronger.PointMean.heathBrown_intermediateLine_pos
+#print axioms MathCollab.Density.Stronger.PointMean.heathBrown_intermediateLine_pos
+#check @MathCollab.Density.Stronger.PointMean.heathBrown_intermediateLine_le_quarter
+#print axioms MathCollab.Density.Stronger.PointMean.heathBrown_intermediateLine_le_quarter
+#check @MathCollab.Density.Stronger.PointMean.heathBrown_movingPole_vertical_shift
+#print axioms MathCollab.Density.Stronger.PointMean.heathBrown_movingPole_vertical_shift
+#check @MathCollab.Density.Stronger.PointMean.heathBrown_gammaPole_vertical_shift
+#print axioms MathCollab.Density.Stronger.PointMean.heathBrown_gammaPole_vertical_shift
+#check @MathCollab.Density.Stronger.PointMean.heathBrown_twoPole_vertical_shift
+#print axioms MathCollab.Density.Stronger.PointMean.heathBrown_twoPole_vertical_shift
+#check @MathCollab.Density.Stronger.PointMean.heathBrownSmoothedDivisorSeries_eq_rightVertical
+#print axioms MathCollab.Density.Stronger.PointMean.heathBrownSmoothedDivisorSeries_eq_rightVertical
+#check @MathCollab.Density.Stronger.PointMean.heathBrown_zetaSquare_eq_smoothed_sub_residue_sub_leftVertical
+#print axioms MathCollab.Density.Stronger.PointMean.heathBrown_zetaSquare_eq_smoothed_sub_residue_sub_leftVertical
+#check @MathCollab.Density.Stronger.PointMean.exists_heathBrown_Gamma_shift_kernel_bound
+#print axioms MathCollab.Density.Stronger.PointMean.exists_heathBrown_Gamma_shift_kernel_bound
+#check @MathCollab.Density.Stronger.PointMean.ford_norm_eq_re_of_nonneg
+#print axioms MathCollab.Density.Stronger.PointMean.ford_norm_eq_re_of_nonneg
+#check @MathCollab.Density.Stronger.PointMean.ford_norm_riemannZeta_le_real
+#print axioms MathCollab.Density.Stronger.PointMean.ford_norm_riemannZeta_le_real
+#check @MathCollab.Density.Stronger.PointMean.continuous_heathBrownZetaSquareMellinIntegrand_vertical
+#print axioms MathCollab.Density.Stronger.PointMean.continuous_heathBrownZetaSquareMellinIntegrand_vertical
+#check @MathCollab.Density.Stronger.PointMean.integrable_abs_sq_mul_exp_neg_abs
+#print axioms MathCollab.Density.Stronger.PointMean.integrable_abs_sq_mul_exp_neg_abs
+#check @MathCollab.Density.Stronger.PointMean.integrable_heathBrownZetaSquareMellinIntegrand_plus
+#print axioms MathCollab.Density.Stronger.PointMean.integrable_heathBrownZetaSquareMellinIntegrand_plus
+#check @MathCollab.Density.Stronger.PointMean.integrable_heathBrownZetaSquareMellinIntegrand_minus
+#print axioms MathCollab.Density.Stronger.PointMean.integrable_heathBrownZetaSquareMellinIntegrand_minus
+#check @MathCollab.Density.Stronger.PointMean.integrable_heathBrownZetaSquareMellinIntegrand_right
+#print axioms MathCollab.Density.Stronger.PointMean.integrable_heathBrownZetaSquareMellinIntegrand_right
+#check @MathCollab.Density.Stronger.PointMean.riemannZetaPoleRemoved_zero
+#print axioms MathCollab.Density.Stronger.PointMean.riemannZetaPoleRemoved_zero
+#check @MathCollab.Density.Stronger.PointMean.riemannZetaPoleRemoved_eq_mul_riemannZeta
+#print axioms MathCollab.Density.Stronger.PointMean.riemannZetaPoleRemoved_eq_mul_riemannZeta
+#check @MathCollab.Density.Stronger.PointMean.differentiable_riemannZetaPoleRemoved
+#print axioms MathCollab.Density.Stronger.PointMean.differentiable_riemannZetaPoleRemoved
+#check @MathCollab.Density.Stronger.PointMean.heathBrownMovingPoleNumerator_at_pole
+#print axioms MathCollab.Density.Stronger.PointMean.heathBrownMovingPoleNumerator_at_pole
+#check @MathCollab.Density.Stronger.PointMean.heathBrownZetaSquareMellinIntegrand_eq_poleCleared
+#print axioms MathCollab.Density.Stronger.PointMean.heathBrownZetaSquareMellinIntegrand_eq_poleCleared
+#check @MathCollab.Density.Stronger.PointMean.differentiableOn_heathBrownMovingPoleNumerator
+#print axioms MathCollab.Density.Stronger.PointMean.differentiableOn_heathBrownMovingPoleNumerator
+#check @MathCollab.Density.Stronger.PointMean.heathBrownMovingPoleResidue_eq
+#print axioms MathCollab.Density.Stronger.PointMean.heathBrownMovingPoleResidue_eq
+#check @MathCollab.Density.Stronger.PointMean.heathBrown_movingPole_finite_rectangle
+#print axioms MathCollab.Density.Stronger.PointMean.heathBrown_movingPole_finite_rectangle
+#check @MathCollab.Density.Stronger.PointMean.exists_zetaMomentCriticalNorm_sq_le_quadratic
+#print axioms MathCollab.Density.Stronger.PointMean.exists_zetaMomentCriticalNorm_sq_le_quadratic
+#check @MathCollab.Density.Stronger.PointMean.integral_exp_neg_half_abs_heathBrown
+#print axioms MathCollab.Density.Stronger.PointMean.integral_exp_neg_half_abs_heathBrown
+#check @MathCollab.Density.Stronger.PointMean.integrable_exp_neg_half_abs_heathBrown
+#print axioms MathCollab.Density.Stronger.PointMean.integrable_exp_neg_half_abs_heathBrown
+#check @MathCollab.Density.Stronger.PointMean.heathBrown_fullMoment_tail_pointwise
+#print axioms MathCollab.Density.Stronger.PointMean.heathBrown_fullMoment_tail_pointwise
+#check @MathCollab.Density.Stronger.PointMean.exists_heathBrownFullCriticalMoment_le_truncated
+#print axioms MathCollab.Density.Stronger.PointMean.exists_heathBrownFullCriticalMoment_le_truncated
+#check @MathCollab.Density.Stronger.PointMean.heathBrownLemmaThreeMoment_nonneg
+#print axioms MathCollab.Density.Stronger.PointMean.heathBrownLemmaThreeMoment_nonneg
+#check @MathCollab.Density.Stronger.PointMean.exists_eventually_heathBrownLemmaThree_truncated
+#print axioms MathCollab.Density.Stronger.PointMean.exists_eventually_heathBrownLemmaThree_truncated
+#check @MathCollab.Density.Stronger.PointMean.heathBrownLemmaThree_native
+#print axioms MathCollab.Density.Stronger.PointMean.heathBrownLemmaThree_native
+#check @MathCollab.Density.Stronger.PointMean.exists_heathBrown_Gamma_shift_kernel_strong_bound
+#print axioms MathCollab.Density.Stronger.PointMean.exists_heathBrown_Gamma_shift_kernel_strong_bound
+#check @MathCollab.Density.Stronger.PointMean.integrable_heathBrownStrongMellinCriticalMoment
+#print axioms MathCollab.Density.Stronger.PointMean.integrable_heathBrownStrongMellinCriticalMoment
+#check @MathCollab.Density.Stronger.PointMean.heathBrownStrongMellinCriticalMoment_nonneg
+#print axioms MathCollab.Density.Stronger.PointMean.heathBrownStrongMellinCriticalMoment_nonneg
+#check @MathCollab.Density.Stronger.PointMean.exists_norm_heathBrown_leftMellinIntegrand_strong_le
+#print axioms MathCollab.Density.Stronger.PointMean.exists_norm_heathBrown_leftMellinIntegrand_strong_le
+#check @MathCollab.Density.Stronger.PointMean.exists_norm_heathBrown_leftVertical_strong_le
+#print axioms MathCollab.Density.Stronger.PointMean.exists_norm_heathBrown_leftVertical_strong_le
+#check @MathCollab.Density.Stronger.PointMean.exists_heathBrown_offCritical_plus_strong_le
+#print axioms MathCollab.Density.Stronger.PointMean.exists_heathBrown_offCritical_plus_strong_le
+#check @MathCollab.Density.Stronger.PointMean.pointMeanInput_native
+#print axioms MathCollab.Density.Stronger.PointMean.pointMeanInput_native
+#check @MathCollab.Density.Stronger.PointMean.norm_GammaR_real_im
+#print axioms MathCollab.Density.Stronger.PointMean.norm_GammaR_real_im
+#check @MathCollab.Density.Stronger.PointMean.norm_GammaR_real_neg_im_eq
+#print axioms MathCollab.Density.Stronger.PointMean.norm_GammaR_real_neg_im_eq
+#check @MathCollab.Density.Stronger.PointMean.heathBrown_zeta_displaced_reflection
+#print axioms MathCollab.Density.Stronger.PointMean.heathBrown_zeta_displaced_reflection
+#check @MathCollab.Density.Stronger.PointMean.exists_norm_GammaR_heathBrown_reflection_ratio_le
+#print axioms MathCollab.Density.Stronger.PointMean.exists_norm_GammaR_heathBrown_reflection_ratio_le
+#check @MathCollab.Density.Stronger.PointMean.exists_heathBrown_offCritical_minus_strong_le
+#print axioms MathCollab.Density.Stronger.PointMean.exists_heathBrown_offCritical_minus_strong_le
+#check @MathCollab.Density.Stronger.PointMean.heathBrownLemmaThreeMoment_eq_centered
+#print axioms MathCollab.Density.Stronger.PointMean.heathBrownLemmaThreeMoment_eq_centered
+#check @MathCollab.Density.Stronger.PointMean.heathBrownLemmaThreeMoment_le_centered
+#print axioms MathCollab.Density.Stronger.PointMean.heathBrownLemmaThreeMoment_le_centered
+#check @MathCollab.Density.Stronger.PointMean.integral_exp_neg_abs_heathBrown
+#print axioms MathCollab.Density.Stronger.PointMean.integral_exp_neg_abs_heathBrown
+#check @MathCollab.Density.Stronger.PointMean.integrable_exp_neg_abs_heathBrown
+#print axioms MathCollab.Density.Stronger.PointMean.integrable_exp_neg_abs_heathBrown
+#check @MathCollab.Density.Stronger.PointMean.heathBrownStrongSingularKernel_le_exp
+#print axioms MathCollab.Density.Stronger.PointMean.heathBrownStrongSingularKernel_le_exp
+#check @MathCollab.Density.Stronger.PointMean.integrable_heathBrownStrongSingularKernel
+#print axioms MathCollab.Density.Stronger.PointMean.integrable_heathBrownStrongSingularKernel
+#check @MathCollab.Density.Stronger.PointMean.integral_heathBrownStrongSingularKernel_le
+#print axioms MathCollab.Density.Stronger.PointMean.integral_heathBrownStrongSingularKernel_le
+#check @MathCollab.Density.Stronger.PointMean.intervalIntegral_heathBrownStrongSingularKernel_le
+#print axioms MathCollab.Density.Stronger.PointMean.intervalIntegral_heathBrownStrongSingularKernel_le
+#check @MathCollab.Density.Stronger.PointMean.norm_VIntegral'_le_intervalIntegral_norm
+#print axioms MathCollab.Density.Stronger.PointMean.norm_VIntegral'_le_intervalIntegral_norm
+#check @MathCollab.Density.Stronger.PointMean.exists_norm_heathBrownLemmaThree_plusEdge_integrand_le
+#print axioms MathCollab.Density.Stronger.PointMean.exists_norm_heathBrownLemmaThree_plusEdge_integrand_le
+#check @MathCollab.Density.Stronger.PointMean.integrable_heathBrownStrongLongEdgeMajorant
+#print axioms MathCollab.Density.Stronger.PointMean.integrable_heathBrownStrongLongEdgeMajorant
+#check @MathCollab.Density.Stronger.PointMean.integral_heathBrownStrongLongEdgeMajorant_le
+#print axioms MathCollab.Density.Stronger.PointMean.integral_heathBrownStrongLongEdgeMajorant_le
+#check @MathCollab.Density.Stronger.PointMean.exists_norm_heathBrownLemmaThree_plusEdge_le
+#print axioms MathCollab.Density.Stronger.PointMean.exists_norm_heathBrownLemmaThree_plusEdge_le
+#check @MathCollab.Density.Stronger.PointMean.exists_norm_heathBrownLemmaThree_minusEdge_integrand_le
+#print axioms MathCollab.Density.Stronger.PointMean.exists_norm_heathBrownLemmaThree_minusEdge_integrand_le
+#check @MathCollab.Density.Stronger.PointMean.exists_norm_heathBrownLemmaThree_minusEdge_le
+#print axioms MathCollab.Density.Stronger.PointMean.exists_norm_heathBrownLemmaThree_minusEdge_le
+#check @MathCollab.Density.Stronger.PointMean.heathBrownLemmaThree_minus_factor_le_exp_four
+#print axioms MathCollab.Density.Stronger.PointMean.heathBrownLemmaThree_minus_factor_le_exp_four
+#check @MathCollab.Density.Stronger.PointMean.eventually_heathBrownLemmaThree_minus_factor
+#print axioms MathCollab.Density.Stronger.PointMean.eventually_heathBrownLemmaThree_minus_factor
+#check @MathCollab.Density.Stronger.PointMean.exists_eventually_heathBrownLemmaThree_fullMoment
+#print axioms MathCollab.Density.Stronger.PointMean.exists_eventually_heathBrownLemmaThree_fullMoment
+#check @MathCollab.Density.Stronger.bounded_power_exponent
+#print axioms MathCollab.Density.Stronger.bounded_power_exponent
+#check @MathCollab.Density.Stronger.bounded_power_scale
+#print axioms MathCollab.Density.Stronger.bounded_power_scale
+#check @MathCollab.Density.Stronger.short_scale_bounded_power
+#print axioms MathCollab.Density.Stronger.short_scale_bounded_power
+#check @MathCollab.Density.Stronger.bounded_power_piece_scales
+#print axioms MathCollab.Density.Stronger.bounded_power_piece_scales
+#check @MathCollab.Density.Stronger.bounded_power_support_scale
+#print axioms MathCollab.Density.Stronger.bounded_power_support_scale
+#check @MathCollab.Density.Stronger.fixed_scale_factor_eventually_below_height
+#print axioms MathCollab.Density.Stronger.fixed_scale_factor_eventually_below_height
+#check @MathCollab.Density.Stronger.weightedCriticalTwelfth_le_physical_interval
+#print axioms MathCollab.Density.Stronger.weightedCriticalTwelfth_le_physical_interval
+#check @MathCollab.Density.Stronger.separated_weightedCriticalMean_twelfth_le_with_card
+#print axioms MathCollab.Density.Stronger.separated_weightedCriticalMean_twelfth_le_with_card
+#check @MathCollab.Density.Stronger.separated_card_in_height_slab
+#print axioms MathCollab.Density.Stronger.separated_card_in_height_slab
+#check @MathCollab.Density.Stronger.separated_weightedCriticalMean_twelfth_le
+#print axioms MathCollab.Density.Stronger.separated_weightedCriticalMean_twelfth_le
+#check @MathCollab.Density.Stronger.momentDecay_pos
+#print axioms MathCollab.Density.Stronger.momentDecay_pos
+#check @MathCollab.Density.Stronger.momentDecay_le_one
+#print axioms MathCollab.Density.Stronger.momentDecay_le_one
+#check @MathCollab.Density.Stronger.momentDecay_antitone
+#print axioms MathCollab.Density.Stronger.momentDecay_antitone
+#check @MathCollab.Density.Stronger.momentDecay_continuous
+#print axioms MathCollab.Density.Stronger.momentDecay_continuous
+#check @MathCollab.Density.Stronger.momentDecay_le_inv_one_add_sq
+#print axioms MathCollab.Density.Stronger.momentDecay_le_inv_one_add_sq
+#check @MathCollab.Density.Stronger.integrable_momentDecay
+#print axioms MathCollab.Density.Stronger.integrable_momentDecay
+#check @MathCollab.Density.Stronger.momentDecay_mass_bounds
+#print axioms MathCollab.Density.Stronger.momentDecay_mass_bounds
+#check @MathCollab.Density.Stronger.momentDecay_holder_twelfth
+#print axioms MathCollab.Density.Stronger.momentDecay_holder_twelfth
+#check @MathCollab.Density.Stronger.separated_momentDecay_row
+#print axioms MathCollab.Density.Stronger.separated_momentDecay_row
+#check @MathCollab.Density.Stronger.integrable_momentDecay_mul
+#print axioms MathCollab.Density.Stronger.integrable_momentDecay_mul
+#check @MathCollab.Density.Stronger.separated_momentDecay_integral_le
+#print axioms MathCollab.Density.Stronger.separated_momentDecay_integral_le
+#check @MathCollab.Density.Stronger.exists_unitSeparated_closedBall_cover_of_card_bound
+#print axioms MathCollab.Density.Stronger.exists_unitSeparated_closedBall_cover_of_card_bound
+#check @MathCollab.Density.Stronger.volume_le_two_mul_of_separated_card_bound
+#print axioms MathCollab.Density.Stronger.volume_le_two_mul_of_separated_card_bound
+#check @MathCollab.Density.Stronger.sqrt_le_stronger_lower_scale
+#print axioms MathCollab.Density.Stronger.sqrt_le_stronger_lower_scale
+#check @MathCollab.Density.Stronger.smoothPoweredFamily_largeValues_admissible
+#print axioms MathCollab.Density.Stronger.smoothPoweredFamily_largeValues_admissible
+#check @MathCollab.Density.Stronger.smooth_largeValue_term_le
+#print axioms MathCollab.Density.Stronger.smooth_largeValue_term_le
+#check @MathCollab.Density.Stronger.smooth_family_sum_eventually
+#print axioms MathCollab.Density.Stronger.smooth_family_sum_eventually
+#check @MathCollab.Density.Stronger.smoothHalfScale_pos
+#print axioms MathCollab.Density.Stronger.smoothHalfScale_pos
+#check @MathCollab.Density.Stronger.smoothDetectorBlock_index_pos
+#print axioms MathCollab.Density.Stronger.smoothDetectorBlock_index_pos
+#check @MathCollab.Density.Stronger.smoothHalfScale_zero_eq
+#print axioms MathCollab.Density.Stronger.smoothHalfScale_zero_eq
+#check @MathCollab.Density.Stronger.smoothHalfScale_one_eq
+#print axioms MathCollab.Density.Stronger.smoothHalfScale_one_eq
+#check @MathCollab.Density.Stronger.smoothHalfScale_bounds
+#print axioms MathCollab.Density.Stronger.smoothHalfScale_bounds
+#check @MathCollab.Density.Stronger.smoothDetectorBlock_eq_halves
+#print axioms MathCollab.Density.Stronger.smoothDetectorBlock_eq_halves
+#check @MathCollab.Density.Stronger.exists_smoothBlock_Taylor_member
+#print axioms MathCollab.Density.Stronger.exists_smoothBlock_Taylor_member
+#check @MathCollab.Density.Stronger.smoothTaylorArithmetic_support
+#print axioms MathCollab.Density.Stronger.smoothTaylorArithmetic_support
+#check @MathCollab.Density.Stronger.smoothTaylorArithmetic_norm_le
+#print axioms MathCollab.Density.Stronger.smoothTaylorArithmetic_norm_le
+#check @MathCollab.Density.Stronger.smoothTaylorArithmetic_LSeries
+#print axioms MathCollab.Density.Stronger.smoothTaylorArithmetic_LSeries
+#check @MathCollab.Density.Stronger.norm_smoothTaylor_LSeries
+#print axioms MathCollab.Density.Stronger.norm_smoothTaylor_LSeries
+#check @MathCollab.Density.Stronger.exists_smoothTaylor_powered_piece
+#print axioms MathCollab.Density.Stronger.exists_smoothTaylor_powered_piece
+#check @MathCollab.Density.Stronger.smoothPoweredFamilyScale_pos
+#print axioms MathCollab.Density.Stronger.smoothPoweredFamilyScale_pos
+#check @MathCollab.Density.Stronger.mem_smoothPoweredIndices
+#print axioms MathCollab.Density.Stronger.mem_smoothPoweredIndices
+#check @MathCollab.Density.Stronger.smoothTaylorIndices_card_eventually
+#print axioms MathCollab.Density.Stronger.smoothTaylorIndices_card_eventually
+#check @MathCollab.Density.Stronger.smoothPoweredIndices_card_eventually
+#print axioms MathCollab.Density.Stronger.smoothPoweredIndices_card_eventually
+#check @MathCollab.Density.Stronger.smoothPoweredFamily_admissible
+#print axioms MathCollab.Density.Stronger.smoothPoweredFamily_admissible
+#check @MathCollab.Density.Stronger.smooth_long_or_short_powered_cover
+#print axioms MathCollab.Density.Stronger.smooth_long_or_short_powered_cover
+#check @MathCollab.Density.Stronger.smoothHeightConstant_pos
+#print axioms MathCollab.Density.Stronger.smoothHeightConstant_pos
+#check @MathCollab.Density.Stronger.exists_smoothPowered_height
+#print axioms MathCollab.Density.Stronger.exists_smoothPowered_height
+#check @MathCollab.Density.Stronger.smoothHeightConstant_eventually
+#print axioms MathCollab.Density.Stronger.smoothHeightConstant_eventually
+#check @MathCollab.Density.Stronger.detectingPolynomial_normalizedSmoothPowered
+#print axioms MathCollab.Density.Stronger.detectingPolynomial_normalizedSmoothPowered
+#check @MathCollab.Density.Stronger.normalizedSmoothPoweredCoefficient_eventually
+#print axioms MathCollab.Density.Stronger.normalizedSmoothPoweredCoefficient_eventually
+#check @MathCollab.Density.Stronger.exists_normalizedSmoothPowered_height
+#print axioms MathCollab.Density.Stronger.exists_normalizedSmoothPowered_height
+#check @MathCollab.Density.Stronger.smoothTaylorIndices_card_le_log
+#print axioms MathCollab.Density.Stronger.smoothTaylorIndices_card_le_log
+#check @MathCollab.Density.Stronger.shortTaylor_cutoff_error_eventually
+#print axioms MathCollab.Density.Stronger.shortTaylor_cutoff_error_eventually
+#check @MathCollab.Density.Stronger.smooth_short_Taylor_cover
+#print axioms MathCollab.Density.Stronger.smooth_short_Taylor_cover
+#check @MathCollab.Density.Stronger.smooth_long_or_short_Taylor_cover
+#print axioms MathCollab.Density.Stronger.smooth_long_or_short_Taylor_cover
+#check @MathCollab.Density.Stronger.zetaSubset_large_values_cover_indexed
+#print axioms MathCollab.Density.Stronger.zetaSubset_large_values_cover_indexed
+#check @MathCollab.Density.Stronger.smoothShortZeroFinset_subset
+#print axioms MathCollab.Density.Stronger.smoothShortZeroFinset_subset
+#check @MathCollab.Density.Stronger.smoothShortZeroCount_bound
+#print axioms MathCollab.Density.Stronger.smoothShortZeroCount_bound
+#check @MathCollab.Density.Stronger.smooth_remaining_zeros_have_long_detector
+#print axioms MathCollab.Density.Stronger.smooth_remaining_zeros_have_long_detector
+#check @MathCollab.Density.Stronger.smoothDetectorResidue_eventually_small
+#print axioms MathCollab.Density.Stronger.smoothDetectorResidue_eventually_small
+#check @MathCollab.Density.Stronger.smoothMollifierBlock_contour_identity
+#print axioms MathCollab.Density.Stronger.smoothMollifierBlock_contour_identity
+#check @MathCollab.Density.Stronger.smoothDetectorBlock_contour_identity
+#print axioms MathCollab.Density.Stronger.smoothDetectorBlock_contour_identity
+#check @MathCollab.Density.Stronger.uniform_smoothDetectorResidue_bound
+#print axioms MathCollab.Density.Stronger.uniform_smoothDetectorResidue_bound
+#check @MathCollab.Density.Stronger.uniform_smoothDetectorKernel_critical_bound
+#print axioms MathCollab.Density.Stronger.uniform_smoothDetectorKernel_critical_bound
+#check @MathCollab.Density.Stronger.smoothContourNumerator_div_eq_kernel
+#print axioms MathCollab.Density.Stronger.smoothContourNumerator_div_eq_kernel
+#check @MathCollab.Density.Stronger.smoothContourNumerator_at_pole
+#print axioms MathCollab.Density.Stronger.smoothContourNumerator_at_pole
+#check @MathCollab.Density.Stronger.smoothContourNumerator_differentiable
+#print axioms MathCollab.Density.Stronger.smoothContourNumerator_differentiable
+#check @MathCollab.Density.Stronger.entire_div_sub_rectangle
+#print axioms MathCollab.Density.Stronger.entire_div_sub_rectangle
+#check @MathCollab.Density.Stronger.smoothDetector_finite_rectangle_residue
+#print axioms MathCollab.Density.Stronger.smoothDetector_finite_rectangle_residue
+#check @MathCollab.Density.Stronger.norm_riemannZeta_le_eight_mul_norm
+#print axioms MathCollab.Density.Stronger.norm_riemannZeta_le_eight_mul_norm
+#check @MathCollab.Density.Stronger.continuous_smoothDetectorKernel_line
+#print axioms MathCollab.Density.Stronger.continuous_smoothDetectorKernel_line
+#check @MathCollab.Density.Stronger.integrable_smoothDetectorKernel_line
+#print axioms MathCollab.Density.Stronger.integrable_smoothDetectorKernel_line
+#check @MathCollab.Density.Stronger.integrable_smoothDetectorKernel_left
+#print axioms MathCollab.Density.Stronger.integrable_smoothDetectorKernel_left
+#check @MathCollab.Density.Stronger.integrable_smoothDetectorKernel_right
+#print axioms MathCollab.Density.Stronger.integrable_smoothDetectorKernel_right
+#check @MathCollab.Density.Stronger.smoothDetectorKernel_horizontal_bound
+#print axioms MathCollab.Density.Stronger.smoothDetectorKernel_horizontal_bound
+#check @MathCollab.Density.Stronger.tendsto_smoothDetector_horizontal_integral
+#print axioms MathCollab.Density.Stronger.tendsto_smoothDetector_horizontal_integral
+#check @MathCollab.Density.Stronger.smoothDetector_contour_identity
+#print axioms MathCollab.Density.Stronger.smoothDetector_contour_identity
+#check @MathCollab.Density.Stronger.summable_norm_detectorTerm
+#print axioms MathCollab.Density.Stronger.summable_norm_detectorTerm
+#check @MathCollab.Density.Stronger.summable_norm_detectorTerm_tail
+#print axioms MathCollab.Density.Stronger.summable_norm_detectorTerm_tail
+#check @MathCollab.Density.Stronger.summable_norm_smoothDetectorBlock
+#print axioms MathCollab.Density.Stronger.summable_norm_smoothDetectorBlock
+#check @MathCollab.Density.Stronger.tsum_smoothDetectorBlock
+#print axioms MathCollab.Density.Stronger.tsum_smoothDetectorBlock
+#check @MathCollab.Density.Stronger.smoothDetectorBlock_zero_of_nonpos
+#print axioms MathCollab.Density.Stronger.smoothDetectorBlock_zero_of_nonpos
+#check @MathCollab.Density.Stronger.smoothDetectorBlock_zero_of_small
+#print axioms MathCollab.Density.Stronger.smoothDetectorBlock_zero_of_small
+#check @MathCollab.Density.Stronger.tsum_norm_detector_tail_le
+#print axioms MathCollab.Density.Stronger.tsum_norm_detector_tail_le
+#check @MathCollab.Density.Stronger.shifted_indicator_tail_le
+#print axioms MathCollab.Density.Stronger.shifted_indicator_tail_le
+#check @MathCollab.Density.Stronger.smoothDetectorBlock_scale_tail_bound
+#print axioms MathCollab.Density.Stronger.smoothDetectorBlock_scale_tail_bound
+#check @MathCollab.Density.Stronger.smoothDetectorBlock_scale_tail_le_two_rpow
+#print axioms MathCollab.Density.Stronger.smoothDetectorBlock_scale_tail_le_two_rpow
+#check @MathCollab.Density.Stronger.mem_smoothScaleIndices
+#print axioms MathCollab.Density.Stronger.mem_smoothScaleIndices
+#check @MathCollab.Density.Stronger.smoothScaleIndices_nonempty
+#print axioms MathCollab.Density.Stronger.smoothScaleIndices_nonempty
+#check @MathCollab.Density.Stronger.smoothScaleIndices_card_le
+#print axioms MathCollab.Density.Stronger.smoothScaleIndices_card_le
+#check @MathCollab.Density.Stronger.smoothDetectorBlock_norm_partition
+#print axioms MathCollab.Density.Stronger.smoothDetectorBlock_norm_partition
+#check @MathCollab.Density.Stronger.exists_smoothDetectorBlock
+#print axioms MathCollab.Density.Stronger.exists_smoothDetectorBlock
+#check @MathCollab.Density.Stronger.smoothScaleIndices_card_le_log
+#print axioms MathCollab.Density.Stronger.smoothScaleIndices_card_le_log
+#check @MathCollab.Density.Stronger.log_sq_eventually_le_height
+#print axioms MathCollab.Density.Stronger.log_sq_eventually_le_height
+#check @MathCollab.Density.Stronger.smoothDetector_eventually_large
+#print axioms MathCollab.Density.Stronger.smoothDetector_eventually_large
+#check @MathCollab.Density.Stronger.smoothDetectorBlock_eq_smoothMollifierBlock
+#print axioms MathCollab.Density.Stronger.smoothDetectorBlock_eq_smoothMollifierBlock
+#check @MathCollab.Density.Stronger.norm_smoothDyadicTerm
+#print axioms MathCollab.Density.Stronger.norm_smoothDyadicTerm
+#check @MathCollab.Density.Stronger.hasSum_norm_smoothDyadicTerm
+#print axioms MathCollab.Density.Stronger.hasSum_norm_smoothDyadicTerm
+#check @MathCollab.Density.Stronger.hasSum_smoothDyadicTerm
+#print axioms MathCollab.Density.Stronger.hasSum_smoothDyadicTerm
+#check @MathCollab.Density.Stronger.summable_norm_smoothDyadicTerm
+#print axioms MathCollab.Density.Stronger.summable_norm_smoothDyadicTerm
+#check @MathCollab.Density.Stronger.summable_smoothDyadicTerm
+#print axioms MathCollab.Density.Stronger.summable_smoothDyadicTerm
+#check @MathCollab.Density.Stronger.summable_smoothDyadicBlock
+#print axioms MathCollab.Density.Stronger.summable_smoothDyadicBlock
+#check @MathCollab.Density.Stronger.summable_norm_smoothDyadicBlock
+#print axioms MathCollab.Density.Stronger.summable_norm_smoothDyadicBlock
+#check @MathCollab.Density.Stronger.tsum_smoothDyadicBlock
+#print axioms MathCollab.Density.Stronger.tsum_smoothDyadicBlock
+#check @MathCollab.Density.Stronger.tsum_norm_smoothDyadicBlock_le
+#print axioms MathCollab.Density.Stronger.tsum_norm_smoothDyadicBlock_le
+#check @MathCollab.Density.Stronger.smoothDyadicTerm_zero_of_nonpos
+#print axioms MathCollab.Density.Stronger.smoothDyadicTerm_zero_of_nonpos
+#check @MathCollab.Density.Stronger.smoothDyadicBlock_zero_of_nonpos
+#print axioms MathCollab.Density.Stronger.smoothDyadicBlock_zero_of_nonpos
+#check @MathCollab.Density.Stronger.smoothDyadicTerm_zero_of_large_index
+#print axioms MathCollab.Density.Stronger.smoothDyadicTerm_zero_of_large_index
+#check @MathCollab.Density.Stronger.smoothDyadicTerm_hasFiniteSupport
+#print axioms MathCollab.Density.Stronger.smoothDyadicTerm_hasFiniteSupport
+#check @MathCollab.Density.Stronger.smoothDyadicBlock_eq_sum_range
+#print axioms MathCollab.Density.Stronger.smoothDyadicBlock_eq_sum_range
+#check @MathCollab.Density.Stronger.smoothDyadicBlock_scale_tail_le
+#print axioms MathCollab.Density.Stronger.smoothDyadicBlock_scale_tail_le
+#check @MathCollab.Density.Stronger.LSeries_term_mul_scaled_cpow
+#print axioms MathCollab.Density.Stronger.LSeries_term_mul_scaled_cpow
+#check @MathCollab.Density.Stronger.norm_LSeries_term_vertical
+#print axioms MathCollab.Density.Stronger.norm_LSeries_term_vertical
+#check @MathCollab.Density.Stronger.continuous_LSeries_term_vertical
+#print axioms MathCollab.Density.Stronger.continuous_LSeries_term_vertical
+#check @MathCollab.Density.Stronger.integrable_scaled_mellin_line
+#print axioms MathCollab.Density.Stronger.integrable_scaled_mellin_line
+#check @MathCollab.Density.Stronger.smoothMellin_absolute_exchange
+#print axioms MathCollab.Density.Stronger.smoothMellin_absolute_exchange
+#check @MathCollab.Density.Stronger.integrable_smoothLSeries_contour
+#print axioms MathCollab.Density.Stronger.integrable_smoothLSeries_contour
+#check @MathCollab.Density.Stronger.smoothLSeries_eq_mellinContour
+#print axioms MathCollab.Density.Stronger.smoothLSeries_eq_mellinContour
+#check @MathCollab.Density.Stronger.smoothMollifierBlock_eq_rightContour
+#print axioms MathCollab.Density.Stronger.smoothMollifierBlock_eq_rightContour
+#check @MathCollab.Density.Stronger.integrable_smoothMollifierBlock_rightContour
+#print axioms MathCollab.Density.Stronger.integrable_smoothMollifierBlock_rightContour
+#check @MathCollab.Density.Stronger.dyadicStep_contDiff
+#print axioms MathCollab.Density.Stronger.dyadicStep_contDiff
+#check @MathCollab.Density.Stronger.dyadicStep_bounds
+#print axioms MathCollab.Density.Stronger.dyadicStep_bounds
+#check @MathCollab.Density.Stronger.dyadicStep_antitone
+#print axioms MathCollab.Density.Stronger.dyadicStep_antitone
+#check @MathCollab.Density.Stronger.dyadicStep_one
+#print axioms MathCollab.Density.Stronger.dyadicStep_one
+#check @MathCollab.Density.Stronger.dyadicStep_zero
+#print axioms MathCollab.Density.Stronger.dyadicStep_zero
+#check @MathCollab.Density.Stronger.smoothDyadicWeight_contDiff
+#print axioms MathCollab.Density.Stronger.smoothDyadicWeight_contDiff
+#check @MathCollab.Density.Stronger.smoothDyadicWeight_zero_of_le
+#print axioms MathCollab.Density.Stronger.smoothDyadicWeight_zero_of_le
+#check @MathCollab.Density.Stronger.smoothDyadicWeight_zero_of_ge
+#print axioms MathCollab.Density.Stronger.smoothDyadicWeight_zero_of_ge
+#check @MathCollab.Density.Stronger.smoothDyadicWeight_bounds
+#print axioms MathCollab.Density.Stronger.smoothDyadicWeight_bounds
+#check @MathCollab.Density.Stronger.smoothDyadicWeight_tsupport
+#print axioms MathCollab.Density.Stronger.smoothDyadicWeight_tsupport
+#check @MathCollab.Density.Stronger.smoothDyadicWeight_support_open
+#print axioms MathCollab.Density.Stronger.smoothDyadicWeight_support_open
+#check @MathCollab.Density.Stronger.smoothDyadicWeight_hasCompactSupport
+#print axioms MathCollab.Density.Stronger.smoothDyadicWeight_hasCompactSupport
+#check @MathCollab.Density.Stronger.smoothDyadicWeight_div_pow_succ
+#print axioms MathCollab.Density.Stronger.smoothDyadicWeight_div_pow_succ
+#check @MathCollab.Density.Stronger.dyadicStep_div_pow_tendsto
+#print axioms MathCollab.Density.Stronger.dyadicStep_div_pow_tendsto
+#check @MathCollab.Density.Stronger.hasSum_smoothDyadicWeight_nonneg_scales
+#print axioms MathCollab.Density.Stronger.hasSum_smoothDyadicWeight_nonneg_scales
+#check @MathCollab.Density.Stronger.dyadicStep_mul_pow_tendsto
+#print axioms MathCollab.Density.Stronger.dyadicStep_mul_pow_tendsto
+#check @MathCollab.Density.Stronger.hasSum_smoothDyadicWeight_neg_scales
+#print axioms MathCollab.Density.Stronger.hasSum_smoothDyadicWeight_neg_scales
+#check @MathCollab.Density.Stronger.hasSum_smoothDyadicWeight
+#print axioms MathCollab.Density.Stronger.hasSum_smoothDyadicWeight
+#check @MathCollab.Density.Stronger.tsum_smoothDyadicWeight
+#print axioms MathCollab.Density.Stronger.tsum_smoothDyadicWeight
+#check @MathCollab.Density.Stronger.smoothDyadicWeight_index_bounds
+#print axioms MathCollab.Density.Stronger.smoothDyadicWeight_index_bounds
+#check @MathCollab.Density.Stronger.smoothDyadicWeight_pointwise_finite
+#print axioms MathCollab.Density.Stronger.smoothDyadicWeight_pointwise_finite
+#check @MathCollab.Density.Stronger.norm_smoothShortCoefficient_le
+#print axioms MathCollab.Density.Stronger.norm_smoothShortCoefficient_le
+#check @MathCollab.Density.Stronger.smoothShortCoefficient_zero_of_le_half
+#print axioms MathCollab.Density.Stronger.smoothShortCoefficient_zero_of_le_half
+#check @MathCollab.Density.Stronger.smoothShortCoefficient_zero_of_two_le
+#print axioms MathCollab.Density.Stronger.smoothShortCoefficient_zero_of_two_le
+#check @MathCollab.Density.Stronger.smoothShortCoefficient_support
+#print axioms MathCollab.Density.Stronger.smoothShortCoefficient_support
+#check @MathCollab.Density.Stronger.smoothShortCoefficient_tsum_split
+#print axioms MathCollab.Density.Stronger.smoothShortCoefficient_tsum_split
+#check @MathCollab.Density.Stronger.smoothShortCoefficient_term_eq
+#print axioms MathCollab.Density.Stronger.smoothShortCoefficient_term_eq
+#check @MathCollab.Density.Stronger.norm_smoothShortTaylorCoefficient_le
+#print axioms MathCollab.Density.Stronger.norm_smoothShortTaylorCoefficient_le
+#check @MathCollab.Density.Stronger.summable_smoothShortTerm
+#print axioms MathCollab.Density.Stronger.summable_smoothShortTerm
+#check @MathCollab.Density.Stronger.smoothDetector_tail_half_split
+#print axioms MathCollab.Density.Stronger.smoothDetector_tail_half_split
+#check @MathCollab.Density.Stronger.exists_smoothShort_half
+#print axioms MathCollab.Density.Stronger.exists_smoothShort_half
+#check @MathCollab.Density.Stronger.exists_smoothShortTaylor_component
+#print axioms MathCollab.Density.Stronger.exists_smoothShortTaylor_component
+#check @MathCollab.Density.Stronger.continuous_const_div_max
+#print axioms MathCollab.Density.Stronger.continuous_const_div_max
+#check @MathCollab.Density.Stronger.integral_const_div_max
+#print axioms MathCollab.Density.Stronger.integral_const_div_max
+#check @MathCollab.Density.Stronger.integral_le_log_of_truncated_tail
+#print axioms MathCollab.Density.Stronger.integral_le_log_of_truncated_tail
+#check @MathCollab.Density.Stronger.uniform_derivatives_comp_on_compact
+#print axioms MathCollab.Density.Stronger.uniform_derivatives_comp_on_compact
+#check @MathCollab.Density.Stronger.uniform_derivatives_mul_on_compact
+#print axioms MathCollab.Density.Stronger.uniform_derivatives_mul_on_compact
+#check @MathCollab.Density.Stronger.dampedMellinLift_contDiff
+#print axioms MathCollab.Density.Stronger.dampedMellinLift_contDiff
+#check @MathCollab.Density.Stronger.dampedMellinLift_tsupport
+#print axioms MathCollab.Density.Stronger.dampedMellinLift_tsupport
+#check @MathCollab.Density.Stronger.dampedMellinLift_uniform_derivatives
+#print axioms MathCollab.Density.Stronger.dampedMellinLift_uniform_derivatives
+#check @MathCollab.Density.Stronger.tsupport_iteratedDeriv_complex_subset
+#print axioms MathCollab.Density.Stronger.tsupport_iteratedDeriv_complex_subset
+#check @MathCollab.Density.Stronger.uniform_fourier_power_bound
+#print axioms MathCollab.Density.Stronger.uniform_fourier_power_bound
+#check @MathCollab.Density.Stronger.norm_iteratedDeriv_ofReal
+#print axioms MathCollab.Density.Stronger.norm_iteratedDeriv_ofReal
+#check @MathCollab.Density.Stronger.dampedCutoff_mellin_eq_fourier
+#print axioms MathCollab.Density.Stronger.dampedCutoff_mellin_eq_fourier
+#check @MathCollab.Density.Stronger.dampedCutoff_uniform_mellin_power_bound
+#print axioms MathCollab.Density.Stronger.dampedCutoff_uniform_mellin_power_bound
+#check @MathCollab.Density.Stronger.dampedCutoff_uniform_mellin_decay
+#print axioms MathCollab.Density.Stronger.dampedCutoff_uniform_mellin_decay
+#check @MathCollab.Density.Stronger.dampedCutoff_mellinConvergent
+#print axioms MathCollab.Density.Stronger.dampedCutoff_mellinConvergent
+#check @MathCollab.Density.Stronger.dampedCutoff_integrable_mellin_line
+#print axioms MathCollab.Density.Stronger.dampedCutoff_integrable_mellin_line
+#check @MathCollab.Density.Stronger.dampedCutoff_mellin_inversion
+#print axioms MathCollab.Density.Stronger.dampedCutoff_mellin_inversion
+#check @MathCollab.Density.Stronger.dampedCutoff_uniform_mellin_weighted_L1
+#print axioms MathCollab.Density.Stronger.dampedCutoff_uniform_mellin_weighted_L1
+#check @MathCollab.Density.Stronger.integrable_weightedCriticalMean
+#print axioms MathCollab.Density.Stronger.integrable_weightedCriticalMean
+#check @MathCollab.Density.Stronger.weightedCriticalMean_nonneg
+#print axioms MathCollab.Density.Stronger.weightedCriticalMean_nonneg
+#check @MathCollab.Density.Stronger.uniform_smoothDetector_critical_integral_bound
+#print axioms MathCollab.Density.Stronger.uniform_smoothDetector_critical_integral_bound
+#check @MathCollab.Density.Stronger.uniform_smoothMollifierBlock_mean_bound
+#print axioms MathCollab.Density.Stronger.uniform_smoothMollifierBlock_mean_bound
+#check @MathCollab.Density.Stronger.zetaMomentCriticalNorm_nonneg
+#print axioms MathCollab.Density.Stronger.zetaMomentCriticalNorm_nonneg
+#check @MathCollab.Density.Stronger.zetaMomentCriticalNorm_le_linear
+#print axioms MathCollab.Density.Stronger.zetaMomentCriticalNorm_le_linear
+#check @MathCollab.Density.Stronger.integrable_weightedCriticalTwelfth
+#print axioms MathCollab.Density.Stronger.integrable_weightedCriticalTwelfth
+#check @MathCollab.Density.Stronger.weightedCriticalMean_twelfth_le
+#print axioms MathCollab.Density.Stronger.weightedCriticalMean_twelfth_le
+#check @MathCollab.Density.Stronger.weightedCriticalTwelfth_eq_translated
+#print axioms MathCollab.Density.Stronger.weightedCriticalTwelfth_eq_translated
+#check @MathCollab.Density.Stronger.separated_critical_twelfth_on_interval
+#print axioms MathCollab.Density.Stronger.separated_critical_twelfth_on_interval
+#print MathCollab.Density.IsNontrivialZetaZero
+#print MathCollab.Density.zetaMultiplicity
+#print MathCollab.Density.zetaZeroRegion
+#print MathCollab.Density.zetaZeroFinset
+#print MathCollab.Density.zetaSlabCount
+#print MathCollab.Density.zetaDensityCount
+#print MathCollab.Density.Stronger.zetaMomentCriticalNorm
+#print MathCollab.Density.Stronger.Peaks.PointMeanInput
+#print MathCollab.Density.Stronger.Peaks.LocalMeanPacketInput
+#print MathCollab.Density.Stronger.Atkinson.LocalMeanSourceToPrefix
+#print MathCollab.Density.Stronger.Atkinson.LocalMeanStationaryInput
+#print MathCollab.Density.Stronger.Atkinson.atkinsonStationaryLeadingSum
+#print MathCollab.Density.Stronger.stronger_density_bound_native
+#print MathCollab.Density.Stronger.zeta_twelfth_physical_native
+#print MathCollab.Density.Stronger.PointMean.pointMeanInput_native
+#print MathCollab.Density.Stronger.Atkinson.localMeanStationaryInput_native

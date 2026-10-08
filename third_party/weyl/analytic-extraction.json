@@ -1,0 +1,35 @@
+{
+  "scope": "Selected public source provenance. Records identify inspected source files/ranges; they do not assert that entire upstream files were copied. See PROVENANCE.md and retained file-level notices.",
+  "upstream": {
+    "repository": "https://github.com/smccolm/Lean",
+    "revision": "6e2d10c6c2252ee1575bb7ef12dea12e2f1a3af1",
+    "license": "MIT-0; selected PNT-derived material is Apache-2.0"
+  },
+  "source_records": [
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/GuthMaynard/DFIBesselMellin.lean",
+      "retained": true,
+      "source_sha256": "cc093cb8e335d72058b47208bd481997ff241712e775ed19336f6cb2dc90641d"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/GuthMaynard/DFIComplexLaplace.lean",
+      "retained": true,
+      "source_sha256": "1f79e5847fb9cb9e3e3d1a61fa62f9043ecf9b362c643fc06f42730607473bf9"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/GuthMaynardExternal/PNT/ZetaAppendix.lean",
+      "retained": true,
+      "source_sha256": "9fad94d5a7026d86882df61147b1082b103caf555ac803f0b1b52efd8bc28d9f"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/EulerMaclaurin.lean",
+      "retained": true,
+      "source_sha256": "0fb4f12235c0814e425968b2f77702b0815cbf9ad1e23a9400d23455d05d4d7c"
+    },
+    {
+      "path": "Riemann Zeta/9. Zero Density, Large Values and Prime Transfer/71 Guth-Maynard, 2026/GuthMaynardExternal/PNT/ZetaBoundsUpstream.lean",
+      "retained": true,
+      "source_sha256": "39c506e9b834b47f7af4ef35c947201b365b0c7be3d307fcfd4b7b2864764ee4"
+    }
+  ]
+}
